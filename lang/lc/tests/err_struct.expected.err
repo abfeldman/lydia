@@ -1,0 +1,14 @@
+err_struct.sys: In system `test':
+err_struct.sys:14: error: no member `y' in structure `a'
+err_struct.sys:16: error: `b' is not a structure
+err_struct.sys:18: error: `z' is not a structure
+err_struct.sys:19: error: no member `c1' in structure `c'
+err_struct.sys:21: error: no member `foo' in structure `a'
+err_struct.sys:23: error: `i' is not a structure
+err_struct.sys: In system `test1':
+err_struct.sys:36: error: no member `y' in structure `a'
+err_struct.sys:38: error: `b' is not a structure
+err_struct.sys:40: error: `z' is not a structure
+err_struct.sys:41: error: no member `c1' in structure `c'
+err_struct.sys:43: error: no member `foo' in structure `a'
+err_struct.sys:45: error: `i' is not a structure

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+  <separator>Arithmetic Circuits (WFM) Flat Tests:</separator>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-weak.cnf</input>
+    <output>2adder-weak.atms</output>
+  </test>
+  <test>
+    <title>74182</title>
+    <input>74182.cnf</input>
+    <output>74182.atms</output>
+  </test>
+  <test>
+    <title>74L85</title>
+    <input>74L85.cnf</input>
+    <output>74L85.atms</output>
+  </test>
+  <test>
+    <title>74283</title>
+    <input>74283.cnf</input>
+    <output>74283.atms</output>
+  </test>
+  <test>
+    <title>74181</title>
+    <input>74181.cnf</input>
+    <output>74181.atms</output>
+  </test>
+</testsuite>

@@ -1,0 +1,58 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   inverter
+   ()
+   (
+    :csp
+    ((:values_set boolean (t f)))
+    (
+     (
+      :enum_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.95 0.05))
+       (:bool_variable_attribute health (t nil))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier i $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      0
+     )
+     (
+      :enum_variable
+      (:identifier o $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      0
+     )
+    )
+    ()
+    ((:enum_constant $nil t 0))
+    0
+    (
+     (
+      :csp_impl_sentence
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (:csp_atomic_sentence (:csp_constant_term 0))
+      )
+      (
+       :csp_not_sentence
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 1))
+	(:csp_atomic_sentence (:csp_variable_term 2))
+       )
+      )
+     )
+    )
+   )
+  )
+ )
+)

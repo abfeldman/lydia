@@ -1,0 +1,1371 @@
+(
+ :horn_flat_kb
+ m74l85
+ (
+  :horn
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier ~i1 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i1 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~i2 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i2 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~i3 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i3 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~i4 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i4 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~i5 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i5 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~i6 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i6 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~i7 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i7 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~i8 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i8 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~i9 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i9 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~i10 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i10 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~i11 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i11 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~o1 $nil $nil)
+    (
+     (:bool_variable_attribute output (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier o1 $nil $nil)
+    (
+     (:bool_variable_attribute output (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~o2 $nil $nil)
+    (
+     (:bool_variable_attribute output (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier o2 $nil $nil)
+    (
+     (:bool_variable_attribute output (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~o3 $nil $nil)
+    (
+     (:bool_variable_attribute output (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier o3 $nil $nil)
+    (
+     (:bool_variable_attribute output (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (:bool_variable (:identifier ~z1 $nil $nil) () -1)
+   (:bool_variable (:identifier z1 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z2 $nil $nil) () -1)
+   (:bool_variable (:identifier z2 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z3 $nil $nil) () -1)
+   (:bool_variable (:identifier z3 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z4 $nil $nil) () -1)
+   (:bool_variable (:identifier z4 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z5 $nil $nil) () -1)
+   (:bool_variable (:identifier z5 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z6 $nil $nil) () -1)
+   (:bool_variable (:identifier z6 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z7 $nil $nil) () -1)
+   (:bool_variable (:identifier z7 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z8 $nil $nil) () -1)
+   (:bool_variable (:identifier z8 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z9 $nil $nil) () -1)
+   (:bool_variable (:identifier z9 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z10 $nil $nil) () -1)
+   (:bool_variable (:identifier z10 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z11 $nil $nil) () -1)
+   (:bool_variable (:identifier z11 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z12 $nil $nil) () -1)
+   (:bool_variable (:identifier z12 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z13 $nil $nil) () -1)
+   (:bool_variable (:identifier z13 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z14 $nil $nil) () -1)
+   (:bool_variable (:identifier z14 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z15 $nil $nil) () -1)
+   (:bool_variable (:identifier z15 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z16 $nil $nil) () -1)
+   (:bool_variable (:identifier z16 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z17 $nil $nil) () -1)
+   (:bool_variable (:identifier z17 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z18 $nil $nil) () -1)
+   (:bool_variable (:identifier z18 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z19 $nil $nil) () -1)
+   (:bool_variable (:identifier z19 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z20 $nil $nil) () -1)
+   (:bool_variable (:identifier z20 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z21 $nil $nil) () -1)
+   (:bool_variable (:identifier z21 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z22 $nil $nil) () -1)
+   (:bool_variable (:identifier z22 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z23 $nil $nil) () -1)
+   (:bool_variable (:identifier z23 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z24 $nil $nil) () -1)
+   (:bool_variable (:identifier z24 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z25 $nil $nil) () -1)
+   (:bool_variable (:identifier z25 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z26 $nil $nil) () -1)
+   (:bool_variable (:identifier z26 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z27 $nil $nil) () -1)
+   (:bool_variable (:identifier z27 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z28 $nil $nil) () -1)
+   (:bool_variable (:identifier z28 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z29 $nil $nil) () -1)
+   (:bool_variable (:identifier z29 $nil $nil) () -1)
+   (:bool_variable (:identifier ~z30 $nil $nil) () -1)
+   (:bool_variable (:identifier z30 $nil $nil) () -1)
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate36 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate36 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate37 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate37 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate38 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate38 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate39 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate39 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate40 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate40 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate41 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate41 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate42 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate42 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate43 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate43 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate60 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate60 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate61 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate61 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate62 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate62 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate63 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate63 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate64 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate64 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate65 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate65 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate66 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate66 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate67 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate67 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate68 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate68 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate69 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate69 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate70 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate70 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate71 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate71 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate96 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate96 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate97 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate97 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate98 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate98 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate99 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate99 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate100 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate100 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate101 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate101 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate102 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate102 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate103 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate103 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate104 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate104 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate105 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate105 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate106 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate106 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate107 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate107 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ~h $nil ((:qualifier gate108 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate108 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (:material_implication (29 89) 0)
+   (:material_implication (1 89) 28)
+   (:material_implication (1 29) 88)
+   (:material_implication (31 91) 2)
+   (:material_implication (3 91) 30)
+   (:material_implication (3 31) 90)
+   (:material_implication (33 93) 4)
+   (:material_implication (5 93) 32)
+   (:material_implication (5 33) 92)
+   (:material_implication (35 95) 6)
+   (:material_implication (7 95) 34)
+   (:material_implication (7 35) 94)
+   (:material_implication (37 97) 8)
+   (:material_implication (9 97) 36)
+   (:material_implication (9 37) 96)
+   (:material_implication (39 99) 10)
+   (:material_implication (11 99) 38)
+   (:material_implication (11 39) 98)
+   (:material_implication (41 101) 12)
+   (:material_implication (13 101) 40)
+   (:material_implication (13 41) 100)
+   (:material_implication (43 103) 14)
+   (:material_implication (15 103) 42)
+   (:material_implication (15 43) 102)
+   (:material_implication (61 121) 44)
+   (:material_implication (45 121) 60)
+   (:material_implication (45 61) 120)
+   (:material_implication (61 121) 46)
+   (:material_implication (47 121) 60)
+   (:material_implication (47 61) 120)
+   (:material_implication (63 123) 48)
+   (:material_implication (49 123) 62)
+   (:material_implication (49 63) 122)
+   (:material_implication (63 123) 50)
+   (:material_implication (51 123) 62)
+   (:material_implication (51 63) 122)
+   (:material_implication (65 125) 52)
+   (:material_implication (53 125) 64)
+   (:material_implication (53 65) 124)
+   (:material_implication (65 125) 54)
+   (:material_implication (55 125) 64)
+   (:material_implication (55 65) 124)
+   (:material_implication (67 127) 56)
+   (:material_implication (57 127) 66)
+   (:material_implication (57 67) 126)
+   (:material_implication (67 127) 58)
+   (:material_implication (59 127) 66)
+   (:material_implication (59 67) 126)
+   (:material_implication (47 107) 1)
+   (:material_implication (0 107) 46)
+   (:material_implication (0 47) 106)
+   (:material_implication (71 131) 1)
+   (:material_implication (0 131) 70)
+   (:material_implication (0 71) 130)
+   (:material_implication (28 89) 1)
+   (:material_implication (0 89) 29)
+   (:material_implication (0 28) 88)
+   (:material_implication (45 105) 3)
+   (:material_implication (2 105) 44)
+   (:material_implication (2 45) 104)
+   (:material_implication (69 129) 3)
+   (:material_implication (2 129) 68)
+   (:material_implication (2 69) 128)
+   (:material_implication (30 91) 3)
+   (:material_implication (2 91) 31)
+   (:material_implication (2 30) 90)
+   (:material_implication (51 111) 5)
+   (:material_implication (4 111) 50)
+   (:material_implication (4 51) 110)
+   (:material_implication (75 135) 5)
+   (:material_implication (4 135) 74)
+   (:material_implication (4 75) 134)
+   (:material_implication (32 93) 5)
+   (:material_implication (4 93) 33)
+   (:material_implication (4 32) 92)
+   (:material_implication (49 109) 7)
+   (:material_implication (6 109) 48)
+   (:material_implication (6 49) 108)
+   (:material_implication (73 133) 7)
+   (:material_implication (6 133) 72)
+   (:material_implication (6 73) 132)
+   (:material_implication (34 95) 7)
+   (:material_implication (6 95) 35)
+   (:material_implication (6 34) 94)
+   (:material_implication (55 115) 9)
+   (:material_implication (8 115) 54)
+   (:material_implication (8 55) 114)
+   (:material_implication (79 139) 9)
+   (:material_implication (8 139) 78)
+   (:material_implication (8 79) 138)
+   (:material_implication (36 97) 9)
+   (:material_implication (8 97) 37)
+   (:material_implication (8 36) 96)
+   (:material_implication (53 113) 11)
+   (:material_implication (10 113) 52)
+   (:material_implication (10 53) 112)
+   (:material_implication (77 137) 11)
+   (:material_implication (10 137) 76)
+   (:material_implication (10 77) 136)
+   (:material_implication (38 99) 11)
+   (:material_implication (10 99) 39)
+   (:material_implication (10 38) 98)
+   (:material_implication (59 119) 13)
+   (:material_implication (12 119) 58)
+   (:material_implication (12 59) 118)
+   (:material_implication (83 143) 13)
+   (:material_implication (12 143) 82)
+   (:material_implication (12 83) 142)
+   (:material_implication (40 101) 13)
+   (:material_implication (12 101) 41)
+   (:material_implication (12 40) 100)
+   (:material_implication (57 117) 15)
+   (:material_implication (14 117) 56)
+   (:material_implication (14 57) 116)
+   (:material_implication (81 141) 15)
+   (:material_implication (14 141) 80)
+   (:material_implication (14 81) 140)
+   (:material_implication (42 103) 15)
+   (:material_implication (14 103) 43)
+   (:material_implication (14 42) 102)
+   (:material_implication (85 145) 17)
+   (:material_implication (16 145) 84)
+   (:material_implication (16 85) 144)
+   (:material_implication (87 147) 19)
+   (:material_implication (18 147) 86)
+   (:material_implication (18 87) 146)
+   (:material_implication (23 149) 21)
+   (:material_implication (20 149) 22)
+   (:material_implication (20 23) 148)
+   (:material_implication (71 151) 25)
+   (:material_implication (24 151) 70)
+   (:material_implication (24 71) 150)
+   (:material_implication (75 151) 25)
+   (:material_implication (24 151) 74)
+   (:material_implication (24 75) 150)
+   (:material_implication (79 151) 25)
+   (:material_implication (24 151) 78)
+   (:material_implication (24 79) 150)
+   (:material_implication (83 151) 25)
+   (:material_implication (24 151) 82)
+   (:material_implication (24 83) 150)
+   (:material_implication (85 151) 25)
+   (:material_implication (24 151) 84)
+   (:material_implication (24 85) 150)
+   (:material_implication (69 153) 27)
+   (:material_implication (26 153) 68)
+   (:material_implication (26 69) 152)
+   (:material_implication (73 153) 27)
+   (:material_implication (26 153) 72)
+   (:material_implication (26 73) 152)
+   (:material_implication (77 153) 27)
+   (:material_implication (26 153) 76)
+   (:material_implication (26 77) 152)
+   (:material_implication (81 153) 27)
+   (:material_implication (26 153) 80)
+   (:material_implication (26 81) 152)
+   (:material_implication (87 153) 27)
+   (:material_implication (26 153) 86)
+   (:material_implication (26 87) 152)
+   (:material_implication (45 105) 29)
+   (:material_implication (28 105) 44)
+   (:material_implication (28 45) 104)
+   (:material_implication (69 129) 29)
+   (:material_implication (28 129) 68)
+   (:material_implication (28 69) 128)
+   (:material_implication (47 107) 31)
+   (:material_implication (30 107) 46)
+   (:material_implication (30 47) 106)
+   (:material_implication (71 131) 31)
+   (:material_implication (30 131) 70)
+   (:material_implication (30 71) 130)
+   (:material_implication (49 109) 33)
+   (:material_implication (32 109) 48)
+   (:material_implication (32 49) 108)
+   (:material_implication (73 133) 33)
+   (:material_implication (32 133) 72)
+   (:material_implication (32 73) 132)
+   (:material_implication (51 111) 35)
+   (:material_implication (34 111) 50)
+   (:material_implication (34 51) 110)
+   (:material_implication (75 135) 35)
+   (:material_implication (34 135) 74)
+   (:material_implication (34 75) 134)
+   (:material_implication (53 113) 37)
+   (:material_implication (36 113) 52)
+   (:material_implication (36 53) 112)
+   (:material_implication (77 137) 37)
+   (:material_implication (36 137) 76)
+   (:material_implication (36 77) 136)
+   (:material_implication (55 115) 39)
+   (:material_implication (38 115) 54)
+   (:material_implication (38 55) 114)
+   (:material_implication (79 139) 39)
+   (:material_implication (38 139) 78)
+   (:material_implication (38 79) 138)
+   (:material_implication (57 117) 41)
+   (:material_implication (40 117) 56)
+   (:material_implication (40 57) 116)
+   (:material_implication (81 141) 41)
+   (:material_implication (40 141) 80)
+   (:material_implication (40 81) 140)
+   (:material_implication (59 119) 43)
+   (:material_implication (42 119) 58)
+   (:material_implication (42 59) 118)
+   (:material_implication (83 143) 43)
+   (:material_implication (42 143) 82)
+   (:material_implication (42 83) 142)
+   (:material_implication (60 149) 22)
+   (:material_implication (23 149) 61)
+   (:material_implication (23 60) 148)
+   (:material_implication (73 133) 61)
+   (:material_implication (60 133) 72)
+   (:material_implication (60 73) 132)
+   (:material_implication (75 135) 61)
+   (:material_implication (60 135) 74)
+   (:material_implication (60 75) 134)
+   (:material_implication (77 137) 61)
+   (:material_implication (60 137) 76)
+   (:material_implication (60 77) 136)
+   (:material_implication (79 139) 61)
+   (:material_implication (60 139) 78)
+   (:material_implication (60 79) 138)
+   (:material_implication (81 141) 61)
+   (:material_implication (60 141) 80)
+   (:material_implication (60 81) 140)
+   (:material_implication (83 143) 61)
+   (:material_implication (60 143) 82)
+   (:material_implication (60 83) 142)
+   (:material_implication (85 145) 61)
+   (:material_implication (60 145) 84)
+   (:material_implication (60 85) 144)
+   (:material_implication (87 147) 61)
+   (:material_implication (60 147) 86)
+   (:material_implication (60 87) 146)
+   (:material_implication (62 149) 22)
+   (:material_implication (23 149) 63)
+   (:material_implication (23 62) 148)
+   (:material_implication (77 137) 63)
+   (:material_implication (62 137) 76)
+   (:material_implication (62 77) 136)
+   (:material_implication (79 139) 63)
+   (:material_implication (62 139) 78)
+   (:material_implication (62 79) 138)
+   (:material_implication (81 141) 63)
+   (:material_implication (62 141) 80)
+   (:material_implication (62 81) 140)
+   (:material_implication (83 143) 63)
+   (:material_implication (62 143) 82)
+   (:material_implication (62 83) 142)
+   (:material_implication (85 145) 63)
+   (:material_implication (62 145) 84)
+   (:material_implication (62 85) 144)
+   (:material_implication (87 147) 63)
+   (:material_implication (62 147) 86)
+   (:material_implication (62 87) 146)
+   (:material_implication (64 149) 22)
+   (:material_implication (23 149) 65)
+   (:material_implication (23 64) 148)
+   (:material_implication (81 141) 65)
+   (:material_implication (64 141) 80)
+   (:material_implication (64 81) 140)
+   (:material_implication (83 143) 65)
+   (:material_implication (64 143) 82)
+   (:material_implication (64 83) 142)
+   (:material_implication (85 145) 65)
+   (:material_implication (64 145) 84)
+   (:material_implication (64 85) 144)
+   (:material_implication (87 147) 65)
+   (:material_implication (64 147) 86)
+   (:material_implication (64 87) 146)
+   (:material_implication (66 149) 22)
+   (:material_implication (23 149) 67)
+   (:material_implication (23 66) 148)
+   (:material_implication (85 145) 67)
+   (:material_implication (66 145) 84)
+   (:material_implication (66 85) 144)
+   (:material_implication (87 147) 67)
+   (:material_implication (66 147) 86)
+   (:material_implication (66 87) 146)
+   (:material_implication (29 44 105) 2)
+   (:material_implication (3 44 105) 28)
+   (:material_implication (3 29 105) 45)
+   (:material_implication (3 29 44) 104)
+   (:material_implication (46 60 121) 45)
+   (:material_implication (44 60 121) 47)
+   (:material_implication (44 46 121) 61)
+   (:material_implication (44 46 60) 120)
+   (:material_implication (31 46 107) 0)
+   (:material_implication (1 46 107) 30)
+   (:material_implication (1 31 107) 47)
+   (:material_implication (1 31 46) 106)
+   (:material_implication (33 48 109) 6)
+   (:material_implication (7 48 109) 32)
+   (:material_implication (7 33 109) 49)
+   (:material_implication (7 33 48) 108)
+   (:material_implication (50 62 123) 49)
+   (:material_implication (48 62 123) 51)
+   (:material_implication (48 50 123) 63)
+   (:material_implication (48 50 62) 122)
+   (:material_implication (35 50 111) 4)
+   (:material_implication (5 50 111) 34)
+   (:material_implication (5 35 111) 51)
+   (:material_implication (5 35 50) 110)
+   (:material_implication (37 52 113) 10)
+   (:material_implication (11 52 113) 36)
+   (:material_implication (11 37 113) 53)
+   (:material_implication (11 37 52) 112)
+   (:material_implication (54 64 125) 53)
+   (:material_implication (52 64 125) 55)
+   (:material_implication (52 54 125) 65)
+   (:material_implication (52 54 64) 124)
+   (:material_implication (39 54 115) 8)
+   (:material_implication (9 54 115) 38)
+   (:material_implication (9 39 115) 55)
+   (:material_implication (9 39 54) 114)
+   (:material_implication (41 56 117) 14)
+   (:material_implication (15 56 117) 40)
+   (:material_implication (15 41 117) 57)
+   (:material_implication (15 41 56) 116)
+   (:material_implication (58 66 127) 57)
+   (:material_implication (56 66 127) 59)
+   (:material_implication (56 58 127) 67)
+   (:material_implication (56 58 66) 126)
+   (:material_implication (43 58 119) 12)
+   (:material_implication (13 58 119) 42)
+   (:material_implication (13 43 119) 59)
+   (:material_implication (13 43 58) 118)
+   (:material_implication (29 68 129) 2)
+   (:material_implication (3 68 129) 28)
+   (:material_implication (3 29 129) 69)
+   (:material_implication (3 29 68) 128)
+   (:material_implication (31 70 131) 0)
+   (:material_implication (1 70 131) 30)
+   (:material_implication (1 31 131) 71)
+   (:material_implication (1 31 70) 130)
+   (:material_implication (33 61 72 133) 6)
+   (:material_implication (7 61 72 133) 32)
+   (:material_implication (7 33 72 133) 60)
+   (:material_implication (7 33 61 133) 73)
+   (:material_implication (7 33 61 72) 132)
+   (:material_implication (35 61 74 135) 4)
+   (:material_implication (5 61 74 135) 34)
+   (:material_implication (5 35 74 135) 60)
+   (:material_implication (5 35 61 135) 75)
+   (:material_implication (5 35 61 74) 134)
+   (:material_implication (37 61 63 76 137) 10)
+   (:material_implication (11 61 63 76 137) 36)
+   (:material_implication (11 37 63 76 137) 60)
+   (:material_implication (11 37 61 76 137) 62)
+   (:material_implication (11 37 61 63 137) 77)
+   (:material_implication (11 37 61 63 76) 136)
+   (:material_implication (39 61 63 78 139) 8)
+   (:material_implication (9 61 63 78 139) 38)
+   (:material_implication (9 39 63 78 139) 60)
+   (:material_implication (9 39 61 78 139) 62)
+   (:material_implication (9 39 61 63 139) 79)
+   (:material_implication (9 39 61 63 78) 138)
+   (:material_implication (22 61 63 65 67 149) 20)
+   (:material_implication (21 61 63 65 67 149) 23)
+   (:material_implication (21 22 63 65 67 149) 60)
+   (:material_implication (21 22 61 65 67 149) 62)
+   (:material_implication (21 22 61 63 67 149) 64)
+   (:material_implication (21 22 61 63 65 149) 66)
+   (:material_implication (21 22 61 63 65 67) 148)
+   (:material_implication (68 72 76 80 86 153) 26)
+   (:material_implication (27 72 76 80 86 153) 69)
+   (:material_implication (27 68 76 80 86 153) 73)
+   (:material_implication (27 68 72 80 86 153) 77)
+   (:material_implication (27 68 72 76 86 153) 81)
+   (:material_implication (27 68 72 76 80 153) 87)
+   (:material_implication (27 68 72 76 80 86) 152)
+   (:material_implication (70 74 78 82 84 151) 24)
+   (:material_implication (25 74 78 82 84 151) 71)
+   (:material_implication (25 70 78 82 84 151) 75)
+   (:material_implication (25 70 74 82 84 151) 79)
+   (:material_implication (25 70 74 78 84 151) 83)
+   (:material_implication (25 70 74 78 82 151) 85)
+   (:material_implication (25 70 74 78 82 84) 150)
+   (:material_implication (41 61 63 65 80 141) 14)
+   (:material_implication (15 61 63 65 80 141) 40)
+   (:material_implication (15 41 63 65 80 141) 60)
+   (:material_implication (15 41 61 65 80 141) 62)
+   (:material_implication (15 41 61 63 80 141) 64)
+   (:material_implication (15 41 61 63 65 141) 81)
+   (:material_implication (15 41 61 63 65 80) 140)
+   (:material_implication (43 61 63 65 82 143) 12)
+   (:material_implication (13 61 63 65 82 143) 42)
+   (:material_implication (13 43 63 65 82 143) 60)
+   (:material_implication (13 43 61 65 82 143) 62)
+   (:material_implication (13 43 61 63 82 143) 64)
+   (:material_implication (13 43 61 63 65 143) 83)
+   (:material_implication (13 43 61 63 65 82) 142)
+   (:material_implication (61 63 65 67 84 145) 16)
+   (:material_implication (17 63 65 67 84 145) 60)
+   (:material_implication (17 61 65 67 84 145) 62)
+   (:material_implication (17 61 63 67 84 145) 64)
+   (:material_implication (17 61 63 65 84 145) 66)
+   (:material_implication (17 61 63 65 67 145) 85)
+   (:material_implication (17 61 63 65 67 84) 144)
+   (:material_implication (61 63 65 67 86 147) 18)
+   (:material_implication (19 63 65 67 86 147) 60)
+   (:material_implication (19 61 65 67 86 147) 62)
+   (:material_implication (19 61 63 67 86 147) 64)
+   (:material_implication (19 61 63 65 86 147) 66)
+   (:material_implication (19 61 63 65 67 147) 87)
+   (:material_implication (19 61 63 65 67 86) 146)
+   (:material_implication (0 1) -1)
+   (:material_implication (2 3) -1)
+   (:material_implication (4 5) -1)
+   (:material_implication (6 7) -1)
+   (:material_implication (8 9) -1)
+   (:material_implication (10 11) -1)
+   (:material_implication (12 13) -1)
+   (:material_implication (14 15) -1)
+   (:material_implication (16 17) -1)
+   (:material_implication (18 19) -1)
+   (:material_implication (20 21) -1)
+   (:material_implication (22 23) -1)
+   (:material_implication (24 25) -1)
+   (:material_implication (26 27) -1)
+   (:material_implication (28 29) -1)
+   (:material_implication (30 31) -1)
+   (:material_implication (32 33) -1)
+   (:material_implication (34 35) -1)
+   (:material_implication (36 37) -1)
+   (:material_implication (38 39) -1)
+   (:material_implication (40 41) -1)
+   (:material_implication (42 43) -1)
+   (:material_implication (44 45) -1)
+   (:material_implication (46 47) -1)
+   (:material_implication (48 49) -1)
+   (:material_implication (50 51) -1)
+   (:material_implication (52 53) -1)
+   (:material_implication (54 55) -1)
+   (:material_implication (56 57) -1)
+   (:material_implication (58 59) -1)
+   (:material_implication (60 61) -1)
+   (:material_implication (62 63) -1)
+   (:material_implication (64 65) -1)
+   (:material_implication (66 67) -1)
+   (:material_implication (68 69) -1)
+   (:material_implication (70 71) -1)
+   (:material_implication (72 73) -1)
+   (:material_implication (74 75) -1)
+   (:material_implication (76 77) -1)
+   (:material_implication (78 79) -1)
+   (:material_implication (80 81) -1)
+   (:material_implication (82 83) -1)
+   (:material_implication (84 85) -1)
+   (:material_implication (86 87) -1)
+  )
+ )
+)

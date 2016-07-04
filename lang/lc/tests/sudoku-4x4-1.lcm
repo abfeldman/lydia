@@ -1,0 +1,468 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   Everywhere
+   ()
+   (
+    :csp
+    ((:values_set tile (one two three four)))
+    (
+     (:enum_variable (:identifier g (0) $nil) () 0)
+     (:enum_variable (:identifier g (1) $nil) () 0)
+     (:enum_variable (:identifier g (2) $nil) () 0)
+     (:enum_variable (:identifier g (3) $nil) () 0)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_not_sentence
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (:csp_atomic_sentence (:csp_variable_term 1))
+      )
+     )
+     (
+      :csp_not_sentence
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (:csp_atomic_sentence (:csp_variable_term 2))
+      )
+     )
+     (
+      :csp_not_sentence
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (:csp_atomic_sentence (:csp_variable_term 3))
+      )
+     )
+     (
+      :csp_not_sentence
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 1))
+       (:csp_atomic_sentence (:csp_variable_term 2))
+      )
+     )
+     (
+      :csp_not_sentence
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 1))
+       (:csp_atomic_sentence (:csp_variable_term 3))
+      )
+     )
+     (
+      :csp_not_sentence
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 2))
+       (:csp_atomic_sentence (:csp_variable_term 3))
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   Grid
+   (
+    (
+     :edge
+     Everywhere
+     h
+     (0)
+     (
+      (:mapping (:identifier g (0 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (0 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (0 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (0 3) $nil) (:identifier g (3) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     v
+     (0)
+     (
+      (:mapping (:identifier g (0 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 0) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 0) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 0) $nil) (:identifier g (3) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     h
+     (1)
+     (
+      (:mapping (:identifier g (1 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (1 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (1 3) $nil) (:identifier g (3) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     v
+     (1)
+     (
+      (:mapping (:identifier g (0 1) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 1) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 1) $nil) (:identifier g (3) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     h
+     (2)
+     (
+      (:mapping (:identifier g (2 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (2 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (2 3) $nil) (:identifier g (3) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     v
+     (2)
+     (
+      (:mapping (:identifier g (0 2) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 2) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 2) $nil) (:identifier g (3) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     h
+     (3)
+     (
+      (:mapping (:identifier g (3 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (3 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (3 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 3) $nil) (:identifier g (3) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     v
+     (3)
+     (
+      (:mapping (:identifier g (0 3) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 3) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 3) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 3) $nil) (:identifier g (3) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     b
+     (0)
+     (
+      (:mapping (:identifier g (0 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (0 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (1 0) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (1 1) $nil) (:identifier g (3) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     b
+     (1)
+     (
+      (:mapping (:identifier g (0 2) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (0 3) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (1 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (1 3) $nil) (:identifier g (3) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     b
+     (2)
+     (
+      (:mapping (:identifier g (2 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (2 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (3 0) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 1) $nil) (:identifier g (3) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     b
+     (3)
+     (
+      (:mapping (:identifier g (2 2) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (2 3) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (3 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 3) $nil) (:identifier g (3) $nil))
+     )
+    )
+   )
+   (
+    :csp
+    ((:values_set tile (one two three four)))
+    (
+     (:enum_variable (:identifier g (0 0) $nil) () 0)
+     (:enum_variable (:identifier g (0 1) $nil) () 0)
+     (:enum_variable (:identifier g (0 2) $nil) () 0)
+     (:enum_variable (:identifier g (0 3) $nil) () 0)
+     (:enum_variable (:identifier g (1 0) $nil) () 0)
+     (:enum_variable (:identifier g (1 1) $nil) () 0)
+     (:enum_variable (:identifier g (1 2) $nil) () 0)
+     (:enum_variable (:identifier g (1 3) $nil) () 0)
+     (:enum_variable (:identifier g (2 0) $nil) () 0)
+     (:enum_variable (:identifier g (2 1) $nil) () 0)
+     (:enum_variable (:identifier g (2 2) $nil) () 0)
+     (:enum_variable (:identifier g (2 3) $nil) () 0)
+     (:enum_variable (:identifier g (3 0) $nil) () 0)
+     (:enum_variable (:identifier g (3 1) $nil) () 0)
+     (:enum_variable (:identifier g (3 2) $nil) () 0)
+     (:enum_variable (:identifier g (3 3) $nil) () 0)
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+  (
+   :node
+   Sudoku
+   (
+    (
+     :edge
+     Grid
+     grid
+     $nil
+     (
+      (:mapping (:identifier g (0 0) $nil) (:identifier g (0 0) $nil))
+      (:mapping (:identifier g (0 1) $nil) (:identifier g (0 1) $nil))
+      (:mapping (:identifier g (0 2) $nil) (:identifier g (0 2) $nil))
+      (:mapping (:identifier g (0 3) $nil) (:identifier g (0 3) $nil))
+      (:mapping (:identifier g (1 0) $nil) (:identifier g (1 0) $nil))
+      (:mapping (:identifier g (1 1) $nil) (:identifier g (1 1) $nil))
+      (:mapping (:identifier g (1 2) $nil) (:identifier g (1 2) $nil))
+      (:mapping (:identifier g (1 3) $nil) (:identifier g (1 3) $nil))
+      (:mapping (:identifier g (2 0) $nil) (:identifier g (2 0) $nil))
+      (:mapping (:identifier g (2 1) $nil) (:identifier g (2 1) $nil))
+      (:mapping (:identifier g (2 2) $nil) (:identifier g (2 2) $nil))
+      (:mapping (:identifier g (2 3) $nil) (:identifier g (2 3) $nil))
+      (:mapping (:identifier g (3 0) $nil) (:identifier g (3 0) $nil))
+      (:mapping (:identifier g (3 1) $nil) (:identifier g (3 1) $nil))
+      (:mapping (:identifier g (3 2) $nil) (:identifier g (3 2) $nil))
+      (:mapping (:identifier g (3 3) $nil) (:identifier g (3 3) $nil))
+     )
+    )
+   )
+   (
+    :csp
+    ((:values_set tile (one two three four)))
+    (
+     (
+      :enum_variable
+      (:identifier g (0 0) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (0 1) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (0 2) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (0 3) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (1 0) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (1 1) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (1 2) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (1 3) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (2 0) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (2 1) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (2 2) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (2 3) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (3 0) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (3 1) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (3 2) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (3 3) $nil)
+      (
+       (:bool_variable_attribute health (t nil nil nil))
+       (:float_variable_attribute probability (0.25 0.25 0.25 0.25))
+      )
+      0
+     )
+    )
+    ()
+    (
+     (:enum_constant $nil one 0)
+     (:enum_constant $nil three 0)
+     (:enum_constant $nil two 0)
+    )
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 0))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 2))
+      (:csp_atomic_sentence (:csp_constant_term 1))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 4))
+      (:csp_atomic_sentence (:csp_constant_term 2))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 11))
+      (:csp_atomic_sentence (:csp_constant_term 1))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 13))
+      (:csp_atomic_sentence (:csp_constant_term 2))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 15))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+    )
+   )
+  )
+ )
+)

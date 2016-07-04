@@ -1,0 +1,4 @@
+err_arg_type.sys: In system `main':
+err_arg_type.sys:13: error: incompatible type for argument 1 to system `Z'
+err_arg_type.sys:15: error: incompatible type for argument 1 to system `X'
+err_arg_type.sys:16: error: incompatible type for argument 1 to function `foo'

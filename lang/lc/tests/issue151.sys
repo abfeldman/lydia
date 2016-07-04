@@ -1,0 +1,8 @@
+type new1 = bool;
+type new2 = bool;
+
+system issue151()
+{
+	new1 foo = false;
+	new2 zoo = true;
+}

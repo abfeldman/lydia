@@ -1,0 +1,34 @@
+bool function event (bool x[1:2])
+{
+	not(x[1]) and x[2]
+}
+
+system Flipflop (
+	bool h,
+	bool dataIn[2:2], dataOut[1:2],
+	bool set[1:2], reset[1:2] )
+{
+	bool setEvent, resetEvent;
+	
+	if (h) {
+		setEvent = event (set);
+		resetEvent = event (reset);
+		
+		dataOut[2] =  resetEvent ? false : (setEvent ? dataIn[2] : dataOut[1]);
+	}
+}
+
+system DynamicFlipflop (
+	bool h,
+	bool dataIn[2:10], dataOut[1:10],
+	bool set[1:10], reset[1:10] )
+{
+	system Flipflop flipflop[1:9];
+	
+	forall (i in 1 .. 9) {
+		flipflop [i] (h, dataIn[i+1], dataOut[i:i+1], set[i:i+1], reset[i:i+1]);
+	}
+		
+	attribute health (h) = h;
+	attribute probability (h) = h ? 0.99 : 0.01;
+}

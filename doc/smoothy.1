@@ -1,0 +1,64 @@
+.TH smoothy 1 "10 January 2005" "Lydia 2.0" "Lydia toolkit"
+.SH NAME
+smoothy \- the Lydia inlining utility
+.SH SYNOPSIS
+.B smoothy
+[\fIOPTIONS\fR] [\fISOURCE\fR] [\fIDEST\fR]
+.br
+.B smoothy
+[\fB\-h\fR]
+.br
+.B smoothy
+[\fB\-v\fR]
+.SH DESCRIPTION
+The Lydia language can express hierarchical structure and the models
+are compiled with this structure preserved. The presence of
+hierarchical information is of extreme importance for the speed of the
+reasoning and Lydia presents both algorithms which can utilize this
+hierarchical information for faster diagnosis as well as the slower
+traditional "flat" implementations. The purpose of "smoothy" is to
+remove the hierarchical information, producing a flat representation
+for these reasoning engines which need a flat format. Note, that some
+representations (e.g. Disjunctive Normal Form) can grow exponentially
+in the process of inlining. When in doubt consult the knowledge
+compilation literature and the Lydia manuals and papers.
+.PP
+If SOURCE is not specified, model will be read from standard input. If
+DEST is not specified the compiled model will be sent to standard output.
+.SH OPTIONS
+.TP
+\-h
+Display a short help text.
+.TP
+\-v
+Show version information and exit.
+.TP
+\-V
+Increase verbosity and show the names of the nodes which are being
+inlined.
+.TP
+-S
+Do not perform Boolean CNF/DNF simplification which can be costly for
+larger models.
+.TP
+-s <depth>
+Do partial inlining (cf. the Lydia algorithms page for more
+information).
+.SH "REPORTING BUGS"
+Report bugs to <lydia-bugs@fdir.org>.
+.SH "SEE ALSO"
+.BR lydia (1),
+.BR lc (1),
+.BR lcm2wff (1),
+.BR wff2cnf (1),
+.BR tvwff2mvwff (1),
+.BR lsim (1),
+.BR cdas (1),
+.BR cnf2dnf (1),
+.BR scotty (1),
+.BR gotcha (1)
+.SH COPYRIGHT
+Copyright \(co 2005-2006, Delft University of Technology.
+.SH AUTHOR
+Written by Alexander Feldman, some parts of the language and the
+tool kit are based on a prototype Lydia 1.0 implementation.

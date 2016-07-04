@@ -1,0 +1,81 @@
+(
+ :tv_wff_flat_kb
+ main
+ (
+  :tv_wff
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier w $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier x $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier y $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier z $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I0 $nil)))
+    (
+     (:bool_variable_attribute health (nil t))
+     (:float_variable_attribute probability (0.01 0.99))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I1 $nil)))
+    (
+     (:bool_variable_attribute health (nil t))
+     (:float_variable_attribute probability (0.01 0.99))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I2 $nil)))
+    (
+     (:bool_variable_attribute health (nil t))
+     (:float_variable_attribute probability (0.01 0.99))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (
+    :tv_wff_e_impl
+    (:tv_wff_e_var 4)
+    (:tv_wff_e_equiv (:tv_wff_e_var 1) (:tv_wff_e_not (:tv_wff_e_var 0)))
+   )
+   (
+    :tv_wff_e_impl
+    (:tv_wff_e_var 5)
+    (:tv_wff_e_equiv (:tv_wff_e_var 0) (:tv_wff_e_not (:tv_wff_e_var 2)))
+   )
+   (
+    :tv_wff_e_impl
+    (:tv_wff_e_var 6)
+    (:tv_wff_e_equiv (:tv_wff_e_var 0) (:tv_wff_e_not (:tv_wff_e_var 3)))
+   )
+  )
+ )
+)

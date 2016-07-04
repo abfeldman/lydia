@@ -1,0 +1,78 @@
+/**
+ * Given a colour monitor with three BMC connectors, there are a lot of ways
+ * it can be connected up wrong: there are three connectors to mix up, and
+ * each connection can also be faulty.
+ *
+ * When we project a set of patches with all combinations of colours on
+ * the monitor, we can easily deduce the mixup of these colours.
+ */
+
+type primaryColor = enum { R, G, B };
+type mixedColor = enum { black, white, red, green, blue, yellow, cyan, magenta };
+
+system mixColor(mixedColor res, bool r, g, b)
+{
+	switch (res) {
+		mixedColor.black   -> { r = false; g = false; b = false; }
+		mixedColor.red     -> { r = true;  g = false; b = false; }
+		mixedColor.green   -> { r = false; g = true;  b = false; }
+		mixedColor.blue    -> { r = false; g = false; b = true;  }
+		mixedColor.yellow  -> { r = true;  g = true;  b = false; }
+		mixedColor.cyan    -> { r = false; g = true;  b = true;  }
+		mixedColor.magenta -> { r = true;  g = false; b = true;  }
+		default /* mixedColor.white */ -> { r = true; g = true; b = true; }
+	}
+}
+
+system exclusiveErrors(bool dead, e1, e2)
+{
+	attribute probability(dead) = dead ? 0.01 : 0.99;
+	attribute probability(e1) = e1 ? 0.02 : 0.98;
+	attribute probability(e2) = e2 ? 0.02 : 0.98;
+	attribute health(dead, e1, e2) = true;
+
+	dead => !(e1 or e2);
+	e1 => !(dead or e2);
+	e2 => !(dead or e1);
+}
+
+system patchValue(mixedColor patch, bool r, g, b, f_R_dead, f_G_dead, f_B_dead, f_R_is_G, f_R_is_B, f_G_is_R, f_G_is_B, f_B_is_R, f_B_is_G)
+{
+    bool actual_r = (f_R_dead ? false : (f_R_is_G ? g : (f_R_is_B ? b : r)));
+    bool actual_g = (f_G_dead ? false : (f_G_is_R ? r : (f_G_is_B ? b : g)));
+    bool actual_b = (f_B_dead ? false : (f_B_is_R ? r : (f_B_is_G ? g : b)));
+
+	system mixColor mix(patch, actual_r, actual_g, actual_b);
+}
+
+system monitor(mixedColor patch0, patch1, patch2, patch3, patch4, patch5, patch6, patch7)
+{
+	bool f_R_dead, f_G_dead, f_B_dead;
+	bool f_R_is_G, f_R_is_B;
+	bool f_G_is_R, f_G_is_B;
+	bool f_B_is_R, f_B_is_G;
+
+	!f_R_dead;
+	!f_G_dead;
+	!f_B_dead;
+
+	system exclusiveErrors exR(f_R_dead, f_R_is_G, f_R_is_B);
+	system exclusiveErrors exG(f_G_dead, f_G_is_R, f_G_is_B);
+	system exclusiveErrors exB(f_B_dead, f_B_is_R, f_B_is_G);
+
+	f_R_is_G => !f_B_is_G;
+	f_B_is_G => !f_R_is_G;
+	f_G_is_R => !f_B_is_R;
+	f_B_is_R => !f_G_is_R;
+	f_G_is_B => !f_R_is_B;
+	f_R_is_B => !f_G_is_B;
+
+	system patchValue p0(patch0, false, false, false, f_R_dead, f_G_dead, f_B_dead, f_R_is_G, f_R_is_B, f_G_is_R, f_G_is_B, f_B_is_R, f_B_is_R);
+	system patchValue p1(patch1, false, false, true, f_R_dead, f_G_dead, f_B_dead, f_R_is_G, f_R_is_B, f_G_is_R, f_G_is_B, f_B_is_R, f_B_is_R);
+	system patchValue p2(patch2, false, true, false, f_R_dead, f_G_dead, f_B_dead, f_R_is_G, f_R_is_B, f_G_is_R, f_G_is_B, f_B_is_R, f_B_is_R);
+	system patchValue p3(patch3, false, true, true, f_R_dead, f_G_dead, f_B_dead, f_R_is_G, f_R_is_B, f_G_is_R, f_G_is_B, f_B_is_R, f_B_is_R);
+	system patchValue p4(patch4, true, false, false, f_R_dead, f_G_dead, f_B_dead, f_R_is_G, f_R_is_B, f_G_is_R, f_G_is_B, f_B_is_R, f_B_is_R);
+	system patchValue p5(patch5, true, false, true, f_R_dead, f_G_dead, f_B_dead, f_R_is_G, f_R_is_B, f_G_is_R, f_G_is_B, f_B_is_R, f_B_is_R);
+	system patchValue p6(patch6, true, true, false, f_R_dead, f_G_dead, f_B_dead, f_R_is_G, f_R_is_B, f_G_is_R, f_G_is_B, f_B_is_R, f_B_is_R);
+	system patchValue p7(patch7, true, true, true, f_R_dead, f_G_dead, f_B_dead, f_R_is_G, f_R_is_B, f_G_is_R, f_G_is_B, f_B_is_R, f_B_is_R);
+}

@@ -1,0 +1,349 @@
+(
+ :tv_wff_flat_kb
+ fulladder
+ (
+  :tv_wff
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier i1 $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i2 $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ci $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier sum $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier carry $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (:bool_variable (:identifier f $nil ((:qualifier FA $nil))) () -1)
+   (:bool_variable (:identifier p $nil ((:qualifier FA $nil))) () -1)
+   (:bool_variable (:identifier q $nil ((:qualifier FA $nil))) () -1)
+   (
+    :bool_variable
+    (
+     :identifier
+     f0
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA1 $nil) (:qualifier A $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f1
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA1 $nil) (:qualifier A $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f0
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA1 $nil) (:qualifier X $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f1
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA1 $nil) (:qualifier X $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f0
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA2 $nil) (:qualifier A $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f1
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA2 $nil) (:qualifier A $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f0
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA2 $nil) (:qualifier X $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f1
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA2 $nil) (:qualifier X $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f0 $nil ((:qualifier FA $nil) (:qualifier O $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f1 $nil ((:qualifier FA $nil) (:qualifier O $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (
+    :tv_wff_e_and
+    (
+     :tv_wff_e_and
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_impl
+       (
+	:tv_wff_e_and
+	(:tv_wff_e_not (:tv_wff_e_var 8))
+	(:tv_wff_e_not (:tv_wff_e_var 9))
+       )
+       (
+	:tv_wff_e_equiv
+	(:tv_wff_e_var 6)
+	(:tv_wff_e_and (:tv_wff_e_var 0) (:tv_wff_e_var 1))
+       )
+      )
+      (
+       :tv_wff_e_impl
+       (:tv_wff_e_var 8)
+       (:tv_wff_e_equiv (:tv_wff_e_var 6) (:tv_wff_e_const nil))
+      )
+     )
+     (
+      :tv_wff_e_impl
+      (:tv_wff_e_var 9)
+      (:tv_wff_e_equiv (:tv_wff_e_var 6) (:tv_wff_e_const t))
+     )
+    )
+    (:tv_wff_e_not (:tv_wff_e_and (:tv_wff_e_var 8) (:tv_wff_e_var 9)))
+   )
+   (
+    :tv_wff_e_and
+    (
+     :tv_wff_e_and
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_impl
+       (
+	:tv_wff_e_and
+	(:tv_wff_e_not (:tv_wff_e_var 10))
+	(:tv_wff_e_not (:tv_wff_e_var 11))
+       )
+       (
+	:tv_wff_e_equiv
+	(:tv_wff_e_var 5)
+	(
+	 :tv_wff_e_not
+	 (:tv_wff_e_equiv (:tv_wff_e_var 0) (:tv_wff_e_var 1))
+	)
+       )
+      )
+      (
+       :tv_wff_e_impl
+       (:tv_wff_e_var 10)
+       (:tv_wff_e_equiv (:tv_wff_e_var 5) (:tv_wff_e_const nil))
+      )
+     )
+     (
+      :tv_wff_e_impl
+      (:tv_wff_e_var 11)
+      (:tv_wff_e_equiv (:tv_wff_e_var 5) (:tv_wff_e_const t))
+     )
+    )
+    (:tv_wff_e_not (:tv_wff_e_and (:tv_wff_e_var 10) (:tv_wff_e_var 11)))
+   )
+   (
+    :tv_wff_e_and
+    (
+     :tv_wff_e_and
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_impl
+       (
+	:tv_wff_e_and
+	(:tv_wff_e_not (:tv_wff_e_var 12))
+	(:tv_wff_e_not (:tv_wff_e_var 13))
+       )
+       (
+	:tv_wff_e_equiv
+	(:tv_wff_e_var 7)
+	(:tv_wff_e_and (:tv_wff_e_var 2) (:tv_wff_e_var 5))
+       )
+      )
+      (
+       :tv_wff_e_impl
+       (:tv_wff_e_var 12)
+       (:tv_wff_e_equiv (:tv_wff_e_var 7) (:tv_wff_e_const nil))
+      )
+     )
+     (
+      :tv_wff_e_impl
+      (:tv_wff_e_var 13)
+      (:tv_wff_e_equiv (:tv_wff_e_var 7) (:tv_wff_e_const t))
+     )
+    )
+    (:tv_wff_e_not (:tv_wff_e_and (:tv_wff_e_var 12) (:tv_wff_e_var 13)))
+   )
+   (
+    :tv_wff_e_and
+    (
+     :tv_wff_e_and
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_impl
+       (
+	:tv_wff_e_and
+	(:tv_wff_e_not (:tv_wff_e_var 14))
+	(:tv_wff_e_not (:tv_wff_e_var 15))
+       )
+       (
+	:tv_wff_e_equiv
+	(:tv_wff_e_var 3)
+	(
+	 :tv_wff_e_not
+	 (:tv_wff_e_equiv (:tv_wff_e_var 2) (:tv_wff_e_var 5))
+	)
+       )
+      )
+      (
+       :tv_wff_e_impl
+       (:tv_wff_e_var 14)
+       (:tv_wff_e_equiv (:tv_wff_e_var 3) (:tv_wff_e_const nil))
+      )
+     )
+     (
+      :tv_wff_e_impl
+      (:tv_wff_e_var 15)
+      (:tv_wff_e_equiv (:tv_wff_e_var 3) (:tv_wff_e_const t))
+     )
+    )
+    (:tv_wff_e_not (:tv_wff_e_and (:tv_wff_e_var 14) (:tv_wff_e_var 15)))
+   )
+   (
+    :tv_wff_e_and
+    (
+     :tv_wff_e_and
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_impl
+       (
+	:tv_wff_e_and
+	(:tv_wff_e_not (:tv_wff_e_var 16))
+	(:tv_wff_e_not (:tv_wff_e_var 17))
+       )
+       (
+	:tv_wff_e_equiv
+	(:tv_wff_e_var 4)
+	(:tv_wff_e_or (:tv_wff_e_var 6) (:tv_wff_e_var 7))
+       )
+      )
+      (
+       :tv_wff_e_impl
+       (:tv_wff_e_var 16)
+       (:tv_wff_e_equiv (:tv_wff_e_var 4) (:tv_wff_e_const nil))
+      )
+     )
+     (
+      :tv_wff_e_impl
+      (:tv_wff_e_var 17)
+      (:tv_wff_e_equiv (:tv_wff_e_var 4) (:tv_wff_e_const t))
+     )
+    )
+    (:tv_wff_e_not (:tv_wff_e_and (:tv_wff_e_var 16) (:tv_wff_e_var 17)))
+   )
+  )
+ )
+)

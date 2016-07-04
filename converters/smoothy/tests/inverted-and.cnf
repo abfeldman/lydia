@@ -1,0 +1,109 @@
+(
+ :tv_cnf_flat_kb
+ main
+ (
+  :tv_cnf
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier a $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier b $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier c $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier d $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier e $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f $nil ((:qualifier I1 $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f $nil ((:qualifier I2 $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f_i1 $nil ((:qualifier A1 $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f_i2 $nil ((:qualifier A1 $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f $nil ((:qualifier I3 $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (:tv_clause () (8 9))
+   (:tv_clause (0 1 6) ())
+   (:tv_clause (1) (4 8))
+   (:tv_clause (2 3 7) ())
+   (:tv_clause (3 8) (4))
+   (:tv_clause (4) (1 8))
+   (:tv_clause (4 5 10) ())
+   (:tv_clause (6) (0 1))
+   (:tv_clause (7) (2 3))
+   (:tv_clause (10) (4 5))
+   (:tv_clause (1 8 9) (4))
+   (:tv_clause (4 8) (3 9))
+   (:tv_clause (4 8 9) (1 3))
+  )
+ )
+)

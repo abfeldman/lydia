@@ -1,0 +1,10 @@
+err_array.sys: In system `test':
+err_array.sys:6: error: subscript of non-array
+err_array.sys:10: error: incompatible array type of `b'
+err_array.sys:9: error: declaration is an array of 2 dimensions
+err_array.sys:10: error: but the expression specifies 1 dimension
+err_array.sys:12: error: invalid operand sizes to `binary ='
+err_array.sys:15: error: incompatible array type of `a'
+err_array.sys:14: error: declaration is an array of 1 dimension
+err_array.sys:15: error: but the expression specifies 2 dimensions
+err_array.sys:16: error: subscript out of range

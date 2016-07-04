@@ -1,0 +1,2 @@
+err_type.sys:3: error: invalid operand to `unary !'
+err_type.sys:4: error: invalid operands to `or'

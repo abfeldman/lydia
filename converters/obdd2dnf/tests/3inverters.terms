@@ -1,0 +1,23 @@
+(
+ :tv_dnf_hierarchy
+ (
+  (
+   :node
+   alpha_1
+   ()
+   (
+    :tv_dnf
+    ()
+    (
+     (:bool_variable (:identifier x $nil $nil) () -1)
+     (:bool_variable (:identifier y $nil $nil) () -1)
+     (:bool_variable (:identifier z $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ((:tv_term (0 1) (2)))
+   )
+  )
+ )
+)

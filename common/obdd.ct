@@ -1,0 +1,21 @@
+#include "obdd.h"
+#include "fread.h"
+#include "fscan.h"
+#include "fwrite.h"
+#include "sorted_int_list.h"
+
+#include <assert.h>
+
+.insert obddconf.t
+.include lydia.ct
+#line $[1+${tpllineno}] "${tplfilename}"
+
+/*
+ * Local variables:
+ * mode: c
+ * tab-width: 8
+ * c-basic-offset: 4
+ * End:
+ * vim600: sw=4 ts=8 fdm=marker
+ * vim<600: sw=4 ts=8
+ */

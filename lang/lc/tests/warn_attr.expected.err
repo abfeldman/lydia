@@ -1,0 +1,7 @@
+warn_attr.sys: In system `boo':
+warn_attr.sys:7: warning:  non-const observable attribute of `zoo'
+warn_attr.sys:8: warning:  constant health attribute of `foo'
+warn_attr.sys:10: warning:  the probability value 3.14 of `foo' is out of range
+warn_attr.sys:10: warning: (Each out of range value of an attribute
+warn_attr.sys:10: warning: is reported only once.)
+warn_attr.sys:12: warning:  the total probability mass of `bar' is out of range

@@ -1,0 +1,387 @@
+(
+ csp_hierarchy
+ [
+  (
+   node
+   "sensor"
+   []
+   (
+    csp
+    []
+    [(bool_variable "h" @ []), (bool_variable "out" @ [])]
+    [(bool_constant @ True)]
+    [
+     (
+      csp_impl_sentence
+      (csp_atomic_sentence (csp_variable_term 0))
+      (
+       csp_equiv_sentence
+       (csp_atomic_sentence (csp_variable_term 1))
+       (csp_atomic_sentence (csp_constant_term 0))
+      )
+     )
+    ]
+   )
+  ),
+  (
+   node
+   "amp"
+   []
+   (
+    csp
+    []
+    [
+     (bool_variable "h" @ []),
+     (bool_variable "y" @ []),
+     (bool_variable "x" @ []),
+     (bool_variable "pwr" @ [])
+    ]
+    []
+    [
+     (
+      csp_impl_sentence
+      (csp_atomic_sentence (csp_variable_term 0))
+      (
+       csp_equiv_sentence
+       (csp_atomic_sentence (csp_variable_term 1))
+       (
+	csp_atomic_sentence
+	(
+	 csp_function_term
+	 "mul"
+	 [(csp_variable_term 2), (csp_variable_term 3)]
+	)
+       )
+      )
+     )
+    ]
+   )
+  ),
+  (
+   node
+   "connection"
+   []
+   (
+    csp
+    []
+    [
+     (bool_variable "h" @ []),
+     (bool_variable "x" @ []),
+     (bool_variable "y" @ [])
+    ]
+    []
+    [
+     (
+      csp_impl_sentence
+      (csp_atomic_sentence (csp_variable_term 0))
+      (
+       csp_equiv_sentence
+       (csp_atomic_sentence (csp_variable_term 1))
+       (csp_atomic_sentence (csp_variable_term 2))
+      )
+     )
+    ]
+   )
+  ),
+  (
+   node
+   "filter"
+   []
+   (
+    csp
+    []
+    [
+     (bool_variable "h" @ []),
+     (bool_variable "x" @ []),
+     (bool_variable "y" @ [])
+    ]
+    []
+    [
+     (
+      csp_impl_sentence
+      (csp_atomic_sentence (csp_variable_term 0))
+      (
+       csp_equiv_sentence
+       (csp_atomic_sentence (csp_variable_term 1))
+       (csp_atomic_sentence (csp_variable_term 2))
+      )
+     )
+    ]
+   )
+  ),
+  (
+   node
+   "a_d"
+   []
+   (
+    csp
+    []
+    [
+     (bool_variable "h" @ []),
+     (bool_variable "y" @ []),
+     (bool_variable "x" @ []),
+     (bool_variable "pwr" @ [])
+    ]
+    []
+    [
+     (
+      csp_impl_sentence
+      (csp_atomic_sentence (csp_variable_term 0))
+      (
+       csp_equiv_sentence
+       (csp_atomic_sentence (csp_variable_term 1))
+       (
+	csp_atomic_sentence
+	(
+	 csp_function_term
+	 "mul"
+	 [(csp_variable_term 2), (csp_variable_term 3)]
+	)
+       )
+      )
+     )
+    ]
+   )
+  ),
+  (
+   node
+   "active_antenna"
+   [
+    (
+     edge
+     "sensor"
+     "sensor1"
+     @
+     [(mapping "raw_as" @ "out" @), (mapping "h" @ "h" @)]
+    ),
+    (
+     edge
+     "amp"
+     "amp1"
+     @
+     [
+      (mapping "raw_as" @ "x" @),
+      (mapping "ampl_as" @ "y" @),
+      (mapping "pwr" @ "pwr" @),
+      (mapping "h" @ "h" @)
+     ]
+    ),
+    (
+     edge
+     "connection"
+     "connection1"
+     @
+     [
+      (mapping "ampl_as" @ "x" @),
+      (mapping "ampl_as_acc" @ "y" @),
+      (mapping "h" @ "h" @)
+     ]
+    ),
+    (
+     edge
+     "filter"
+     "filter1"
+     @
+     [
+      (mapping "ampl_as_acc" @ "x" @),
+      (mapping "ampl_as_acc_f" @ "y" @),
+      (mapping "h" @ "h" @)
+     ]
+    ),
+    (
+     edge
+     "amp"
+     "amp2"
+     @
+     [
+      (mapping "ampl_as_acc_f" @ "x" @),
+      (mapping "analog_y" @ "y" @),
+      (mapping "pwr" @ "pwr" @),
+      (mapping "h" @ "h" @)
+     ]
+    ),
+    (
+     edge
+     "a_d"
+     "a_d1"
+     @
+     [
+      (mapping "analog_y" @ "x" @),
+      (mapping "y" @ "y" @),
+      (mapping "pwr" @ "pwr" @),
+      (mapping "h" @ "h" @)
+     ]
+    )
+   ]
+   (
+    csp
+    []
+    [
+     (bool_variable "raw_as" @ []),
+     (bool_variable "h" @ []),
+     (bool_variable "ampl_as" @ []),
+     (bool_variable "pwr" @ []),
+     (bool_variable "ampl_as_acc" @ []),
+     (bool_variable "ampl_as_acc_f" @ []),
+     (bool_variable "analog_y" @ []),
+     (bool_variable "y" @ [])
+    ]
+    []
+    []
+   )
+  ),
+  (
+   node
+   "power_src"
+   []
+   (
+    csp
+    []
+    [(bool_variable "h" @ []), (bool_variable "out" @ [])]
+    [(bool_constant @ True)]
+    [
+     (
+      csp_impl_sentence
+      (csp_atomic_sentence (csp_variable_term 0))
+      (
+       csp_equiv_sentence
+       (csp_atomic_sentence (csp_variable_term 1))
+       (csp_atomic_sentence (csp_constant_term 0))
+      )
+     )
+    ]
+   )
+  ),
+  (
+   node
+   "lofar1"
+   [
+    (
+     edge
+     "power_src"
+     "power_src1"
+     @
+     [(mapping "pwr1" @ "out" @), (mapping "ih_pwr1" @ "h" @)]
+    ),
+    (
+     edge
+     "power_src"
+     "power_src2"
+     @
+     [(mapping "pwr2" @ "out" @), (mapping "ih_pwr2" @ "h" @)]
+    ),
+    (
+     edge
+     "active_antenna"
+     "active_antenna1"
+     @
+     [
+      (mapping "y1" @ "y" @),
+      (mapping "pwr1" @ "pwr" @),
+      (mapping "ih1" @ "h" @)
+     ]
+    ),
+    (
+     edge
+     "active_antenna"
+     "active_antenna2"
+     @
+     [
+      (mapping "y2" @ "y" @),
+      (mapping "pwr2" @ "pwr" @),
+      (mapping "ih2" @ "h" @)
+     ]
+    ),
+    (
+     edge
+     "active_antenna"
+     "active_antenna3"
+     @
+     [
+      (mapping "y3" @ "y" @),
+      (mapping "pwr2" @ "pwr" @),
+      (mapping "ih3" @ "h" @)
+     ]
+    )
+   ]
+   (
+    csp
+    []
+    [
+     (bool_variable "pwr1" @ []),
+     (
+      bool_variable
+      "ih_pwr1"
+      @
+      [
+       (
+	float_variable_attribute
+	"probability"
+	[0.001000000047497451305389404296875, 0.999000012874603271484375]
+       ),
+       (bool_variable_attribute "health" [True, True])
+      ]
+     ),
+     (bool_variable "pwr2" @ []),
+     (
+      bool_variable
+      "ih_pwr2"
+      @
+      [
+       (
+	float_variable_attribute
+	"probability"
+	[0.001000000047497451305389404296875, 0.999000012874603271484375]
+       ),
+       (bool_variable_attribute "health" [True, True])
+      ]
+     ),
+     (bool_variable "y1" @ []),
+     (
+      bool_variable
+      "ih1"
+      @
+      [
+       (
+	float_variable_attribute
+	"probability"
+	[0.001000000047497451305389404296875, 0.999000012874603271484375]
+       ),
+       (bool_variable_attribute "health" [True, True])
+      ]
+     ),
+     (bool_variable "y2" @ []),
+     (
+      bool_variable
+      "ih2"
+      @
+      [
+       (
+	float_variable_attribute
+	"probability"
+	[0.001000000047497451305389404296875, 0.999000012874603271484375]
+       ),
+       (bool_variable_attribute "health" [True, True])
+      ]
+     ),
+     (bool_variable "y3" @ []),
+     (
+      bool_variable
+      "ih3"
+      @
+      [
+       (
+	float_variable_attribute
+	"probability"
+	[0.001000000047497451305389404296875, 0.999000012874603271484375]
+       ),
+       (bool_variable_attribute "health" [True, True])
+      ]
+     )
+    ]
+    []
+    []
+   )
+  )
+ ]
+)

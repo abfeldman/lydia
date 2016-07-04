@@ -1,0 +1,5 @@
+issue54.sys: In system `X34PropulsionSystem':
+issue54.sys:13: error: `cmdOpen' undefined (first use in this system)
+issue54.sys:13: error: (Each undefined identifier is reported only once
+issue54.sys:13: error: for each system it appears in.)
+issue54.sys:13: error: `cmdClose' undefined (first use in this system)

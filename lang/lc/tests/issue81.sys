@@ -1,0 +1,14 @@
+system sub(bool b)
+{
+	b;
+}
+
+system main()
+{
+	bool z;
+
+	attribute health(z) = z;
+	attribute probability(z) = z ? 0.5 : 0.5;
+
+	system sub s(z);
+}

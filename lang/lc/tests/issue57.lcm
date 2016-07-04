@@ -1,0 +1,28 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   simple
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier i $nil $nil) () -1)
+     (:bool_variable (:identifier o $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 1))
+      (:csp_atomic_sentence (:csp_variable_term 0))
+     )
+    )
+   )
+  )
+ )
+)

@@ -1,0 +1,4 @@
+err_cond.sys: In system `test':
+err_cond.sys:5: error: invalid condition in ternary expression
+err_cond.sys:6: error: type mismatch in ternary expression
+err_cond.sys:8: error: type mismatch in conditional expression

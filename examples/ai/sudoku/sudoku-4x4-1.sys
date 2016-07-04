@@ -1,0 +1,18 @@
+#include "sudoku-4x4.inc"
+
+system Sudoku()
+{
+	tile g[4][4];
+
+	attribute health(g) = \x (x = tile.one) ? true : false;
+	attribute probability(g) = 0.25;
+
+	system Grid grid(g);
+
+	g[0][0] = tile.one;
+	g[0][2] = tile.three;
+	g[1][0] = tile.two;
+	g[2][3] = tile.three;
+	g[3][1] = tile.two;
+	g[3][3] = tile.one;
+}

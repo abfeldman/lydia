@@ -1,0 +1,8 @@
+type color = enum { R, G, B };
+
+system test()
+{
+	bool a;
+	color b;
+	b = a as color;
+}

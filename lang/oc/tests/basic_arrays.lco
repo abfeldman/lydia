@@ -1,0 +1,38 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   alpha_1
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier i (0) $nil) () -1)
+     (:bool_variable (:identifier i (1) $nil) () -1)
+     (:bool_variable (:identifier i (2) $nil) () -1)
+     (:bool_variable (:identifier i (3) $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_and_sentence
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(:csp_atomic_sentence (:csp_variable_term 0))
+	(:csp_atomic_sentence (:csp_variable_term 1))
+       )
+       (:csp_atomic_sentence (:csp_variable_term 2))
+      )
+      (:csp_atomic_sentence (:csp_variable_term 3))
+     )
+    )
+   )
+  )
+ )
+)

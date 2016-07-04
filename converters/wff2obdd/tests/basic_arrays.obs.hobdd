@@ -1,0 +1,32 @@
+(
+ :obdd_hierarchy
+ (
+  (
+   :node
+   alpha_1
+   ()
+   (
+    :obdd
+    ()
+    (
+     (:bool_variable (:identifier i (0) $nil) () -1)
+     (:bool_variable (:identifier i (1) $nil) () -1)
+     (:bool_variable (:identifier i (2) $nil) () -1)
+     (:bool_variable (:identifier i (3) $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (:obdd_terminal_node nil)
+     (:obdd_terminal_node t)
+     (:obdd_non_terminal_node 3 0 1)
+     (:obdd_non_terminal_node 2 0 2)
+     (:obdd_non_terminal_node 1 0 3)
+     (:obdd_non_terminal_node 0 0 4)
+    )
+    5
+   )
+  )
+ )
+)

@@ -1,0 +1,197 @@
+
+
+system multiplier(bool a_0, a_1, a_2, a_3, b_0, b_1, b_2, b_3, m_0, m_1, m_2, m_3, m_4, m_5, m_6, m_7)
+{
+    attribute health(a_0) = true;
+    attribute health(a_1) = true;
+    attribute health(a_2) = true;
+    attribute health(a_3) = true;
+
+    attribute health(b_0) = true;
+    attribute health(b_1) = true;
+    attribute health(b_2) = true;
+    attribute health(b_3) = true;
+
+    attribute probability(a_0) = 0.5;
+    attribute probability(a_1) = 0.5;
+    attribute probability(a_2) = 0.5;
+    attribute probability(a_3) = 0.5;
+
+    attribute probability(b_0) = 0.5;
+    attribute probability(b_1) = 0.5;
+    attribute probability(b_2) = 0.5;
+    attribute probability(b_3) = 0.5;
+
+    bool q_0_0, z_0_0, c_0_0;
+    bool q_0_1, z_0_1, c_0_1;
+    bool q_0_2, z_0_2, c_0_2;
+    bool q_0_3, z_0_3, c_0_3;
+    bool q_0_4, z_0_4, c_0_4;
+    bool q_0_5, z_0_5, c_0_5;
+    bool q_0_6, z_0_6, c_0_6;
+    bool q_0_7, z_0_7, c_0_7;
+    bool q_1_0, z_1_0, c_1_0;
+    bool q_1_1, z_1_1, c_1_1;
+    bool q_1_2, z_1_2, c_1_2;
+    bool q_1_3, z_1_3, c_1_3;
+    bool q_1_4, z_1_4, c_1_4;
+    bool q_1_5, z_1_5, c_1_5;
+    bool q_1_6, z_1_6, c_1_6;
+    bool q_1_7, z_1_7, c_1_7;
+    bool q_2_0, z_2_0, c_2_0;
+    bool q_2_1, z_2_1, c_2_1;
+    bool q_2_2, z_2_2, c_2_2;
+    bool q_2_3, z_2_3, c_2_3;
+    bool q_2_4, z_2_4, c_2_4;
+    bool q_2_5, z_2_5, c_2_5;
+    bool q_2_6, z_2_6, c_2_6;
+    bool q_2_7, z_2_7, c_2_7;
+    bool q_3_0, z_3_0, c_3_0;
+    bool q_3_1, z_3_1, c_3_1;
+    bool q_3_2, z_3_2, c_3_2;
+    bool q_3_3, z_3_3, c_3_3;
+    bool q_3_4, z_3_4, c_3_4;
+    bool q_3_5, z_3_5, c_3_5;
+    bool q_3_6, z_3_6, c_3_6;
+    bool q_3_7, z_3_7, c_3_7;
+
+    bool g_0;
+    bool g_1;
+    bool g_2;
+    bool g_3;
+
+    q_0_0 = a_0 ? b_0 : false;
+    q_0_1 = a_0 ? b_1 : false;
+    q_0_2 = a_0 ? b_2 : false;
+    q_0_3 = a_0 ? b_3 : false;
+    q_0_4 = a_0 ? false : false;
+    q_0_5 = a_0 ? false : false;
+    q_0_6 = a_0 ? false : false;
+    q_0_7 = a_0 ? false : false;
+    q_1_0 = a_1 ? false : false;
+    q_1_1 = a_1 ? b_0 : false;
+    q_1_2 = a_1 ? b_1 : false;
+    q_1_3 = a_1 ? b_2 : false;
+    q_1_4 = a_1 ? b_3 : false;
+    q_1_5 = a_1 ? false : false;
+    q_1_6 = a_1 ? false : false;
+    q_1_7 = a_1 ? false : false;
+    q_2_0 = a_2 ? false : false;
+    q_2_1 = a_2 ? false : false;
+    q_2_2 = a_2 ? b_0 : false;
+    q_2_3 = a_2 ? b_1 : false;
+    q_2_4 = a_2 ? b_2 : false;
+    q_2_5 = a_2 ? b_3 : false;
+    q_2_6 = a_2 ? false : false;
+    q_2_7 = a_2 ? false : false;
+    q_3_0 = a_3 ? false : false;
+    q_3_1 = a_3 ? false : false;
+    q_3_2 = a_3 ? false : false;
+    q_3_3 = a_3 ? b_0 : false;
+    q_3_4 = a_3 ? b_1 : false;
+    q_3_5 = a_3 ? b_2 : false;
+    q_3_6 = a_3 ? b_3 : false;
+    q_3_7 = a_3 ? false : false;
+
+    z_0_0 = ((false != q_0_0) != false);
+    c_0_0 = ((false and q_0_0) or (false and false) or (q_0_0 and false));
+    z_0_1 = ((false != q_0_1) != c_0_0);
+    c_0_1 = ((false and q_0_1) or (false and c_0_0) or (q_0_1 and c_0_0));
+    z_0_2 = ((false != q_0_2) != c_0_1);
+    c_0_2 = ((false and q_0_2) or (false and c_0_1) or (q_0_2 and c_0_1));
+    z_0_3 = ((false != q_0_3) != c_0_2);
+    c_0_3 = ((false and q_0_3) or (false and c_0_2) or (q_0_3 and c_0_2));
+    z_0_4 = ((false != q_0_4) != c_0_3);
+    c_0_4 = ((false and q_0_4) or (false and c_0_3) or (q_0_4 and c_0_3));
+    z_0_5 = ((false != q_0_5) != c_0_4);
+    c_0_5 = ((false and q_0_5) or (false and c_0_4) or (q_0_5 and c_0_4));
+    z_0_6 = ((false != q_0_6) != c_0_5);
+    c_0_6 = ((false and q_0_6) or (false and c_0_5) or (q_0_6 and c_0_5));
+    z_0_7 = ((false != q_0_7) != c_0_6);
+    c_0_7 = ((false and q_0_7) or (false and c_0_6) or (q_0_7 and c_0_6));
+    z_1_0 = ((z_0_0 != q_1_0) != false);
+    c_1_0 = ((z_0_0 and q_1_0) or (z_0_0 and false) or (q_1_0 and false));
+    z_1_1 = ((z_0_1 != q_1_1) != c_1_0);
+    c_1_1 = ((z_0_1 and q_1_1) or (z_0_1 and c_1_0) or (q_1_1 and c_1_0));
+    z_1_2 = ((z_0_2 != q_1_2) != c_1_1);
+    c_1_2 = ((z_0_2 and q_1_2) or (z_0_2 and c_1_1) or (q_1_2 and c_1_1));
+    z_1_3 = ((z_0_3 != q_1_3) != c_1_2);
+    c_1_3 = ((z_0_3 and q_1_3) or (z_0_3 and c_1_2) or (q_1_3 and c_1_2));
+    z_1_4 = ((z_0_4 != q_1_4) != c_1_3);
+    c_1_4 = ((z_0_4 and q_1_4) or (z_0_4 and c_1_3) or (q_1_4 and c_1_3));
+    z_1_5 = ((z_0_5 != q_1_5) != c_1_4);
+    c_1_5 = ((z_0_5 and q_1_5) or (z_0_5 and c_1_4) or (q_1_5 and c_1_4));
+    z_1_6 = ((z_0_6 != q_1_6) != c_1_5);
+    c_1_6 = ((z_0_6 and q_1_6) or (z_0_6 and c_1_5) or (q_1_6 and c_1_5));
+    z_1_7 = ((z_0_7 != q_1_7) != c_1_6);
+    c_1_7 = ((z_0_7 and q_1_7) or (z_0_7 and c_1_6) or (q_1_7 and c_1_6));
+    z_2_0 = ((z_1_0 != q_2_0) != false);
+    c_2_0 = ((z_1_0 and q_2_0) or (z_1_0 and false) or (q_2_0 and false));
+    z_2_1 = ((z_1_1 != q_2_1) != c_2_0);
+    c_2_1 = ((z_1_1 and q_2_1) or (z_1_1 and c_2_0) or (q_2_1 and c_2_0));
+    z_2_2 = ((z_1_2 != q_2_2) != c_2_1);
+    c_2_2 = ((z_1_2 and q_2_2) or (z_1_2 and c_2_1) or (q_2_2 and c_2_1));
+    z_2_3 = ((z_1_3 != q_2_3) != c_2_2);
+    c_2_3 = ((z_1_3 and q_2_3) or (z_1_3 and c_2_2) or (q_2_3 and c_2_2));
+    z_2_4 = ((z_1_4 != q_2_4) != c_2_3);
+    c_2_4 = ((z_1_4 and q_2_4) or (z_1_4 and c_2_3) or (q_2_4 and c_2_3));
+    z_2_5 = ((z_1_5 != q_2_5) != c_2_4);
+    c_2_5 = ((z_1_5 and q_2_5) or (z_1_5 and c_2_4) or (q_2_5 and c_2_4));
+    z_2_6 = ((z_1_6 != q_2_6) != c_2_5);
+    c_2_6 = ((z_1_6 and q_2_6) or (z_1_6 and c_2_5) or (q_2_6 and c_2_5));
+    z_2_7 = ((z_1_7 != q_2_7) != c_2_6);
+    c_2_7 = ((z_1_7 and q_2_7) or (z_1_7 and c_2_6) or (q_2_7 and c_2_6));
+    z_3_0 = ((z_2_0 != q_3_0) != false);
+    c_3_0 = ((z_2_0 and q_3_0) or (z_2_0 and false) or (q_3_0 and false));
+    z_3_1 = ((z_2_1 != q_3_1) != c_3_0);
+    c_3_1 = ((z_2_1 and q_3_1) or (z_2_1 and c_3_0) or (q_3_1 and c_3_0));
+    z_3_2 = ((z_2_2 != q_3_2) != c_3_1);
+    c_3_2 = ((z_2_2 and q_3_2) or (z_2_2 and c_3_1) or (q_3_2 and c_3_1));
+    z_3_3 = ((z_2_3 != q_3_3) != c_3_2);
+    c_3_3 = ((z_2_3 and q_3_3) or (z_2_3 and c_3_2) or (q_3_3 and c_3_2));
+    z_3_4 = ((z_2_4 != q_3_4) != c_3_3);
+    c_3_4 = ((z_2_4 and q_3_4) or (z_2_4 and c_3_3) or (q_3_4 and c_3_3));
+    z_3_5 = ((z_2_5 != q_3_5) != c_3_4);
+    c_3_5 = ((z_2_5 and q_3_5) or (z_2_5 and c_3_4) or (q_3_5 and c_3_4));
+    z_3_6 = ((z_2_6 != q_3_6) != c_3_5);
+    c_3_6 = ((z_2_6 and q_3_6) or (z_2_6 and c_3_5) or (q_3_6 and c_3_5));
+    z_3_7 = ((z_2_7 != q_3_7) != c_3_6);
+    c_3_7 = ((z_2_7 and q_3_7) or (z_2_7 and c_3_6) or (q_3_7 and c_3_6));
+
+    /* equate product to the last z value */
+
+    m_0 = z_3_0;
+    m_1 = z_3_1;
+    m_2 = z_3_2;
+    m_3 = z_3_3;
+    m_4 = z_3_4;
+    m_5 = z_3_5;
+    m_6 = z_3_6;
+    m_7 = z_3_7;
+
+    /* g_i means: the binary number a[i..0] is strictly greater than the binary number b[i..0] */
+
+    g_0 = (a_0 = b_0) ? false : a_0;
+    g_1 = (a_1 = b_1) ? g_0 : a_1;
+    g_2 = (a_2 = b_2) ? g_1 : a_2;
+    g_3 = (a_3 = b_3) ? g_2 : a_3;
+
+    /* make sure that a<=b */
+
+    g_3 = false;
+    /* make sure that a>1 */
+
+    a_1 or a_2 or a_3;
+    /* emit constraint on the product (PRODUCT=143) */
+
+    m_0 = true;
+    m_1 = true;
+    m_2 = true;
+    m_3 = true;
+    m_4 = false;
+    m_5 = false;
+    m_6 = false;
+    m_7 = true;
+
+    /* end of multiplier system */
+}

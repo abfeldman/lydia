@@ -1,0 +1,23 @@
+observation alpha_1
+{
+    (leftSensorMass == mass.nominal) &&
+    (leftSensorFlow == mass.high) &&
+    (rightSensorMass == mass.nominal) &&
+    (rightSensorFlow == mass.zero) &&
+    (selector == selectorPosition.left) &&
+    (mainSensorFlowOut == mass.nominal) &&
+    enginePumpOn &&
+    !electricPumpOn;
+}
+
+observation alpha_2
+{
+    (leftSensorMass == mass.nominal) &&
+    (leftSensorFlow == mass.nominal) &&
+    (rightSensorMass == mass.nominal) &&
+    (rightSensorFlow == mass.low) &&
+    (selector == selectorPosition.left) &&
+    (mainSensorFlowOut == mass.nominal) &&
+    enginePumpOn &&
+    !electricPumpOn;
+}

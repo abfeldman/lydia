@@ -1,0 +1,1181 @@
+.. File: lydia.ct
+..
+.insert types.ht
+..
+.macro ansi_nproto t el
+.    set tl
+.    set sep
+.    foreach e $(el)
+.        set tl "$(tl)$(sep)${type $t $e} p_$e"
+.        set sep ", "
+.    endforeach
+.    if ${== ${len $(tl)} 0}
+.       set tl void
+.    endif
+.    return "$(tl)"
+.endmacro
+..
+.macro ansi_nproto_lognew t el
+.    set tl
+.    set sep
+.    foreach e $(el)
+.        set tl "$(tl)$(sep)${type $t $e} p_$e"
+.        set sep ", "
+.    endforeach
+.    set tl "$(tl)$(sep)const char *_f, const int _l"
+.    return "$(tl)"
+.endmacro
+..
+/*** WARNING: THIS IS GENERATED CODE. ***/
+
+/* ---- start of ${tplfilename} ---- */
+/* 
+ * template file:      ${tplfilename}
+ * datastructure file: ${dsfilename}
+ * tm version:         $(tmvers)
+ * tm kernel version:  $(kernel-version)
+ */
+
+#ifndef FIRSTROOM
+# define FIRSTROOM 0
+#endif
+
+.if ${len $(want_ds_list) $(want_ds)}
+/* Counters for allocation and freeing. */
+.foreach t $(want_ds_list)
+static long newcnt_$t_list = 0, frecnt_$t_list = 0;
+.endforeach
+.foreach t $(want_ds)
+.if ${not ${isvirtual $t}}
+static long newcnt_$t = 0, frecnt_$t = 0;
+.endif
+.endforeach
+
+.endif
+static char srcfile[] = __FILE__;
+
+#ifndef FATAL
+# define FATAL(msg) { if (srcfile[0] == '\0' && __LINE__ == 0) { fprintf(stderr, "*** fatal error: %s\n", msg); } else { fprintf(stderr, "%s(%d): *** fatal error: %s\n", srcfile, __LINE__, msg); } exit(1); }
+#endif
+
+.if ${len $(want_delete_list) $(want_deletelist_list) $(want_extractlist_list) $(want_extract_list) $(want_insert_list) $(want_insertlist_list) $(want_concat_list) ${comm $(want_fscan) "" ${ctypelist} ${classlist}} $(want_fscan_list) $(want_slice_list)}
+.if ${len $(want_delete_list) $(want_deletelist_list) $(want_extractlist_list) $(want_extract_list) $(want_insert_list) $(want_insertlist_list) $(want_concat_list)}
+static char nilptr[] = "NIL pointer";
+.endif
+.if ${len ${comm $(want_fscan) "" ${ctypelist} ${classlist}}}
+static char badcons[] = "bad constructor for '%s': '%s'";
+.endif
+.if ${len $(want_fscan_list)}
+/* static char badeof[] = "unexpected end of file"; */
+.endif
+.if ${len $(want_slice_list)}
+static char badslice[] = "bad slice";
+.endif
+
+.endif
+#ifndef FATALTAG
+# define FATALTAG(tag) { fprintf(stderr, "%s(%d): bad tag: %d=0x%x\n", srcfile, __LINE__, (int)tag, (int)tag); exit(1); }
+#endif
+
+.foreach t $(want_setroom_list)
+$t_list setroom_$t_list($t_list l, const unsigned int rm)
+{
+    if (l->room >= rm) {
+        return l;
+    }
+    if (l->room == 0) {
+        l->arr = ($t *)malloc(rm * sizeof(*(l->arr)));
+    } else {
+        l->arr = ($t *)realloc(l->arr, rm * sizeof(*(l->arr)));
+    }
+    l->room = rm;
+
+    return l;
+}
+
+.endforeach
+.foreach t $(want_new_list)
+$t_list new_$t_list()
+{
+    $t_list nw;
+
+    nw = ($t_list)malloc(sizeof(*nw));
+    nw->sz = 0;
+#if FIRSTROOM == 0
+    nw->arr = ($t *)0;
+    nw->room = 0;
+#else
+    nw->arr = ($t *)malloc(FIRSTROOM * sizeof($t));
+    nw->room = FIRSTROOM;
+#endif
+.if ${member $t $(want_ds_list)}
+    newcnt_$t_list++;
+.endif
+    return nw;
+}
+
+.endforeach
+.foreach t ${nonvirtual $(want_new)}
+/* Allocate a new instance of ${metatype $t} '$t'. */
+.set tl ${call ansi_nproto $t "${allfields $t}"}
+$t new_$t($(tl))
+{
+    $t nw;
+
+    nw = ($t)malloc(sizeof(*nw));
+    nw->tag = TAG$t;
+.foreach e ${allfields $t}
+    nw->$e = p_$e;
+.endforeach
+.if ${member $t $(want_ds)}
+    newcnt_$t++;
+.endif
+    return nw;
+}
+
+.endforeach
+.foreach t ${rev ${inheritsort $(want_fre)}}
+/* Free an element 'e' of ${metatype $t} type '$t'. */
+void fre_$t($t e)
+{
+    if (e == $tNIL) {
+        return;
+    }
+.if ${len ${nonvirtual $t ${subclasses $t}}}
+    switch (e->tag) {
+.if ${isvirtual $t}
+.else
+        case TAG$t:
+.if ${member $t $(want_ds)}
+            frecnt_$t++;
+.endif
+            free(e);
+            break;
+.endif
+.foreach c ${nonvirtual ${subclasses $t}}
+        case TAG$c:
+            fre_$c(($c)e);
+            break;
+.endforeach
+        default:
+            FATALTAG(e->tag);
+    }
+.else
+    frecnt_$t++;
+    free(e);
+.endif
+}
+
+.endforeach
+.foreach t $(want_fre_list)
+void fre_$t_list($t_list l)
+{
+    if (l == $t_listNIL) {
+        return;
+    }
+.if ${member $t $(want_ds_list)}
+    frecnt_$t_list++;
+.endif
+    if (l->room != 0) {
+        free(l->arr);
+    }
+    free(l);
+}
+
+.endforeach
+.if ${len $(want_append_list)}
+/* Append list routines: */
+
+.foreach t $(want_append_list)
+/* Append a $t element 'e' to list 'l', and return the new list. */
+$t_list append_$t_list($t_list l, $t e)
+{
+    if (l->sz >= l->room) {
+        l = setroom_$t_list(l, 1 + (l->sz) + (l->sz));
+    }
+    l->arr[l->sz] = e;
+    l->sz++;
+    return l;
+}
+
+.endforeach
+.endif
+.if ${len $(want_reverse_list)}
+/* Reverse list routines: */
+
+.foreach t $(want_reverse_list)
+/* Reverse the elements in list 'l'. */
+$t_list reverse_$t_list($t_list l)
+{
+    unsigned int ix;
+    unsigned int other;
+    $t h;
+    $t *arr;
+
+    if (l == $t_listNIL) {
+        return l;
+    }
+    ix = 0;
+    other = l->sz-1;
+    arr = l->arr;
+    while (ix < other) {
+        h = arr[ix];
+        arr[ix] = arr[other];
+        arr[other] = h;
+        ix++;
+        other--;
+    }
+    return l;
+}
+
+.endforeach
+.endif
+.if ${len $(want_insert_list)}
+/* Insert list routines: */
+
+.foreach t $(want_insert_list)
+/* Insert a $t element 'e' to into list 'l' at position 'pos'. */
+$t_list insert_$t_list($t_list l, const unsigned int pos, $t e)
+{
+    unsigned int ix;
+    $t *arr;
+    unsigned int the_pos = pos;
+
+    if (l == $t_listNIL) {
+        FATAL(nilptr);
+    }
+    if (l->sz >= l->room) {
+        l = setroom_$t_list(l, 1 + (l->sz) + (l->sz));
+    }
+    if (the_pos>l->sz) {
+        the_pos = l->sz;
+    }
+    arr = l->arr;
+    for (ix = l->sz; ix > the_pos; ix--) {
+        arr[ix] = arr[ix-1];
+    }
+    l->sz++;
+    arr[the_pos] = e;
+    return l;
+}
+
+.endforeach
+.endif
+.if ${len $(want_insertlist_list)}
+/* Insertlist list routines */
+
+.foreach t $(want_insertlist_list)
+/*
+ * Insert a $t list 'lb' to into list 'la' at position 'pos'.
+ * The elements of 'lb' are copied into 'la', and the container is destroyed.
+ */
+$t_list insertlist_$t_list($t_list la, unsigned int pos, $t_list lb)
+{
+
+    if (la == $t_listNIL) {
+        FATAL(nilptr);
+    }
+    if (lb != $t_listNIL && lb->sz != 0) {
+        const unsigned int szb = lb->sz;
+        unsigned int ix;
+        $t *arr;
+
+        la = setroom_$t_list(la, la->sz+szb);
+        if (pos>la->sz) {
+            pos = la->sz;
+        }
+
+        /* Move up elements */
+        arr = la->arr;
+        for (ix = la->sz + szb - 1; ix >= (pos + szb); ix--) {
+            arr[ix] = arr[ix-szb];
+        }
+        la->sz += szb;
+        /* Copy in elements from 'lb' */
+        {
+            unsigned int cnt = szb;
+            $t *sp = lb->arr;
+            $t *dp = &la->arr[pos];
+
+            while (cnt != 0) {
+                *dp++ = *sp++;
+                cnt--;
+            }
+        }
+    }
+    fre_$t_list(lb);
+    return la;
+}
+
+.endforeach
+.endif
+.if ${len $(want_concat_list)}
+/* List concatenation routines: */
+
+.foreach t $(want_concat_list)
+/*
+ * Concatenate $t list 'lb' after $t list 'la'.
+ * The elements of 'lb' are copied into 'la', and the container is destroyed.
+ */
+$t_list concat_$t_list($t_list la, $t_list lb)
+{
+    unsigned int cnt;
+    $t *sp;
+    $t *dp;
+
+    if (la == $t_listNIL) {
+        FATAL(nilptr);
+    }
+    la = setroom_$t_list(la, la->sz+lb->sz);
+    cnt = lb->sz;
+    sp = lb->arr;
+    dp = &la->arr[la->sz];
+    while (cnt != 0) {
+        *dp++ = *sp++;
+        cnt--;
+    }
+    la->sz += lb->sz;
+    fre_$t_list(lb);
+    return la;
+}
+
+.endforeach
+.endif
+.if ${len $(want_rfre) $(want_rfre_list)}
+/* Recursive freeing routines: */
+
+.foreach t ${depsort $(want_rfre)}
+/*
+ * Recursively free an element 'e' of ${metatype $t} type '$t'
+ * and all elements in it.
+ */
+void rfre_$t($t e)
+{
+    if (e == $tNIL) {
+        return;
+    }
+.if ${len ${nonvirtual $t ${subclasses $t}}}
+    switch (e->tag) {
+.if ${isvirtual $t}
+.else
+        case TAG$t:
+.foreach e ${allfields $t}
+            rfre_${type $t $e}(e->$e);
+.endforeach
+            fre_$t(e);
+            break;
+.endif
+.foreach c ${nonvirtual ${subclasses $t}}
+        case TAG$c:
+            rfre_$c(($c)e);
+            break;
+.endforeach
+        default:
+            FATALTAG((int)e->tag);
+    }
+.else
+    /* There are no subclasses. */
+.foreach e ${allfields $t}
+    rfre_${type $t $e}(e->$e);
+.endforeach
+    fre_$t(e);
+.endif
+}
+
+.endforeach
+.foreach t $(want_rfre_list)
+/* Recursively free a list of elements 'e' of type $t. */
+void rfre_$t_list($t_list e)
+{
+    unsigned int ix;
+
+    if (e == $t_listNIL) {
+        return;
+    }
+    for (ix = 0; ix < e->sz; ix++) {
+        rfre_$t(e->arr[ix]);
+    }
+    fre_$t_list(e);
+}
+
+.endforeach
+.endif
+.if ${len $(want_fprint) $(want_fprint_list)}
+/* fprint routines: */
+
+.foreach t $(want_fprint)
+/* Print an element 't' of ${metatype $t} type '$t' using print optimizer. */
+void fprint_$t(print_state st, const const_$t t)
+{
+    if (t == $tNIL) {
+        fprint_lydia_symbol(st, lydia_symbolNIL);
+        return;
+    }
+.if ${len ${nonvirtual $t ${subclasses $t}}}
+    switch (t->tag) {
+.if ${isvirtual $t}
+.else
+        case TAG$t:
+            open_cons(st, "$t");
+.foreach e ${allfields $t}
+            fprint_${type $t $e}(st, t->$e);
+.endforeach
+            close_cons(st);
+            break;
+.endif
+.foreach c ${nonvirtual ${subclasses $t}}
+        case TAG$c:
+            fprint_$c(st, to_const_$c(t));
+            break;
+.endforeach
+        default:
+            FATALTAG(t->tag);
+    }
+.else
+    open_cons(st, "$t");
+.foreach e ${allfields $t}
+    print_${type $t $e}(st, t->$e);
+.endforeach
+    close_cons(st);
+.endif
+}
+
+.endforeach
+.foreach t $(want_fprint_list)
+
+/* Print a list of elements 'l' of type '$t' using print optimizer. */
+void fprint_$t_list(print_state st, const const_$t_list l)
+{
+    unsigned int ix;
+
+    if (l == $t_listNIL) {
+        fprint_lydia_symbol(st, lydia_symbolNIL);
+        return;
+    }
+    open_list(st);
+    for (ix = 0; ix < l->sz; ix++) {
+        fprint_$t(st, l->arr[ix]);
+    }
+    close_list(st);
+}
+
+.endforeach
+.endif
+.if ${len $(want_fwrite) $(want_fwrite_list)}
+/* fwrite routines: */
+
+.foreach t $(want_fwrite)
+/* Write a ${metatype $t} $t 't' to file 'f'. */
+void fwrite_$t(FILE *f, const const_$t t)
+{
+    if (t == $tNIL) {
+        fwrite_int(f, -1);
+        return;
+    }
+
+.if ${len ${nonvirtual ${subclasses $t}}}
+    switch (t->tag) {
+.if ${isvirtual $t}
+.else
+        case TAG$t:
+            fwrite_int(f, TAG$t);
+.foreach e ${allfields $t}
+            fwrite_${type $t $e}(f, t->$e);
+.endforeach
+            break;
+.endif
+.foreach c ${nonvirtual ${subclasses $t}}
+        case TAG$c:
+            fwrite_$c(f, to_const_$c(t));
+            break;
+.endforeach
+        default:
+            FATALTAG( t->tag );
+    }
+.else
+    fwrite_int(f, TAG$t);
+.foreach e ${allfields $t}
+    fwrite_${type $t $e}(f, t->$e);
+.endforeach
+.endif
+}
+
+.endforeach
+.foreach t $(want_fwrite_list)
+/* Write a $t list 'l' to file 'f'. */
+void fwrite_$t_list(FILE *f, const const_$t_list l)
+{
+    unsigned int ix, length = (l == $t_listNIL ? (unsigned int)-1 : l->sz);
+    fwrite_unsigned(f, (int)length);
+    if (-1 == (int)length) {
+        return;
+    }
+    for (ix = 0; ix < length; ix++) {
+        fwrite_$t(f, l->arr[ix]);
+    }
+}
+
+.endforeach
+.endif
+.if ${len $(want_rdup) $(want_rdup_list)}
+/* Duplication routines: */
+
+.foreach t $(want_rdup)
+/* Recursively duplicate a ${metatype $t} $t element 'e'. */
+$t rdup_$t(const const_$t e)
+{
+.if ${len ${inheritors $t}}
+    if (e == $tNIL) {
+        return $tNIL;
+    }
+    switch (e->tag) {
+.if ${not ${isvirtual $t}}
+        case TAG$t:
+        {
+.foreach e ${allfields $t}
+            ${type $t $e} i_$e;
+.endforeach
+
+.foreach e ${allfields $t}
+            i_$e = rdup_${type $t $e}(e->$e);
+.endforeach
+            return new_$t(${seplist ", " ${prefix "i_" ${allfields $t}}});
+        }
+.endif
+.foreach c ${nonvirtual ${subclasses $t}}
+        case TAG$c:
+            return ($t)rdup_$c(to_const_$c(e));
+.endforeach
+        default:
+            FATALTAG( e->tag );
+    }
+    return $tNIL;
+.else
+.. There are no subclasses
+.foreach e ${allfields $t}
+    ${type $t $e} i_$e;
+.endforeach
+
+.if ${len ${allfields $t}}
+.else
+.endif
+    if (e == $tNIL) {
+        return $tNIL;
+    }
+.foreach e ${allfields $t}
+    i_$e = rdup_${type $t $e}(e->$e);
+.endforeach
+    return new_$t(${seplist ", " ${prefix "i_" ${allfields $t}}});
+.endif
+}
+
+.endforeach
+.foreach t $(want_rdup_list)
+/* Recursively duplicate $t list 'l'. */
+$t_list rdup_$t_list(const const_$t_list l)
+{
+    unsigned int ix;
+    $t_list nw;
+    $t *ar;
+    $t *o_r;
+
+    if (l == $t_listNIL) {
+        return $t_listNIL;
+    }
+    nw = setroom_$t_list(new_$t_list(), l->sz);
+    ar = nw->arr;
+    o_r = l->arr;
+    for (ix = 0; ix < l->sz; ix++) {
+        *ar++ = rdup_$t(*o_r++);
+    }
+    nw->sz = l->sz;
+    return nw;
+}
+
+.endforeach
+.endif
+.if ${len $(want_slice_list)}
+/* Slice routines: */
+
+.foreach t $(want_slice_list)
+/*
+ * Recursively duplicate elements from $t list 'l',
+ * starting at element 'b', and ending at element
+ * 'e'. Element 'e' is not copied.
+ */
+$t_list slice_$t_list(const const_$t_list l, const unsigned int b, const unsigned int parm_e)
+{
+    unsigned int ix;
+    $t_list nw;
+    unsigned int e = parm_e;
+
+    if (l == $t_listNIL) {
+        return $t_listNIL;
+    }
+    nw = new_$t_list();
+    if (e > l->sz) {
+        e = l->sz;
+    }
+    if (b > e) {
+        FATAL(badslice);
+    }
+    nw = setroom_$t_list(nw, e - b);
+    for (ix = b; ix < e; ix++) {
+        nw = append_$t_list(nw, rdup_$t(l->arr[ix]));
+    }
+    return nw;
+}
+
+.endforeach
+.endif
+.if ${len $(want_cmp) $(want_cmp_list)}
+/* Comparison routines: */
+
+.foreach t $(want_cmp)
+int cmp_$t(const const_$t a, const const_$t b)
+{
+    int res;
+
+/* A small optimization, but also takes care of NIL. */
+    if (a == b) {
+        return 0;
+    }
+    if (a == $tNIL) {
+        return -1;
+    }
+    if (b == $tNIL) {
+        return 1;
+    }
+    res = ((int)a->tag - (int)b->tag);
+    if (res != 0) {
+        return res;
+    }
+.if ${len ${nonvirtual ${subclasses $t}}}
+    switch (a->tag) {
+.if ${not ${isvirtual $t}}
+        case TAG$t:
+.set first 1
+.foreach e ${allfields $t}
+.if $(first)
+.set first 0
+.else
+            if (res != 0) {
+                return res;
+            }
+.endif
+            res = cmp_${type $t $e}(a->$e, b->$e);
+.endforeach
+            break;
+.endif
+.foreach c ${nonvirtual ${subclasses $t}}
+        case TAG$c:
+            res = cmp_$c(to_const_$c(a), to_const_$c(b));
+            break;
+.endforeach
+        default:
+            FATALTAG( a->tag );
+            break;
+    }
+.else
+.if ${isvirtual $t}
+    res = 0;
+.else
+.set first 1
+.foreach e ${allfields $t}
+.if $(first)
+.set first 0
+.else
+    if (res != 0) {
+        return res;
+    }
+.endif
+    res = cmp_${type $t $e}(a->$e, b->$e);
+.endforeach
+.endif
+.endif
+    return res;
+}
+
+.endforeach
+.foreach t $(want_cmp_list)
+/* Compare two $t lists. */
+int cmp_$t_list(const const_$t_list a, const const_$t_list b)
+{
+    int res;
+    unsigned int ix;
+
+/* A small optimization, but also takes care of NIL. */
+    if (a == b) {
+        return 0;
+    }
+    if (a == $t_listNIL) {
+        return -1;
+    }
+    if (b == $t_listNIL) {
+        return 1;
+    }
+    ix = 0;
+    while (ix < a->sz || ix < b->sz) {
+        if (ix>=a->sz) {
+            return -1;
+        }
+        if (ix >= b->sz) {
+            return 1;
+        }
+        res = cmp_$t(a->arr[ix], b->arr[ix]);
+        if (res != 0) {
+            return res;
+        }
+        ix++;
+    }
+    return 0;
+}
+
+.endforeach
+.endif
+.if ${len $(want_isequal) $(want_isequal_list)}
+/* Equality test routines: */
+
+.foreach t $(want_isequal)
+/*
+ * Compare two $t ${metatype $t},
+ * and return 1 iff they are equal.
+ */
+int isequal_$t(const const_$t a, const const_$t b)
+{
+/* A small optimization, but also takes care of NIL. */
+    if (a == b) {
+        return 1;
+    }
+    if (a == $tNIL || b == $tNIL) {
+        return 0;
+    }
+    if (a->tag != b->tag) {
+        return 0;
+    }
+.if ${len ${nonvirtual ${subclasses $t}}}
+    switch( a->tag ) {
+.if ${not ${isvirtual $t}}
+        case TAG$t:
+.foreach e ${allfields $t}
+            if (!isequal_${type $t $e}(a->$e, b->$e)) {
+                return 0;
+            }
+.endforeach
+            break;
+.endif
+.foreach c ${nonvirtual ${subclasses $t}}
+        case TAG$c:
+            if (!isequal_$c(to_const_$c(a), to_const_$c(b))) {
+                return 0;
+            }
+            break;
+.endforeach
+        default:
+            FATALTAG( a->tag );
+            break;
+    }
+.else
+.if ${isvirtual $t}
+.else
+.foreach e ${allfields $t}
+    if (!isequal_${type $t $e}(a->$e, b->$e)) {
+        return 0;
+    }
+.endforeach
+.endif
+.endif
+    return 1;
+}
+
+.endforeach
+.foreach t $(want_isequal_list)
+/*
+ * Compare two $t lists,
+ * and return 1 iff they are equal.
+ */
+int isequal_$t_list(const const_$t_list a, const const_$t_list b)
+{
+    unsigned int ix;
+
+/* A small optimization, but also takes care of NIL. */
+    if (a == b) {
+        return 1;
+    }
+    if (a == $t_listNIL || b == $t_listNIL) {
+        return 0;
+    }
+    if (a->sz != b->sz) {
+        return 0;
+    }
+    for (ix = 0; ix < a->sz; ix++) {
+        if (!isequal_$t(a->arr[ix], b->arr[ix])) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+.endforeach
+.endif
+.if ${len $(want_fscan) $(want_fscan_list)}
+/* Scan routines. */
+
+.foreach t $(want_fscan)
+/*
+ * Read a ${metatype $t} of type $t from file 'f' and allocate space for it.
+ * Set the pointer 'p' to point to that structure.
+ */
+int fscan_$t(FILE *fp, $t *p)
+{
+    char *word;
+
+.if ${not ${len ${nonvirtual $t ${subclasses $t}}}}
+.endif
+    *p = $tNIL;
+
+    skip_spaces(fp);
+    if (is_nil_symbol(fp)) {
+        *p = $tNIL;
+        return 1;
+    }
+    if (!fscan_lbracket(fp)) {
+        strcpy(errmsg, "'(' expected");
+        return 0;
+    }
+    skip_spaces(fp);
+    if (!fscan_colon(fp)) {
+        strcpy(errmsg, "':' expected");
+        return 0;
+    }
+    if (!fscan_string(fp, &word)) {
+        strcpy(errmsg, "structure name expected");
+        return 0;
+    }
+    skip_spaces(fp);
+.. first time in the loop there should be no 'else' before the if,
+.. in all other cases there should.
+.set els
+.if ${not ${isvirtual $t}}
+    $(els)if (strcmp(word, "$t") == 0) {
+.foreach e ${allfields $t}
+        ${type $t $e} l_$e;
+.endforeach
+
+.foreach e ${allfields $t}
+        l_$e = ${type $t $e}NIL;
+        if (!fscan_${type $t $e}(fp, &l_$e)) {
+            free(word);
+            return 0;
+        }
+.endforeach
+        *p = new_$t(${seplist ", " ${prefix " l_" ${allfields $t}}});
+    }
+.set els "else "
+.endif
+.foreach c ${nonvirtual ${subclasses $t}}
+    $(els)if (strcmp(word, "$c") == 0) {
+.foreach e ${allfields $c}
+        ${type $c $e} l_$e;
+.endforeach
+
+.foreach e ${allfields $c}
+        l_$e = ${type $c $e}NIL;
+        if (!fscan_${type $c $e}(fp, &l_$e)) {
+            free(word);
+            return 0;
+        }
+.endforeach
+        *p = ($t)new_$c(${seplist ", " ${prefix " l_" ${allfields $c}}});
+    }
+.set els "else "
+.endforeach
+    else {
+        sprintf(errmsg, badcons, "$t", word);
+        free(word);
+        return 0;
+    }
+    skip_spaces(fp);
+    if (!fscan_rbracket(fp)) {
+        strcpy(errmsg, "')' expected");
+        free(word);
+        return 0;
+    }
+    free(word);
+    return 1;
+}
+
+.endforeach
+.foreach t $(want_fscan_list)
+/*
+ * Read an instance of a list of datastructure of type $t
+ * from file 'f' and allocate space for it. Set the pointer 'p' to
+ * point to that structure.
+ */
+int fscan_$t_list(FILE *fp, $t_list *p)
+{
+    int c;
+    $t nw;
+
+    skip_spaces(fp);
+    if (is_nil_symbol(fp)) {
+        *p = $t_listNIL;
+        return 1;
+    }
+    if (!fscan_lbracket(fp)) {
+        strcpy(errmsg, "'(' expected");
+        return 0;
+    }
+    *p = new_$t_list();
+    skip_spaces(fp);
+    while (1) {
+        c = getc(fp);
+        ungetc(c, fp);
+        if (')' == c) {
+            break;
+        }
+        if (!fscan_$t(fp, &nw)) {
+            return 0;
+        }
+        append_$t_list(*p, nw);
+        skip_spaces(fp);
+    }
+    skip_spaces(fp);
+    if (!fscan_rbracket(fp)) {
+        strcpy(errmsg, "')' expected");
+        return 0;
+    }
+    return 1;
+}
+
+.endforeach
+.endif
+.if ${len $(want_fread) $(want_fread_list)}
+/* Read routines. */
+
+.foreach t $(want_fread)
+/*
+ * Read a ${metatype $t} of type $t from file 'f' and allocate space for it.
+ * Set the pointer 'p' to point to that structure.
+ */
+int fread_$t(FILE *f, $t *p)
+{
+    int err = 0;
+    int tag;
+
+    if (fread_int(f, &tag)) {
+        return 1;
+    }
+    *p = $tNIL;
+    if (-1 == tag) {
+        return 0;
+    }
+.. First time in loop there should be no 'else' before the if,
+.. in all other cases there should.
+.set els
+.if ${not ${isvirtual $t}}
+    $(els)if (tag == TAG$t) {
+.foreach e ${allfields $t}
+        ${type $t $e} l_$e;
+.endforeach
+
+.foreach e ${allfields $t}
+        l_$e = ${type $t $e}NIL;
+        if (!err) {
+            err = fread_${type $t $e}(f, &l_$e);
+        }
+.endforeach
+        *p = new_$t(${seplist ", " ${prefix " l_" ${allfields $t}}});
+    }
+.set els "else "
+.endif
+.foreach c ${nonvirtual ${subclasses $t}}
+    $(els)if (tag == TAG$c) {
+.foreach e ${allfields $c}
+        ${type $c $e} l_$e;
+.endforeach
+
+.foreach e ${allfields $c}
+        l_$e = ${type $c $e}NIL;
+        if (!err) {
+            err = fread_${type $c $e}(f, &l_$e);
+        }
+.endforeach
+        *p = ($t)new_$c( ${seplist ", " ${prefix " l_" ${allfields $c}}} );
+    }
+.set els "else "
+.endforeach
+    else {
+        err = 1;
+    }
+    return err;
+}
+
+.endforeach
+.foreach t $(want_fscan_list)
+/*
+ * Read an instance of a list of datastructure of type $t
+ * from file 'f' and allocate space for it. Set the pointer 'p' to
+ * point to that structure.
+ */
+int fread_$t_list(FILE *f, $t_list *p)
+{
+    unsigned int ix, length;
+
+    if (fread_unsigned(f, &length)) {
+        return 1;
+    }
+    *p = $t_listNIL;
+    if (-1 == (int)length) {
+        return 0;
+    }
+    *p = setroom_$t_list(new_$t_list(), length);
+    for (ix = 0; ix < length; ix++) {
+        if (fread_$t(f, &((*p)->arr[ix]))) {
+            return 1;
+        }
+        (*p)->sz += 1;
+    }
+
+    return 0;
+}
+
+.endforeach
+.endif
+.if ${len $(want_delete_list)}
+/* Delete list routines: */
+
+.foreach t $(want_delete_list)
+/* Delete '$t' element at position 'pos' in list 'l'. */
+$t_list delete_$t_list($t_list l, const unsigned int pos)
+{
+    unsigned int ix;
+
+    if (l == $t_listNIL) {
+        FATAL(nilptr);
+    }
+    if (pos >= l->sz) {
+        return l;
+    }
+    rfre_$t(l->arr[pos]);
+    l->sz--;
+    for (ix = pos; ix < l->sz; ix++) {
+        l->arr[ix] = l->arr[ix+1];
+    }
+    return l;
+}
+
+.endforeach
+.endif
+.if ${len $(want_deletelist_list)}
+/* deletelist list routines: */
+
+.foreach t $(want_deletelist_list)
+/* delete '$t' elements at positions 'from' to 'to' in list 'l'. */
+$t_list deletelist_$t_list($t_list l, unsigned int from, unsigned int to)
+{
+    unsigned int ix;
+    unsigned int sh;
+
+    if (l == $t_listNIL) {
+        FATAL(nilptr);
+    }
+    if (to >= l->sz) {
+        to = l->sz;
+    }
+    if (from > to) {
+        return l;
+    }
+    for (ix = from; ix < to; ix++) {
+        rfre_$t(l->arr[ix]);
+    }
+    sh = to-from;
+    for (ix = from; ix + sh < l->sz; ix++) {
+        l->arr[ix] = l->arr[ix+sh];
+    }
+    l->sz -= sh;
+    return l;
+}
+
+.endforeach
+.endif
+.if ${len $(want_extract_list)}
+/* Extract list routines: */
+
+.foreach t $(want_extract_list)
+/* Extract '$t' element at position 'pos' in list 'l'. */
+$t_list extract_$t_list($t_list l, const unsigned int pos, $t *e, int *valid)
+{
+    unsigned int ix;
+
+    if (l == $t_listNIL) {
+        FATAL(nilptr);
+    }
+    if (pos >= l->sz) {
+        *valid = 0;
+        return l;
+    }
+    *valid = 1;
+    *e = l->arr[pos];
+    l->sz--;
+    for (ix = pos; ix < l->sz; ix++) {
+        l->arr[ix] = l->arr[ix+1];
+    }
+    return l;
+}
+
+.endforeach
+.endif
+.if ${len $(want_extractlist_list)}
+/* Extract list list routines: */
+
+.foreach t $(want_extractlist_list)
+/*
+ * Given a $t list 'l', a range 'from' to 'to' and a pointer to a
+ * $t list 'res', create a new list '*res', and move the elements
+ * from 'from' up to, but not including 'to' to this new list. All
+ * elements beyond the range are moved down to close the gap. If necessary,
+ * the range is silently adjusted to cover only exisiting elements.
+ */
+$t_list extractlist_$t_list($t_list l, unsigned int from, unsigned int to, $t_list *res)
+{
+    unsigned int ix;
+    unsigned int ressz;
+
+    if (l == $t_listNIL) {
+        FATAL(nilptr);
+    }
+    if (to >= l->sz) {
+        to = l->sz;
+    }
+    if (from > to) {
+        from = to;
+    }
+    ressz = to - from;
+    *res = setroom_$t_list(new_$t_list(), ressz);
+    /* Copy in elements into 'res' */
+    {
+        unsigned int cnt = ressz;
+        $t *sp = &l->arr[from];
+        $t *dp = (*res)->arr;
+
+        while (cnt != 0) {
+            *dp++ = *sp++;
+            cnt--;
+        }
+    }
+    (*res)->sz = ressz;
+    l->sz -= ressz;
+    for (ix = from; ix < l->sz; ix++) {
+        l->arr[ix] = l->arr[ix+ressz];
+    }
+    return l;
+}
+
+.endforeach
+.endif
+/* ---- end of ${tplfilename} ---- */
+..
+.. Local variables:
+.. mode: c
+.. End:

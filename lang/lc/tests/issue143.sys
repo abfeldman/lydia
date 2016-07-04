@@ -1,0 +1,87 @@
+// Airbus A-330 fuel system
+
+/*
+variables:
+flow   	fuel mass flow, 
+	[zero, low, nominal, high]
+*/
+
+// types
+
+
+
+// components:
+
+
+type Mass = enum {zero, low, nom, high};
+
+// one dimensional flow has size m and direction v (false = -, true = +)
+// about direction :
+/*
+
+   +	
+   |
+-__|__+
+   |
+   |
+   -
+*/
+type Flow = struct {Mass m, bool v};
+
+/*system Junction (Flow flow[0:3][0:9])
+{
+	Mass massIn[0:3][0:9];
+	Mass massOut[0:3][0:9];
+	
+	forall (i in 0..1) {
+		forall (j in 0..9) {
+			massIn[i][j]=not(flow[i][j].v) ? flow[i][j].m : Mass.zero;
+			massOut[i][j]=flow[i][j].v ? flow[i][j].m : Mass.zero;
+		}
+	}
+
+	forall (i in 2..3) {
+		forall (j in 0..9) {
+			massIn[i][j]=flow[i][j].v ? flow[i][j].m : Mass.zero;
+			massOut[i][j]=not(flow[i][j].v) ? flow[i][j].m : Mass.zero;
+		}
+	}
+
+
+}*/
+
+
+system Junction (Mass mi0,mi1,mi2,mi3,mi4,mi5,mi6,mi7,mi8,mi9,mi10
+	, chkMassIn)
+{
+	bool chkMassInHigh;
+	Mass mHigh;
+	
+	mHigh=Mass.high;
+	
+	chkMassInHigh = chkMass (mi0,mi1,mi2,mi3,mi4,mi5,mi6,mi7,mi8,mi9,mi10, mHigh);
+
+	chkMassIn = (chkMassInHigh ? Mass.high : Mass.zero);
+//		(chkMass (massIn[0:10], Mass.nom) ? Mass.nom :
+//			(chkMass (massIn[0:10], Mass.low) ? Mass.low : Mass.zero)));
+}
+
+bool function chkMass (Mass m0,m1,m2,m3,m4,m5,m6,m7,m8,m9,m10, chk)
+{
+	((m0=chk) or (m1=chk) or (m2=chk) or
+		(m3=chk) or (m4=chk) or (m5=chk) or
+			(m6=chk) or (m7=chk) or (m8=chk) or
+				(m9=chk) or (m10=chk))
+
+}
+
+
+
+
+
+
+
+
+
+
+

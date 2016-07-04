@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+
+  <separator>Basic Hierarhical Tests:</separator>
+  <test>
+    <title>empty system</title>
+    <input>empty.hcnf</input>
+    <output>empty.hdnf</output>
+  </test>
+  <test>
+    <title>empty hierarchy</title>
+    <input>realempty.hcnf</input>
+    <output>realempty.hdnf</output>
+  </test>
+
+  <separator>Arithmetic Circuits (WFM) Hiearchical Tests:</separator>
+  <test>
+    <title>2 chained inverters</title>
+    <input>2inverters.hcnf</input>
+    <output>2inverters.hdnf</output>
+  </test>
+  <test>
+    <title>3 chained inverters</title>
+    <input>3inverters.hcnf</input>
+    <output>3inverters.hdnf</output>
+  </test>
+  <test>
+    <title>4 chained inverters</title>
+    <input>4inverters.hcnf</input>
+    <output>4inverters.hdnf</output>
+  </test>
+  <test>
+    <title>Boolean polycell</title>
+    <input>polycell.hcnf</input>
+    <output>polycell.hdnf</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-weak.hcnf</input>
+    <output>2adder-weak.hdnf</output>
+  </test>
+  <test>
+    <title>1-bit subtractor</title>
+    <input>2subtractor.hcnf</input>
+    <output>2subtractor.hdnf</output>
+  </test>
+
+  <separator>Arithmetic Circuits (SFM) Hiearchical Tests:</separator>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-strong.hcnf</input>
+    <output>2adder-strong.hdnf</output>
+  </test>
+
+  <separator>Basic Flat Tests:</separator>
+  <test>
+    <title>empty system</title>
+    <input>empty.cnf</input>
+    <output>empty.dnf</output>
+  </test>
+  <test>
+    <title>realempty system</title>
+    <input>realempty.cnf</input>
+    <output>realempty.dnf</output>
+  </test>
+
+  <separator>Arithmetic Circuits (WFM) Flat Tests:</separator>
+  <test>
+    <title>2 chained inverters</title>
+    <input>2inverters.cnf</input>
+    <output>2inverters.dnf</output>
+  </test>
+  <test>
+    <title>3 chained inverters</title>
+    <input>3inverters.cnf</input>
+    <output>3inverters.dnf</output>
+  </test>
+  <test>
+    <title>4 chained inverters</title>
+    <input>4inverters.cnf</input>
+    <output>4inverters.dnf</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-weak.cnf</input>
+    <output>2adder-weak.dnf</output>
+  </test>
+
+  <separator>Arithmetic Circuits (SFM) Flat Tests:</separator>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-strong.cnf</input>
+    <output>2adder-strong.dnf</output>
+  </test>
+</testsuite>

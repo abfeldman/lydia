@@ -1,0 +1,4 @@
+struct.sys: In system `boo':
+struct.sys:29: warning: unused variable structure member `arg1.q2.z1.y1.x2'
+struct.sys:29: warning: (Reporting only the first unused
+struct.sys:29: warning: member for each structure.)

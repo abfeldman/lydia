@@ -1,0 +1,45 @@
+.TH smoothy 1 "28 June 2007" "Lydia 2.0" "Lydia toolkit"
+.SH NAME
+cdas \- the Lydia Conflict-Directed A* diagnostic engine
+.SH SYNOPSIS
+.B cdas
+[\fIOPTIONS\fR] [\fISOURCE\fR]
+.br
+.B cdas
+[\fB\-h\fR]
+.br
+.B cdas
+[\fB\-v\fR]
+.SH DESCRIPTION
+This is a Conflict-Directed A* solver for a Lydia model represented in
+Conjunctive Normal Form (CNF). A filename containing a system
+description in CNF should be supplied as a first argument to the
+program. In interactive mode, a Command Line Interface (CLI) is
+provided by the solver. Typically the user would enter an observation
+by using the CLI and compute one or more minimal diagnoses. For more
+information on the CLI, type "help" at the CLI prompt.
+.SH OPTIONS
+.TP
+\-h
+Display a short help text.
+.TP
+\-v
+Show version information and exit.
+.SH "REPORTING BUGS"
+Report bugs to <lydia-bugs@fdir.org>.
+.SH "SEE ALSO"
+.BR lydia (1),
+.BR lc (1),
+.BR lcm2wff (1),
+.BR wff2cnf (1),
+.BR tvwff2mvwff (1),
+.BR lsim (1),
+.BR smoothy (1),
+.BR cnf2dnf (1),
+.BR scotty (1),
+.BR gotcha (1)
+.SH COPYRIGHT
+Copyright \(co 2005-2007, Delft University of Technology.
+.SH AUTHOR
+Written by Alexander Feldman, some parts of the language and the
+tool kit are based on a prototype Lydia 1.0 implementation.

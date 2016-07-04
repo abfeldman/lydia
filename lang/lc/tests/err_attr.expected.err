@@ -1,0 +1,7 @@
+err_attr.sys: In system `test':
+err_attr.sys:8: error: invalid attribute value type
+err_attr.sys:8: error: expected bool, found int
+err_attr.sys:9: error: invalid attribute value type
+err_attr.sys:9: error: expected float, found color
+err_attr.sys:10: error: invalid attribute value type
+err_attr.sys:10: error: expected color, found int

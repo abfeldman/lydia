@@ -1,0 +1,559 @@
+(
+ :tv_wff_hierarchy
+ (
+  (
+   :node
+   TJunction
+   ()
+   (
+    :tv_wff
+    (
+     (:values_set Mass (zero low nom high))
+     (:values_set bool (false true))
+    )
+    (
+     (
+      :bool_variable
+      (:identifier m$0 $nil ((:qualifier auxFlow (1))))
+      ()
+      0
+     )
+     (
+      :bool_variable
+      (:identifier m$1 $nil ((:qualifier auxFlow (1))))
+      ()
+      0
+     )
+     (
+      :bool_variable
+      (:identifier m$2 $nil ((:qualifier auxFlow (1))))
+      ()
+      0
+     )
+     (
+      :bool_variable
+      (:identifier m$3 $nil ((:qualifier auxFlow (1))))
+      ()
+      0
+     )
+     (
+      :bool_variable
+      (:identifier v$0 $nil ((:qualifier auxFlow (1))))
+      ()
+      1
+     )
+     (
+      :bool_variable
+      (:identifier v$1 $nil ((:qualifier auxFlow (1))))
+      ()
+      1
+     )
+     (
+      :bool_variable
+      (:identifier m$0 $nil ((:qualifier auxFlow (2))))
+      ()
+      2
+     )
+     (
+      :bool_variable
+      (:identifier m$1 $nil ((:qualifier auxFlow (2))))
+      ()
+      2
+     )
+     (
+      :bool_variable
+      (:identifier m$2 $nil ((:qualifier auxFlow (2))))
+      ()
+      2
+     )
+     (
+      :bool_variable
+      (:identifier m$3 $nil ((:qualifier auxFlow (2))))
+      ()
+      2
+     )
+     (
+      :bool_variable
+      (:identifier v$0 $nil ((:qualifier auxFlow (2))))
+      ()
+      3
+     )
+     (
+      :bool_variable
+      (:identifier v$1 $nil ((:qualifier auxFlow (2))))
+      ()
+      3
+     )
+     (
+      :bool_variable
+      (:identifier m$0 $nil ((:qualifier auxFlow (3))))
+      ()
+      4
+     )
+     (
+      :bool_variable
+      (:identifier m$1 $nil ((:qualifier auxFlow (3))))
+      ()
+      4
+     )
+     (
+      :bool_variable
+      (:identifier m$2 $nil ((:qualifier auxFlow (3))))
+      ()
+      4
+     )
+     (
+      :bool_variable
+      (:identifier m$3 $nil ((:qualifier auxFlow (3))))
+      ()
+      4
+     )
+     (
+      :bool_variable
+      (:identifier v$0 $nil ((:qualifier auxFlow (3))))
+      ()
+      5
+     )
+     (
+      :bool_variable
+      (:identifier v$1 $nil ((:qualifier auxFlow (3))))
+      ()
+      5
+     )
+     (:bool_variable (:identifier massIn$0 (1) $nil) () 6)
+     (:bool_variable (:identifier massIn$1 (1) $nil) () 6)
+     (:bool_variable (:identifier massIn$2 (1) $nil) () 6)
+     (:bool_variable (:identifier massIn$3 (1) $nil) () 6)
+     (:bool_variable (:identifier massIn$0 (2) $nil) () 7)
+     (:bool_variable (:identifier massIn$1 (2) $nil) () 7)
+     (:bool_variable (:identifier massIn$2 (2) $nil) () 7)
+     (:bool_variable (:identifier massIn$3 (2) $nil) () 7)
+     (:bool_variable (:identifier massIn$0 (3) $nil) () 8)
+     (:bool_variable (:identifier massIn$1 (3) $nil) () 8)
+     (:bool_variable (:identifier massIn$2 (3) $nil) () 8)
+     (:bool_variable (:identifier massIn$3 (3) $nil) () 8)
+    )
+    (
+     (:enum_variable (:identifier m $nil ((:qualifier auxFlow (1)))) () 0)
+     (:enum_variable (:identifier v $nil ((:qualifier auxFlow (1)))) () 1)
+     (:enum_variable (:identifier m $nil ((:qualifier auxFlow (2)))) () 0)
+     (:enum_variable (:identifier v $nil ((:qualifier auxFlow (2)))) () 1)
+     (:enum_variable (:identifier m $nil ((:qualifier auxFlow (3)))) () 0)
+     (:enum_variable (:identifier v $nil ((:qualifier auxFlow (3)))) () 1)
+     (:enum_variable (:identifier massIn (1) $nil) () 0)
+     (:enum_variable (:identifier massIn (2) $nil) () 0)
+     (:enum_variable (:identifier massIn (3) $nil) () 0)
+    )
+    ()
+    1
+    (
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_not (:tv_wff_e_var 5))
+       (
+	:tv_wff_e_or
+	(
+	 :tv_wff_e_or
+	 (
+	  :tv_wff_e_or
+	  (:tv_wff_e_and (:tv_wff_e_var 18) (:tv_wff_e_var 0))
+	  (:tv_wff_e_and (:tv_wff_e_var 19) (:tv_wff_e_var 1))
+	 )
+	 (:tv_wff_e_and (:tv_wff_e_var 20) (:tv_wff_e_var 2))
+	)
+	(:tv_wff_e_and (:tv_wff_e_var 21) (:tv_wff_e_var 3))
+       )
+      )
+      (:tv_wff_e_or (:tv_wff_e_var 5) (:tv_wff_e_var 18))
+     )
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_not (:tv_wff_e_var 11))
+       (
+	:tv_wff_e_or
+	(
+	 :tv_wff_e_or
+	 (
+	  :tv_wff_e_or
+	  (:tv_wff_e_and (:tv_wff_e_var 22) (:tv_wff_e_var 6))
+	  (:tv_wff_e_and (:tv_wff_e_var 23) (:tv_wff_e_var 7))
+	 )
+	 (:tv_wff_e_and (:tv_wff_e_var 24) (:tv_wff_e_var 8))
+	)
+	(:tv_wff_e_and (:tv_wff_e_var 25) (:tv_wff_e_var 9))
+       )
+      )
+      (:tv_wff_e_or (:tv_wff_e_var 11) (:tv_wff_e_var 22))
+     )
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_not (:tv_wff_e_var 17))
+       (
+	:tv_wff_e_or
+	(
+	 :tv_wff_e_or
+	 (
+	  :tv_wff_e_or
+	  (:tv_wff_e_and (:tv_wff_e_var 26) (:tv_wff_e_var 12))
+	  (:tv_wff_e_and (:tv_wff_e_var 27) (:tv_wff_e_var 13))
+	 )
+	 (:tv_wff_e_and (:tv_wff_e_var 28) (:tv_wff_e_var 14))
+	)
+	(:tv_wff_e_and (:tv_wff_e_var 29) (:tv_wff_e_var 15))
+       )
+      )
+      (:tv_wff_e_or (:tv_wff_e_var 17) (:tv_wff_e_var 26))
+     )
+     (
+      :tv_wff_e_or
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_or (:tv_wff_e_var 0) (:tv_wff_e_var 1))
+       (:tv_wff_e_var 2)
+      )
+      (:tv_wff_e_var 3)
+     )
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_and
+       (
+	:tv_wff_e_and
+	(
+	 :tv_wff_e_and
+	 (
+	  :tv_wff_e_and
+	  (
+	   :tv_wff_e_or
+	   (:tv_wff_e_not (:tv_wff_e_var 0))
+	   (:tv_wff_e_not (:tv_wff_e_var 1))
+	  )
+	  (
+	   :tv_wff_e_or
+	   (:tv_wff_e_not (:tv_wff_e_var 0))
+	   (:tv_wff_e_not (:tv_wff_e_var 2))
+	  )
+	 )
+	 (
+	  :tv_wff_e_or
+	  (:tv_wff_e_not (:tv_wff_e_var 0))
+	  (:tv_wff_e_not (:tv_wff_e_var 3))
+	 )
+	)
+	(
+	 :tv_wff_e_or
+	 (:tv_wff_e_not (:tv_wff_e_var 1))
+	 (:tv_wff_e_not (:tv_wff_e_var 2))
+	)
+       )
+       (
+	:tv_wff_e_or
+	(:tv_wff_e_not (:tv_wff_e_var 1))
+	(:tv_wff_e_not (:tv_wff_e_var 3))
+       )
+      )
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_not (:tv_wff_e_var 2))
+       (:tv_wff_e_not (:tv_wff_e_var 3))
+      )
+     )
+     (:tv_wff_e_or (:tv_wff_e_var 4) (:tv_wff_e_var 5))
+     (
+      :tv_wff_e_or
+      (:tv_wff_e_not (:tv_wff_e_var 4))
+      (:tv_wff_e_not (:tv_wff_e_var 5))
+     )
+     (
+      :tv_wff_e_or
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_or (:tv_wff_e_var 6) (:tv_wff_e_var 7))
+       (:tv_wff_e_var 8)
+      )
+      (:tv_wff_e_var 9)
+     )
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_and
+       (
+	:tv_wff_e_and
+	(
+	 :tv_wff_e_and
+	 (
+	  :tv_wff_e_and
+	  (
+	   :tv_wff_e_or
+	   (:tv_wff_e_not (:tv_wff_e_var 6))
+	   (:tv_wff_e_not (:tv_wff_e_var 7))
+	  )
+	  (
+	   :tv_wff_e_or
+	   (:tv_wff_e_not (:tv_wff_e_var 6))
+	   (:tv_wff_e_not (:tv_wff_e_var 8))
+	  )
+	 )
+	 (
+	  :tv_wff_e_or
+	  (:tv_wff_e_not (:tv_wff_e_var 6))
+	  (:tv_wff_e_not (:tv_wff_e_var 9))
+	 )
+	)
+	(
+	 :tv_wff_e_or
+	 (:tv_wff_e_not (:tv_wff_e_var 7))
+	 (:tv_wff_e_not (:tv_wff_e_var 8))
+	)
+       )
+       (
+	:tv_wff_e_or
+	(:tv_wff_e_not (:tv_wff_e_var 7))
+	(:tv_wff_e_not (:tv_wff_e_var 9))
+       )
+      )
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_not (:tv_wff_e_var 8))
+       (:tv_wff_e_not (:tv_wff_e_var 9))
+      )
+     )
+     (:tv_wff_e_or (:tv_wff_e_var 10) (:tv_wff_e_var 11))
+     (
+      :tv_wff_e_or
+      (:tv_wff_e_not (:tv_wff_e_var 10))
+      (:tv_wff_e_not (:tv_wff_e_var 11))
+     )
+     (
+      :tv_wff_e_or
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_or (:tv_wff_e_var 12) (:tv_wff_e_var 13))
+       (:tv_wff_e_var 14)
+      )
+      (:tv_wff_e_var 15)
+     )
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_and
+       (
+	:tv_wff_e_and
+	(
+	 :tv_wff_e_and
+	 (
+	  :tv_wff_e_and
+	  (
+	   :tv_wff_e_or
+	   (:tv_wff_e_not (:tv_wff_e_var 12))
+	   (:tv_wff_e_not (:tv_wff_e_var 13))
+	  )
+	  (
+	   :tv_wff_e_or
+	   (:tv_wff_e_not (:tv_wff_e_var 12))
+	   (:tv_wff_e_not (:tv_wff_e_var 14))
+	  )
+	 )
+	 (
+	  :tv_wff_e_or
+	  (:tv_wff_e_not (:tv_wff_e_var 12))
+	  (:tv_wff_e_not (:tv_wff_e_var 15))
+	 )
+	)
+	(
+	 :tv_wff_e_or
+	 (:tv_wff_e_not (:tv_wff_e_var 13))
+	 (:tv_wff_e_not (:tv_wff_e_var 14))
+	)
+       )
+       (
+	:tv_wff_e_or
+	(:tv_wff_e_not (:tv_wff_e_var 13))
+	(:tv_wff_e_not (:tv_wff_e_var 15))
+       )
+      )
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_not (:tv_wff_e_var 14))
+       (:tv_wff_e_not (:tv_wff_e_var 15))
+      )
+     )
+     (:tv_wff_e_or (:tv_wff_e_var 16) (:tv_wff_e_var 17))
+     (
+      :tv_wff_e_or
+      (:tv_wff_e_not (:tv_wff_e_var 16))
+      (:tv_wff_e_not (:tv_wff_e_var 17))
+     )
+     (
+      :tv_wff_e_or
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_or (:tv_wff_e_var 18) (:tv_wff_e_var 19))
+       (:tv_wff_e_var 20)
+      )
+      (:tv_wff_e_var 21)
+     )
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_and
+       (
+	:tv_wff_e_and
+	(
+	 :tv_wff_e_and
+	 (
+	  :tv_wff_e_and
+	  (
+	   :tv_wff_e_or
+	   (:tv_wff_e_not (:tv_wff_e_var 18))
+	   (:tv_wff_e_not (:tv_wff_e_var 19))
+	  )
+	  (
+	   :tv_wff_e_or
+	   (:tv_wff_e_not (:tv_wff_e_var 18))
+	   (:tv_wff_e_not (:tv_wff_e_var 20))
+	  )
+	 )
+	 (
+	  :tv_wff_e_or
+	  (:tv_wff_e_not (:tv_wff_e_var 18))
+	  (:tv_wff_e_not (:tv_wff_e_var 21))
+	 )
+	)
+	(
+	 :tv_wff_e_or
+	 (:tv_wff_e_not (:tv_wff_e_var 19))
+	 (:tv_wff_e_not (:tv_wff_e_var 20))
+	)
+       )
+       (
+	:tv_wff_e_or
+	(:tv_wff_e_not (:tv_wff_e_var 19))
+	(:tv_wff_e_not (:tv_wff_e_var 21))
+       )
+      )
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_not (:tv_wff_e_var 20))
+       (:tv_wff_e_not (:tv_wff_e_var 21))
+      )
+     )
+     (
+      :tv_wff_e_or
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_or (:tv_wff_e_var 22) (:tv_wff_e_var 23))
+       (:tv_wff_e_var 24)
+      )
+      (:tv_wff_e_var 25)
+     )
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_and
+       (
+	:tv_wff_e_and
+	(
+	 :tv_wff_e_and
+	 (
+	  :tv_wff_e_and
+	  (
+	   :tv_wff_e_or
+	   (:tv_wff_e_not (:tv_wff_e_var 22))
+	   (:tv_wff_e_not (:tv_wff_e_var 23))
+	  )
+	  (
+	   :tv_wff_e_or
+	   (:tv_wff_e_not (:tv_wff_e_var 22))
+	   (:tv_wff_e_not (:tv_wff_e_var 24))
+	  )
+	 )
+	 (
+	  :tv_wff_e_or
+	  (:tv_wff_e_not (:tv_wff_e_var 22))
+	  (:tv_wff_e_not (:tv_wff_e_var 25))
+	 )
+	)
+	(
+	 :tv_wff_e_or
+	 (:tv_wff_e_not (:tv_wff_e_var 23))
+	 (:tv_wff_e_not (:tv_wff_e_var 24))
+	)
+       )
+       (
+	:tv_wff_e_or
+	(:tv_wff_e_not (:tv_wff_e_var 23))
+	(:tv_wff_e_not (:tv_wff_e_var 25))
+       )
+      )
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_not (:tv_wff_e_var 24))
+       (:tv_wff_e_not (:tv_wff_e_var 25))
+      )
+     )
+     (
+      :tv_wff_e_or
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_or (:tv_wff_e_var 26) (:tv_wff_e_var 27))
+       (:tv_wff_e_var 28)
+      )
+      (:tv_wff_e_var 29)
+     )
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_and
+       (
+	:tv_wff_e_and
+	(
+	 :tv_wff_e_and
+	 (
+	  :tv_wff_e_and
+	  (
+	   :tv_wff_e_or
+	   (:tv_wff_e_not (:tv_wff_e_var 26))
+	   (:tv_wff_e_not (:tv_wff_e_var 27))
+	  )
+	  (
+	   :tv_wff_e_or
+	   (:tv_wff_e_not (:tv_wff_e_var 26))
+	   (:tv_wff_e_not (:tv_wff_e_var 28))
+	  )
+	 )
+	 (
+	  :tv_wff_e_or
+	  (:tv_wff_e_not (:tv_wff_e_var 26))
+	  (:tv_wff_e_not (:tv_wff_e_var 29))
+	 )
+	)
+	(
+	 :tv_wff_e_or
+	 (:tv_wff_e_not (:tv_wff_e_var 27))
+	 (:tv_wff_e_not (:tv_wff_e_var 28))
+	)
+       )
+       (
+	:tv_wff_e_or
+	(:tv_wff_e_not (:tv_wff_e_var 27))
+	(:tv_wff_e_not (:tv_wff_e_var 29))
+       )
+      )
+      (
+       :tv_wff_e_or
+       (:tv_wff_e_not (:tv_wff_e_var 28))
+       (:tv_wff_e_not (:tv_wff_e_var 29))
+      )
+     )
+    )
+   )
+  )
+ )
+)

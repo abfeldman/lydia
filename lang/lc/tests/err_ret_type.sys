@@ -1,0 +1,4 @@
+bool function foo(int a)
+{
+	a
+}

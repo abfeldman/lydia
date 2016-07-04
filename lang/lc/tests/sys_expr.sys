@@ -1,0 +1,17 @@
+system bar(bool a)
+{
+	a;
+}
+
+system foo()
+{
+	system bar x;
+
+	bool b = x(true);
+
+	system bar p, q;
+
+	p(true) and q(true);
+
+	system bar r(true);
+}

@@ -1,0 +1,25 @@
+system invert(bool i, o)
+{
+	bool h;
+
+	attribute health(h) = true;
+	attribute probability(h) = h ? 0.99 : 0.01;
+	
+	h => (i = !o);
+}
+
+system main()
+{
+	bool a, b;
+
+	system invert I1[4][4], I2[4][4];
+	system invert I3;
+
+	I1[:1](a, b);
+	I1[:1][1:2](a, b);
+	I1[:1][1:2][2:](a, b);
+
+	I2[5][5](a, b);
+	I2(a, b);
+	I3[1][1](a, b);
+}

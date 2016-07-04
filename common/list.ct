@@ -1,0 +1,115 @@
+#include <assert.h>
+
+#include "fwrite.h"
+#include "fread.h"
+#include "fscan.h"
+#include "list.h"
+#include "defs.h"
+
+int search_lydia_symbol_list(const_lydia_symbol_list symbols, lydia_symbol symbol, unsigned int *pos)
+{
+    unsigned int ix;
+    for (ix = 0; ix < symbols->sz; ix++) {
+        if (symbols->arr[ix] == symbol) {
+            *pos = ix;
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int search_int_list(const_int_list l, const int m, unsigned int *pos)
+{
+    register unsigned int i;
+
+    for (i = 0; i < l->sz; i++) {
+        if (m == l->arr[i]) {
+            *pos = i;
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int member_int_list(const_int_list l, const int s)
+{
+    register unsigned int i;
+
+    for (i = 0; i < l->sz; i++) {
+        if (l->arr[i] == s) {
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int_list add_int_list(int_list l, int s)
+{
+    if (!member_int_list(l, s)) {
+        l = append_int_list(l, s);
+    }
+    return l;
+}
+
+int_list merge_int_list(int_list x, int_list y)
+{
+    register unsigned int i;
+
+    for (i = 0; i < y->sz; i++) {
+        if (!member_int_list(x, y->arr[i])) {
+            x = append_int_list(x, y->arr[i]);
+        }
+    }
+    return x;
+}
+
+int_list remove_int_list(int_list l, const int v)
+{
+    register unsigned int i;
+
+    for (i = 0; i < l->sz; i++) {
+        if (l->arr[i] == v) {
+            return delete_int_list(l, i);
+        }
+    }
+    return l;
+}
+
+/* Returns 1 iff every integer in lx is also in ly. */
+int is_subset_int_list(const_int_list lx, const_int_list ly)
+{
+    unsigned int i;
+
+    for (i = 0; i < lx->sz; i++) {
+        if (!member_int_list(ly, lx->arr[i])) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+double max_float_list(const_double_list list)
+{
+    double result = 0.0; /* initialize to suppress the warning */
+
+    register unsigned int ix;
+
+    assert(list->sz > 0);
+
+    for (ix = 0; ix < list->sz; ix++) {
+        if (0 == ix || (list->arr[ix] > result)) {
+            result = list->arr[ix];
+        }
+    }
+
+    return result;
+}
+
+.insert listconf.t
+.include lydia.ct
+
+/*
+ * Local variables:
+ * mode: c
+ * End:
+ */

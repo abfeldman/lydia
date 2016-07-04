@@ -1,0 +1,84 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   LowBandAntenna
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier sig $nil $nil) () -1)
+     (:bool_variable (:identifier h $nil $nil) () -1)
+    )
+    ()
+    ((:bool_constant $nil t) (:bool_constant $nil nil))
+    0
+    (
+     (
+      :csp_or_sentence
+      (
+       :csp_not_sentence
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 0))
+	(:csp_atomic_sentence (:csp_constant_term 0))
+       )
+      )
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 1))
+       (:csp_atomic_sentence (:csp_constant_term 0))
+      )
+     )
+     (
+      :csp_or_sentence
+      (
+       :csp_or_sentence
+       (
+	:csp_not_sentence
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 0))
+	 (:csp_atomic_sentence (:csp_constant_term 1))
+	)
+       )
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 0))
+	(:csp_atomic_sentence (:csp_constant_term 0))
+       )
+      )
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 1))
+       (:csp_atomic_sentence (:csp_constant_term 1))
+      )
+     )
+     (
+      :csp_or_sentence
+      (
+       :csp_or_sentence
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 0))
+	(:csp_atomic_sentence (:csp_constant_term 1))
+       )
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 0))
+	(:csp_atomic_sentence (:csp_constant_term 0))
+       )
+      )
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 1))
+       (:csp_atomic_sentence (:csp_constant_term 0))
+      )
+     )
+    )
+   )
+  )
+ )
+)

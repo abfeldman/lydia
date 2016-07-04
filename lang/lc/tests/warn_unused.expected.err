@@ -1,0 +1,12 @@
+warn_unused.sys: In function `foo':
+warn_unused.sys:1: warning: unused variable `a'
+warn_unused.sys: In system `zoo':
+warn_unused.sys:6: warning: unused variable `a'
+warn_unused.sys: In system `boo':
+warn_unused.sys:10: warning: unused variable `a'
+warn_unused.sys:12: warning: unused variable `b'
+warn_unused.sys:14: warning: unused system declaration `B'
+warn_unused.sys:15: warning: unused system array declaration `C'
+warn_unused.sys:16: warning: unused system array element `D[4]'
+warn_unused.sys:16: warning: (Reporting only the first unused
+warn_unused.sys:16: warning: element for each system array.)

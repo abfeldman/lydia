@@ -1,0 +1,285 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   led
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier inp $nil $nil) () -1)
+     (:bool_variable (:identifier out $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier f $nil $nil)
+      (
+       (:float_variable_attribute probability (0.99999 1e-05))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 1))
+      (
+       :csp_and_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 2)))
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   paper_sensor
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier inp $nil $nil) () -1)
+     (:bool_variable (:identifier out $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier f $nil $nil)
+      (
+       (:float_variable_attribute probability (0.999 0.001))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_impl_sentence
+      (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 2)))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 1))
+       (:csp_atomic_sentence (:csp_variable_term 0))
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   copier
+   (
+    (
+     :edge
+     paper_sensor
+     in_paper_sensor
+     $nil
+     (
+      (
+       :mapping
+       (:identifier $in_paper_sensor#1 $nil $nil)
+       (:identifier inp $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier original_rdy $nil $nil)
+       (:identifier out $nil $nil)
+      )
+     )
+    )
+    (
+     :edge
+     paper_sensor
+     copier_paper_sensor
+     $nil
+     (
+      (
+       :mapping
+       (:identifier $copier_paper_sensor#1 $nil $nil)
+       (:identifier inp $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier paper_rdy $nil $nil)
+       (:identifier out $nil $nil)
+      )
+     )
+    )
+    (
+     :edge
+     led
+     pwr_led
+     $nil
+     (
+      (:mapping (:identifier pwr $nil $nil) (:identifier inp $nil $nil))
+      (
+       :mapping
+       (:identifier pwr_led $nil $nil)
+       (:identifier out $nil $nil)
+      )
+     )
+    )
+    (
+     :edge
+     led
+     rdy_led
+     $nil
+     (
+      (:mapping (:identifier rdy $nil $nil) (:identifier inp $nil $nil))
+      (
+       :mapping
+       (:identifier rdy_led $nil $nil)
+       (:identifier out $nil $nil)
+      )
+     )
+    )
+    (
+     :edge
+     led
+     paper_rdy_led
+     $nil
+     (
+      (
+       :mapping
+       (:identifier paper_rdy $nil $nil)
+       (:identifier inp $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier paper_rdy_led $nil $nil)
+       (:identifier out $nil $nil)
+      )
+     )
+    )
+   )
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier pwr $nil $nil) () -1)
+     (:bool_variable (:identifier original_rdy $nil $nil) () -1)
+     (:bool_variable (:identifier paper_rdy $nil $nil) () -1)
+     (:bool_variable (:identifier rdy $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier f_pwr $nil $nil)
+      (
+       (:float_variable_attribute probability (0.997 0.003))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier f_no_original $nil $nil)
+      (
+       (:float_variable_attribute probability (0.97 0.03))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier f_no_paper $nil $nil)
+      (
+       (:float_variable_attribute probability (0.975 0.025))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier in_tray_filled $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier paper_tray_filled $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier pwr_led $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier rdy_led $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier paper_rdy_led $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (:bool_variable (:identifier $in_paper_sensor#1 $nil $nil) () -1)
+     (:bool_variable (:identifier $copier_paper_sensor#1 $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 4))
+      (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 0)))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 5))
+      (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 7)))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 6))
+      (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 8)))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 3))
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(:csp_atomic_sentence (:csp_variable_term 0))
+	(:csp_atomic_sentence (:csp_variable_term 2))
+       )
+       (:csp_atomic_sentence (:csp_variable_term 1))
+      )
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 12))
+      (
+       :csp_and_sentence
+       (:csp_atomic_sentence (:csp_variable_term 7))
+       (:csp_atomic_sentence (:csp_variable_term 0))
+      )
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 13))
+      (
+       :csp_and_sentence
+       (:csp_atomic_sentence (:csp_variable_term 8))
+       (:csp_atomic_sentence (:csp_variable_term 0))
+      )
+     )
+    )
+   )
+  )
+ )
+)

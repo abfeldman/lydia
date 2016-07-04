@@ -1,0 +1,30 @@
+type prcontrol = enum { regulatingHigh, regulatingLow, boo };
+type pressure = enum { zero, low, high };
+type state = enum { healthy, faulty, unknown };
+
+system PressureRegulator(pressure lineInPressure, pressure lineOutPressure, prcontrol ctrl)
+{
+	state h;
+
+	attribute probability(h) = cond(h) (state.healthy -> 0.95; state.faulty -> 0.045; state.unknown -> 0.005);
+	attribute health(h) = cond(h) (state.healthy -> true; state.faulty -> false; state.unknown -> false);
+
+	(ctrl = prcontrol.regulatingHigh) and (h = state.healthy) => (lineOutPressure = pressure.low);
+	(ctrl = prcontrol.regulatingLow) and (h = state.healthy) => (lineOutPressure = lineInPressure);
+}
+
+attribute float cost;
+attribute prcontrol test;
+
+system X34PropulsionSystem()
+{
+	system PressureRegulator rg11;
+
+	pressure sv01_rg11, rg11_rg01;
+	prcontrol rg11position;
+
+	attribute cost(rg11position) = cond(rg11position) (prcontrol.regulatingHigh -> 0.5; prcontrol.regulatingLow -> 1.5; prcontrol.boo -> 2.5);
+	attribute test(rg11position) = cond(rg11position) (prcontrol.regulatingHigh -> prcontrol.regulatingHigh; prcontrol.regulatingLow -> prcontrol.regulatingLow; prcontrol.boo -> prcontrol.boo);
+
+	rg11(sv01_rg11, rg11_rg01, rg11position);
+}

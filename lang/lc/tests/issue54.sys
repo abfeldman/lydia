@@ -1,0 +1,14 @@
+type prcontrol = enum /* pressure regulator control */
+{
+	regulatingHigh,
+	regulatingLow
+};
+
+attribute float cost;
+
+system X34PropulsionSystem()
+{
+	prcontrol rg11position;
+
+	attribute cost(rg11position) = cond(rg11position) (cmdOpen -> 0.5; cmdClose -> 1.5);
+}

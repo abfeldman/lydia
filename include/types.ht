@@ -1,0 +1,105 @@
+.. Given a type t, return its root class
+.macro rootclass t
+.    if ${member $t ${typelist}}
+.        set root ${inherits $t}
+.        while ${len $(root)}
+.            set t $(root)
+.            set root ${inherits $t}
+.        endwhile
+.    endif
+.    return $t
+.endmacro
+..
+.. Some initial checks
+.set minvers 36
+.if ${< $(tmvers) $(minvers)}
+.    error ${tplfilename}: at least tm version $(minvers) required.
+.    exit 1
+.endif
+.if ${not ${defined basename}}
+.    error '${tplfilename}': definition of basename required.
+.    exit 1
+.endif
+.if ${not ${defined wantdefs}}
+.    error '${tplfilename}': 'wantdefs' must be set.
+.    exit 1
+.endif
+..
+.if ${not ${defined notwantdefs}}
+.    set notwantdefs
+.endif
+..
+.. Prefix and suffix used to construct a list type name from a name
+.set listpre
+.set listsuff _list
+..
+.set groups ds cmp isequal new fre rfre rdup fprint fwrite fread fscan is
+.set listgroups append concat slice setroom insert delete reverse extract extractlist insertlist deletelist
+.append groups $(listgroups)
+.set misccode stat_$(basename) get_balance_$(basename) flush_$(basename)
+..
+.. Reset all want_<groups> variables
+.foreach g $(groups) stat
+.    set want_$g
+.endforeach
+.set want_misc
+..
+.set wantdefs ${uniq $(wantdefs)}
+.set want_ds ${comm ${typelist} "" $(wantdefs)}
+.foreach t $(want_ds) lydia_bool double int lydia_symbol
+.    append want_ds ${filt ($t)_list_list_list & $(wantdefs)}
+.    append want_ds ${filt ($t)_list_list & $(wantdefs)}
+.    append want_ds ${filt ($t)_list & $(wantdefs)}
+.endforeach
+.set wantdefs ${excl $(wantdefs) "" $(want_ds)}
+.. Operations on single elements
+.foreach g ${rmlist ds $(groups)}
+.. Extract all requests starting with $g
+.    set want_$g ${filt $g_(*) \1 $(wantdefs)}
+.    set badtypes ${excl ${singletypes $(want_$g)} "" ${typelist}}
+.    if ${len $(badtypes)}
+.        error Don't know how to generate: ${prefix $g_ $(badtypes)}
+.        exit 1
+.    endif
+.    set wantdefs ${excl $(wantdefs) "" ${prefix $g_ $(want_$g)}}
+.endforeach
+.. Miscellaneous functions
+.set want_misc ${comm $(wantdefs) "" $(misccode)}
+.set wantdefs ${excl $(wantdefs) "" $(want_misc)}
+.if ${len $(wantdefs)}
+.    error Cannot handle definition: $(wantdefs)
+.    exit 1
+.endif
+..
+.. ** derived definitions **
+.set statcode ${or ${member stat_$(basename) $(want_misc)} ${member isbalanced_$(basename) $(want_misc)}}
+.if ${not $(statcode)}
+.    set want_stat
+.endif
+..
+.. Enforce notwantdefs
+.set notwantdefs ${uniq $(notwantdefs)}
+.if ${len $(notwantdefs)}
+.    foreach g ${rmlist ds $(groups)}
+.        foreach t $(want_$g)
+.            if ${member $g_$t $(notwantdefs)}
+.                set want_$g ${rmlist $t $(want_$g)}
+.            endif
+.        endforeach
+.    endforeach
+.    foreach t $(want_ds)
+.        if ${member $t $(notwantdefs)}
+.            set want_ds ${rmlist $t $(want_ds)}
+.        endif
+.    endforeach
+.    foreach f $(misccode)
+.        if ${member $f $(notwantdefs)}
+.            set want_misc ${rmlist $f $(want_misc)}
+.        endif
+.    endforeach
+.endif
+..
+.foreach g $(groups) stat
+.    set want_$g_list ${delisttypes $(want_$g)}
+.    set want_$g ${singletypes $(want_$g)}
+.endforeach

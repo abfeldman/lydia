@@ -1,0 +1,141 @@
+(
+ :tv_cnf_flat_kb
+ polycell
+ (
+  :tv_cnf
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier a $nil $nil)
+    (
+     (:bool_variable_attribute observable (t t))
+     (:bool_variable_attribute input (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier b $nil $nil)
+    (
+     (:bool_variable_attribute observable (t t))
+     (:bool_variable_attribute input (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier c $nil $nil)
+    (
+     (:bool_variable_attribute observable (t t))
+     (:bool_variable_attribute input (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier d $nil $nil)
+    (
+     (:bool_variable_attribute observable (t t))
+     (:bool_variable_attribute input (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier e $nil $nil)
+    (
+     (:bool_variable_attribute observable (t t))
+     (:bool_variable_attribute input (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f $nil $nil)
+    (
+     (:bool_variable_attribute observable (t t))
+     (:bool_variable_attribute output (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier g $nil $nil)
+    (
+     (:bool_variable_attribute observable (t t))
+     (:bool_variable_attribute output (t t))
+    )
+    -1
+   )
+   (:bool_variable (:identifier x $nil $nil) () -1)
+   (:bool_variable (:identifier y $nil $nil) () -1)
+   (:bool_variable (:identifier z $nil $nil) () -1)
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier and2A $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier and2B $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier and2C $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier or2A $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier or2B $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (:tv_clause (0) (7 10))
+   (:tv_clause (1) (8 11))
+   (:tv_clause (2) (7 10))
+   (:tv_clause (2) (9 12))
+   (:tv_clause (3) (8 11))
+   (:tv_clause (4) (9 12))
+   (:tv_clause (5) (7 13))
+   (:tv_clause (5) (8 13))
+   (:tv_clause (6) (8 14))
+   (:tv_clause (6) (9 14))
+   (:tv_clause (7) (0 2 10))
+   (:tv_clause (7 8) (5 13))
+   (:tv_clause (8) (1 3 11))
+   (:tv_clause (8 9) (6 14))
+   (:tv_clause (9) (2 4 12))
+  )
+ )
+)

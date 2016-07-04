@@ -1,0 +1,7 @@
+issue119.sys: In system `bar':
+issue119.sys:4: warning: unused variable array `c'
+issue119.sys:4: warning: unused variable `q'
+issue119.sys: In system `foo':
+issue119.sys:10: warning: unused variable structure member `c[1].D'
+issue119.sys:10: warning: (Reporting only the first unused
+issue119.sys:10: warning: member for each structure.)

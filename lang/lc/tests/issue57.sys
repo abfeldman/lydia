@@ -1,0 +1,4 @@
+system simple (bool i, bool o)
+{
+	o = i;
+}

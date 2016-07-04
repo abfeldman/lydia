@@ -1,0 +1,317 @@
+(
+ :tv_wff_flat_kb
+ stereo
+ (
+  :tv_wff
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier powerSwitchCD $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier playButton $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier playLight $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier stopButton $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier powerSwitchAmp $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier powerLightCD $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier powerLightAmp $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier speakerLeft $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier speakerRight $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier soundLeft $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier soundRight $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier sound $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier cdLeft $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier cdRight $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f_power $nil ((:qualifier cd $nil)))
+    (
+     (:float_variable_attribute probability (0.9 0.1))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f_channelLeft $nil ((:qualifier cd $nil)))
+    (
+     (:float_variable_attribute probability (0.999 0.001))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f_channelRight $nil ((:qualifier cd $nil)))
+    (
+     (:float_variable_attribute probability (0.999 0.001))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier switchedOn $nil ((:qualifier cd $nil)))
+    ()
+    -1
+   )
+   (:bool_variable (:identifier playing $nil ((:qualifier cd $nil))) () -1)
+   (
+    :bool_variable
+    (:identifier f $nil ((:qualifier cd $nil) (:qualifier powerLed $nil)))
+    (
+     (:float_variable_attribute probability (0.9999 0.0001))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f
+     $nil
+     ((:qualifier cd $nil) (:qualifier playingLed $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.9999 0.0001))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f_power $nil ((:qualifier amplifier $nil)))
+    (
+     (:float_variable_attribute probability (0.9 0.1))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f_channelLeft $nil ((:qualifier amplifier $nil)))
+    (
+     (:float_variable_attribute probability (0.999 0.001))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f_channelRight $nil ((:qualifier amplifier $nil)))
+    (
+     (:float_variable_attribute probability (0.999 0.001))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier switchedOn $nil ((:qualifier amplifier $nil)))
+    ()
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f
+     $nil
+     ((:qualifier amplifier $nil) (:qualifier powerLed $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.9999 0.0001))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f $nil ((:qualifier leftSpeaker $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f $nil ((:qualifier rightSpeaker $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (
+    :tv_wff_e_equiv
+    (:tv_wff_e_var 11)
+    (:tv_wff_e_or (:tv_wff_e_var 9) (:tv_wff_e_var 10))
+   )
+   (
+    :tv_wff_e_and
+    (
+     :tv_wff_e_and
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_equiv
+       (:tv_wff_e_var 17)
+       (:tv_wff_e_and (:tv_wff_e_not (:tv_wff_e_var 14)) (:tv_wff_e_var 0))
+      )
+      (
+       :tv_wff_e_equiv
+       (:tv_wff_e_var 18)
+       (
+	:tv_wff_e_and
+	(:tv_wff_e_and (:tv_wff_e_var 17) (:tv_wff_e_var 1))
+	(:tv_wff_e_not (:tv_wff_e_var 3))
+       )
+      )
+     )
+     (
+      :tv_wff_e_equiv
+      (:tv_wff_e_var 12)
+      (:tv_wff_e_and (:tv_wff_e_var 18) (:tv_wff_e_not (:tv_wff_e_var 15)))
+     )
+    )
+    (
+     :tv_wff_e_equiv
+     (:tv_wff_e_var 13)
+     (:tv_wff_e_and (:tv_wff_e_var 18) (:tv_wff_e_not (:tv_wff_e_var 16)))
+    )
+   )
+   (
+    :tv_wff_e_equiv
+    (:tv_wff_e_var 5)
+    (:tv_wff_e_and (:tv_wff_e_var 17) (:tv_wff_e_not (:tv_wff_e_var 19)))
+   )
+   (
+    :tv_wff_e_equiv
+    (:tv_wff_e_var 2)
+    (:tv_wff_e_and (:tv_wff_e_var 18) (:tv_wff_e_not (:tv_wff_e_var 20)))
+   )
+   (
+    :tv_wff_e_and
+    (
+     :tv_wff_e_and
+     (
+      :tv_wff_e_equiv
+      (:tv_wff_e_var 24)
+      (:tv_wff_e_and (:tv_wff_e_not (:tv_wff_e_var 21)) (:tv_wff_e_var 4))
+     )
+     (
+      :tv_wff_e_equiv
+      (:tv_wff_e_var 7)
+      (
+       :tv_wff_e_and
+       (
+	:tv_wff_e_and
+	(:tv_wff_e_var 24)
+	(:tv_wff_e_not (:tv_wff_e_var 22))
+       )
+       (:tv_wff_e_var 12)
+      )
+     )
+    )
+    (
+     :tv_wff_e_equiv
+     (:tv_wff_e_var 8)
+     (
+      :tv_wff_e_and
+      (:tv_wff_e_and (:tv_wff_e_var 24) (:tv_wff_e_not (:tv_wff_e_var 23)))
+      (:tv_wff_e_var 13)
+     )
+    )
+   )
+   (
+    :tv_wff_e_equiv
+    (:tv_wff_e_var 6)
+    (:tv_wff_e_and (:tv_wff_e_var 24) (:tv_wff_e_not (:tv_wff_e_var 25)))
+   )
+   (
+    :tv_wff_e_equiv
+    (:tv_wff_e_var 9)
+    (:tv_wff_e_and (:tv_wff_e_var 7) (:tv_wff_e_not (:tv_wff_e_var 26)))
+   )
+   (
+    :tv_wff_e_equiv
+    (:tv_wff_e_var 10)
+    (:tv_wff_e_and (:tv_wff_e_var 8) (:tv_wff_e_not (:tv_wff_e_var 27)))
+   )
+  )
+ )
+)

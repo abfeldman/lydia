@@ -1,0 +1,44 @@
+type tankState = enum { full, empty, unknown };
+type content = enum { liquidOxygen, rocketPropellant, helium };
+type range = enum { aboveThreshold, inRange, belowThreshold };
+type fluid = struct { range pressure, range temperature, content content };
+type a = struct { bool x1, bool x2 };
+type b = struct { a y1, a y2 };
+type c = struct { b z1, b z2 };
+type d = struct { c q1, c q2 };
+
+system tank(fluid outlet)
+{
+	outlet.content = content.helium;
+
+	tankState h;
+
+	attribute probability(h) = cond(h) (tankState.full -> 0.475;
+	                                    tankState.empty -> 0.475;
+	                                    tankState.unknown -> 0.05);
+	attribute health(h) = (h == tankState.full) ?  true : false;
+
+	(h = tankState.full) => ((outlet.content = content.helium) and
+	                         (outlet.pressure = range.inRange) and
+	                         (outlet.temperature = range.inRange));
+	(h = tankState.empty) => ((outlet.content = content.helium) and
+	                          (outlet.pressure = range.belowThreshold) and
+	                          (outlet.temperature = range.inRange));
+}
+
+system boo(d arg1)
+{
+	arg1.q2.z1.y1.x1 = true;
+}
+
+system main()
+{
+	system tank tk01;
+
+	fluid outlet;
+
+	tk01(outlet);
+
+	d x;
+	system boo B(x);
+}

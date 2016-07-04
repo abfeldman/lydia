@@ -1,0 +1,119 @@
+|| File: lydia.ds
+
+|| An origin descriptor. This is tacked onto all sorts of constructs 
+|| for which it is useful to track their origin.
+origin = { file:lydia_symbol, line:int };
+
+|| A symbol with its origin.
+orig_symbol = { sym:lydia_symbol, org:origin };
+
+type = 
+    variable_type: {} |
+    bool_type: {} |
+    float_type: {} |
+    int_type: {} |
+    user_type: { name:orig_symbol };
+
+extent = { from:expr, to:expr };
+
+model = { defs:[definition] };
+
+definition = { name:orig_symbol } +
+    attribute_definition: { type:type } |
+    system_definition: { type:type, formals:[formal], locals:[local], references:[reference], attributes:[attribute], predicates:compound_predicate } |
+    constant_definition: { type:type, val:expr } |
+    type_definition: { type:type } |
+    enum_definition: { members:[orig_symbol] } |
+    struct_definition: { members:[struct_entry] } |
+    function_definition: { type:type, formals:[formal], val:expr };
+
+struct_entry = { type:type, name:orig_symbol, ranges:[extent] };
+
+formal = { name:variable_identifier, type:type, offset:int, ref_count:[int] };
+local = { name:variable_identifier, type:type, ref_count:[int] };
+reference = { name:orig_symbol, ranges:[extent], type:type, ref_count:[int] };
+attribute = { type:type, var:expr_variable, alias:orig_symbol, value:expr };
+
+predicate = { org:origin } +
+    compound_predicate: { name:orig_symbol, predicates:[predicate], locals:[local] } |
+    simple_predicate: { x:expr } |
+    if_predicate: { cond:expr, thenval:compound_predicate, elseval:compound_predicate } | 
+    switch_predicate: { lhs:expr, choices:[switch_choice], deflt:compound_predicate } |
+    forall_predicate: { id:orig_symbol, ranges:extent, body:compound_predicate } |
+    exists_predicate: { id:orig_symbol, ranges:extent, body:compound_predicate } |
+    system_declaration: { name:orig_symbol, instances:[system_instantiation] } |
+    variable_declaration: { type:type, instances:[variable_instantiation] } |
+    attribute_declaration: { instances:[attribute_instantiation] };
+
+system_instantiation = { name:orig_symbol, ranges:[extent], arguments:[expr] };
+variable_instantiation = { type:type, name:orig_symbol, ranges:[extent], val:expr };
+attribute_instantiation = { type:type, variables:[expr_variable], alias:orig_symbol, val:expr };
+
+variable_identifier = { name:orig_symbol, ranges:[extent], qualifiers:[variable_qualifier] };
+variable_qualifier = { name:orig_symbol, ranges:[extent] };
+
+switch_choice = { rhs:expr, predicate:compound_predicate, org:origin };
+
+expr ~= { type:type };
+
+|| These expressions should be sorted into the front when
+|| reordering them.
+expr_primary = expr +
+    expr_variable: { name:variable_identifier };
+
+|| Binary operator expressions
+expr_binop = expr + { l:expr, r:expr } +
+    expr_add: {} |
+    expr_sub: {} |
+    expr_mult: {} |
+    expr_div: {} |
+    expr_mod: {} |
+    expr_and: {} |
+    expr_or: {} |
+    expr_imply: {} |
+    expr_eq: {} |
+    expr_ne: {} |
+    expr_lt: {} |
+    expr_gt: {} |
+    expr_le: {} |
+    expr_ge: {};
+
+|| Unary operator expressions
+expr_unop = expr + { x:expr } +
+    expr_negate: {} |
+    expr_not: {};
+
+expr_literal = expr +
+    expr_float: { v:double } |
+    expr_int: { v:int } |
+    expr_bool: { v:lydia_bool } |
+|| The type 'expr_enum' is introduced internally after the type checking.
+    expr_enum: { name:lydia_symbol, entry:lydia_symbol };
+
+expr_other = expr +
+    expr_if_else: { cond:expr, thenval:expr, elseval:expr } |
+    expr_cond: { lhs:expr, choices:[choice], deflt:expr } |
+    expr_apply: { name:orig_symbol, extents:[extent], parms:[expr] } |
+    expr_cast: { v:expr, dest:type } |
+    expr_concatenation: { l:[expr] };
+
+|| One choice in a list of choices of an `on' or `map' construct.
+choice = { org:origin, cond:expr, val:expr };
+
+|| Type table entries (these are not part of the Lydia AST):
+user_type_entry = { name:orig_symbol } +
+    enum_user_type_entry: { entries:[orig_symbol] } |
+    system_user_type_entry: { formals:[formal], references:[reference], type:type } |
+    function_user_type_entry: { type:type, value:expr, formals:[formal] } |
+    constant_user_type_entry: { type:type, value:expr } |
+    alias_user_type_entry: { type:type } |
+    struct_user_type_entry: { types:[type], entries:[orig_symbol], ranges:[[extent]] };
+
+|| Attribute table entries (also not part of the Lydia AST):
+attribute_entry = { name:orig_symbol, type:type };
+
+|| Index table entries (not part of the AST):
+index_entry = { name:lydia_symbol, value:int };
+
+|| Quantifier table entries (not part of the AST, used in the typechecking):
+quantifier_entry = { name:lydia_symbol, from:expr, to:expr };

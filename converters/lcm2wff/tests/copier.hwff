@@ -1,0 +1,253 @@
+(
+ :tv_wff_hierarchy
+ (
+  (
+   :node
+   led
+   ()
+   (
+    :tv_wff
+    ()
+    (
+     (:bool_variable (:identifier inp $nil $nil) () -1)
+     (:bool_variable (:identifier out $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier f $nil $nil)
+      (
+       (:float_variable_attribute probability (0.99999 1e-05))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :tv_wff_e_equiv
+      (:tv_wff_e_var 1)
+      (:tv_wff_e_and (:tv_wff_e_var 0) (:tv_wff_e_not (:tv_wff_e_var 2)))
+     )
+    )
+   )
+  )
+  (
+   :node
+   paper_sensor
+   ()
+   (
+    :tv_wff
+    ()
+    (
+     (:bool_variable (:identifier inp $nil $nil) () -1)
+     (:bool_variable (:identifier out $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier f $nil $nil)
+      (
+       (:float_variable_attribute probability (0.999 0.001))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :tv_wff_e_impl
+      (:tv_wff_e_not (:tv_wff_e_var 2))
+      (:tv_wff_e_equiv (:tv_wff_e_var 1) (:tv_wff_e_var 0))
+     )
+    )
+   )
+  )
+  (
+   :node
+   copier
+   (
+    (
+     :edge
+     paper_sensor
+     in_paper_sensor
+     $nil
+     (
+      (
+       :mapping
+       (:identifier $in_paper_sensor#1 $nil $nil)
+       (:identifier inp $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier original_rdy $nil $nil)
+       (:identifier out $nil $nil)
+      )
+     )
+    )
+    (
+     :edge
+     paper_sensor
+     copier_paper_sensor
+     $nil
+     (
+      (
+       :mapping
+       (:identifier $copier_paper_sensor#1 $nil $nil)
+       (:identifier inp $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier paper_rdy $nil $nil)
+       (:identifier out $nil $nil)
+      )
+     )
+    )
+    (
+     :edge
+     led
+     pwr_led
+     $nil
+     (
+      (:mapping (:identifier pwr $nil $nil) (:identifier inp $nil $nil))
+      (
+       :mapping
+       (:identifier pwr_led $nil $nil)
+       (:identifier out $nil $nil)
+      )
+     )
+    )
+    (
+     :edge
+     led
+     rdy_led
+     $nil
+     (
+      (:mapping (:identifier rdy $nil $nil) (:identifier inp $nil $nil))
+      (
+       :mapping
+       (:identifier rdy_led $nil $nil)
+       (:identifier out $nil $nil)
+      )
+     )
+    )
+    (
+     :edge
+     led
+     paper_rdy_led
+     $nil
+     (
+      (
+       :mapping
+       (:identifier paper_rdy $nil $nil)
+       (:identifier inp $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier paper_rdy_led $nil $nil)
+       (:identifier out $nil $nil)
+      )
+     )
+    )
+   )
+   (
+    :tv_wff
+    ()
+    (
+     (:bool_variable (:identifier pwr $nil $nil) () -1)
+     (:bool_variable (:identifier original_rdy $nil $nil) () -1)
+     (:bool_variable (:identifier paper_rdy $nil $nil) () -1)
+     (:bool_variable (:identifier rdy $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier f_pwr $nil $nil)
+      (
+       (:float_variable_attribute probability (0.997 0.003))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier f_no_original $nil $nil)
+      (
+       (:float_variable_attribute probability (0.97 0.03))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier f_no_paper $nil $nil)
+      (
+       (:float_variable_attribute probability (0.975 0.025))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier in_tray_filled $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier paper_tray_filled $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier pwr_led $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier rdy_led $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier paper_rdy_led $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (:bool_variable (:identifier $in_paper_sensor#1 $nil $nil) () -1)
+     (:bool_variable (:identifier $copier_paper_sensor#1 $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (:tv_wff_e_equiv (:tv_wff_e_var 4) (:tv_wff_e_not (:tv_wff_e_var 0)))
+     (:tv_wff_e_equiv (:tv_wff_e_var 5) (:tv_wff_e_not (:tv_wff_e_var 7)))
+     (:tv_wff_e_equiv (:tv_wff_e_var 6) (:tv_wff_e_not (:tv_wff_e_var 8)))
+     (
+      :tv_wff_e_equiv
+      (:tv_wff_e_var 3)
+      (
+       :tv_wff_e_and
+       (:tv_wff_e_and (:tv_wff_e_var 0) (:tv_wff_e_var 2))
+       (:tv_wff_e_var 1)
+      )
+     )
+     (
+      :tv_wff_e_equiv
+      (:tv_wff_e_var 12)
+      (:tv_wff_e_and (:tv_wff_e_var 7) (:tv_wff_e_var 0))
+     )
+     (
+      :tv_wff_e_equiv
+      (:tv_wff_e_var 13)
+      (:tv_wff_e_and (:tv_wff_e_var 8) (:tv_wff_e_var 0))
+     )
+    )
+   )
+  )
+ )
+)

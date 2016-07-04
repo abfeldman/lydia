@@ -1,0 +1,60 @@
+attribute bool input;
+attribute bool output;
+
+system inverter(bool o, i)
+{
+    bool h;
+
+    attribute probability(h) = (h ? 0.99 : 0.01);
+    attribute health(h) = h;
+    
+    h => (o = !i);
+}
+
+system xor2(bool o, i1, i2)
+{
+    bool h;
+
+    attribute probability(h) = (h ? 0.99 : 0.01);
+    attribute health(h) = h;
+    
+    h => (o = (i1 != i2));
+}
+
+system and2(bool o, i1, i2)
+{
+    bool h;
+
+    attribute probability(h) = (h ? 0.99 : 0.01);
+    attribute health(h) = h;
+    
+    h => (o = (i1 and i2));
+}
+
+system or2(bool o, i1, i2)
+{
+    bool h;
+
+    attribute probability(h) = (h ? 0.99 : 0.01);
+    attribute health(h) = h;
+    
+    h => (o = (i1 or i2));
+}
+
+system subtractor()
+{
+    bool x, y, p, d, b;
+    bool i, j, k, l, m;
+
+    attribute observable(x, y, p, d, b) = true;
+    attribute input(x, y, p) = true;
+    attribute output(d, b) = true;
+
+    system xor2 h1(i, y, p);
+    system xor2 h2(d, x, i);
+    system or2 h3(j, y, p);
+    system and2 h4(m, j, l);
+    system or2 h5(b, m, k);
+    system inverter h6(l, x);
+    system and2 h7(k, y, p);
+}

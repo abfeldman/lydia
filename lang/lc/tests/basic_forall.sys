@@ -1,0 +1,8 @@
+system test()
+{
+	bool a[1:5];
+
+	forall (i in 1 .. 5) {
+		a[i] = true;
+	}
+}

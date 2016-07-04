@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+  <separator>Basic Tests:</separator>
+  <test>
+    <title>empty hierarchy</title>
+    <input>empty.lcm</input>
+    <output>empty.csp</output>
+  </test>
+  <test>
+    <title>empty system</title>
+    <input>realempty.lcm</input>
+    <output>realempty.csp</output>
+  </test>
+  <test>
+    <title>basic array expressions</title>
+    <input>basic_arrays.hcnf</input>
+    <output>basic_arrays.cnf</output>
+  </test>
+
+  <separator>Basic CNF Tests:</separator>
+  <test>
+    <title>empty system</title>
+    <input>empty.hcnf</input>
+    <output>empty.cnf</output>
+  </test>
+  <test>
+    <title>empty hierarchy</title>
+    <input>realempty.hcnf</input>
+    <output>realempty.cnf</output>
+  </test>
+
+  <separator>Propositional Wff Tests:</separator>
+  <test>
+    <title>2 chained inverters</title>
+    <input>2inverters.hwff</input>
+    <output>2inverters.wff</output>
+  </test>
+  <test>
+    <title>3 chained inverters</title>
+    <input>3inverters.hwff</input>
+    <output>3inverters.wff</output>
+  </test>
+  <test>
+    <title>4 chained inverters</title>
+    <input>4inverters.hwff</input>
+    <output>4inverters.wff</output>
+  </test>
+  <test>
+    <title>10 chained inverters</title>
+    <input>10inverters.hwff</input>
+    <output>10inverters.wff</output>
+  </test>
+  <test>
+    <title>Boolean polycell</title>
+    <input>polycell.hwff</input>
+    <output>polycell.wff</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-weak.hwff</input>
+    <output>2adder-weak.wff</output>
+  </test>
+  <test>
+    <title>1-bit subtractor</title>
+    <input>2subtractor.hwff</input>
+    <output>2subtractor.wff</output>
+  </test>
+  <test>
+    <title>3 inverters and an AND gate</title>
+    <input>inverted-and.hwff</input>
+    <output>inverted-and.wff</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-strong.hwff</input>
+    <output>2adder-strong.wff</output>
+  </test>
+  <test>
+    <title>copier</title>
+    <input>copier.hwff</input>
+    <output>copier.wff</output>
+  </test>
+  <test>
+    <title>stereo</title>
+    <input>stereo.hwff</input>
+    <output>stereo.wff</output>
+  </test>
+
+  <separator>Arithmetic Circuits (WFM) CNF Tests:</separator>
+  <test>
+    <title>2 chained inverters</title>
+    <input>2inverters.hcnf</input>
+    <output>2inverters.cnf</output>
+  </test>
+  <test>
+    <title>3 chained inverters</title>
+    <input>3inverters.hcnf</input>
+    <output>3inverters.cnf</output>
+  </test>
+  <test>
+    <title>4 chained inverters</title>
+    <input>4inverters.hcnf</input>
+    <output>4inverters.cnf</output>
+  </test>
+  <test>
+    <title>10 chained inverters</title>
+    <input>10inverters.hcnf</input>
+    <output>10inverters.cnf</output>
+  </test>
+  <test>
+    <title>Boolean polycell</title>
+    <input>polycell.hcnf</input>
+    <output>polycell.cnf</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-weak.hcnf</input>
+    <output>2adder-weak.cnf</output>
+  </test>
+  <test>
+    <title>1-bit subtractor</title>
+    <input>2subtractor.hcnf</input>
+    <output>2subtractor.cnf</output>
+  </test>
+  <test>
+    <title>3 inverters and an AND gate</title>
+    <input>inverted-and.hcnf</input>
+    <output>inverted-and.cnf</output>
+  </test>
+  <test>
+    <title>74182</title>
+    <input>74182.hcnf</input>
+    <output>74182.cnf</output>
+  </test>
+  <test>
+    <title>74L85</title>
+    <input>74L85.hcnf</input>
+    <output>74L85.cnf</output>
+  </test>
+  <test>
+    <title>74283</title>
+    <input>74283.hcnf</input>
+    <output>74283.cnf</output>
+  </test>
+  <test>
+    <title>74181</title>
+    <input>74181.hcnf</input>
+    <output>74181.cnf</output>
+  </test>
+
+  <separator>Arithmetic Circuits (SFM) CNF Tests:</separator>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-strong.hcnf</input>
+    <output>2adder-strong.cnf</output>
+  </test>
+<!--
+  <separator>Arithmetic Circuits (Custom Boolean Type):</separator>
+  <test>
+    <title>inverter</title>
+    <input>inverter-mv.mvhcnf</input>
+    <output>inverter-mv.mvcnf</output>
+  </test>
+  <test>
+    <title>2 chained inverters</title>
+    <input>2inverters-mv.mvhcnf</input>
+    <output>2inverters-mv.mvcnf</output>
+  </test>
+-->
+  <separator>Modelling Tests:</separator>
+  <test>
+    <title>copier</title>
+    <input>copier.hcnf</input>
+    <output>copier.cnf</output>
+  </test>
+  <test>
+    <title>stereo</title>
+    <input>stereo.hcnf</input>
+    <output>stereo.cnf</output>
+  </test>
+<!--
+  <separator>Mastermind:</separator>
+  <test>
+    <title>mastermind 2 pins, 3 colors</title>
+    <input>mastermind-2x3.mvhcnf</input>
+    <output>mastermind-2x3.mvcnf</output>
+  </test>
+  <test>
+    <title>mastermind 2 pins, 4 colors</title>
+    <input>mastermind-2x4.mvhcnf</input>
+    <output>mastermind-2x4.mvcnf</output>
+  </test>
+  <test>
+    <title>mastermind 2 pins, 5 colors</title>
+    <input>mastermind-2x5.mvhcnf</input>
+    <output>mastermind-2x5.mvcnf</output>
+  </test>
+  <test>
+    <title>mastermind 2 pins, 6 colors</title>
+    <input>mastermind-2x6.mvhcnf</input>
+    <output>mastermind-2x6.mvcnf</output>
+  </test>
+  <test>
+    <title>mastermind 3 pins, 3 colors</title>
+    <input>mastermind-3x3.mvhcnf</input>
+    <output>mastermind-3x3.mvcnf</output>
+  </test>
+  <test>
+    <title>mastermind 3 pins, 4 colors</title>
+    <input>mastermind-3x4.mvhcnf</input>
+    <output>mastermind-3x4.mvcnf</output>
+  </test>
+  <test>
+    <title>mastermind 3 pins, 5 colors</title>
+    <input>mastermind-3x5.mvhcnf</input>
+    <output>mastermind-3x5.mvcnf</output>
+  </test>
+  <test>
+    <title>mastermind 3 pins, 6 colors</title>
+    <input>mastermind-3x6.mvhcnf</input>
+    <output>mastermind-3x6.mvcnf</output>
+  </test>
+  <test>
+    <title>mastermind 4 pins, 3 colors</title>
+    <input>mastermind-4x3.mvhcnf</input>
+    <output>mastermind-4x3.mvcnf</output>
+  </test>
+  <test>
+    <title>mastermind 4 pins, 4 colors</title>
+    <input>mastermind-4x4.mvhcnf</input>
+    <output>mastermind-4x4.mvcnf</output>
+  </test>
+  <test>
+    <title>mastermind 4 pins, 5 colors</title>
+    <input>mastermind-4x5.mvhcnf</input>
+    <output>mastermind-4x5.mvcnf</output>
+  </test>
+  <test>
+    <title>mastermind 4 pins, 6 colors</title>
+    <input>mastermind-4x6.mvhcnf</input>
+    <output>mastermind-4x6.mvcnf</output>
+  </test>
+
+  <separator>Sudoku:</separator>
+  <test>
+    <title>sudoku 4x4 grid (layout 1)</title>
+    <input>sudoku-4x4-1.mvhcnf</input>
+    <output>sudoku-4x4-1.mvcnf</output>
+  </test>
+  <test>
+    <title>sudoku 9x9 grid (layout 1)</title>
+    <input>sudoku-9x9-1.mvhcnf</input>
+    <output>sudoku-9x9-1.mvcnf</output>
+  </test>
+  <test>
+    <title>sudoku 9x9 grid (layout 2)</title>
+    <input>sudoku-9x9-2.mvhcnf</input>
+    <output>sudoku-9x9-2.mvcnf</output>
+  </test>
+  <test>
+    <title>sudoku 9x9 grid (layout 3)</title>
+    <input>sudoku-9x9-3.mvhcnf</input>
+    <output>sudoku-9x9-3.mvcnf</output>
+  </test>
+-->
+  <separator>Regression Tests:</separator>
+<!--
+  <test>
+    <title>issue 41</title>
+    <input>issue41.mvhcnf</input>
+    <output>issue41.mvcnf</output>
+  </test>
+  <test>
+    <title>issue 47</title>
+    <input>issue47.mvhcnf</input>
+    <output>issue47.mvcnf</output>
+  </test>
+-->
+  <test>
+    <title>issue 57</title>
+    <input>issue57.hcsp</input>
+    <output>issue57.csp</output>
+  </test>
+  <test>
+    <title>issue 110</title>
+    <input>issue110.hcnf</input>
+    <output>issue110.cnf</output>
+  </test>
+
+  <separator>Arithmetic Circuits (SFM) DNF Tests:</separator>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-strong.hdnf</input>
+    <output>2adder-strong.dnf</output>
+  </test>
+
+  <separator>Basic DNF Tests:</separator>
+  <test>
+    <title>empty hierarchy</title>
+    <input>empty.hdnf</input>
+    <output>empty.dnf</output>
+  </test>
+  <test>
+    <title>empty system</title>
+    <input>realempty.hdnf</input>
+    <output>realempty.dnf</output>
+  </test>
+
+  <separator>Arithmetic Circuits DNF Tests:</separator>
+  <test>
+    <title>2 chained inverters</title>
+    <input>2inverters.hdnf</input>
+    <output>2inverters.dnf</output>
+  </test>
+  <test>
+    <title>3 inverters</title>
+    <input>3inverters.hdnf</input>
+    <output>3inverters.dnf</output>
+  </test>
+  <test>
+    <title>4 chained inverters</title>
+    <input>4inverters.hdnf</input>
+    <output>4inverters.dnf</output>
+  </test>
+  <test>
+    <title>Boolean polycell</title>
+    <input>polycell.hdnf</input>
+    <output>polycell.dnf</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-weak.hdnf</input>
+    <output>2adder-weak.dnf</output>
+  </test>
+  <test>
+    <title>1-bit subtractor</title>
+    <input>2subtractor.hdnf</input>
+    <output>2subtractor.dnf</output>
+  </test>
+</testsuite>

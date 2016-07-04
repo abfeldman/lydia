@@ -1,0 +1,7 @@
+err_args_cnt.sys: In system `foo':
+err_args_cnt.sys:6: warning: unused variable `a'
+err_args_cnt.sys: In system `main':
+err_args_cnt.sys:12: error: too few arguments to function `bar'
+err_args_cnt.sys:13: error: too many arguments to function `bar'
+err_args_cnt.sys:14: error: too few arguments to system `f1'
+err_args_cnt.sys:17: error: too many arguments to system `f2'

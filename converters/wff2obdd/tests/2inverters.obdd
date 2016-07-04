@@ -1,0 +1,64 @@
+(
+ :obdd_flat_kb
+ main
+ (
+  :obdd
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier x $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier y $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier z $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I0 $nil)))
+    (
+     (:bool_variable_attribute health (nil t))
+     (:float_variable_attribute probability (0.01 0.99))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I1 $nil)))
+    (
+     (:bool_variable_attribute health (nil t))
+     (:float_variable_attribute probability (0.01 0.99))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (:obdd_terminal_node nil)
+   (:obdd_terminal_node t)
+   (:obdd_non_terminal_node 4 1 0)
+   (:obdd_non_terminal_node 3 2 0)
+   (:obdd_non_terminal_node 3 1 0)
+   (:obdd_non_terminal_node 2 3 4)
+   (:obdd_non_terminal_node 2 1 2)
+   (:obdd_non_terminal_node 1 5 6)
+   (:obdd_non_terminal_node 2 2 1)
+   (:obdd_non_terminal_node 2 4 3)
+   (:obdd_non_terminal_node 1 8 9)
+   (:obdd_non_terminal_node 0 7 10)
+  )
+  11
+ )
+)

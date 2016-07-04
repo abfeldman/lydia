@@ -1,0 +1,85 @@
+#include "config.h"
+
+#include <assert.h>
+
+#include "ast.h"
+#include "util.h"
+#include "defs.h"
+
+static void rfre_function_user_type_entry(function_user_type_entry e);
+static void rfre_constant_user_type_entry(constant_user_type_entry e);
+static void rfre_system_user_type_entry(system_user_type_entry e);
+static int isequal_orig_symbol(const_orig_symbol l, const_orig_symbol r);
+
+.insert astconf.t
+.include lydia.ct
+#line $[1+${tpllineno}] "${tplfilename}"
+
+static int isequal_orig_symbol(const_orig_symbol l, const_orig_symbol r)
+{
+    return r->sym == l->sym;
+}
+
+static void rfre_function_user_type_entry(function_user_type_entry e)
+{
+    if (e == function_user_type_entryNIL) {
+	return;
+    }
+    switch (e->tag) {
+	case TAGfunction_user_type_entry:
+	    rfre_orig_symbol(e->name);
+	    rfre_type(e->type);
+/* Don't free 'e->value'. */
+/* Don't free 'e->formals'. */
+	    fre_function_user_type_entry(e);
+	    break;
+	default:
+	    assert(0);
+    }
+}
+
+static void rfre_constant_user_type_entry(constant_user_type_entry e)
+{
+    if (e == constant_user_type_entryNIL) {
+	return;
+    }
+    switch (e->tag) {
+	case TAGconstant_user_type_entry:
+	    rfre_orig_symbol(e->name);
+	    rfre_type(e->type);
+/* Don't free 'e->value'. */
+	    fre_constant_user_type_entry(e);
+	    break;
+	default:
+	    assert(0);
+    }
+}
+
+static void rfre_system_user_type_entry(system_user_type_entry e)
+{
+    if (e == system_user_type_entryNIL) {
+	return;
+    }
+    switch (e->tag) {
+	case TAGsystem_user_type_entry:
+	    rfre_orig_symbol(e->name);
+	    fre_system_user_type_entry(e);
+/* Don't free 'e->formals'. */
+/* Don't free 'e->locals'. */
+/* Don't free 'e->references'. */
+/* Don't free 'e->predicates'. */
+	    break;
+	default:
+	    assert(0);
+    }
+}
+
+/*
+ * local variables:
+ * mode: c
+ * tab-width: 8
+ * c-basic-offset: 4
+ * End:
+ * vim600: sw=4 ts=8 fdm=marker
+ * vim<600: sw=4 ts=8
+ */

@@ -1,0 +1,18 @@
+#ifndef HIERARCHY_H
+#define HIERARCHY_H
+
+#include "list.h"
+#include "types.h"
+#include "variable.h"
+#include "serializable.h"
+
+.insert hierarchyconf.t
+.include lydia.ht
+#line $[1+${tpllineno}] "${tplfilename}"
+
+extern int search_node_list(const_node_list, lydia_symbol, unsigned int *);
+extern int member_node_list(const_node_list, lydia_symbol, unsigned int *);
+extern node find_root_node(const_hierarchy);
+extern node find_node(const_hierarchy, const_lydia_symbol);
+
+#endif

@@ -1,0 +1,72 @@
+(
+ :tv_cnf_flat_kb
+ main
+ (
+  :tv_cnf
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier i (0) $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i (1) $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i (2) $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i (3) $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I (0))))
+    (
+     (:bool_variable_attribute health (nil t))
+     (:float_variable_attribute probability (0.05 0.95))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I (1))))
+    (
+     (:bool_variable_attribute health (nil t))
+     (:float_variable_attribute probability (0.05 0.95))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I (2))))
+    (
+     (:bool_variable_attribute health (nil t))
+     (:float_variable_attribute probability (0.05 0.95))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (:tv_clause () (0 1 4))
+   (:tv_clause () (1 2 5))
+   (:tv_clause () (2 3 6))
+   (:tv_clause (0 1) (4))
+   (:tv_clause (1 2) (5))
+   (:tv_clause (2 3) (6))
+  )
+ )
+)

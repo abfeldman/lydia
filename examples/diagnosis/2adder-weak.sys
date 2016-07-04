@@ -1,0 +1,10 @@
+#include "weak/std-logic.inc"
+
+system fulladder()
+{
+	bool i1, i2, ci, sum, carry;
+
+	attribute observable(i1, i2, ci, sum, carry) = true;
+
+	system fulladder2 FA(i1, i2, ci, sum, carry);
+}

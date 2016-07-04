@@ -1,0 +1,129 @@
+This directory contains the sources for a Lydia compiler.
+
+The language Lydia is used to describe the behaviour of physical systems,
+and in particular their behaviour under the assumption of defects in the
+system. These system models are used to generate code for error
+identification and diagnosis, and related applications.
+
+---------------------------------------------------------------------------
+
+The Tm Template Manager software is being phased out, but for now
+needs to be installed in order to use Lydia. The most recent
+version of Tm as of this writing is version 2.1.0, available
+from:
+
+    <https://gforge.cs.vu.nl/projects/templatemanager>
+
+---------------------------------------------------------------------------
+
+Other prerequisities: 
+
+Lydia requires: 
+
+- autoconf v2.58a or higher
+- automake v2.7 or higher
+
+Running the test suite (*strongly* recommended) requires:
+
+- python 2.4 or higher
+
+---------------------------------------------------------------------------
+
+To build the compiler it is usually sufficient to issue the following
+commands:
+
+    ./configure --prefix=$HOME/lydia
+    make all check install
+    rehash
+
+This will configure the sources for your particular system,
+compile the Lydia compiler, run a set of validation tests on it,
+and install a `lydia' executable in the directory
+$HOME/lydia/bin. The `rehash' command makes sure that the
+installed executable is also found by your shell, and is only
+necessary if you are running a C-Shell derivative (e.g. csh or
+tcsh).
+
+(If you are compiling Lydia from sources obtained directly from
+the Subversion repository rather than from an official release
+archive, you need to explicitly generate the 'configure' script
+first. Please refer to the file README-DEVELOPERS for
+instructions.)
+
+    ./configure --help 
+
+will list possible custom options to 'configure' that are yet to
+be documented in this README.
+
+If the python 2.4 executable is not in your search path (this can
+be the case e.g. on Debian systems), provide the correct location
+as follows:
+
+    ./configure PYTHON=/some/location/python2.4
+
+---------------------------------------------------------------------------
+You can uninstall the Lydia compiler again with:
+
+    make uninstall
+
+in this directory.
+
+Obviously, you can also have it installed in another directory by changing
+the value that you give to the --prefix option of the configure script.
+
+Assuming that the directory $HOME/lydia/bin is your search path, you can
+now invoke the compiler as follows:
+
+    lydia hello.sys
+
+There actually is a file hello.sys in the distribution. For this file
+the lydia compiler will produce the following output:
+
+system hello(s:int) = {
+    s = 42
+}
+
+Options
+-------
+
+Optionally, the readline library can be used to allow more comfortable
+editing of commandlines in `spock'. To enable this feature, give 
+configure the option
+
+ --enable-readline
+
+
+
+Flags
+-----
+
+The command
+
+    lydia -h
+
+shows the command-line options of Lydia.  The most useful are:
+
+-c		Reorder the simplified system, and generate C code for it.
+-dn		Trace expression simplification.
+
+
+
+Further information
+-------------------
+
+A number of separate files provide further information:
+
+
+File		Contents
+----		--------
+
+INSTALL		Detailed description of the `configure' script.
+PROTOCOL	Description of the protocol for exchanging measurement
+		streams.
+README		This file.
+README-DEVELOPERS
+		README for lydia developers.
+examples	A directory with example systems.
+implementation	A directory containing documentation of the implementation.
+testsuite	A directory with tests for the lydia compiler.
+

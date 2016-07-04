@@ -1,0 +1,85 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   X34PropulsionSystem
+   ()
+   (
+    :csp
+    (
+     (:values_set e1 (ce1_0 ce2_0))
+     (:values_set e2 (ce2_0 ce2_1))
+     (:values_set e3 (ce3_0 ce3_1 ce3_2))
+    )
+    (
+     (
+      :enum_variable
+      (:identifier h1 $nil $nil)
+      (
+       (:float_variable_attribute probability (0.9 0.1))
+       (:bool_variable_attribute health (t nil))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier h2 $nil $nil)
+      (
+       (:float_variable_attribute probability (0.9 0.1))
+       (:bool_variable_attribute health (t nil))
+      )
+      1
+     )
+     (:enum_variable (:identifier a $nil $nil) () 2)
+     (:enum_variable (:identifier b $nil $nil) () 2)
+    )
+    ()
+    (
+     (:enum_constant $nil ce2_0 1)
+     (:enum_constant $nil ce3_2 2)
+     (:enum_constant $nil ce1_0 0)
+    )
+    0
+    (
+     (
+      :csp_impl_sentence
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 1))
+       (:csp_atomic_sentence (:csp_constant_term 0))
+      )
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 2))
+       (:csp_atomic_sentence (:csp_constant_term 1))
+      )
+     )
+     (
+      :csp_impl_sentence
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (:csp_atomic_sentence (:csp_constant_term 2))
+      )
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 3))
+       (:csp_atomic_sentence (:csp_variable_term 2))
+      )
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 1))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 0))
+      (:csp_atomic_sentence (:csp_constant_term 2))
+     )
+    )
+   )
+  )
+ )
+)

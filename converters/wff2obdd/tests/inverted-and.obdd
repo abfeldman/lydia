@@ -1,0 +1,197 @@
+(
+ :obdd_flat_kb
+ main
+ (
+  :obdd
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier a $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier b $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier c $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier d $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier e $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f $nil ((:qualifier I1 $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f $nil ((:qualifier I2 $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f_i1 $nil ((:qualifier A1 $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f_i2 $nil ((:qualifier A1 $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f $nil ((:qualifier I3 $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (:obdd_terminal_node nil)
+   (:obdd_terminal_node t)
+   (:obdd_non_terminal_node 10 0 1)
+   (:obdd_non_terminal_node 9 2 0)
+   (:obdd_non_terminal_node 8 2 3)
+   (:obdd_non_terminal_node 7 0 4)
+   (:obdd_non_terminal_node 6 0 5)
+   (:obdd_non_terminal_node 9 1 0)
+   (:obdd_non_terminal_node 8 1 7)
+   (:obdd_non_terminal_node 7 0 8)
+   (:obdd_non_terminal_node 6 0 9)
+   (:obdd_non_terminal_node 5 6 10)
+   (:obdd_non_terminal_node 4 11 0)
+   (:obdd_non_terminal_node 6 0 3)
+   (:obdd_non_terminal_node 6 0 7)
+   (:obdd_non_terminal_node 5 13 14)
+   (:obdd_non_terminal_node 9 0 1)
+   (:obdd_non_terminal_node 8 16 0)
+   (:obdd_non_terminal_node 6 0 17)
+   (:obdd_non_terminal_node 9 0 2)
+   (:obdd_non_terminal_node 8 19 0)
+   (:obdd_non_terminal_node 6 0 20)
+   (:obdd_non_terminal_node 5 18 21)
+   (:obdd_non_terminal_node 4 15 22)
+   (:obdd_non_terminal_node 3 12 23)
+   (:obdd_non_terminal_node 6 0 4)
+   (:obdd_non_terminal_node 6 0 8)
+   (:obdd_non_terminal_node 5 25 26)
+   (:obdd_non_terminal_node 4 27 0)
+   (:obdd_non_terminal_node 7 0 3)
+   (:obdd_non_terminal_node 6 0 29)
+   (:obdd_non_terminal_node 7 0 7)
+   (:obdd_non_terminal_node 6 0 31)
+   (:obdd_non_terminal_node 5 30 32)
+   (:obdd_non_terminal_node 7 0 17)
+   (:obdd_non_terminal_node 6 0 34)
+   (:obdd_non_terminal_node 7 0 20)
+   (:obdd_non_terminal_node 6 0 36)
+   (:obdd_non_terminal_node 5 35 37)
+   (:obdd_non_terminal_node 4 33 38)
+   (:obdd_non_terminal_node 3 28 39)
+   (:obdd_non_terminal_node 2 24 40)
+   (:obdd_non_terminal_node 8 2 0)
+   (:obdd_non_terminal_node 7 0 42)
+   (:obdd_non_terminal_node 8 1 0)
+   (:obdd_non_terminal_node 7 0 44)
+   (:obdd_non_terminal_node 5 43 45)
+   (:obdd_non_terminal_node 8 0 7)
+   (:obdd_non_terminal_node 7 0 47)
+   (:obdd_non_terminal_node 8 0 3)
+   (:obdd_non_terminal_node 7 0 49)
+   (:obdd_non_terminal_node 5 48 50)
+   (:obdd_non_terminal_node 4 46 51)
+   (:obdd_non_terminal_node 5 8 4)
+   (:obdd_non_terminal_node 4 0 53)
+   (:obdd_non_terminal_node 3 52 54)
+   (:obdd_non_terminal_node 5 42 44)
+   (:obdd_non_terminal_node 5 47 49)
+   (:obdd_non_terminal_node 4 56 57)
+   (:obdd_non_terminal_node 5 9 5)
+   (:obdd_non_terminal_node 4 0 59)
+   (:obdd_non_terminal_node 3 58 60)
+   (:obdd_non_terminal_node 2 55 61)
+   (:obdd_non_terminal_node 1 41 62)
+   (:obdd_non_terminal_node 5 5 9)
+   (:obdd_non_terminal_node 4 64 0)
+   (:obdd_non_terminal_node 5 3 7)
+   (:obdd_non_terminal_node 5 17 20)
+   (:obdd_non_terminal_node 4 66 67)
+   (:obdd_non_terminal_node 3 65 68)
+   (:obdd_non_terminal_node 5 4 8)
+   (:obdd_non_terminal_node 4 70 0)
+   (:obdd_non_terminal_node 5 29 31)
+   (:obdd_non_terminal_node 5 34 36)
+   (:obdd_non_terminal_node 4 72 73)
+   (:obdd_non_terminal_node 3 71 74)
+   (:obdd_non_terminal_node 2 69 75)
+   (:obdd_non_terminal_node 6 0 43)
+   (:obdd_non_terminal_node 6 0 45)
+   (:obdd_non_terminal_node 5 77 78)
+   (:obdd_non_terminal_node 6 0 48)
+   (:obdd_non_terminal_node 6 0 50)
+   (:obdd_non_terminal_node 5 80 81)
+   (:obdd_non_terminal_node 4 79 82)
+   (:obdd_non_terminal_node 5 26 25)
+   (:obdd_non_terminal_node 4 0 84)
+   (:obdd_non_terminal_node 3 83 85)
+   (:obdd_non_terminal_node 6 0 42)
+   (:obdd_non_terminal_node 6 0 44)
+   (:obdd_non_terminal_node 5 87 88)
+   (:obdd_non_terminal_node 6 0 47)
+   (:obdd_non_terminal_node 6 0 49)
+   (:obdd_non_terminal_node 5 90 91)
+   (:obdd_non_terminal_node 4 89 92)
+   (:obdd_non_terminal_node 5 10 6)
+   (:obdd_non_terminal_node 4 0 94)
+   (:obdd_non_terminal_node 3 93 95)
+   (:obdd_non_terminal_node 2 86 96)
+   (:obdd_non_terminal_node 1 76 97)
+   (:obdd_non_terminal_node 0 63 98)
+  )
+  99
+ )
+)

@@ -1,0 +1,193 @@
+serializable ~= {};
+
+hierarchy ~= serializable + { nodes:[node] };
+flat_kb ~= serializable + { name:lydia_symbol, constraints:kb };
+
+node =
+{
+    type:lydia_symbol,
+    edges:[edge],
+    constraints:kb
+};
+
+edge =
+{
+    type:lydia_symbol,
+    name:lydia_symbol,
+    indices:[int],
+    bindings:[mapping]
+};
+
+mapping =
+{
+    from:identifier,
+    to:identifier
+};
+
+identifier = { name:lydia_symbol, indices:[int], qualifiers:[qualifier] };
+qualifier = { name:lydia_symbol, indices:[int] };
+
+variable = { name:identifier, attributes:[variable_attribute] } +
+    int_variable: { } |
+    float_variable: { } |
+    bool_variable: { encoded_variable:int } |
+    enum_variable: { values_set:int };
+
+variable_attribute = { name:lydia_symbol } +
+    int_variable_attribute: { values:[int] } |
+    float_variable_attribute: { values:[double] } |
+    bool_variable_attribute: { values:[lydia_bool] } |
+    enum_variable_attribute: { values:[lydia_symbol], values_set:int };
+
+values_set = { name:lydia_symbol, entries:[lydia_symbol] };
+
+constant = { name:lydia_symbol } +
+    int_constant: { value:int } |
+    float_constant: { value:double } |
+    bool_constant: { value:lydia_bool } |
+    enum_constant: { value:lydia_symbol, values_set:int };
+
+kb ~=
+{
+    domains:[values_set],
+    variables:[variable],
+    encoded_variables:[variable],
+    constants:[constant],
+    encoding:int
+};
+
+variable_assignment = { var:int } +
+    bool_variable_assignment: { value:lydia_bool } |
+    int_variable_assignment: { value:int } |
+    float_variable_assignment: { value:double } |
+    enum_variable_assignment: { value:int };
+
+faultmode = 
+{
+    probability:double,
+    cardinality:int,
+    assignments:[variable_assignment]
+};
+
+csp = kb +
+{
+    sentences:[csp_sentence]
+};
+
+csp_values_set = { name:lydia_symbol, entries:[lydia_symbol] };
+
+csp_sentence = {} +
+    csp_not_sentence: { n:csp_sentence } |
+    csp_and_sentence: { lhs:csp_sentence, rhs:csp_sentence } |
+    csp_or_sentence: { lhs:csp_sentence, rhs:csp_sentence } |
+    csp_impl_sentence: { lhs:csp_sentence, rhs:csp_sentence } |
+    csp_equiv_sentence: { lhs:csp_sentence, rhs:csp_sentence } |
+    csp_lt_sentence: { lhs:csp_sentence, rhs:csp_sentence } |
+    csp_atomic_sentence: { a:csp_term };
+
+csp_term = {} +
+    csp_function_term: { name:lydia_symbol, args:[csp_term] } |
+    csp_constant_term: { c:int } |
+    csp_variable_term: { v:int };
+
+csp_hierarchy = hierarchy + {};
+csp_flat_kb = flat_kb + {};
+
+mv_wff = kb +
+{
+    e:[mv_wff_expr]
+};
+
+mv_cnf = kb +
+{
+    clauses:[mv_clause]
+};
+
+mv_dnf = kb +
+{
+    terms:[mv_term]
+};
+
+mv_wff_expr = {} +
+    mv_wff_e_not: { n:mv_wff_expr } |
+    mv_wff_e_and: { lhs:mv_wff_expr, rhs:mv_wff_expr } |
+    mv_wff_e_or: { lhs:mv_wff_expr, rhs:mv_wff_expr } |
+    mv_wff_e_impl: { lhs:mv_wff_expr, rhs:mv_wff_expr } |
+    mv_wff_e_equiv: { lhs:mv_wff_expr, rhs:mv_wff_expr } |
+    mv_wff_e_var: { var:int, val:int } |
+    mv_wff_e_const: { c:lydia_bool };
+
+mv_clause = { pos:[mv_literal], neg:[mv_literal] };
+mv_term = { pos:[mv_literal], neg:[mv_literal] };
+
+mv_literal = { var:int, val:int };
+
+mv_wff_hierarchy = hierarchy + {};
+mv_cnf_hierarchy = hierarchy + {};
+mv_dnf_hierarchy = hierarchy + {};
+
+mv_wff_flat_kb = flat_kb + {};
+mv_cnf_flat_kb = flat_kb + {};
+mv_dnf_flat_kb = flat_kb + {};
+
+tv_wff = kb +
+{
+    e:[tv_wff_expr]
+};
+
+tv_nnf = kb +
+{
+    e:[tv_nnf_expr]
+};
+
+tv_nf = kb +
+    tv_cnf: { clauses:[tv_clause] } |
+    tv_dnf: { terms:[tv_term] } |
+    horn: { clauses:[material_implication] };
+
+tv_wff_expr = {} +
+    tv_wff_e_not: { n:tv_wff_expr } |
+    tv_wff_e_and: { lhs:tv_wff_expr, rhs:tv_wff_expr } |
+    tv_wff_e_or: { lhs:tv_wff_expr, rhs:tv_wff_expr } |
+    tv_wff_e_impl: { lhs:tv_wff_expr, rhs:tv_wff_expr } |
+    tv_wff_e_equiv: { lhs:tv_wff_expr, rhs:tv_wff_expr } |
+    tv_wff_e_var: { v:int } |
+    tv_wff_e_const: { c:lydia_bool };
+
+tv_nnf_expr = {} +
+    tv_nnf_e_not: { n:tv_nnf_e_var } |
+    tv_nnf_e_and: { lhs:tv_nnf_expr, rhs:tv_nnf_expr } |
+    tv_nnf_e_or: { lhs:tv_nnf_expr, rhs:tv_nnf_expr } |
+    tv_nnf_e_var: { v:int };
+
+tv_literal_set = { pos:[int], neg:[int] } +
+    tv_term: {} |
+    tv_clause: {};
+
+material_implication = { antecedents:[int], consequent:int };
+
+tv_wff_hierarchy = hierarchy + {};
+tv_nnf_hierarchy = hierarchy + {};
+tv_cnf_hierarchy = hierarchy + {};
+tv_dnf_hierarchy = hierarchy + {};
+horn_hierarchy = hierarchy + {};
+
+tv_wff_flat_kb = flat_kb + {};
+tv_nnf_flat_kb = flat_kb + {};
+tv_cnf_flat_kb = flat_kb + {};
+tv_dnf_flat_kb = flat_kb + {};
+horn_flat_kb = flat_kb + {};
+
+obdd = kb + { nodes:[obdd_node], root:int };
+obdd_node = {} +
+    obdd_non_terminal_node: { var:int, low:int, high:int } |
+    obdd_terminal_node: { value:lydia_bool };
+obdd_hierarchy = hierarchy + {};
+obdd_flat_kb = flat_kb + {};
+
+mdd = kb + { nodes:[mdd_node], root:int };
+mdd_node = {} +
+    mdd_non_terminal_node: { var:int, kids:[int] } |
+    mdd_terminal_node: { value:lydia_bool };
+mdd_hierarchy = hierarchy + {};
+mdd_flat_kb = flat_kb + {};

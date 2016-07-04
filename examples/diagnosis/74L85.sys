@@ -1,0 +1,61 @@
+#include "weak/std-logic.inc"
+
+attribute bool input;
+attribute bool output;
+
+system m74l85()
+{
+// Input variables:
+    bool i1, i2, i3, i4, i5, i6, i7, i8;
+    bool i9, i10, i11;
+    attribute input(i1, i2, i3, i4, i5, i6, i7, i8) = true;
+    attribute input(i9, i10, i11) = true;
+    attribute observable(i1, i2, i3, i4, i5, i6, i7, i8) = true;
+    attribute observable(i9, i10, i11) = true;
+
+// Output variables:
+    bool o1, o2, o3;
+    attribute output(o1, o2, o3) = true;
+    attribute observable(o1, o2, o3) = true;
+
+// Internal variables:
+    bool z1, z2, z3, z4, z5, z6, z7, z8;
+    bool z9, z10, z11, z12, z13, z14, z15, z16;
+    bool z17, z18, z19, z20, z21, z22, z23, z24;
+    bool z25, z26, z27, z28, z29, z30;
+
+// Gates:
+    system inverter gate36(z1, i1);
+    system inverter gate37(z2, i2);
+    system inverter gate38(z3, i3);
+    system inverter gate39(z4, i4);
+    system inverter gate40(z5, i5);
+    system inverter gate41(z6, i6);
+    system inverter gate42(z7, i7);
+    system inverter gate43(z8, i8);
+    system and2 gate60(z9, z1, i2);
+    system and2 gate61(z10, z2, i1);
+    system and2 gate62(z11, z3, i4);
+    system and2 gate63(z12, i3, z4);
+    system and2 gate64(z13, z5, i6);
+    system and2 gate65(z14, z6, i5);
+    system and2 gate66(z15, z7, i8);
+    system and2 gate67(z16, z8, i7);
+    system nor2 gate68(z17, z9, z10);
+    system nor2 gate69(z18, z11, z12);
+    system nor2 gate70(z19, z13, z14);
+    system nor2 gate71(z20, z15, z16);
+    system and2 gate96(z21, i2, z1);
+    system and2 gate97(z22, i1, z2);
+    system and3 gate98(z23, i4, z17, z3);
+    system and3 gate99(z24, z4, z17, i3);
+    system and4 gate100(z25, i6, z17, z18, z5);
+    system and4 gate101(z26, z6, z17, z18, i5);
+    system and5 gate102(z27, i8, z17, z18, z19, z7);
+    system and5 gate103(z28, z8, z17, z18, z19, i7);
+    system and5 gate104(z29, z17, z18, z19, z20, i9);
+    system and5 gate105(z30, z17, z18, z19, z20, i10);
+    system and5 gate106(o1, z17, z18, z19, z20, i11);
+    system or5 gate107(o2, z22, z24, z26, z28, z29);
+    system or5 gate108(o3, z21, z23, z25, z27, z30);
+}

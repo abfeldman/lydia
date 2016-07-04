@@ -1,0 +1,9 @@
+//-------------------------------------------------------------------
+// errdupformal.sys --  Check compiler complains about duplicate formals.
+//-------------------------------------------------------------------
+
+system circuit(int a, bool a)
+{
+    a = b;
+}
+

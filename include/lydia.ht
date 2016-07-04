@@ -1,0 +1,263 @@
+.. File: lydia.ht
+..
+.insert types.ht
+..
+/*** WARNING: THIS IS GENERATED CODE. ***/
+
+/* ---- start of ${tplfilename} ---- */
+/* 
+ * template file:      ${tplfilename}
+ * datastructure file: ${dsfilename}
+ * tm version:         $(tmvers)
+ * tm kernel version:  $(kernel-version)
+ */
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+/* Data structures: */
+
+/* Forward reference typedefs for all types: */
+.foreach t ${depsort $(want_ds)}
+typedef struct str_$t *$t;
+.endforeach
+.foreach t $(want_ds_list)
+typedef struct str_$t_list *$t_list;
+.endforeach
+.foreach t ${depsort $(want_ds)}
+typedef const struct str_$t *const_$t;
+.endforeach
+.foreach t $(want_ds_list)
+typedef const struct str_$t_list *const_$t_list;
+.endforeach
+
+.foreach t $(want_ds)
+#define $tNIL ($t)0
+.endforeach
+.foreach t $(want_ds_list)
+#define $t_listNIL ($t_list)0
+.endforeach
+
+.set taggedtypes
+..
+.set tl
+.foreach t ${singletypes $(want_ds)}
+. if ${eq $t ${call rootclass $t}}
+.  append tl ${call rootclass $t}
+. endif
+.endforeach
+.set tl ${uniq $(tl)}
+.foreach t $(tl)
+. set l ${nonvirtual ${inheritsort $t ${subclasses $t}}}
+typedef enum en_tags_$t {
+. set lastelm ${first ${rev $l}}
+. foreach e $l
+.  if ${eq $e $(lastelm)}
+    TAG$e
+.  else
+    TAG$e,
+.  endif
+. endforeach
+. append taggedtypes $l
+} tags_$t;
+
+.endforeach
+.foreach t ${depsort $(want_ds)}
+.. Structure definitions for all the constructors of the type
+.. That have elements (C does not like empty structures or unions).
+/* Structure for ${metatype $t} '$t'. */
+.switch ${metatype $t}
+.case constructor constructorbase class
+struct str_$t {
+    tags_${call rootclass $t} tag;
+.foreach e ${allfields $t}
+    ${type $t $e} $e;
+.endforeach
+};
+.endswitch
+
+.endforeach
+.foreach t $(want_ds_list)
+struct str_$t_list {
+    unsigned int sz;
+    unsigned int room;
+    $t *arr;
+};
+
+.endforeach
+/* Type casting macros. */
+.foreach t $(want_ds)
+#define to_$t(e) (($t)e)
+#define to_const_$t(e) ((const_$t)e)
+.endforeach
+
+.. new_<type> routines
+.if ${len $(want_new) $(want_new_list) $(want_slice) $(want_slice_list) $(want_fscan) $(want_fscan_list) $(want_extract_list)}
+.foreach t $(want_new)
+.if ${isvirtual $t}
+/* No new_$t() since this type is virtual. */
+.else
+.set tl
+.foreach e ${allfields $t}
+.append tl ${type $t $e}
+.endforeach
+.if ${len $(tl)}
+extern $t new_$t(${seplist ", " $(tl)});
+.else
+extern $t new_$t();
+.endif
+.endif
+.endforeach
+.foreach t $(want_new_list)
+extern $t_list new_$t_list();
+.endforeach
+.endif
+..
+.. setroom_<type>_list functions.
+.. For this library they are dummy functions.
+.foreach t $(want_setroom_list)
+extern $t_list setroom_$t_list($t_list, const unsigned int);
+.endforeach
+..
+.. append_<type>_list() routines.
+.foreach t $(want_append_list)
+extern $t_list append_$t_list($t_list, $t);
+.endforeach
+..
+.. reverse_<type>_list() routines.
+.foreach t $(want_reverse_list)
+extern $t_list reverse_$t_list($t_list);
+.endforeach
+..
+.. insert_<type>_list() routines.
+.foreach t $(want_insert_list)
+extern $t_list insert_$t_list($t_list, const unsigned int, $t);
+.endforeach
+..
+.. insertlist_<type>_list() routines.
+.foreach t $(want_insertlist_list)
+extern $t_list insertlist_$t_list($t_list, unsigned int, $t_list);
+.endforeach
+..
+.. delete_<type>_list() routines.
+.foreach t $(want_delete_list)
+extern $t_list delete_$t_list($t_list, const unsigned int);
+.endforeach
+..
+.. deletelist_<type>_list() routines.
+.foreach t $(want_deletelist_list)
+extern $t_list deletelist_$t_list($t_list, unsigned int, unsigned int);
+.endforeach
+..
+.. extract_<type>_list() routines.
+.foreach t $(want_extract_list)
+extern $t_list extract_$t_list($t_list, const unsigned int, $t *, int *);
+.endforeach
+..
+.. extractlist_<type>_list() routines.
+.if ${len $(want_extractlist_list)}
+.foreach t $(want_extractlist_list)
+extern $t_list extractlist_$t_list($t_list, unsigned int, unsigned int, $t_list *);
+.endforeach
+.endif
+..
+.. concat_<type>_list() routines
+.foreach t $(want_concat_list)
+extern $t_list concat_$t_list($t_list, $t_list);
+.endforeach
+..
+.. fre_<type>_list() routines
+.foreach t $(want_fre_list)
+extern void fre_$t_list($t_list);
+.endforeach
+.foreach t $(want_fre)
+extern void fre_$t($t);
+.endforeach
+..
+.. rfre_<type>_list() routines
+.foreach t $(want_rfre_list)
+extern void rfre_$t_list($t_list);
+.endforeach
+.foreach t $(want_rfre)
+extern void rfre_$t($t);
+.endforeach
+..
+.. fprint_<type>() routines
+.foreach t $(want_fprint)
+extern void fprint_$t(print_state, const const_$t);
+.endforeach
+.foreach t $(want_fprint_list)
+extern void fprint_$t_list(print_state, const const_$t_list);
+.endforeach
+..
+.. fwrite_<type>() routines
+.foreach t $(want_fwrite)
+extern void fwrite_$t(FILE *, const const_$t);
+.endforeach
+.foreach t $(want_fwrite_list)
+extern void fwrite_$t_list(FILE *, const const_$t_list);
+.endforeach
+..
+.. slice_<type>() routines
+.if ${len $(want_slice_list)}
+.foreach t $(want_slice_list)
+extern $t_list slice_$t_list(const_$t_list, unsigned int, unsigned int);
+.endforeach
+.endif
+..
+.. rdup_<type>() routines
+.if ${len $(want_rdup) $(want_rdup_list)}
+.foreach t $(want_rdup)
+extern $t rdup_$t(const const_$t);
+.endforeach
+.foreach t $(want_rdup_list)
+extern $t_list rdup_$t_list(const const_$t_list);
+.endforeach
+.endif
+..
+.. fscan_<type>() routines
+.if ${len $(want_fscan) $(want_fscan_list)}
+.foreach t $(want_fscan)
+extern int fscan_$t(FILE *, $t *);
+.endforeach
+.foreach t $(want_fscan_list)
+extern int fscan_$t_list(FILE *, $t_list *);
+.endforeach
+.endif
+..
+.. fread_<type>() routines
+.if ${len $(want_fread) $(want_fread_list)}
+.foreach t $(want_fread)
+extern int fread_$t(FILE *, $t *);
+.endforeach
+.foreach t $(want_fread_list)
+extern int fread_$t_list(FILE *, $t_list *);
+.endforeach
+.endif
+..
+.. cmp_<type>() routines
+.foreach t $(want_cmp)
+extern int cmp_$t(const const_$t a, const const_$t b);
+.endforeach
+.foreach t $(want_cmp_list)
+extern int cmp_$t_list(const const_$t_list a, const const_$t_list b);
+.endforeach
+..
+.. isequal_<type>() routines
+.foreach t $(want_isequal)
+extern int isequal_$t(const const_$t a, const const_$t b);
+.endforeach
+.foreach t $(want_isequal_list)
+extern int isequal_$t_list(const const_$t_list a, const const_$t_list b);
+.endforeach
+..
+#ifdef __cplusplus
+}
+#endif
+/* ---- end of ${tplfilename} ---- */
+..
+.. Local variables:
+.. mode: c
+.. End:

@@ -1,0 +1,9 @@
+system test()
+{
+	bool a, b;
+
+	5 ? a : b;
+	a ? true : 6;
+
+	cond(a) (0 -> false; default -> 0);
+}

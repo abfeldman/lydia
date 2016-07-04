@@ -1,0 +1,54 @@
+#include "oc.h"
+#include "lcm.h"
+#include "util.h"
+#include "defs.h"
+#include "dump.h"
+#include "error.h"
+#include "config.h"
+#include "rewrite.h"
+#include "variable.h"
+#include "typeinfer.h"
+
+#include <assert.h>
+
+.insert occonf.t
+.include lydia.ct
+#line $[1+${tpllineno}] "${tplfilename}"
+
+static int trace_lex = 0;
+static int trace_yacc = 0;
+
+extern obs_dump obs_parse(FILE *, const char *, char **, unsigned int, int, int);
+
+int oc(FILE *input,
+       char *infilename,
+       char **ipath,
+       unsigned int ipathsz,
+       values_set_list domains,
+       variable_list variables,
+       csp_hierarchy *output)
+{
+    obs_dump result = obs_parse(input,
+                                infilename,
+                                ipath,
+                                ipathsz,
+                                trace_yacc,
+                                trace_lex);
+    if (result == obs_dumpNIL) {
+        return 0;
+    }
+
+    if (!infer_types_dump(result, domains, variables)) {
+        rfre_obs_dump(result);
+
+        return 0;
+    }
+
+    result = rewrite_dump(result, domains, variables);
+
+    *output = dump(result, domains);
+
+    rfre_obs_dump(result);
+
+    return 1;
+}

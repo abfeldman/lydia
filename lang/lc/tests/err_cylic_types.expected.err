@@ -1,0 +1,8 @@
+err_cylic_types.sys:1: error: circular definition of `a'
+err_cylic_types.sys:1: error: (Each chain is reported only once.)
+err_cylic_types.sys:1: error: `a' aliases `b' here
+err_cylic_types.sys:2: error: `b' aliases `c' here
+err_cylic_types.sys:3: error: `c' aliases `d' here
+err_cylic_types.sys:4: error: `d' aliases again `a' here
+err_cylic_types.sys: In system `test':
+err_cylic_types.sys:8: error: incompatible type in initalizer of `bar'

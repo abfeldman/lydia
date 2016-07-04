@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+
+  <separator>Basic Tests:</separator>
+  <test>
+    <title>empty hierarchy</title>
+    <input>empty.lcm</input>
+    <output>empty.hwff</output>
+  </test>
+  <test>
+    <title>empty system</title>
+    <input>realempty.lcm</input>
+    <output>realempty.hwff</output>
+  </test>
+  <test>
+    <title>basic array expressions</title>
+    <input>basic_arrays.lcm</input>
+    <output>basic_arrays.hwff</output>
+  </test>
+
+  <separator>Arithmetic Circuits (WFM):</separator>
+  <test>
+    <title>2 chained inverters</title>
+    <input>2inverters.lcm</input>
+    <output>2inverters.hwff</output>
+  </test>
+  <test>
+    <title>3 inverters</title>
+    <input>3inverters.lcm</input>
+    <output>3inverters.hwff</output>
+  </test>
+  <test>
+    <title>4 chained inverters</title>
+    <input>4inverters.lcm</input>
+    <output>4inverters.hwff</output>
+  </test>
+  <test>
+    <title>10 chained inverters</title>
+    <input>10inverters.lcm</input>
+    <output>10inverters.hwff</output>
+  </test>
+  <test>
+    <title>Boolean polycell</title>
+    <input>polycell.lcm</input>
+    <output>polycell.hwff</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-weak.lcm</input>
+    <output>2adder-weak.hwff</output>
+  </test>
+  <test>
+    <title>1-bit subtractor</title>
+    <input>2subtractor.lcm</input>
+    <output>2subtractor.hwff</output>
+  </test>
+  <test>
+    <title>3 inverters and an AND gate</title>
+    <input>inverted-and.lcm</input>
+    <output>inverted-and.hwff</output>
+  </test>
+  <test>
+    <title>74182</title>
+    <input>74182.lcm</input>
+    <output>74182.hwff</output>
+  </test>
+  <test>
+    <title>74L85</title>
+    <input>74L85.lcm</input>
+    <output>74L85.hwff</output>
+  </test>
+  <test>
+    <title>74283</title>
+    <input>74283.lcm</input>
+    <output>74283.hwff</output>
+  </test>
+  <test>
+    <title>74181</title>
+    <input>74181.lcm</input>
+    <output>74181.hwff</output>
+  </test>
+
+  <separator>Arithmetic Circuits (SFM):</separator>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-strong.lcm</input>
+    <output>2adder-strong.hwff</output>
+  </test>
+
+  <separator>Modelling Tests:</separator>
+  <test>
+    <title>copier</title>
+    <input>copier.lcm</input>
+    <output>copier.hwff</output>
+  </test>
+  <test>
+    <title>stereo</title>
+    <input>stereo.lcm</input>
+    <output>stereo.hwff</output>
+  </test>
+
+  <separator>Observations:</separator>
+  <test>
+    <title>empty hierarchy</title>
+    <input>empty.lco</input>
+    <output>empty.obs.hwff</output>
+  </test>
+  <test>
+    <title>2 chained inverters</title>
+    <input>2inverters.lco</input>
+    <output>2inverters.obs.hwff</output>
+  </test>
+  <test>
+    <title>3 inverters</title>
+    <input>3inverters.lco</input>
+    <output>3inverters.obs.hwff</output>
+  </test>
+  <test>
+    <title>4 chained inverters</title>
+    <input>4inverters.lco</input>
+    <output>4inverters.obs.hwff</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder.lco</input>
+    <output>2adder.obs.hwff</output>
+  </test>
+  <test>
+    <title>1-bit subtractor</title>
+    <input>2subtractor.lco</input>
+    <output>2subtractor.obs.hwff</output>
+  </test>
+  <test>
+    <title>Boolean polycell</title>
+    <input>polycell.lco</input>
+    <output>polycell.obs.hwff</output>
+  </test>
+  <test>
+    <title>basic array expressions</title>
+    <input>basic_arrays.lco</input>
+    <output>basic_arrays.obs.hwff</output>
+  </test>
+  <test>
+    <title>74182</title>
+    <input>74182.lco</input>
+    <output>74182.obs.hwff</output>
+  </test>
+  <test>
+    <title>74L85</title>
+    <input>74L85.lco</input>
+    <output>74L85.obs.hwff</output>
+  </test>
+  <test>
+    <title>74283</title>
+    <input>74283.lco</input>
+    <output>74283.obs.hwff</output>
+  </test>
+  <test>
+    <title>74181</title>
+    <input>74181.lco</input>
+    <output>74181.obs.hwff</output>
+  </test>
+
+  <separator>Regression Tests:</separator>
+  <test>
+    <title>issue 110</title>
+    <input>issue110.lcm</input>
+    <output>issue110.hwff</output>
+  </test>
+</testsuite>
+    

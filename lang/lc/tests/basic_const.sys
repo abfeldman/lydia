@@ -1,0 +1,9 @@
+type color = enum { R, G, B };
+const bool b = false;
+const color red = color.R;
+
+system test()
+{
+	bool a = b;
+	color c = red;
+}

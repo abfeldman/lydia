@@ -1,0 +1,105 @@
+(
+ :tv_dnf_hierarchy
+ (
+  (
+   :node
+   alpha_1
+   ()
+   (
+    :tv_dnf
+    ()
+    (
+     (:bool_variable (:identifier x $nil $nil) () -1)
+     (:bool_variable (:identifier y $nil $nil) () -1)
+     (:bool_variable (:identifier p $nil $nil) () -1)
+     (:bool_variable (:identifier b $nil $nil) () -1)
+     (:bool_variable (:identifier d $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ((:tv_term (0 1 2 3) (4)))
+   )
+  )
+  (
+   :node
+   alpha_2
+   ()
+   (
+    :tv_dnf
+    ()
+    (
+     (:bool_variable (:identifier x $nil $nil) () -1)
+     (:bool_variable (:identifier y $nil $nil) () -1)
+     (:bool_variable (:identifier p $nil $nil) () -1)
+     (:bool_variable (:identifier b $nil $nil) () -1)
+     (:bool_variable (:identifier d $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ((:tv_term (1 2 4) (0 3)))
+   )
+  )
+  (
+   :node
+   alpha_3
+   ()
+   (
+    :tv_dnf
+    ()
+    (
+     (:bool_variable (:identifier x $nil $nil) () -1)
+     (:bool_variable (:identifier y $nil $nil) () -1)
+     (:bool_variable (:identifier p $nil $nil) () -1)
+     (:bool_variable (:identifier b $nil $nil) () -1)
+     (:bool_variable (:identifier d $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ((:tv_term (0 1 2) (3 4)))
+   )
+  )
+  (
+   :node
+   alpha_4
+   ()
+   (
+    :tv_dnf
+    ()
+    (
+     (:bool_variable (:identifier x $nil $nil) () -1)
+     (:bool_variable (:identifier y $nil $nil) () -1)
+     (:bool_variable (:identifier p $nil $nil) () -1)
+     (:bool_variable (:identifier b $nil $nil) () -1)
+     (:bool_variable (:identifier d $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ((:tv_term (1 4) (0 2 3)))
+   )
+  )
+  (
+   :node
+   alpha_5
+   ()
+   (
+    :tv_dnf
+    ()
+    (
+     (:bool_variable (:identifier x $nil $nil) () -1)
+     (:bool_variable (:identifier y $nil $nil) () -1)
+     (:bool_variable (:identifier p $nil $nil) () -1)
+     (:bool_variable (:identifier b $nil $nil) () -1)
+     (:bool_variable (:identifier d $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ((:tv_term (1) (0 2 3 4)))
+   )
+  )
+ )
+)

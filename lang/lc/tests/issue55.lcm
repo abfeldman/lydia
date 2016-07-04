@@ -1,0 +1,137 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   PressureRegulator
+   ()
+   (
+    :csp
+    (
+     (:values_set pressure (zero low high))
+     (:values_set prcontrol (regulatingHigh regulatingLow boo))
+     (:values_set state (healthy faulty unknown))
+    )
+    (
+     (:enum_variable (:identifier lineInPressure $nil $nil) () 0)
+     (:enum_variable (:identifier lineOutPressure $nil $nil) () 0)
+     (:enum_variable (:identifier ctrl $nil $nil) () 1)
+     (
+      :enum_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.95 0.045 0.005))
+       (:bool_variable_attribute health (t nil nil))
+      )
+      2
+     )
+    )
+    ()
+    (
+     (:enum_constant $nil regulatingHigh 1)
+     (:enum_constant $nil healthy 2)
+     (:enum_constant $nil low 0)
+     (:enum_constant $nil regulatingLow 1)
+    )
+    0
+    (
+     (
+      :csp_impl_sentence
+      (
+       :csp_and_sentence
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 2))
+	(:csp_atomic_sentence (:csp_constant_term 0))
+       )
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 3))
+	(:csp_atomic_sentence (:csp_constant_term 1))
+       )
+      )
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 1))
+       (:csp_atomic_sentence (:csp_constant_term 2))
+      )
+     )
+     (
+      :csp_impl_sentence
+      (
+       :csp_and_sentence
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 2))
+	(:csp_atomic_sentence (:csp_constant_term 3))
+       )
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 3))
+	(:csp_atomic_sentence (:csp_constant_term 1))
+       )
+      )
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 1))
+       (:csp_atomic_sentence (:csp_variable_term 0))
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   X34PropulsionSystem
+   (
+    (
+     :edge
+     PressureRegulator
+     rg11
+     $nil
+     (
+      (
+       :mapping
+       (:identifier sv01_rg11 $nil $nil)
+       (:identifier lineInPressure $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier rg11_rg01 $nil $nil)
+       (:identifier lineOutPressure $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier rg11position $nil $nil)
+       (:identifier ctrl $nil $nil)
+      )
+     )
+    )
+   )
+   (
+    :csp
+    (
+     (:values_set pressure (zero low high))
+     (:values_set prcontrol (regulatingHigh regulatingLow boo))
+    )
+    (
+     (:enum_variable (:identifier sv01_rg11 $nil $nil) () 0)
+     (:enum_variable (:identifier rg11_rg01 $nil $nil) () 0)
+     (
+      :enum_variable
+      (:identifier rg11position $nil $nil)
+      (
+       (:float_variable_attribute cost (0.5 1.5 2.5))
+       (:enum_variable_attribute test (regulatingHigh regulatingLow boo) 1)
+      )
+      1
+     )
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

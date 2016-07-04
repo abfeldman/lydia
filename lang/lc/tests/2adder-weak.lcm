@@ -1,0 +1,295 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   or2
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_impl_sentence
+      (:csp_atomic_sentence (:csp_variable_term 3))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (
+	:csp_or_sentence
+	(:csp_atomic_sentence (:csp_variable_term 1))
+	(:csp_atomic_sentence (:csp_variable_term 2))
+       )
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   xor2
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_impl_sentence
+      (:csp_atomic_sentence (:csp_variable_term 3))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (
+	:csp_not_sentence
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 1))
+	 (:csp_atomic_sentence (:csp_variable_term 2))
+	)
+       )
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   and2
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_impl_sentence
+      (:csp_atomic_sentence (:csp_variable_term 3))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (
+	:csp_and_sentence
+	(:csp_atomic_sentence (:csp_variable_term 1))
+	(:csp_atomic_sentence (:csp_variable_term 2))
+       )
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   halfadder2
+   (
+    (
+     :edge
+     and2
+     A
+     $nil
+     (
+      (:mapping (:identifier carry $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i1 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier i2 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     xor2
+     X
+     $nil
+     (
+      (:mapping (:identifier sum $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i1 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier i2 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+   )
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier sum $nil $nil) () -1)
+     (:bool_variable (:identifier carry $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+  (
+   :node
+   fulladder2
+   (
+    (
+     :edge
+     halfadder2
+     HA1
+     $nil
+     (
+      (:mapping (:identifier i1 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier i2 $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier f $nil $nil) (:identifier sum $nil $nil))
+      (:mapping (:identifier p $nil $nil) (:identifier carry $nil $nil))
+     )
+    )
+    (
+     :edge
+     halfadder2
+     HA2
+     $nil
+     (
+      (:mapping (:identifier ci $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier f $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier sum $nil $nil) (:identifier sum $nil $nil))
+      (:mapping (:identifier q $nil $nil) (:identifier carry $nil $nil))
+     )
+    )
+    (
+     :edge
+     or2
+     O
+     $nil
+     (
+      (:mapping (:identifier carry $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier p $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier q $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+   )
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier ci $nil $nil) () -1)
+     (:bool_variable (:identifier sum $nil $nil) () -1)
+     (:bool_variable (:identifier carry $nil $nil) () -1)
+     (:bool_variable (:identifier f $nil $nil) () -1)
+     (:bool_variable (:identifier p $nil $nil) () -1)
+     (:bool_variable (:identifier q $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+  (
+   :node
+   fulladder
+   (
+    (
+     :edge
+     fulladder2
+     FA
+     $nil
+     (
+      (:mapping (:identifier i1 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier i2 $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier ci $nil $nil) (:identifier ci $nil $nil))
+      (:mapping (:identifier sum $nil $nil) (:identifier sum $nil $nil))
+      (
+       :mapping
+       (:identifier carry $nil $nil)
+       (:identifier carry $nil $nil)
+      )
+     )
+    )
+   )
+   (
+    :csp
+    ()
+    (
+     (
+      :bool_variable
+      (:identifier i1 $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i2 $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier ci $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier sum $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier carry $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

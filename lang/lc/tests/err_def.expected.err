@@ -1,0 +1,2 @@
+err_def.sys: In system `test':
+err_def.sys:5: error: missing default statement in conditional expression

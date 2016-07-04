@@ -1,0 +1,21 @@
+system inverter(bool x[2])
+{
+	bool h;
+
+	attribute health(h) = h;
+	attribute probability(h) = (h ? 0.95 : 0.05);
+
+	h => (x[0] = !x[1]);
+}
+
+system main()
+{
+	bool i[4];
+	system inverter I[3];
+
+	attribute observable(i) = true;
+
+	I[0](i[:1]);
+	I[1](i[1:2]);
+	I[2](i[2:]);
+}

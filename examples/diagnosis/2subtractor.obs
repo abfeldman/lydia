@@ -1,0 +1,24 @@
+observation alpha_1
+{
+    x && y && p && b && !d;
+}
+
+observation alpha_2
+{
+    !x && y && p && !b && d;
+}
+
+observation alpha_3
+{
+    x && y && p && !b && !d;
+}
+
+observation alpha_4
+{
+    !x && y && !p && !b && d;
+}
+
+observation alpha_5
+{
+    !x && y && !p && !b && !d;
+}

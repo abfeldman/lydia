@@ -1,0 +1,17 @@
+bool function foo(bool a)
+{
+	a
+}
+
+system zoo(bool b)
+{
+	b;
+}
+
+system main()
+{
+	system zoo Z(2);
+	system zoo X;
+	X(5);
+	foo(3);
+}

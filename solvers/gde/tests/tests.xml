@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+  <separator>74XXX Tests:</separator>
+  <test>
+    <title>74182</title>
+    <model>74182.atms</model>
+    <observation>74182.terms</observation>
+    <input>74182.commands.input</input>
+    <output>74182.expected.out</output>
+  </test>
+</testsuite>

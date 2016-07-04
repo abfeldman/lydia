@@ -1,0 +1,12 @@
+type Bool = enum { t, f };
+
+system foo()
+{
+	bool a = true, b = true, c = true, d = true;
+	Bool e = Bool.t;
+
+	attribute health(a, b, c) = \x x;
+	attribute probability(a, b) = \x x ? 0.95 : 0.05;
+	attribute probability(c, d) = 0.5;
+	attribute probability(e) = \x (x = Bool.t) ? 0.95 : 0.05;
+}

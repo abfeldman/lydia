@@ -1,0 +1,34 @@
+system inverter(bool i, o)
+{
+    bool h;
+
+    attribute probability(h) = (h ? 0.95 : 0.05);
+    attribute health(h) = h;
+    
+    h => (i = !o);
+}
+
+system main(bool ix, y1, y2, y3, y4, y5, y6, y7, y8, y9, y10)
+{
+    system inverter I0;
+    system inverter I1;
+    system inverter I2;
+    system inverter I3;
+    system inverter I4;
+    system inverter I5;
+    system inverter I6;
+    system inverter I7;
+    system inverter I8;
+    system inverter I9;
+
+    I0(ix, y1);
+    I1(y1, y2);
+    I2(y2, y3);
+    I3(y3, y4);
+    I4(y4, y5);
+    I5(y5, y6);
+    I6(y6, y7);
+    I7(y7, y8);
+    I8(y8, y9);
+    I9(y9, y10);
+}

@@ -1,0 +1,6 @@
+err_redef_formal.sys: In system `circuit':
+err_redef_formal.sys:5: error: redefinition of `a'
+err_redef_formal.sys:5: error: `a' previously defined here
+err_redef_formal.sys:7: error: `b' undefined (first use in this system)
+err_redef_formal.sys:7: error: (Each undefined identifier is reported only once
+err_redef_formal.sys:7: error: for each system it appears in.)

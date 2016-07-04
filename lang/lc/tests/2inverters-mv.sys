@@ -1,0 +1,23 @@
+type boolean = enum { t, f };
+
+system inverter(boolean h, i, o)
+{
+	attribute probability(h) = cond(h) (boolean.t -> 0.95;
+	                                    boolean.f -> 0.05);
+	attribute health(h) = cond(h) (boolean.t -> true;
+                                       boolean.f -> false);
+
+	(h = boolean.t) => !(i = o);
+}
+
+system main()
+{
+	boolean a, b, c, h1, h2;
+
+   	attribute observable(a) = true;
+   	attribute observable(b) = true;
+   	attribute observable(c) = true;
+
+	system inverter I1(h1, a, b);
+	system inverter I2(h2, b, c);
+}

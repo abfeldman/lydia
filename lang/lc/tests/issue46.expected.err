@@ -1,0 +1,4 @@
+issue46.sys: In system `Foo':
+issue46.sys:1: warning: unused variable `h1'
+issue46.sys: In system `Bar':
+issue46.sys:7: error: too few arguments to system `inst'

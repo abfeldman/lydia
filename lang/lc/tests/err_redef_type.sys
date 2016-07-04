@@ -1,0 +1,6 @@
+type color = enum { R, G, B };
+type color = enum { R, G, B };
+type color = enum { R, G, B };
+type boo = color;
+type boo = color;
+type test = enum { A, A };

@@ -1,0 +1,97 @@
+#include "weak/std-logic.inc"
+
+attribute bool input;
+attribute bool output;
+
+system m74181()
+{
+// Input variables:
+    bool i1, i2, i3, i4, i5, i6, i7, i8;
+    bool i9, i10, i11, i12, i13, i14;
+    attribute input(i1, i2, i3, i4, i5, i6, i7, i8) = true;
+    attribute input(i9, i10, i11, i12, i13, i14) = true;
+    attribute observable(i1, i2, i3, i4, i5, i6, i7, i8) = true;
+    attribute observable(i9, i10, i11, i12, i13, i14) = true;
+
+// Output variables:
+    bool o1, o2, o3, o4, o5, o6, o7, o8;
+    attribute output(o1, o2, o3, o4, o5, o6, o7, o8) = true;
+    attribute observable(o1, o2, o3, o4, o5, o6, o7, o8) = true;
+
+// Internal variables:
+    bool z1, z2, z3, z4, z5, z6, z7, z8;
+    bool z9, z10, z11, z12, z13, z14, z15, z16;
+    bool z17, z18, z19, z20, z21, z22, z23, z24;
+    bool z25, z26, z27, z28, z29, z30, z31, z32;
+    bool z33, z34, z35, z36, z37, z38, z39, z40;
+    bool z41, z42, z43, z44, z45, z46, z47, z48;
+    bool z49, z50, z51, z52, z53, z54, z55, z56;
+    bool z57;
+
+// Gates:
+    system inverter gate27(z1, i13);
+    system inverter gate28(z2, i5);
+    system inverter gate29(z3, i7);
+    system inverter gate30(z4, i9);
+    system inverter gate31(z5, i11);
+    system and3 gate68(z6, i5, i4, i6);
+    system and3 gate69(z7, i6, i3, z2);
+    system and2 gate70(z8, z2, i2);
+    system and2 gate71(z9, i1, i5);
+    system buffer gate72(z10, i6);
+    system and3 gate73(z11, i7, i4, i8);
+    system and3 gate74(z12, i8, i3, z3);
+    system and2 gate75(z13, z3, i2);
+    system and2 gate76(z14, i1, i7);
+    system buffer gate77(z15, i8);
+    system and3 gate78(z16, i9, i4, i10);
+    system and3 gate79(z17, i10, i3, z4);
+    system and2 gate80(z18, z4, i2);
+    system and2 gate81(z19, i1, i9);
+    system buffer gate82(z20, i10);
+    system and3 gate83(z21, i11, i4, i12);
+    system and3 gate84(z22, i12, i3, z5);
+    system and2 gate85(z23, z5, i2);
+    system and2 gate86(z24, i1, i11);
+    system buffer gate87(z25, i12);
+    system nor2 gate88(z26, z6, z7);
+    system nor3 gate89(z27, z8, z9, z10);
+    system nor2 gate90(z28, z11, z12);
+    system nor3 gate91(z29, z13, z14, z15);
+    system nor2 gate92(z30, z16, z17);
+    system nor3 gate93(z31, z18, z19, z20);
+    system nor2 gate94(z32, z21, z22);
+    system nor3 gate95(z33, z23, z24, z25);
+    system buffer gate153(z34, z27);
+    system and2 gate154(z35, z26, z29);
+    system and3 gate155(z36, z26, z31, z28);
+    system and4 gate156(z37, z26, z28, z30, z33);
+    system nand5 gate157(z38, z26, z28, z30, z32, i14);
+    system nand4 gate158(o1, z26, z28, z30, z32);
+    system xor2 gate159(z39, z26, z27);
+    system and5 gate160(z40, i14, z32, z30, z28, z1);
+    system and4 gate161(z41, z30, z28, z33, z1);
+    system and3 gate162(z42, z28, z31, z1);
+    system and2 gate163(z43, z29, z1);
+    system xor2 gate164(z44, z28, z29);
+    system and4 gate165(z45, i14, z32, z30, z1);
+    system and3 gate166(z46, z30, z33, z1);
+    system and2 gate167(z47, z31, z1);
+    system xor2 gate168(z48, z30, z31);
+    system and3 gate169(z49, i14, z32, z1);
+    system and2 gate170(z50, z33, z1);
+    system xor2 gate171(z51, z32, z33);
+    system nand2 gate172(z52, i14, z1);
+    system nor4 gate173(o2, z34, z35, z36, z37);
+    system inverter gate176(z53, o2);
+    system inverter gate177(z54, z38);
+    system nor4 gate178(z55, z40, z41, z42, z43);
+    system nor3 gate179(z56, z45, z46, z47);
+    system nor2 gate180(z57, z49, z50);
+    system or2 gate181(o3, z53, z54);
+    system xor2 gate182(o4, z39, z55);
+    system xor2 gate185(o5, z44, z56);
+    system xor2 gate188(o6, z48, z57);
+    system xor2 gate191(o7, z51, z52);
+    system and4 gate194(o8, o4, o5, o6, o7);
+}

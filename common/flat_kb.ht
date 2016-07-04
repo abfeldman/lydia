@@ -1,0 +1,13 @@
+#ifndef FLAT_KB_H
+#define FLAT_KB_H
+
+#include "list.h"
+#include "types.h"
+#include "variable.h"
+#include "serializable.h"
+
+.insert flat_kbconf.t
+.include lydia.ht
+#line $[1+${tpllineno}] "${tplfilename}"
+
+#endif

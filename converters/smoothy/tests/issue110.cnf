@@ -1,0 +1,277 @@
+(
+ :tv_cnf_flat_kb
+ inverter100
+ (
+  :tv_cnf
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier x $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier y100 $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier y10 $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier y20 $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (:bool_variable (:identifier y1 $nil ((:qualifier I00 $nil))) () -1)
+   (:bool_variable (:identifier y2 $nil ((:qualifier I00 $nil))) () -1)
+   (:bool_variable (:identifier y3 $nil ((:qualifier I00 $nil))) () -1)
+   (:bool_variable (:identifier y4 $nil ((:qualifier I00 $nil))) () -1)
+   (:bool_variable (:identifier y5 $nil ((:qualifier I00 $nil))) () -1)
+   (:bool_variable (:identifier y6 $nil ((:qualifier I00 $nil))) () -1)
+   (:bool_variable (:identifier y7 $nil ((:qualifier I00 $nil))) () -1)
+   (:bool_variable (:identifier y8 $nil ((:qualifier I00 $nil))) () -1)
+   (:bool_variable (:identifier y9 $nil ((:qualifier I00 $nil))) () -1)
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I00 $nil) (:qualifier I0 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I00 $nil) (:qualifier I1 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I00 $nil) (:qualifier I2 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I00 $nil) (:qualifier I3 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I00 $nil) (:qualifier I4 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I00 $nil) (:qualifier I5 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I00 $nil) (:qualifier I6 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I00 $nil) (:qualifier I7 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I00 $nil) (:qualifier I8 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I00 $nil) (:qualifier I9 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (:bool_variable (:identifier y1 $nil ((:qualifier I10 $nil))) () -1)
+   (:bool_variable (:identifier y2 $nil ((:qualifier I10 $nil))) () -1)
+   (:bool_variable (:identifier y3 $nil ((:qualifier I10 $nil))) () -1)
+   (:bool_variable (:identifier y4 $nil ((:qualifier I10 $nil))) () -1)
+   (:bool_variable (:identifier y5 $nil ((:qualifier I10 $nil))) () -1)
+   (:bool_variable (:identifier y6 $nil ((:qualifier I10 $nil))) () -1)
+   (:bool_variable (:identifier y7 $nil ((:qualifier I10 $nil))) () -1)
+   (:bool_variable (:identifier y8 $nil ((:qualifier I10 $nil))) () -1)
+   (:bool_variable (:identifier y9 $nil ((:qualifier I10 $nil))) () -1)
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I10 $nil) (:qualifier I0 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I10 $nil) (:qualifier I1 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I10 $nil) (:qualifier I2 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I10 $nil) (:qualifier I3 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I10 $nil) (:qualifier I4 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I10 $nil) (:qualifier I5 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I10 $nil) (:qualifier I6 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I10 $nil) (:qualifier I7 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I10 $nil) (:qualifier I8 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I10 $nil) (:qualifier I9 $nil)))
+    (
+     (:float_variable_attribute probability (0.05 0.95))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (:tv_clause () (0 4 13))
+   (:tv_clause () (2 12 22))
+   (:tv_clause () (2 23 32))
+   (:tv_clause () (3 31 41))
+   (:tv_clause () (4 5 14))
+   (:tv_clause () (5 6 15))
+   (:tv_clause () (6 7 16))
+   (:tv_clause () (7 8 17))
+   (:tv_clause () (8 9 18))
+   (:tv_clause () (9 10 19))
+   (:tv_clause () (10 11 20))
+   (:tv_clause () (11 12 21))
+   (:tv_clause () (23 24 33))
+   (:tv_clause () (24 25 34))
+   (:tv_clause () (25 26 35))
+   (:tv_clause () (26 27 36))
+   (:tv_clause () (27 28 37))
+   (:tv_clause () (28 29 38))
+   (:tv_clause () (29 30 39))
+   (:tv_clause () (30 31 40))
+   (:tv_clause (0 4) (13))
+   (:tv_clause (2 12) (22))
+   (:tv_clause (2 23) (32))
+   (:tv_clause (3 31) (41))
+   (:tv_clause (4 5) (14))
+   (:tv_clause (5 6) (15))
+   (:tv_clause (6 7) (16))
+   (:tv_clause (7 8) (17))
+   (:tv_clause (8 9) (18))
+   (:tv_clause (9 10) (19))
+   (:tv_clause (10 11) (20))
+   (:tv_clause (11 12) (21))
+   (:tv_clause (23 24) (33))
+   (:tv_clause (24 25) (34))
+   (:tv_clause (25 26) (35))
+   (:tv_clause (26 27) (36))
+   (:tv_clause (27 28) (37))
+   (:tv_clause (28 29) (38))
+   (:tv_clause (29 30) (39))
+   (:tv_clause (30 31) (40))
+  )
+ )
+)

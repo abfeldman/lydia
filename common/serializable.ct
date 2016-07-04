@@ -1,0 +1,45 @@
+#include "config.h"
+
+#include "tv.h"
+#include "mv.h"
+#include "lcm.h"
+#include "mdd.h"
+#include "obdd.h"
+#include "fscan.h"
+#include "fread.h"
+#include "fwrite.h"
+#include "variable.h"
+#include "serializable.h"
+
+#include <assert.h>
+
+.insert serializableconf.t
+.include lydia.ct
+#line $[1+${tpllineno}] "${tplfilename}"
+
+void dump_serializable(FILE *outfile, const_serializable data, const int type, const int version)
+{
+    struct str_serializable_header header;
+    struct str_serializable_footer footer;
+
+    header.magic[0] = 0x07; /* BELL */
+    header.magic[1] = 0x1b; /* ESC */
+    header.magic[2] = 'l';
+    header.type = type;
+    header.version = version;
+    init_hash(&header, sizeof(struct str_serializable_header));
+    fwrite(&header, sizeof(struct str_serializable_header), 1, outfile);
+    fwrite_serializable(outfile, data);
+    save_hash(footer.checksum);
+    fwrite(&footer, sizeof(struct str_serializable_footer), 1, outfile);
+}
+
+/*
+ * Local variables:
+ * mode: c
+ * tab-width: 8
+ * c-basic-offset: 4
+ * End:
+ * vim600: sw=4 ts=8 fdm=marker
+ * vim<600: sw=4 ts=8
+ */

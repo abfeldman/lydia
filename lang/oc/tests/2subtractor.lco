@@ -1,0 +1,195 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   alpha_1
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier x $nil $nil) () -1)
+     (:bool_variable (:identifier y $nil $nil) () -1)
+     (:bool_variable (:identifier p $nil $nil) () -1)
+     (:bool_variable (:identifier b $nil $nil) () -1)
+     (:bool_variable (:identifier d $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_and_sentence
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(
+	 :csp_and_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 0))
+	 (:csp_atomic_sentence (:csp_variable_term 1))
+	)
+	(:csp_atomic_sentence (:csp_variable_term 2))
+       )
+       (:csp_atomic_sentence (:csp_variable_term 3))
+      )
+      (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 4)))
+     )
+    )
+   )
+  )
+  (
+   :node
+   alpha_2
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier x $nil $nil) () -1)
+     (:bool_variable (:identifier y $nil $nil) () -1)
+     (:bool_variable (:identifier p $nil $nil) () -1)
+     (:bool_variable (:identifier b $nil $nil) () -1)
+     (:bool_variable (:identifier d $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_and_sentence
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(
+	 :csp_and_sentence
+	 (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 0)))
+	 (:csp_atomic_sentence (:csp_variable_term 1))
+	)
+	(:csp_atomic_sentence (:csp_variable_term 2))
+       )
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 3)))
+      )
+      (:csp_atomic_sentence (:csp_variable_term 4))
+     )
+    )
+   )
+  )
+  (
+   :node
+   alpha_3
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier x $nil $nil) () -1)
+     (:bool_variable (:identifier y $nil $nil) () -1)
+     (:bool_variable (:identifier p $nil $nil) () -1)
+     (:bool_variable (:identifier b $nil $nil) () -1)
+     (:bool_variable (:identifier d $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_and_sentence
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(
+	 :csp_and_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 0))
+	 (:csp_atomic_sentence (:csp_variable_term 1))
+	)
+	(:csp_atomic_sentence (:csp_variable_term 2))
+       )
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 3)))
+      )
+      (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 4)))
+     )
+    )
+   )
+  )
+  (
+   :node
+   alpha_4
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier x $nil $nil) () -1)
+     (:bool_variable (:identifier y $nil $nil) () -1)
+     (:bool_variable (:identifier p $nil $nil) () -1)
+     (:bool_variable (:identifier b $nil $nil) () -1)
+     (:bool_variable (:identifier d $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_and_sentence
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(
+	 :csp_and_sentence
+	 (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 0)))
+	 (:csp_atomic_sentence (:csp_variable_term 1))
+	)
+	(:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 2)))
+       )
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 3)))
+      )
+      (:csp_atomic_sentence (:csp_variable_term 4))
+     )
+    )
+   )
+  )
+  (
+   :node
+   alpha_5
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier x $nil $nil) () -1)
+     (:bool_variable (:identifier y $nil $nil) () -1)
+     (:bool_variable (:identifier p $nil $nil) () -1)
+     (:bool_variable (:identifier b $nil $nil) () -1)
+     (:bool_variable (:identifier d $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_and_sentence
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(
+	 :csp_and_sentence
+	 (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 0)))
+	 (:csp_atomic_sentence (:csp_variable_term 1))
+	)
+	(:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 2)))
+       )
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 3)))
+      )
+      (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 4)))
+     )
+    )
+   )
+  )
+ )
+)

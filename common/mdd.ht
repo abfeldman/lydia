@@ -1,0 +1,24 @@
+#ifndef __MDD_H__
+#define __MDD_H__
+
+#include "serializable.h"
+#include "hierarchy.h"
+#include "variable.h"
+#include "types.h"
+#include "list.h"
+
+.insert mddconf.t
+.include lydia.ht
+#line $[1+${tpllineno}] "${tplfilename}"
+
+#endif
+
+/*
+ * Local variables:
+ * mode: c
+ * tab-width: 8
+ * c-basic-offset: 4
+ * End:
+ * vim600: sw=4 ts=8 fdm=marker
+ * vim<600: sw=4 ts=8
+ */

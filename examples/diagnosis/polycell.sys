@@ -1,0 +1,16 @@
+#include "weak/std-logic.inc"
+
+attribute bool input;
+attribute bool output;
+
+system polycell()
+{
+    bool a, b, c, d, e, f, g, x, y, z;
+
+    attribute observable(a, b, c, d, e, f, g) = true;
+    attribute input(a, b, c, d, e) = true;
+    attribute output(f, g) = true;
+
+    system and2 and2A(x, a, c), and2B(y, b, d), and2C(z, c, e);
+    system or2 or2A(f, x, y), or2B(g, y, z);
+}

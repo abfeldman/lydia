@@ -1,0 +1,43 @@
+// The mastermind game (2 pins)
+
+type Color = enum { RED, YELLOW, BLUE, GREEN, CYAN, PURPLE };
+type Clue = enum { NONE, W, B, WW, WB, BB };
+
+system Mastermind(Color g1, g2, h1, h2, Clue clue)
+{
+    bool e11, e12;
+    bool e21, e22;
+
+    bool f11, f12;
+    bool f21, f22;
+
+    attribute observable(clue) = true;
+
+    attribute observable(g1) = true;
+    attribute health(h1) = (h1 == Color.RED) ? true : false;
+    attribute probability(h1) = 1.0 / 6.0;
+
+    attribute observable(g2) = true;
+    attribute health(h2) = (h2 == Color.RED) ? true : false;
+    attribute probability(h2) = 1.0 / 6.0;
+
+    e11 = (g1 = h1);
+    e12 = (g1 = h2);
+    e21 = (g2 = h1);
+    e22 = (g2 = h2);
+
+    f11 = e11;
+    f22 = e22;
+
+    f12 = e12 and !f11 and !f22;
+
+    f21 = e21 and !f22 and !f11;
+
+    (((f11 = true) and (false)) or ((f11 != true) and ((((f22 = true) and (false)) or ((f22 != true) and (true)))))) => ((clue = Clue.NONE) or (clue = Clue.W) or (clue = Clue.WW));
+    (((f11 = true) and ((((f22 = true) and (false)) or ((f22 != true) and (true))))) or ((f11 != true) and ((((f22 = true) and (true)) or ((f22 != true) and (false)))))) => ((clue = Clue.B) or (clue = Clue.WB));
+    (((f11 = true) and ((((f22 = true) and (true)) or ((f22 != true) and (false))))) or ((f11 != true) and (false))) => ((clue = Clue.BB));
+
+    (((f12 = true) and (false)) or ((f12 != true) and ((((f21 = true) and (false)) or ((f21 != true) and (true)))))) => ((clue = Clue.NONE) or (clue = Clue.B) or (clue = Clue.BB));
+    (((f12 = true) and ((((f21 = true) and (false)) or ((f21 != true) and (true))))) or ((f12 != true) and ((((f21 = true) and (true)) or ((f21 != true) and (false)))))) => ((clue = Clue.W) or (clue = Clue.WB));
+    (((f12 = true) and ((((f21 = true) and (true)) or ((f21 != true) and (false))))) or ((f12 != true) and (false))) => ((clue = Clue.WW));
+}

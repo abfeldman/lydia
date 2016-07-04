@@ -1,0 +1,19 @@
+bool function foo(bool a)
+{
+	false
+}
+
+system zoo(bool a)
+{
+}
+
+system boo(bool a)
+{
+	bool b;
+
+	system zoo B;
+	system zoo C[10];
+	system zoo D[10];
+
+	D[0:3](true);
+}

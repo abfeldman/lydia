@@ -1,0 +1,38 @@
+system inverterA(bool i, o)
+{
+	bool h;
+
+	attribute health(h) = h;
+	attribute probability(h) = h ? 0.975 : 0.025;
+	
+	h => (i = !o);
+}
+
+system inverter(bool i, o)
+{
+	bool h;
+
+	attribute health(h) = h;
+	attribute probability(h) = h ? 0.99 : 0.01;
+	
+	h => (i = !o);
+}
+
+system main()
+{
+	bool a, b, c, d, e;
+
+	attribute observable(a) = true;
+	attribute observable(b) = true;
+	attribute observable(c) = true;
+	attribute observable(d) = true;
+	attribute observable(e) = true;
+
+	system inverterA A;
+	system inverter B, C, D;
+
+	A(a, b);
+	B(b, c);
+	C(c, d);
+	D(d, e);
+}

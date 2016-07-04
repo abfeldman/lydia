@@ -1,0 +1,3 @@
+err_attr_redef.sys: In system `main':
+err_attr_redef.sys:6: error: redefinition of `health(a)'
+err_attr_redef.sys:5: error: `health(a)' previously defined here

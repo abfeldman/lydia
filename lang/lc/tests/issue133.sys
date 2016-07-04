@@ -1,0 +1,12 @@
+type Mass = enum { zero, low, nom, high };
+type Flow = struct { Mass m, bool v };
+
+system TJunction()
+{
+	Flow auxFlow[1:3];
+	Mass massIn[1:3];
+	forall (i in 1 .. 3) {
+		massIn[i] = auxFlow[i].v ? auxFlow[i].m : Mass.zero;
+	}
+}
+	

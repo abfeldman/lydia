@@ -1,0 +1,18 @@
+#include "config.h"
+
+#include "tv.h"
+#include "mv.h"
+#include "lcm.h"
+#include "mdd.h"
+#include "obdd.h"
+#include "fread.h"
+#include "fscan.h"
+#include "fwrite.h"
+#include "flat_kb.h"
+#include "variable.h"
+
+#include <assert.h>
+
+.insert flat_kbconf.t
+.include lydia.ct
+#line $[1+${tpllineno}] "${tplfilename}"

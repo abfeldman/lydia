@@ -1,0 +1,165 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   test
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier b $nil $nil) () -1)
+     (:bool_variable (:identifier c $nil $nil) () -1)
+     (:bool_variable (:identifier a $nil ((:qualifier d $nil))) () -1)
+     (:bool_variable (:identifier b $nil ((:qualifier d $nil))) () -1)
+     (:bool_variable (:identifier a $nil ((:qualifier e $nil))) () -1)
+     (:bool_variable (:identifier b $nil ((:qualifier e $nil))) () -1)
+     (:bool_variable (:identifier a $nil ((:qualifier f $nil))) () -1)
+     (:bool_variable (:identifier b $nil ((:qualifier f $nil))) () -1)
+     (:bool_variable (:identifier a (0) ((:qualifier g $nil))) () -1)
+     (:bool_variable (:identifier a (1) ((:qualifier g $nil))) () -1)
+     (:bool_variable (:identifier b $nil ((:qualifier g $nil))) () -1)
+     (:bool_variable (:identifier a (0) ((:qualifier h $nil))) () -1)
+     (:bool_variable (:identifier a (1) ((:qualifier h $nil))) () -1)
+     (:bool_variable (:identifier b $nil ((:qualifier h $nil))) () -1)
+     (:bool_variable (:identifier a (0) ((:qualifier i $nil))) () -1)
+     (:bool_variable (:identifier a (1) ((:qualifier i $nil))) () -1)
+     (:bool_variable (:identifier b $nil ((:qualifier i $nil))) () -1)
+     (:bool_variable (:identifier j (0) $nil) () -1)
+     (:bool_variable (:identifier j (1) $nil) () -1)
+     (:bool_variable (:identifier k (0) $nil) () -1)
+     (:bool_variable (:identifier k (1) $nil) () -1)
+     (:bool_variable (:identifier l (0) $nil) () -1)
+     (:bool_variable (:identifier l (1) $nil) () -1)
+     (:bool_variable (:identifier m $nil $nil) () -1)
+     (:bool_variable (:identifier n (0 0) $nil) () -1)
+     (:bool_variable (:identifier n (0 1) $nil) () -1)
+     (:bool_variable (:identifier n (1 0) $nil) () -1)
+     (:bool_variable (:identifier n (1 1) $nil) () -1)
+     (
+      :bool_variable
+      (:identifier a (0) ((:qualifier o $nil) (:qualifier a $nil)))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier a (1) ((:qualifier o $nil) (:qualifier a $nil)))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier b $nil ((:qualifier o $nil) (:qualifier a $nil)))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier a (0) ((:qualifier p $nil) (:qualifier a $nil)))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier a (1) ((:qualifier p $nil) (:qualifier a $nil)))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier b $nil ((:qualifier p $nil) (:qualifier a $nil)))
+      ()
+      -1
+     )
+    )
+    ()
+    ((:bool_constant $nil t) (:bool_constant $nil nil))
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 0))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 4))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 5))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 6))
+      (:csp_atomic_sentence (:csp_constant_term 1))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 11))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 14))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 15))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 16))
+      (:csp_atomic_sentence (:csp_constant_term 1))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 19))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 20))
+      (:csp_atomic_sentence (:csp_constant_term 1))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 21))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 23))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 27))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 28))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 31))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 32))
+      (:csp_atomic_sentence (:csp_constant_term 1))
+     )
+    )
+   )
+  )
+ )
+)

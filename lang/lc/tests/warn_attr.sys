@@ -1,0 +1,13 @@
+system boo()
+{
+	bool foo = true;
+	bool zoo = true;
+	bool bar = true;
+	attribute observable(foo) = true;
+	attribute observable(zoo) = zoo ? true : false;
+	attribute health(foo) = true;
+	attribute health(zoo) = zoo ? true : false;
+	attribute probability(foo) = foo ? 2.72 : 3.14;
+	attribute probability(zoo) = zoo ? 0.6 : 0.4;
+	attribute probability(bar) = bar ? 0.6 : 0.5;
+}

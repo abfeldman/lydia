@@ -1,0 +1,4206 @@
+(
+ :mv_wff_hierarchy
+ (
+  (
+   :node
+   Everywhere
+   ()
+   (
+    :mv_wff
+    ((:values_set tile (one two three four five six seven eight nine)))
+    (
+     (:enum_variable (:identifier g (0) $nil) () 0)
+     (:enum_variable (:identifier g (1) $nil) () 0)
+     (:enum_variable (:identifier g (2) $nil) () 0)
+     (:enum_variable (:identifier g (3) $nil) () 0)
+     (:enum_variable (:identifier g (4) $nil) () 0)
+     (:enum_variable (:identifier g (5) $nil) () 0)
+     (:enum_variable (:identifier g (6) $nil) () 0)
+     (:enum_variable (:identifier g (7) $nil) () 0)
+     (:enum_variable (:identifier g (8) $nil) () 0)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 0 0) (:mv_wff_e_var 1 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 0 1) (:mv_wff_e_var 1 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 0 2) (:mv_wff_e_var 1 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 0 3) (:mv_wff_e_var 1 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 0 4) (:mv_wff_e_var 1 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 0 5) (:mv_wff_e_var 1 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 0 6) (:mv_wff_e_var 1 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 0 7) (:mv_wff_e_var 1 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 0 8) (:mv_wff_e_var 1 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 0 0) (:mv_wff_e_var 2 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 0 1) (:mv_wff_e_var 2 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 0 2) (:mv_wff_e_var 2 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 0 3) (:mv_wff_e_var 2 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 0 4) (:mv_wff_e_var 2 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 0 5) (:mv_wff_e_var 2 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 0 6) (:mv_wff_e_var 2 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 0 7) (:mv_wff_e_var 2 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 0 8) (:mv_wff_e_var 2 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 0 0) (:mv_wff_e_var 3 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 0 1) (:mv_wff_e_var 3 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 0 2) (:mv_wff_e_var 3 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 0 3) (:mv_wff_e_var 3 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 0 4) (:mv_wff_e_var 3 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 0 5) (:mv_wff_e_var 3 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 0 6) (:mv_wff_e_var 3 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 0 7) (:mv_wff_e_var 3 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 0 8) (:mv_wff_e_var 3 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 0 0) (:mv_wff_e_var 4 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 0 1) (:mv_wff_e_var 4 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 0 2) (:mv_wff_e_var 4 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 0 3) (:mv_wff_e_var 4 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 0 4) (:mv_wff_e_var 4 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 0 5) (:mv_wff_e_var 4 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 0 6) (:mv_wff_e_var 4 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 0 7) (:mv_wff_e_var 4 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 0 8) (:mv_wff_e_var 4 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 0 0) (:mv_wff_e_var 5 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 0 1) (:mv_wff_e_var 5 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 0 2) (:mv_wff_e_var 5 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 0 3) (:mv_wff_e_var 5 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 0 4) (:mv_wff_e_var 5 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 0 5) (:mv_wff_e_var 5 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 0 6) (:mv_wff_e_var 5 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 0 7) (:mv_wff_e_var 5 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 0 8) (:mv_wff_e_var 5 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 0 0) (:mv_wff_e_var 6 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 0 1) (:mv_wff_e_var 6 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 0 2) (:mv_wff_e_var 6 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 0 3) (:mv_wff_e_var 6 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 0 4) (:mv_wff_e_var 6 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 0 5) (:mv_wff_e_var 6 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 0 6) (:mv_wff_e_var 6 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 0 7) (:mv_wff_e_var 6 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 0 8) (:mv_wff_e_var 6 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 0 0) (:mv_wff_e_var 7 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 0 1) (:mv_wff_e_var 7 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 0 2) (:mv_wff_e_var 7 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 0 3) (:mv_wff_e_var 7 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 0 4) (:mv_wff_e_var 7 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 0 5) (:mv_wff_e_var 7 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 0 6) (:mv_wff_e_var 7 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 0 7) (:mv_wff_e_var 7 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 0 8) (:mv_wff_e_var 7 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 0 0) (:mv_wff_e_var 8 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 0 1) (:mv_wff_e_var 8 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 0 2) (:mv_wff_e_var 8 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 0 3) (:mv_wff_e_var 8 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 0 4) (:mv_wff_e_var 8 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 0 5) (:mv_wff_e_var 8 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 0 6) (:mv_wff_e_var 8 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 0 7) (:mv_wff_e_var 8 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 0 8) (:mv_wff_e_var 8 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 1 0) (:mv_wff_e_var 2 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 1 1) (:mv_wff_e_var 2 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 1 2) (:mv_wff_e_var 2 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 1 3) (:mv_wff_e_var 2 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 1 4) (:mv_wff_e_var 2 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 1 5) (:mv_wff_e_var 2 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 1 6) (:mv_wff_e_var 2 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 1 7) (:mv_wff_e_var 2 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 1 8) (:mv_wff_e_var 2 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 1 0) (:mv_wff_e_var 3 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 1 1) (:mv_wff_e_var 3 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 1 2) (:mv_wff_e_var 3 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 1 3) (:mv_wff_e_var 3 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 1 4) (:mv_wff_e_var 3 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 1 5) (:mv_wff_e_var 3 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 1 6) (:mv_wff_e_var 3 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 1 7) (:mv_wff_e_var 3 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 1 8) (:mv_wff_e_var 3 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 1 0) (:mv_wff_e_var 4 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 1 1) (:mv_wff_e_var 4 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 1 2) (:mv_wff_e_var 4 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 1 3) (:mv_wff_e_var 4 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 1 4) (:mv_wff_e_var 4 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 1 5) (:mv_wff_e_var 4 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 1 6) (:mv_wff_e_var 4 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 1 7) (:mv_wff_e_var 4 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 1 8) (:mv_wff_e_var 4 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 1 0) (:mv_wff_e_var 5 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 1 1) (:mv_wff_e_var 5 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 1 2) (:mv_wff_e_var 5 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 1 3) (:mv_wff_e_var 5 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 1 4) (:mv_wff_e_var 5 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 1 5) (:mv_wff_e_var 5 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 1 6) (:mv_wff_e_var 5 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 1 7) (:mv_wff_e_var 5 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 1 8) (:mv_wff_e_var 5 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 1 0) (:mv_wff_e_var 6 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 1 1) (:mv_wff_e_var 6 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 1 2) (:mv_wff_e_var 6 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 1 3) (:mv_wff_e_var 6 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 1 4) (:mv_wff_e_var 6 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 1 5) (:mv_wff_e_var 6 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 1 6) (:mv_wff_e_var 6 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 1 7) (:mv_wff_e_var 6 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 1 8) (:mv_wff_e_var 6 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 1 0) (:mv_wff_e_var 7 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 1 1) (:mv_wff_e_var 7 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 1 2) (:mv_wff_e_var 7 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 1 3) (:mv_wff_e_var 7 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 1 4) (:mv_wff_e_var 7 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 1 5) (:mv_wff_e_var 7 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 1 6) (:mv_wff_e_var 7 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 1 7) (:mv_wff_e_var 7 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 1 8) (:mv_wff_e_var 7 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 1 0) (:mv_wff_e_var 8 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 1 1) (:mv_wff_e_var 8 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 1 2) (:mv_wff_e_var 8 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 1 3) (:mv_wff_e_var 8 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 1 4) (:mv_wff_e_var 8 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 1 5) (:mv_wff_e_var 8 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 1 6) (:mv_wff_e_var 8 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 1 7) (:mv_wff_e_var 8 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 1 8) (:mv_wff_e_var 8 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 2 0) (:mv_wff_e_var 3 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 2 1) (:mv_wff_e_var 3 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 2 2) (:mv_wff_e_var 3 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 2 3) (:mv_wff_e_var 3 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 2 4) (:mv_wff_e_var 3 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 2 5) (:mv_wff_e_var 3 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 2 6) (:mv_wff_e_var 3 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 2 7) (:mv_wff_e_var 3 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 2 8) (:mv_wff_e_var 3 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 2 0) (:mv_wff_e_var 4 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 2 1) (:mv_wff_e_var 4 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 2 2) (:mv_wff_e_var 4 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 2 3) (:mv_wff_e_var 4 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 2 4) (:mv_wff_e_var 4 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 2 5) (:mv_wff_e_var 4 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 2 6) (:mv_wff_e_var 4 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 2 7) (:mv_wff_e_var 4 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 2 8) (:mv_wff_e_var 4 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 2 0) (:mv_wff_e_var 5 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 2 1) (:mv_wff_e_var 5 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 2 2) (:mv_wff_e_var 5 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 2 3) (:mv_wff_e_var 5 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 2 4) (:mv_wff_e_var 5 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 2 5) (:mv_wff_e_var 5 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 2 6) (:mv_wff_e_var 5 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 2 7) (:mv_wff_e_var 5 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 2 8) (:mv_wff_e_var 5 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 2 0) (:mv_wff_e_var 6 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 2 1) (:mv_wff_e_var 6 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 2 2) (:mv_wff_e_var 6 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 2 3) (:mv_wff_e_var 6 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 2 4) (:mv_wff_e_var 6 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 2 5) (:mv_wff_e_var 6 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 2 6) (:mv_wff_e_var 6 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 2 7) (:mv_wff_e_var 6 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 2 8) (:mv_wff_e_var 6 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 2 0) (:mv_wff_e_var 7 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 2 1) (:mv_wff_e_var 7 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 2 2) (:mv_wff_e_var 7 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 2 3) (:mv_wff_e_var 7 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 2 4) (:mv_wff_e_var 7 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 2 5) (:mv_wff_e_var 7 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 2 6) (:mv_wff_e_var 7 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 2 7) (:mv_wff_e_var 7 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 2 8) (:mv_wff_e_var 7 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 2 0) (:mv_wff_e_var 8 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 2 1) (:mv_wff_e_var 8 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 2 2) (:mv_wff_e_var 8 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 2 3) (:mv_wff_e_var 8 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 2 4) (:mv_wff_e_var 8 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 2 5) (:mv_wff_e_var 8 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 2 6) (:mv_wff_e_var 8 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 2 7) (:mv_wff_e_var 8 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 2 8) (:mv_wff_e_var 8 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 3 0) (:mv_wff_e_var 4 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 3 1) (:mv_wff_e_var 4 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 3 2) (:mv_wff_e_var 4 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 3 3) (:mv_wff_e_var 4 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 3 4) (:mv_wff_e_var 4 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 3 5) (:mv_wff_e_var 4 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 3 6) (:mv_wff_e_var 4 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 3 7) (:mv_wff_e_var 4 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 3 8) (:mv_wff_e_var 4 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 3 0) (:mv_wff_e_var 5 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 3 1) (:mv_wff_e_var 5 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 3 2) (:mv_wff_e_var 5 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 3 3) (:mv_wff_e_var 5 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 3 4) (:mv_wff_e_var 5 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 3 5) (:mv_wff_e_var 5 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 3 6) (:mv_wff_e_var 5 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 3 7) (:mv_wff_e_var 5 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 3 8) (:mv_wff_e_var 5 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 3 0) (:mv_wff_e_var 6 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 3 1) (:mv_wff_e_var 6 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 3 2) (:mv_wff_e_var 6 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 3 3) (:mv_wff_e_var 6 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 3 4) (:mv_wff_e_var 6 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 3 5) (:mv_wff_e_var 6 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 3 6) (:mv_wff_e_var 6 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 3 7) (:mv_wff_e_var 6 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 3 8) (:mv_wff_e_var 6 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 3 0) (:mv_wff_e_var 7 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 3 1) (:mv_wff_e_var 7 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 3 2) (:mv_wff_e_var 7 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 3 3) (:mv_wff_e_var 7 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 3 4) (:mv_wff_e_var 7 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 3 5) (:mv_wff_e_var 7 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 3 6) (:mv_wff_e_var 7 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 3 7) (:mv_wff_e_var 7 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 3 8) (:mv_wff_e_var 7 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 3 0) (:mv_wff_e_var 8 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 3 1) (:mv_wff_e_var 8 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 3 2) (:mv_wff_e_var 8 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 3 3) (:mv_wff_e_var 8 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 3 4) (:mv_wff_e_var 8 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 3 5) (:mv_wff_e_var 8 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 3 6) (:mv_wff_e_var 8 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 3 7) (:mv_wff_e_var 8 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 3 8) (:mv_wff_e_var 8 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 4 0) (:mv_wff_e_var 5 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 4 1) (:mv_wff_e_var 5 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 4 2) (:mv_wff_e_var 5 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 4 3) (:mv_wff_e_var 5 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 4 4) (:mv_wff_e_var 5 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 4 5) (:mv_wff_e_var 5 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 4 6) (:mv_wff_e_var 5 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 4 7) (:mv_wff_e_var 5 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 4 8) (:mv_wff_e_var 5 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 4 0) (:mv_wff_e_var 6 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 4 1) (:mv_wff_e_var 6 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 4 2) (:mv_wff_e_var 6 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 4 3) (:mv_wff_e_var 6 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 4 4) (:mv_wff_e_var 6 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 4 5) (:mv_wff_e_var 6 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 4 6) (:mv_wff_e_var 6 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 4 7) (:mv_wff_e_var 6 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 4 8) (:mv_wff_e_var 6 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 4 0) (:mv_wff_e_var 7 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 4 1) (:mv_wff_e_var 7 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 4 2) (:mv_wff_e_var 7 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 4 3) (:mv_wff_e_var 7 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 4 4) (:mv_wff_e_var 7 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 4 5) (:mv_wff_e_var 7 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 4 6) (:mv_wff_e_var 7 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 4 7) (:mv_wff_e_var 7 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 4 8) (:mv_wff_e_var 7 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 4 0) (:mv_wff_e_var 8 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 4 1) (:mv_wff_e_var 8 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 4 2) (:mv_wff_e_var 8 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 4 3) (:mv_wff_e_var 8 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 4 4) (:mv_wff_e_var 8 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 4 5) (:mv_wff_e_var 8 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 4 6) (:mv_wff_e_var 8 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 4 7) (:mv_wff_e_var 8 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 4 8) (:mv_wff_e_var 8 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 5 0) (:mv_wff_e_var 6 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 5 1) (:mv_wff_e_var 6 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 5 2) (:mv_wff_e_var 6 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 5 3) (:mv_wff_e_var 6 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 5 4) (:mv_wff_e_var 6 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 5 5) (:mv_wff_e_var 6 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 5 6) (:mv_wff_e_var 6 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 5 7) (:mv_wff_e_var 6 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 5 8) (:mv_wff_e_var 6 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 5 0) (:mv_wff_e_var 7 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 5 1) (:mv_wff_e_var 7 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 5 2) (:mv_wff_e_var 7 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 5 3) (:mv_wff_e_var 7 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 5 4) (:mv_wff_e_var 7 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 5 5) (:mv_wff_e_var 7 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 5 6) (:mv_wff_e_var 7 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 5 7) (:mv_wff_e_var 7 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 5 8) (:mv_wff_e_var 7 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 5 0) (:mv_wff_e_var 8 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 5 1) (:mv_wff_e_var 8 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 5 2) (:mv_wff_e_var 8 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 5 3) (:mv_wff_e_var 8 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 5 4) (:mv_wff_e_var 8 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 5 5) (:mv_wff_e_var 8 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 5 6) (:mv_wff_e_var 8 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 5 7) (:mv_wff_e_var 8 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 5 8) (:mv_wff_e_var 8 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 6 0) (:mv_wff_e_var 7 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 6 1) (:mv_wff_e_var 7 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 6 2) (:mv_wff_e_var 7 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 6 3) (:mv_wff_e_var 7 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 6 4) (:mv_wff_e_var 7 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 6 5) (:mv_wff_e_var 7 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 6 6) (:mv_wff_e_var 7 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 6 7) (:mv_wff_e_var 7 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 6 8) (:mv_wff_e_var 7 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 6 0) (:mv_wff_e_var 8 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 6 1) (:mv_wff_e_var 8 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 6 2) (:mv_wff_e_var 8 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 6 3) (:mv_wff_e_var 8 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 6 4) (:mv_wff_e_var 8 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 6 5) (:mv_wff_e_var 8 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 6 6) (:mv_wff_e_var 8 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 6 7) (:mv_wff_e_var 8 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 6 8) (:mv_wff_e_var 8 8))
+      )
+     )
+     (
+      :mv_wff_e_not
+      (
+       :mv_wff_e_or
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (
+	   :mv_wff_e_or
+	   (
+	    :mv_wff_e_or
+	    (
+	     :mv_wff_e_or
+	     (
+	      :mv_wff_e_or
+	      (:mv_wff_e_and (:mv_wff_e_var 7 0) (:mv_wff_e_var 8 0))
+	      (:mv_wff_e_and (:mv_wff_e_var 7 1) (:mv_wff_e_var 8 1))
+	     )
+	     (:mv_wff_e_and (:mv_wff_e_var 7 2) (:mv_wff_e_var 8 2))
+	    )
+	    (:mv_wff_e_and (:mv_wff_e_var 7 3) (:mv_wff_e_var 8 3))
+	   )
+	   (:mv_wff_e_and (:mv_wff_e_var 7 4) (:mv_wff_e_var 8 4))
+	  )
+	  (:mv_wff_e_and (:mv_wff_e_var 7 5) (:mv_wff_e_var 8 5))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 7 6) (:mv_wff_e_var 8 6))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 7 7) (:mv_wff_e_var 8 7))
+       )
+       (:mv_wff_e_and (:mv_wff_e_var 7 8) (:mv_wff_e_var 8 8))
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   Grid
+   (
+    (
+     :edge
+     Everywhere
+     h
+     (0)
+     (
+      (:mapping (:identifier g (0 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (0 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (0 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (0 3) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (0 4) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (0 5) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (0 6) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (0 7) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (0 8) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     h
+     (1)
+     (
+      (:mapping (:identifier g (1 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (1 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (1 3) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (1 4) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (1 5) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (1 6) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (1 7) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (1 8) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     h
+     (2)
+     (
+      (:mapping (:identifier g (2 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (2 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (2 3) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (2 4) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (2 5) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (2 6) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (2 7) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (2 8) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     h
+     (3)
+     (
+      (:mapping (:identifier g (3 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (3 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (3 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 3) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (3 4) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (3 5) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (3 6) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (3 7) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (3 8) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     h
+     (4)
+     (
+      (:mapping (:identifier g (4 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (4 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (4 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (4 3) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (4 4) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (4 5) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (4 6) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (4 7) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (4 8) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     h
+     (5)
+     (
+      (:mapping (:identifier g (5 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (5 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (5 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (5 3) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (5 4) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (5 5) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (5 6) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (5 7) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (5 8) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     h
+     (6)
+     (
+      (:mapping (:identifier g (6 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (6 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (6 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (6 3) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (6 4) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (6 5) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (6 6) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (6 7) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (6 8) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     h
+     (7)
+     (
+      (:mapping (:identifier g (7 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (7 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (7 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (7 3) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (7 4) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (7 5) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (7 6) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (7 7) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (7 8) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     h
+     (8)
+     (
+      (:mapping (:identifier g (8 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (8 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (8 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (8 3) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (8 4) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (8 5) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (8 6) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (8 7) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (8 8) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     v
+     (0)
+     (
+      (:mapping (:identifier g (0 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 0) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 0) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 0) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (4 0) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (5 0) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (6 0) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (7 0) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (8 0) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     v
+     (1)
+     (
+      (:mapping (:identifier g (0 1) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 1) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 1) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (4 1) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (5 1) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (6 1) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (7 1) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (8 1) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     v
+     (2)
+     (
+      (:mapping (:identifier g (0 2) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 2) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 2) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (4 2) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (5 2) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (6 2) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (7 2) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (8 2) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     v
+     (3)
+     (
+      (:mapping (:identifier g (0 3) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 3) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 3) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 3) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (4 3) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (5 3) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (6 3) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (7 3) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (8 3) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     v
+     (4)
+     (
+      (:mapping (:identifier g (0 4) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 4) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 4) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 4) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (4 4) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (5 4) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (6 4) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (7 4) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (8 4) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     v
+     (5)
+     (
+      (:mapping (:identifier g (0 5) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 5) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 5) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 5) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (4 5) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (5 5) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (6 5) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (7 5) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (8 5) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     v
+     (6)
+     (
+      (:mapping (:identifier g (0 6) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 6) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 6) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 6) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (4 6) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (5 6) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (6 6) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (7 6) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (8 6) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     v
+     (7)
+     (
+      (:mapping (:identifier g (0 7) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 7) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 7) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 7) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (4 7) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (5 7) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (6 7) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (7 7) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (8 7) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     v
+     (8)
+     (
+      (:mapping (:identifier g (0 8) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (1 8) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (2 8) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (3 8) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (4 8) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (5 8) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (6 8) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (7 8) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (8 8) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     b
+     (0)
+     (
+      (:mapping (:identifier g (0 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (0 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (0 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (1 0) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (1 1) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (1 2) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (2 0) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (2 1) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (2 2) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     b
+     (1)
+     (
+      (:mapping (:identifier g (0 3) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (0 4) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (0 5) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (1 3) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (1 4) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (1 5) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (2 3) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (2 4) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (2 5) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     b
+     (2)
+     (
+      (:mapping (:identifier g (0 6) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (0 7) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (0 8) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (1 6) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (1 7) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (1 8) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (2 6) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (2 7) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (2 8) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     b
+     (3)
+     (
+      (:mapping (:identifier g (3 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (3 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (3 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (4 0) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (4 1) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (4 2) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (5 0) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (5 1) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (5 2) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     b
+     (4)
+     (
+      (:mapping (:identifier g (3 3) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (3 4) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (3 5) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (4 3) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (4 4) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (4 5) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (5 3) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (5 4) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (5 5) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     b
+     (5)
+     (
+      (:mapping (:identifier g (3 6) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (3 7) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (3 8) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (4 6) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (4 7) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (4 8) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (5 6) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (5 7) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (5 8) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     b
+     (6)
+     (
+      (:mapping (:identifier g (6 0) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (6 1) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (6 2) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (7 0) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (7 1) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (7 2) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (8 0) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (8 1) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (8 2) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     b
+     (7)
+     (
+      (:mapping (:identifier g (6 3) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (6 4) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (6 5) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (7 3) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (7 4) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (7 5) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (8 3) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (8 4) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (8 5) $nil) (:identifier g (8) $nil))
+     )
+    )
+    (
+     :edge
+     Everywhere
+     b
+     (8)
+     (
+      (:mapping (:identifier g (6 6) $nil) (:identifier g (0) $nil))
+      (:mapping (:identifier g (6 7) $nil) (:identifier g (1) $nil))
+      (:mapping (:identifier g (6 8) $nil) (:identifier g (2) $nil))
+      (:mapping (:identifier g (7 6) $nil) (:identifier g (3) $nil))
+      (:mapping (:identifier g (7 7) $nil) (:identifier g (4) $nil))
+      (:mapping (:identifier g (7 8) $nil) (:identifier g (5) $nil))
+      (:mapping (:identifier g (8 6) $nil) (:identifier g (6) $nil))
+      (:mapping (:identifier g (8 7) $nil) (:identifier g (7) $nil))
+      (:mapping (:identifier g (8 8) $nil) (:identifier g (8) $nil))
+     )
+    )
+   )
+   (
+    :mv_wff
+    ((:values_set tile (one two three four five six seven eight nine)))
+    (
+     (:enum_variable (:identifier g (0 0) $nil) () 0)
+     (:enum_variable (:identifier g (0 1) $nil) () 0)
+     (:enum_variable (:identifier g (0 2) $nil) () 0)
+     (:enum_variable (:identifier g (0 3) $nil) () 0)
+     (:enum_variable (:identifier g (0 4) $nil) () 0)
+     (:enum_variable (:identifier g (0 5) $nil) () 0)
+     (:enum_variable (:identifier g (0 6) $nil) () 0)
+     (:enum_variable (:identifier g (0 7) $nil) () 0)
+     (:enum_variable (:identifier g (0 8) $nil) () 0)
+     (:enum_variable (:identifier g (1 0) $nil) () 0)
+     (:enum_variable (:identifier g (1 1) $nil) () 0)
+     (:enum_variable (:identifier g (1 2) $nil) () 0)
+     (:enum_variable (:identifier g (1 3) $nil) () 0)
+     (:enum_variable (:identifier g (1 4) $nil) () 0)
+     (:enum_variable (:identifier g (1 5) $nil) () 0)
+     (:enum_variable (:identifier g (1 6) $nil) () 0)
+     (:enum_variable (:identifier g (1 7) $nil) () 0)
+     (:enum_variable (:identifier g (1 8) $nil) () 0)
+     (:enum_variable (:identifier g (2 0) $nil) () 0)
+     (:enum_variable (:identifier g (2 1) $nil) () 0)
+     (:enum_variable (:identifier g (2 2) $nil) () 0)
+     (:enum_variable (:identifier g (2 3) $nil) () 0)
+     (:enum_variable (:identifier g (2 4) $nil) () 0)
+     (:enum_variable (:identifier g (2 5) $nil) () 0)
+     (:enum_variable (:identifier g (2 6) $nil) () 0)
+     (:enum_variable (:identifier g (2 7) $nil) () 0)
+     (:enum_variable (:identifier g (2 8) $nil) () 0)
+     (:enum_variable (:identifier g (3 0) $nil) () 0)
+     (:enum_variable (:identifier g (3 1) $nil) () 0)
+     (:enum_variable (:identifier g (3 2) $nil) () 0)
+     (:enum_variable (:identifier g (3 3) $nil) () 0)
+     (:enum_variable (:identifier g (3 4) $nil) () 0)
+     (:enum_variable (:identifier g (3 5) $nil) () 0)
+     (:enum_variable (:identifier g (3 6) $nil) () 0)
+     (:enum_variable (:identifier g (3 7) $nil) () 0)
+     (:enum_variable (:identifier g (3 8) $nil) () 0)
+     (:enum_variable (:identifier g (4 0) $nil) () 0)
+     (:enum_variable (:identifier g (4 1) $nil) () 0)
+     (:enum_variable (:identifier g (4 2) $nil) () 0)
+     (:enum_variable (:identifier g (4 3) $nil) () 0)
+     (:enum_variable (:identifier g (4 4) $nil) () 0)
+     (:enum_variable (:identifier g (4 5) $nil) () 0)
+     (:enum_variable (:identifier g (4 6) $nil) () 0)
+     (:enum_variable (:identifier g (4 7) $nil) () 0)
+     (:enum_variable (:identifier g (4 8) $nil) () 0)
+     (:enum_variable (:identifier g (5 0) $nil) () 0)
+     (:enum_variable (:identifier g (5 1) $nil) () 0)
+     (:enum_variable (:identifier g (5 2) $nil) () 0)
+     (:enum_variable (:identifier g (5 3) $nil) () 0)
+     (:enum_variable (:identifier g (5 4) $nil) () 0)
+     (:enum_variable (:identifier g (5 5) $nil) () 0)
+     (:enum_variable (:identifier g (5 6) $nil) () 0)
+     (:enum_variable (:identifier g (5 7) $nil) () 0)
+     (:enum_variable (:identifier g (5 8) $nil) () 0)
+     (:enum_variable (:identifier g (6 0) $nil) () 0)
+     (:enum_variable (:identifier g (6 1) $nil) () 0)
+     (:enum_variable (:identifier g (6 2) $nil) () 0)
+     (:enum_variable (:identifier g (6 3) $nil) () 0)
+     (:enum_variable (:identifier g (6 4) $nil) () 0)
+     (:enum_variable (:identifier g (6 5) $nil) () 0)
+     (:enum_variable (:identifier g (6 6) $nil) () 0)
+     (:enum_variable (:identifier g (6 7) $nil) () 0)
+     (:enum_variable (:identifier g (6 8) $nil) () 0)
+     (:enum_variable (:identifier g (7 0) $nil) () 0)
+     (:enum_variable (:identifier g (7 1) $nil) () 0)
+     (:enum_variable (:identifier g (7 2) $nil) () 0)
+     (:enum_variable (:identifier g (7 3) $nil) () 0)
+     (:enum_variable (:identifier g (7 4) $nil) () 0)
+     (:enum_variable (:identifier g (7 5) $nil) () 0)
+     (:enum_variable (:identifier g (7 6) $nil) () 0)
+     (:enum_variable (:identifier g (7 7) $nil) () 0)
+     (:enum_variable (:identifier g (7 8) $nil) () 0)
+     (:enum_variable (:identifier g (8 0) $nil) () 0)
+     (:enum_variable (:identifier g (8 1) $nil) () 0)
+     (:enum_variable (:identifier g (8 2) $nil) () 0)
+     (:enum_variable (:identifier g (8 3) $nil) () 0)
+     (:enum_variable (:identifier g (8 4) $nil) () 0)
+     (:enum_variable (:identifier g (8 5) $nil) () 0)
+     (:enum_variable (:identifier g (8 6) $nil) () 0)
+     (:enum_variable (:identifier g (8 7) $nil) () 0)
+     (:enum_variable (:identifier g (8 8) $nil) () 0)
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+  (
+   :node
+   Sudoku
+   (
+    (
+     :edge
+     Grid
+     grid
+     $nil
+     (
+      (:mapping (:identifier g (0 0) $nil) (:identifier g (0 0) $nil))
+      (:mapping (:identifier g (0 1) $nil) (:identifier g (0 1) $nil))
+      (:mapping (:identifier g (0 2) $nil) (:identifier g (0 2) $nil))
+      (:mapping (:identifier g (0 3) $nil) (:identifier g (0 3) $nil))
+      (:mapping (:identifier g (0 4) $nil) (:identifier g (0 4) $nil))
+      (:mapping (:identifier g (0 5) $nil) (:identifier g (0 5) $nil))
+      (:mapping (:identifier g (0 6) $nil) (:identifier g (0 6) $nil))
+      (:mapping (:identifier g (0 7) $nil) (:identifier g (0 7) $nil))
+      (:mapping (:identifier g (0 8) $nil) (:identifier g (0 8) $nil))
+      (:mapping (:identifier g (1 0) $nil) (:identifier g (1 0) $nil))
+      (:mapping (:identifier g (1 1) $nil) (:identifier g (1 1) $nil))
+      (:mapping (:identifier g (1 2) $nil) (:identifier g (1 2) $nil))
+      (:mapping (:identifier g (1 3) $nil) (:identifier g (1 3) $nil))
+      (:mapping (:identifier g (1 4) $nil) (:identifier g (1 4) $nil))
+      (:mapping (:identifier g (1 5) $nil) (:identifier g (1 5) $nil))
+      (:mapping (:identifier g (1 6) $nil) (:identifier g (1 6) $nil))
+      (:mapping (:identifier g (1 7) $nil) (:identifier g (1 7) $nil))
+      (:mapping (:identifier g (1 8) $nil) (:identifier g (1 8) $nil))
+      (:mapping (:identifier g (2 0) $nil) (:identifier g (2 0) $nil))
+      (:mapping (:identifier g (2 1) $nil) (:identifier g (2 1) $nil))
+      (:mapping (:identifier g (2 2) $nil) (:identifier g (2 2) $nil))
+      (:mapping (:identifier g (2 3) $nil) (:identifier g (2 3) $nil))
+      (:mapping (:identifier g (2 4) $nil) (:identifier g (2 4) $nil))
+      (:mapping (:identifier g (2 5) $nil) (:identifier g (2 5) $nil))
+      (:mapping (:identifier g (2 6) $nil) (:identifier g (2 6) $nil))
+      (:mapping (:identifier g (2 7) $nil) (:identifier g (2 7) $nil))
+      (:mapping (:identifier g (2 8) $nil) (:identifier g (2 8) $nil))
+      (:mapping (:identifier g (3 0) $nil) (:identifier g (3 0) $nil))
+      (:mapping (:identifier g (3 1) $nil) (:identifier g (3 1) $nil))
+      (:mapping (:identifier g (3 2) $nil) (:identifier g (3 2) $nil))
+      (:mapping (:identifier g (3 3) $nil) (:identifier g (3 3) $nil))
+      (:mapping (:identifier g (3 4) $nil) (:identifier g (3 4) $nil))
+      (:mapping (:identifier g (3 5) $nil) (:identifier g (3 5) $nil))
+      (:mapping (:identifier g (3 6) $nil) (:identifier g (3 6) $nil))
+      (:mapping (:identifier g (3 7) $nil) (:identifier g (3 7) $nil))
+      (:mapping (:identifier g (3 8) $nil) (:identifier g (3 8) $nil))
+      (:mapping (:identifier g (4 0) $nil) (:identifier g (4 0) $nil))
+      (:mapping (:identifier g (4 1) $nil) (:identifier g (4 1) $nil))
+      (:mapping (:identifier g (4 2) $nil) (:identifier g (4 2) $nil))
+      (:mapping (:identifier g (4 3) $nil) (:identifier g (4 3) $nil))
+      (:mapping (:identifier g (4 4) $nil) (:identifier g (4 4) $nil))
+      (:mapping (:identifier g (4 5) $nil) (:identifier g (4 5) $nil))
+      (:mapping (:identifier g (4 6) $nil) (:identifier g (4 6) $nil))
+      (:mapping (:identifier g (4 7) $nil) (:identifier g (4 7) $nil))
+      (:mapping (:identifier g (4 8) $nil) (:identifier g (4 8) $nil))
+      (:mapping (:identifier g (5 0) $nil) (:identifier g (5 0) $nil))
+      (:mapping (:identifier g (5 1) $nil) (:identifier g (5 1) $nil))
+      (:mapping (:identifier g (5 2) $nil) (:identifier g (5 2) $nil))
+      (:mapping (:identifier g (5 3) $nil) (:identifier g (5 3) $nil))
+      (:mapping (:identifier g (5 4) $nil) (:identifier g (5 4) $nil))
+      (:mapping (:identifier g (5 5) $nil) (:identifier g (5 5) $nil))
+      (:mapping (:identifier g (5 6) $nil) (:identifier g (5 6) $nil))
+      (:mapping (:identifier g (5 7) $nil) (:identifier g (5 7) $nil))
+      (:mapping (:identifier g (5 8) $nil) (:identifier g (5 8) $nil))
+      (:mapping (:identifier g (6 0) $nil) (:identifier g (6 0) $nil))
+      (:mapping (:identifier g (6 1) $nil) (:identifier g (6 1) $nil))
+      (:mapping (:identifier g (6 2) $nil) (:identifier g (6 2) $nil))
+      (:mapping (:identifier g (6 3) $nil) (:identifier g (6 3) $nil))
+      (:mapping (:identifier g (6 4) $nil) (:identifier g (6 4) $nil))
+      (:mapping (:identifier g (6 5) $nil) (:identifier g (6 5) $nil))
+      (:mapping (:identifier g (6 6) $nil) (:identifier g (6 6) $nil))
+      (:mapping (:identifier g (6 7) $nil) (:identifier g (6 7) $nil))
+      (:mapping (:identifier g (6 8) $nil) (:identifier g (6 8) $nil))
+      (:mapping (:identifier g (7 0) $nil) (:identifier g (7 0) $nil))
+      (:mapping (:identifier g (7 1) $nil) (:identifier g (7 1) $nil))
+      (:mapping (:identifier g (7 2) $nil) (:identifier g (7 2) $nil))
+      (:mapping (:identifier g (7 3) $nil) (:identifier g (7 3) $nil))
+      (:mapping (:identifier g (7 4) $nil) (:identifier g (7 4) $nil))
+      (:mapping (:identifier g (7 5) $nil) (:identifier g (7 5) $nil))
+      (:mapping (:identifier g (7 6) $nil) (:identifier g (7 6) $nil))
+      (:mapping (:identifier g (7 7) $nil) (:identifier g (7 7) $nil))
+      (:mapping (:identifier g (7 8) $nil) (:identifier g (7 8) $nil))
+      (:mapping (:identifier g (8 0) $nil) (:identifier g (8 0) $nil))
+      (:mapping (:identifier g (8 1) $nil) (:identifier g (8 1) $nil))
+      (:mapping (:identifier g (8 2) $nil) (:identifier g (8 2) $nil))
+      (:mapping (:identifier g (8 3) $nil) (:identifier g (8 3) $nil))
+      (:mapping (:identifier g (8 4) $nil) (:identifier g (8 4) $nil))
+      (:mapping (:identifier g (8 5) $nil) (:identifier g (8 5) $nil))
+      (:mapping (:identifier g (8 6) $nil) (:identifier g (8 6) $nil))
+      (:mapping (:identifier g (8 7) $nil) (:identifier g (8 7) $nil))
+      (:mapping (:identifier g (8 8) $nil) (:identifier g (8 8) $nil))
+     )
+    )
+   )
+   (
+    :mv_wff
+    ((:values_set tile (one two three four five six seven eight nine)))
+    (
+     (
+      :enum_variable
+      (:identifier g (0 0) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (0 1) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (0 2) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (0 3) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (0 4) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (0 5) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (0 6) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (0 7) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (0 8) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (1 0) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (1 1) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (1 2) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (1 3) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (1 4) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (1 5) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (1 6) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (1 7) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (1 8) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (2 0) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (2 1) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (2 2) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (2 3) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (2 4) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (2 5) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (2 6) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (2 7) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (2 8) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (3 0) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (3 1) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (3 2) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (3 3) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (3 4) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (3 5) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (3 6) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (3 7) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (3 8) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (4 0) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (4 1) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (4 2) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (4 3) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (4 4) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (4 5) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (4 6) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (4 7) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (4 8) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (5 0) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (5 1) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (5 2) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (5 3) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (5 4) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (5 5) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (5 6) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (5 7) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (5 8) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (6 0) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (6 1) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (6 2) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (6 3) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (6 4) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (6 5) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (6 6) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (6 7) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (6 8) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (7 0) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (7 1) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (7 2) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (7 3) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (7 4) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (7 5) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (7 6) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (7 7) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (7 8) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (8 0) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (8 1) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (8 2) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (8 3) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (8 4) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (8 5) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (8 6) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (8 7) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g (8 8) $nil)
+      (
+       (
+	:bool_variable_attribute
+	health
+	(t nil nil nil nil nil nil nil nil)
+       )
+       (
+	:float_variable_attribute
+	probability
+	(
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	 0.1111111111111111
+	)
+       )
+      )
+      0
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (:mv_wff_e_var 0 6)
+     (:mv_wff_e_var 1 7)
+     (:mv_wff_e_var 4 8)
+     (:mv_wff_e_var 7 2)
+     (:mv_wff_e_var 8 4)
+     (:mv_wff_e_var 10 5)
+     (:mv_wff_e_var 16 1)
+     (:mv_wff_e_var 21 0)
+     (:mv_wff_e_var 23 1)
+     (:mv_wff_e_var 27 3)
+     (:mv_wff_e_var 28 8)
+     (:mv_wff_e_var 30 7)
+     (:mv_wff_e_var 32 2)
+     (:mv_wff_e_var 34 0)
+     (:mv_wff_e_var 35 5)
+     (:mv_wff_e_var 40 1)
+     (:mv_wff_e_var 45 1)
+     (:mv_wff_e_var 46 0)
+     (:mv_wff_e_var 48 5)
+     (:mv_wff_e_var 50 4)
+     (:mv_wff_e_var 52 8)
+     (:mv_wff_e_var 53 7)
+     (:mv_wff_e_var 57 4)
+     (:mv_wff_e_var 59 6)
+     (:mv_wff_e_var 64 3)
+     (:mv_wff_e_var 70 7)
+     (:mv_wff_e_var 72 5)
+     (:mv_wff_e_var 73 1)
+     (:mv_wff_e_var 76 7)
+     (:mv_wff_e_var 79 6)
+     (:mv_wff_e_var 80 0)
+    )
+   )
+  )
+ )
+)

@@ -1,0 +1,60 @@
+.TH wff2obdd 1 "18 June 2006" "Lydia 2.0" "Lydia toolkit"
+.SH NAME
+wff2cnf \- convert Lydia Boolean Propositional Wff to CNF
+.SH SYNOPSIS
+.B wff2cnf
+[\fIOPTIONS\fR] [\fISOURCE\fR] [\fIDEST\fR]
+.br
+.B wff2cnf
+[\fB\-h\fR]
+.br
+.B wff2cnf
+[\fB\-v\fR]
+.SH DESCRIPTION
+The purpose of the "wff2cnf" utility is to convert a Boolean
+Propositional Wff (Well-Formed Formula) to a Conjunctive Normal Form
+(CNF). A CNF is a conjunction of clauses, where a clause is a
+disjunction of literals and a literal is a negated or unnegated
+variable. Note, that the size of the output grows pretty quickly as a
+function of the input size for certain propositional Wff. More
+information you can find in the Lydia documentation and in the links
+at the Lydia web-site.
+.PP
+The "wff2cnf" utility works both on flat and hierarchical Boolean Wff
+representations.
+.PP
+If SOURCE is not specified, model will be read from standard input. If
+DEST is not specified the compiled model will be sent to standard output.
+.SH OPTIONS
+.TP
+\-f
+Use an obsolete brute force method (used for testing purposes).
+.TP
+\-h
+Display a short help text.
+.TP
+\-v
+Show version information and exit.
+.TP
+-V
+Send execution statistics to the standard error after finishing the
+compilation.
+.SH "REPORTING BUGS"
+Report bugs to <lydia-bugs@fdir.org>.
+.SH "SEE ALSO"
+.BR lydia (1),
+.BR lc (1),
+.BR lcm2wff (1),
+.BR wff2obdd (1),
+.BR obdd2dnf (1),
+.BR smoothy (1),
+.BR lsim (1),
+.BR cdas (1),
+.BR cnf2dnf (1),
+.BR scotty (1),
+.BR gotcha (1)
+.SH COPYRIGHT
+Copyright \(co 2005-2006, Delft University of Technology.
+.SH AUTHOR
+Written by Alexander Feldman, some parts of the language and the
+tool kit are based on a prototype Lydia 1.0 implementation.

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+  <test>
+    <title>polycell-flat</title>
+    <input>polycell.cnf</input>
+    <output>polycell.dnf</output>
+  </test>
+  <test>
+    <title>2subtractor-flat</title>
+    <input>2subtractor.cnf</input>
+    <output>2subtractor.dnf</output>
+  </test>
+</testsuite>

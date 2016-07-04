@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+
+  <separator>Arithmetic Circuits (Custom Boolean Type):</separator>
+  <test>
+    <title>inverter</title>
+    <input>inverter-mv.lcm</input>
+    <output>inverter-mv.mvhwff</output>
+  </test>
+  <test>
+    <title>2 chained inverters</title>
+    <input>2inverters-mv.lcm</input>
+    <output>2inverters-mv.mvhwff</output>
+  </test>
+
+  <separator>Mastermind:</separator>
+  <test>
+    <title>mastermind 2 pins, 3 colors</title>
+    <input>mastermind-2x3.lcm</input>
+    <output>mastermind-2x3.mvhwff</output>
+  </test>
+  <test>
+    <title>mastermind 2 pins, 4 colors</title>
+    <input>mastermind-2x4.lcm</input>
+    <output>mastermind-2x4.mvhwff</output>
+  </test>
+  <test>
+    <title>mastermind 2 pins, 5 colors</title>
+    <input>mastermind-2x5.lcm</input>
+    <output>mastermind-2x5.mvhwff</output>
+  </test>
+  <test>
+    <title>mastermind 2 pins, 6 colors</title>
+    <input>mastermind-2x6.lcm</input>
+    <output>mastermind-2x6.mvhwff</output>
+  </test>
+  <test>
+    <title>mastermind 3 pins, 3 colors</title>
+    <input>mastermind-3x3.lcm</input>
+    <output>mastermind-3x3.mvhwff</output>
+  </test>
+  <test>
+    <title>mastermind 3 pins, 4 colors</title>
+    <input>mastermind-3x4.lcm</input>
+    <output>mastermind-3x4.mvhwff</output>
+  </test>
+  <test>
+    <title>mastermind 3 pins, 5 colors</title>
+    <input>mastermind-3x5.lcm</input>
+    <output>mastermind-3x5.mvhwff</output>
+  </test>
+  <test>
+    <title>mastermind 3 pins, 6 colors</title>
+    <input>mastermind-3x6.lcm</input>
+    <output>mastermind-3x6.mvhwff</output>
+  </test>
+  <test>
+    <title>mastermind 4 pins, 3 colors</title>
+    <input>mastermind-4x3.lcm</input>
+    <output>mastermind-4x3.mvhwff</output>
+  </test>
+  <test>
+    <title>mastermind 4 pins, 4 colors</title>
+    <input>mastermind-4x4.lcm</input>
+    <output>mastermind-4x4.mvhwff</output>
+  </test>
+  <test>
+    <title>mastermind 4 pins, 5 colors</title>
+    <input>mastermind-4x5.lcm</input>
+    <output>mastermind-4x5.mvhwff</output>
+  </test>
+  <test>
+    <title>mastermind 4 pins, 6 colors</title>
+    <input>mastermind-4x6.lcm</input>
+    <output>mastermind-4x6.mvhwff</output>
+  </test>
+
+  <separator>Sudoku:</separator>
+  <test>
+    <title>sudoku 4x4 grid (layout 1)</title>
+    <input>sudoku-4x4-1.lcm</input>
+    <output>sudoku-4x4-1.mvhwff</output>
+  </test>
+  <test>
+    <title>sudoku 9x9 grid (layout 1)</title>
+    <input>sudoku-9x9-1.lcm</input>
+    <output>sudoku-9x9-1.mvhwff</output>
+  </test>
+  <test>
+    <title>sudoku 9x9 grid (layout 2)</title>
+    <input>sudoku-9x9-2.lcm</input>
+    <output>sudoku-9x9-2.mvhwff</output>
+  </test>
+  <test>
+    <title>sudoku 9x9 grid (layout 3)</title>
+    <input>sudoku-9x9-3.lcm</input>
+    <output>sudoku-9x9-3.mvhwff</output>
+  </test>
+
+  <separator>Regression Tests:</separator>
+  <test>
+    <title>issue 41</title>
+    <input>issue41.lcm</input>
+    <output>issue41.mvhwff</output>
+  </test>
+  <test>
+    <title>issue 42</title>
+    <input>issue42.lcm</input>
+    <output>issue42.mvhwff</output>
+  </test>
+  <test>
+    <title>issue 47</title>
+    <input>issue47.lcm</input>
+    <output>issue47.mvhwff</output>
+  </test>
+  <test>
+    <title>issue 81</title>
+    <input>issue81.lcm</input>
+    <output>issue81.mvhwff</output>
+  </test>
+  <test>
+    <title>issue 133</title>
+    <input>issue133.lcm</input>
+    <output>issue133.mvhwff</output>
+  </test>
+</testsuite>

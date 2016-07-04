@@ -1,0 +1,9 @@
+observation alpha_1
+{
+    !i1 && !i2 && !ci && sum && carry;
+}
+
+observation alpha_2
+{
+    i1 && i2 && !ci;
+}

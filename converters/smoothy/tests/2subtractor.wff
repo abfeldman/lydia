@@ -1,0 +1,187 @@
+(
+ :tv_wff_flat_kb
+ subtractor
+ (
+  :tv_wff
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier x $nil $nil)
+    (
+     (:bool_variable_attribute observable (t t))
+     (:bool_variable_attribute input (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier y $nil $nil)
+    (
+     (:bool_variable_attribute observable (t t))
+     (:bool_variable_attribute input (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier p $nil $nil)
+    (
+     (:bool_variable_attribute observable (t t))
+     (:bool_variable_attribute input (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier d $nil $nil)
+    (
+     (:bool_variable_attribute observable (t t))
+     (:bool_variable_attribute output (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier b $nil $nil)
+    (
+     (:bool_variable_attribute observable (t t))
+     (:bool_variable_attribute output (t t))
+    )
+    -1
+   )
+   (:bool_variable (:identifier i $nil $nil) () -1)
+   (:bool_variable (:identifier j $nil $nil) () -1)
+   (:bool_variable (:identifier k $nil $nil) () -1)
+   (:bool_variable (:identifier l $nil $nil) () -1)
+   (:bool_variable (:identifier m $nil $nil) () -1)
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier h1 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier h2 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier h3 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier h4 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier h5 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier h6 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier h7 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (
+    :tv_wff_e_impl
+    (:tv_wff_e_var 10)
+    (
+     :tv_wff_e_equiv
+     (:tv_wff_e_var 5)
+     (:tv_wff_e_not (:tv_wff_e_equiv (:tv_wff_e_var 1) (:tv_wff_e_var 2)))
+    )
+   )
+   (
+    :tv_wff_e_impl
+    (:tv_wff_e_var 11)
+    (
+     :tv_wff_e_equiv
+     (:tv_wff_e_var 3)
+     (:tv_wff_e_not (:tv_wff_e_equiv (:tv_wff_e_var 0) (:tv_wff_e_var 5)))
+    )
+   )
+   (
+    :tv_wff_e_impl
+    (:tv_wff_e_var 12)
+    (
+     :tv_wff_e_equiv
+     (:tv_wff_e_var 6)
+     (:tv_wff_e_or (:tv_wff_e_var 1) (:tv_wff_e_var 2))
+    )
+   )
+   (
+    :tv_wff_e_impl
+    (:tv_wff_e_var 13)
+    (
+     :tv_wff_e_equiv
+     (:tv_wff_e_var 9)
+     (:tv_wff_e_and (:tv_wff_e_var 6) (:tv_wff_e_var 8))
+    )
+   )
+   (
+    :tv_wff_e_impl
+    (:tv_wff_e_var 14)
+    (
+     :tv_wff_e_equiv
+     (:tv_wff_e_var 4)
+     (:tv_wff_e_or (:tv_wff_e_var 9) (:tv_wff_e_var 7))
+    )
+   )
+   (
+    :tv_wff_e_impl
+    (:tv_wff_e_var 15)
+    (:tv_wff_e_equiv (:tv_wff_e_var 8) (:tv_wff_e_not (:tv_wff_e_var 0)))
+   )
+   (
+    :tv_wff_e_impl
+    (:tv_wff_e_var 16)
+    (
+     :tv_wff_e_equiv
+     (:tv_wff_e_var 7)
+     (:tv_wff_e_and (:tv_wff_e_var 1) (:tv_wff_e_var 2))
+    )
+   )
+  )
+ )
+)

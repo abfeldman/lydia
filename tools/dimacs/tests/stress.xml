@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+  <test>
+    <skip />
+    <title>dubois20</title>
+    <input>dubois20.dimacs</input>
+    <output>dubois20.out</output>
+  </test>
+</testsuite>

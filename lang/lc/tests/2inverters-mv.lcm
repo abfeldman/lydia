@@ -1,0 +1,122 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   inverter
+   ()
+   (
+    :csp
+    ((:values_set boolean (t f)))
+    (
+     (
+      :enum_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.95 0.05))
+       (:bool_variable_attribute health (t nil))
+      )
+      0
+     )
+     (:enum_variable (:identifier i $nil $nil) () 0)
+     (:enum_variable (:identifier o $nil $nil) () 0)
+    )
+    ()
+    ((:enum_constant $nil t 0))
+    0
+    (
+     (
+      :csp_impl_sentence
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (:csp_atomic_sentence (:csp_constant_term 0))
+      )
+      (
+       :csp_not_sentence
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 1))
+	(:csp_atomic_sentence (:csp_variable_term 2))
+       )
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   main
+   (
+    (
+     :edge
+     inverter
+     I1
+     $nil
+     (
+      (:mapping (:identifier h1 $nil $nil) (:identifier h $nil $nil))
+      (:mapping (:identifier a $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier b $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     I2
+     $nil
+     (
+      (:mapping (:identifier h2 $nil $nil) (:identifier h $nil $nil))
+      (:mapping (:identifier b $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier c $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+   )
+   (
+    :csp
+    ((:values_set boolean (t f)))
+    (
+     (
+      :enum_variable
+      (:identifier a $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      0
+     )
+     (
+      :enum_variable
+      (:identifier b $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      0
+     )
+     (
+      :enum_variable
+      (:identifier c $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      0
+     )
+     (
+      :enum_variable
+      (:identifier h1 $nil $nil)
+      (
+       (:float_variable_attribute probability (0.95 0.05))
+       (:bool_variable_attribute health (t nil))
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier h2 $nil $nil)
+      (
+       (:float_variable_attribute probability (0.95 0.05))
+       (:bool_variable_attribute health (t nil))
+      )
+      0
+     )
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

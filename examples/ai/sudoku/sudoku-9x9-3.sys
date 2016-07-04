@@ -1,0 +1,41 @@
+#include "sudoku-9x9.inc"
+
+system Sudoku()
+{
+	tile g[9][9];
+
+	attribute health(g) = \x (x = tile.one) ? true : false;
+	attribute probability(g) = 1.0 / 9.0;
+
+	system Grid grid(g);
+
+	g[0][4] = tile.seven;
+	g[0][6] = tile.nine;
+	g[0][7] = tile.four;
+	g[1][1] = tile.seven;
+	g[1][4] = tile.nine;
+	g[1][8] = tile.five;
+	g[2][0] = tile.three;
+	g[2][5] = tile.five;
+	g[2][7] = tile.seven;
+
+	g[3][1] = tile.eight;
+	g[3][2] = tile.seven;
+	g[3][3] = tile.four;
+	g[3][6] = tile.one;
+	g[4][0] = tile.four;
+	g[4][1] = tile.six;
+	g[4][2] = tile.three;
+	g[5][5] = tile.seven;
+	g[5][7] = tile.eight;
+
+	g[6][0] = tile.eight;
+	g[6][3] = tile.seven;
+	g[7][0] = tile.seven;
+	g[7][7] = tile.two;
+	g[7][8] = tile.eight;
+	g[8][1] = tile.five;
+	g[8][3] = tile.two;
+	g[8][4] = tile.six;
+	g[8][5] = tile.eight;
+}

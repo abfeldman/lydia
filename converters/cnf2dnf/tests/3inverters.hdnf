@@ -1,0 +1,106 @@
+(
+ :tv_dnf_hierarchy
+ (
+  (
+   :node
+   invert
+   ()
+   (
+    :tv_dnf
+    ()
+    (
+     (:bool_variable (:identifier i $nil $nil) () -1)
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:bool_variable_attribute health (nil t))
+       (:float_variable_attribute probability (0.01 0.99))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (:tv_term (0 1) (2))
+     (:tv_term (0) (1))
+     (:tv_term (1) (0))
+     (:tv_term () (0 1 2))
+    )
+   )
+  )
+  (
+   :node
+   main
+   (
+    (
+     :edge
+     invert
+     I0
+     $nil
+     (
+      (:mapping (:identifier x $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier w $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     invert
+     I1
+     $nil
+     (
+      (:mapping (:identifier w $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier y $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     invert
+     I2
+     $nil
+     (
+      (:mapping (:identifier w $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier z $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+   )
+   (
+    :tv_dnf
+    ()
+    (
+     (
+      :bool_variable
+      (:identifier w $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier x $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier y $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier z $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    ((:tv_term () ()))
+   )
+  )
+ )
+)

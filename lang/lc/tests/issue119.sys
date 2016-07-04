@@ -1,0 +1,12 @@
+type test = struct { bool D, bool E };
+type color = struct { bool A, bool B, bool C, test G[2] };
+
+system bar(color c[2], bool q)
+{
+}
+
+system foo()
+{
+	color c[2];
+	system bar B(c, c[0].G[0].D);
+}

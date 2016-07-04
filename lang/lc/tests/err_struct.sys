@@ -1,0 +1,46 @@
+type content = enum { liquidOxygen, rocketPropellant, helium };
+type range = enum { aboveThreshold, inRange, belowThreshold };
+type p = enum { bar, foo };
+
+type a = struct { range pressure, range temperature, content content };
+type b = struct { a x, int i };
+type c = struct { a c, b v };
+
+system test(c q, int b, content z, b moo)
+{
+	q.c.pressure = range.inRange;
+	q.v.x.pressure = range.inRange;
+
+	q.v.x.y.pressure = range.inRange;
+
+	b.pressure = range.inRange;
+
+	z.pressure = range.inRange;
+	q.c1.pressure = range.inRange;
+
+	q.c.foo = range.inRange;
+
+	moo.i.foo = range.inRange;
+}
+
+system test1()
+{
+	c q;
+	int b;
+	content z;
+	b moo;
+
+	q.c.pressure = range.inRange;
+	q.v.x.pressure = range.inRange;
+
+	q.v.x.y.pressure = range.inRange;
+
+	b.pressure = range.inRange;
+
+	z.pressure = range.inRange;
+	q.c1.pressure = range.inRange;
+
+	q.c.foo = range.inRange;
+
+	moo.i.foo = range.inRange;
+}

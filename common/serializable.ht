@@ -1,0 +1,40 @@
+#ifndef __SERIALIZABLE_H__
+#define __SERIALIZABLE_H__
+
+#include "types.h"
+#include "list.h"
+
+.insert serializableconf.t
+.include lydia.ht
+#line $[1+${tpllineno}] "${tplfilename}"
+
+typedef struct str_serializable_header *serializable_header;
+typedef struct str_serializbale_footer *serializable_footer;
+
+struct str_serializable_header
+{
+    char magic[3];
+    int type;
+    int version;
+};
+
+struct str_serializable_footer
+{
+    unsigned char checksum[16];
+};
+
+extern void dump_serializable(FILE *outfile, const_serializable data, const int type, const int version);
+
+#define TYPE_OBDD 0x1000
+
+#endif
+
+/*
+ * Local variables:
+ * mode: c
+ * tab-width: 8
+ * c-basic-offset: 4
+ * End:
+ * vim600: sw=4 ts=8 fdm=marker
+ * vim<600: sw=4 ts=8
+ */

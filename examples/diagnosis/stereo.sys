@@ -1,0 +1,79 @@
+system led(bool inp, out)
+{
+    bool f;
+
+    out = inp and !f;
+
+    attribute probability(f) = f ? 0.0001 : 0.9999;
+    attribute health(f) = !f;
+}
+
+system box(bool in_signal, out_signal)
+{
+    bool f;
+
+    out_signal = in_signal and !f;
+
+    attribute probability(f) = f ? 0.01 : 0.99;
+    attribute health(f) = !f;
+}
+
+system cd(bool powerSwitch, powerLight, audioLeft, audioRight, playButton, playLight, stopButton)
+{
+    bool f_power, f_channelLeft, f_channelRight;
+
+    attribute probability(f_power) = f_power ? 0.1 : 0.9;
+    attribute probability(f_channelLeft) = f_channelLeft ? 0.001 : 0.999;
+    attribute probability(f_channelRight) = f_channelRight ? 0.001 : 0.999;
+    attribute health(f_power) = !f_power;
+    attribute health(f_channelLeft) = !f_channelLeft;
+    attribute health(f_channelRight) = !f_channelRight;
+
+    bool switchedOn = !f_power and powerSwitch;
+
+    system led powerLed(switchedOn, powerLight);
+
+    bool playing = switchedOn and playButton and !stopButton;
+
+    system led playingLed(playing, playLight);
+    audioLeft = playing and !f_channelLeft;
+    audioRight = playing and !f_channelRight;
+}
+
+system amplifier(bool powerSwitch, powerLight, cdLeft, cdRight, audioLeft, audioRight)
+{
+    bool f_power, f_channelLeft, f_channelRight;
+
+    attribute probability(f_power) = f_power ? 0.1 : 0.9;
+    attribute probability(f_channelLeft) = f_channelLeft ? 0.001 : 0.999;
+    attribute probability(f_channelRight) = f_channelRight ? 0.001 : 0.999;
+    attribute health(f_power) = !f_power;
+    attribute health(f_channelLeft) = !f_channelLeft;
+    attribute health(f_channelRight) = !f_channelRight;
+
+    bool switchedOn = !f_power and powerSwitch;
+
+    system led powerLed(switchedOn, powerLight);
+
+    audioLeft = switchedOn and !f_channelLeft and cdLeft;
+    audioRight = switchedOn and !f_channelRight and cdRight;
+}
+
+system stereo()
+{
+    bool powerSwitchCD, playButton, playLight, stopButton;
+    bool powerSwitchAmp, powerLightCD, powerLightAmp;
+    bool speakerLeft, speakerRight, soundLeft, soundRight;
+    bool sound, cdLeft, cdRight;
+
+    attribute observable(powerSwitchCD, playButton, playLight, stopButton) = true;
+    attribute observable(powerSwitchAmp, powerLightCD, powerLightAmp) = true;
+    attribute observable(speakerLeft, speakerRight, soundLeft, soundRight) = true;
+    attribute observable(sound, cdLeft, cdRight) = true;
+
+    system cd cd(powerSwitchCD, powerLightCD, cdLeft, cdRight, playButton, playLight, stopButton);
+    system amplifier amplifier(powerSwitchAmp, powerLightAmp, cdLeft, cdRight, speakerLeft, speakerRight);
+    system box leftSpeaker(speakerLeft, soundLeft);
+    system box rightSpeaker(speakerRight, soundRight);
+    sound = soundLeft or soundRight;
+}

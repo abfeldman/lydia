@@ -1,0 +1,122 @@
+digraph LydiaToolSet {
+
+    size="7,11";
+
+    ordering=out;
+
+    edge [color="gray", fontcolor="blue"];
+
+    node [shape=ellipse, color=green];
+
+    fmt_sys    [label=".sys"    ];
+    fmt_lcm    [label=".lcm"    ];
+    fmt_hwff   [label=".hwff"   ];
+    fmt_mvhwff [label=".mvhwff" ];
+    fmt_hcnf   [label=".hcnf"   ];
+    fmt_mvhcnf [label=".mvhcnf" ];
+    fmt_cnf    [label=".cnf"    ];
+    fmt_mvcnf  [label=".mvcnf"  ];
+    fmt_dnf    [label=".dnf"    ];
+    fmt_hdnf   [label=".hdnf"   ];
+    fmt_csp    [label=".csp"    ];
+    fmt_dimacs [label=".dimacs" ];
+    fmt_lisp   [label=".lisp"   ];
+    fmt_mvhdnf [label=".mvhdnf" ];
+
+    node [shape=box, color=magenta];
+
+    // generic tools
+
+    tool_lc        [shape=box label="lc"];
+
+    // boolean tools
+
+    tool_lcm2wff         [label="lcm2wff"     ];
+    tool_wff2cnf         [label="wff2cnf"     ];
+    tool_mvwff2mvcnf     [label="mvwff2mvcnf" ];
+    tool_squeezy1        [label="squeezy"     ];
+    tool_squeezy2        [label="squeezy"     ];
+    tool_squeezy3        [label="squeezy"     ];
+    tool_squeezy4        [label="squeezy"     ];
+    tool_squeezy5        [label="squeezy"     ];
+    tool_squeezy6        [label="squeezy"     ];
+    tool_mvsmoothy       [label="mvsmoothy"   ];
+    tool_smoothy         [label="smoothy"     ];
+    tool_smoothy_sim     [label="smoothy"     ];
+    tool_smoothy_partial [label="smoothy -s"  ];
+    tool_cnf2dimacs      [label="cnf2dimacs"  ];
+    tool_cnf2lisp        [label="cnf2lisp"    ];
+    tool_cnf2dnf         [label="cnf2dnf"     ];
+    tool_hcnf2dnf        [label="cnf2dnf"     ];
+    tool_lcm2mvwff       [label="lcm2mvwff"   ];
+    tool_mvwff2mvcnf     [label="mvwff2mvcnf" ];
+    tool_mvcnf2mvdnf     [label="mvcnf2mvdnf" ];
+
+    tool_hnfstat         [label="hnfstat"];
+
+    node [fillcolor="#ffffcc" style=filled];
+
+    tool_lsim        [label="lsim"        ];
+    tool_scotty      [label="scotty"      ];
+    tool_mvgotcha    [label="mvgotcha"    ];
+    tool_gotcha      [label="gotcha"      ];
+    tool_mvcdas      [label="mvcdas++"    ];
+    tool_cdas        [label="cdas"        ];
+    tool_dimacs      [label="dimacs"      ];
+
+    node [fillcolor="#ffccff" style=filled];
+
+    tool_pylsim      [label="pylsim"];
+    tool_pycdas      [label="pycdas"];
+
+    // generic path
+
+    fmt_sys   -> tool_lc        -> fmt_lcm;
+
+    // simulation path
+
+    fmt_lcm -> tool_smoothy_sim [label="simulation"];
+               tool_smoothy_sim -> fmt_csp;
+    fmt_csp -> tool_lsim -> tool_pylsim;
+
+    // boolean diagnosis path
+
+
+    fmt_lcm -> tool_lcm2wff [label="boolean diagnosis"];
+               tool_lcm2wff   -> fmt_hwff;
+
+    fmt_hwff   -> tool_wff2cnf     -> fmt_hcnf;
+    fmt_hcnf   -> tool_hcnf2dnf    -> fmt_hdnf;
+    fmt_hcnf   -> tool_smoothy     -> fmt_cnf;
+    fmt_hcnf   -> tool_hnfstat;
+    fmt_cnf    -> tool_cnf2dnf     -> fmt_dnf;
+    fmt_cnf    -> tool_cnf2dimacs  -> fmt_dimacs -> tool_dimacs;
+    fmt_cnf    -> tool_cnf2lisp    -> fmt_lisp;
+    fmt_cnf    -> tool_cdas -> tool_pycdas;
+    fmt_dnf    -> tool_scotty;
+
+    fmt_hdnf  -> tool_gotcha;
+
+    // multivalued diagnosis path
+
+    fmt_lcm     -> tool_lcm2mvwff [label="multivalued diagnosis"];
+                   tool_lcm2mvwff   -> fmt_mvhwff;
+    fmt_mvhcnf  -> tool_mvcnf2mvdnf -> fmt_mvhdnf -> tool_mvgotcha;
+    fmt_mvhwff  -> tool_mvwff2mvcnf -> fmt_mvhcnf;
+    fmt_mvhcnf  -> tool_mvsmoothy   -> fmt_mvcnf;
+    fmt_mvcnf   -> tool_mvcdas;
+
+    // squeezy fit in ...
+
+    edge [arrowhead=normal, arrowtail=normal];
+
+    fmt_hcnf   -> tool_squeezy1;
+    fmt_hdnf   -> tool_squeezy2;
+    fmt_cnf    -> tool_squeezy3;
+    fmt_dnf    -> tool_squeezy4;
+    fmt_hdnf   -> tool_smoothy_partial;
+    fmt_mvhcnf -> tool_squeezy5 [style=dashed];
+    fmt_mvcnf  -> tool_squeezy6 [style=dashed];
+
+
+};

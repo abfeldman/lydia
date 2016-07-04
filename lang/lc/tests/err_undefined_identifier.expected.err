@@ -1,0 +1,8 @@
+err_undefined_identifier.sys: In function `moo':
+err_undefined_identifier.sys:3: error: `zoo' undefined (first use in this system)
+err_undefined_identifier.sys:3: error: (Each undefined identifier is reported only once
+err_undefined_identifier.sys:3: error: for each system it appears in.)
+err_undefined_identifier.sys: In system `foo':
+err_undefined_identifier.sys:8: error: `bar' undefined (first use in this system)
+err_undefined_identifier.sys:9: error: predicate does not evaluate to a Boolean
+err_undefined_identifier.sys:11: error: `x' undefined (first use in this system)

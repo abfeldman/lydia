@@ -1,0 +1,889 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   or5
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier i3 $nil $nil) () -1)
+     (:bool_variable (:identifier i4 $nil $nil) () -1)
+     (:bool_variable (:identifier i5 $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_impl_sentence
+      (:csp_atomic_sentence (:csp_variable_term 6))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (
+	:csp_or_sentence
+	(
+	 :csp_or_sentence
+	 (
+	  :csp_or_sentence
+	  (
+	   :csp_or_sentence
+	   (:csp_atomic_sentence (:csp_variable_term 1))
+	   (:csp_atomic_sentence (:csp_variable_term 2))
+	  )
+	  (:csp_atomic_sentence (:csp_variable_term 3))
+	 )
+	 (:csp_atomic_sentence (:csp_variable_term 4))
+	)
+	(:csp_atomic_sentence (:csp_variable_term 5))
+       )
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   and5
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier i3 $nil $nil) () -1)
+     (:bool_variable (:identifier i4 $nil $nil) () -1)
+     (:bool_variable (:identifier i5 $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_impl_sentence
+      (:csp_atomic_sentence (:csp_variable_term 6))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (
+	:csp_and_sentence
+	(
+	 :csp_and_sentence
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_and_sentence
+	   (:csp_atomic_sentence (:csp_variable_term 1))
+	   (:csp_atomic_sentence (:csp_variable_term 2))
+	  )
+	  (:csp_atomic_sentence (:csp_variable_term 3))
+	 )
+	 (:csp_atomic_sentence (:csp_variable_term 4))
+	)
+	(:csp_atomic_sentence (:csp_variable_term 5))
+       )
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   and4
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier i3 $nil $nil) () -1)
+     (:bool_variable (:identifier i4 $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_impl_sentence
+      (:csp_atomic_sentence (:csp_variable_term 5))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (
+	:csp_and_sentence
+	(
+	 :csp_and_sentence
+	 (
+	  :csp_and_sentence
+	  (:csp_atomic_sentence (:csp_variable_term 1))
+	  (:csp_atomic_sentence (:csp_variable_term 2))
+	 )
+	 (:csp_atomic_sentence (:csp_variable_term 3))
+	)
+	(:csp_atomic_sentence (:csp_variable_term 4))
+       )
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   and3
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier i3 $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_impl_sentence
+      (:csp_atomic_sentence (:csp_variable_term 4))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (
+	:csp_and_sentence
+	(
+	 :csp_and_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 1))
+	 (:csp_atomic_sentence (:csp_variable_term 2))
+	)
+	(:csp_atomic_sentence (:csp_variable_term 3))
+       )
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   and2
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_impl_sentence
+      (:csp_atomic_sentence (:csp_variable_term 3))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (
+	:csp_and_sentence
+	(:csp_atomic_sentence (:csp_variable_term 1))
+	(:csp_atomic_sentence (:csp_variable_term 2))
+       )
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   nor2
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_impl_sentence
+      (:csp_atomic_sentence (:csp_variable_term 3))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (
+	:csp_not_sentence
+	(
+	 :csp_or_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 1))
+	 (:csp_atomic_sentence (:csp_variable_term 2))
+	)
+       )
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   inverter
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_impl_sentence
+      (:csp_atomic_sentence (:csp_variable_term 2))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 1)))
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   m74l85
+   (
+    (
+     :edge
+     inverter
+     gate36
+     $nil
+     (
+      (:mapping (:identifier z1 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i1 $nil $nil) (:identifier i $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     gate37
+     $nil
+     (
+      (:mapping (:identifier z2 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i2 $nil $nil) (:identifier i $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     gate38
+     $nil
+     (
+      (:mapping (:identifier z3 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i3 $nil $nil) (:identifier i $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     gate39
+     $nil
+     (
+      (:mapping (:identifier z4 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i4 $nil $nil) (:identifier i $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     gate40
+     $nil
+     (
+      (:mapping (:identifier z5 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i5 $nil $nil) (:identifier i $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     gate41
+     $nil
+     (
+      (:mapping (:identifier z6 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i6 $nil $nil) (:identifier i $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     gate42
+     $nil
+     (
+      (:mapping (:identifier z7 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i7 $nil $nil) (:identifier i $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     gate43
+     $nil
+     (
+      (:mapping (:identifier z8 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i8 $nil $nil) (:identifier i $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     gate60
+     $nil
+     (
+      (:mapping (:identifier z9 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z1 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier i2 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     gate61
+     $nil
+     (
+      (:mapping (:identifier z10 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z2 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier i1 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     gate62
+     $nil
+     (
+      (:mapping (:identifier z11 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z3 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier i4 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     gate63
+     $nil
+     (
+      (:mapping (:identifier z12 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i3 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z4 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     gate64
+     $nil
+     (
+      (:mapping (:identifier z13 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z5 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier i6 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     gate65
+     $nil
+     (
+      (:mapping (:identifier z14 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z6 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier i5 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     gate66
+     $nil
+     (
+      (:mapping (:identifier z15 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z7 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier i8 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     gate67
+     $nil
+     (
+      (:mapping (:identifier z16 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z8 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier i7 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     nor2
+     gate68
+     $nil
+     (
+      (:mapping (:identifier z17 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z9 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z10 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     nor2
+     gate69
+     $nil
+     (
+      (:mapping (:identifier z18 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z11 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z12 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     nor2
+     gate70
+     $nil
+     (
+      (:mapping (:identifier z19 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z13 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z14 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     nor2
+     gate71
+     $nil
+     (
+      (:mapping (:identifier z20 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z15 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z16 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     gate96
+     $nil
+     (
+      (:mapping (:identifier z21 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i2 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z1 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     gate97
+     $nil
+     (
+      (:mapping (:identifier z22 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i1 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z2 $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and3
+     gate98
+     $nil
+     (
+      (:mapping (:identifier z23 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i4 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z17 $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier z3 $nil $nil) (:identifier i3 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and3
+     gate99
+     $nil
+     (
+      (:mapping (:identifier z24 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z4 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z17 $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier i3 $nil $nil) (:identifier i3 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and4
+     gate100
+     $nil
+     (
+      (:mapping (:identifier z25 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i6 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z17 $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier z18 $nil $nil) (:identifier i3 $nil $nil))
+      (:mapping (:identifier z5 $nil $nil) (:identifier i4 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and4
+     gate101
+     $nil
+     (
+      (:mapping (:identifier z26 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z6 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z17 $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier z18 $nil $nil) (:identifier i3 $nil $nil))
+      (:mapping (:identifier i5 $nil $nil) (:identifier i4 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and5
+     gate102
+     $nil
+     (
+      (:mapping (:identifier z27 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier i8 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z17 $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier z18 $nil $nil) (:identifier i3 $nil $nil))
+      (:mapping (:identifier z19 $nil $nil) (:identifier i4 $nil $nil))
+      (:mapping (:identifier z7 $nil $nil) (:identifier i5 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and5
+     gate103
+     $nil
+     (
+      (:mapping (:identifier z28 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z8 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z17 $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier z18 $nil $nil) (:identifier i3 $nil $nil))
+      (:mapping (:identifier z19 $nil $nil) (:identifier i4 $nil $nil))
+      (:mapping (:identifier i7 $nil $nil) (:identifier i5 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and5
+     gate104
+     $nil
+     (
+      (:mapping (:identifier z29 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z17 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z18 $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier z19 $nil $nil) (:identifier i3 $nil $nil))
+      (:mapping (:identifier z20 $nil $nil) (:identifier i4 $nil $nil))
+      (:mapping (:identifier i9 $nil $nil) (:identifier i5 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and5
+     gate105
+     $nil
+     (
+      (:mapping (:identifier z30 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z17 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z18 $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier z19 $nil $nil) (:identifier i3 $nil $nil))
+      (:mapping (:identifier z20 $nil $nil) (:identifier i4 $nil $nil))
+      (:mapping (:identifier i10 $nil $nil) (:identifier i5 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and5
+     gate106
+     $nil
+     (
+      (:mapping (:identifier o1 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z17 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z18 $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier z19 $nil $nil) (:identifier i3 $nil $nil))
+      (:mapping (:identifier z20 $nil $nil) (:identifier i4 $nil $nil))
+      (:mapping (:identifier i11 $nil $nil) (:identifier i5 $nil $nil))
+     )
+    )
+    (
+     :edge
+     or5
+     gate107
+     $nil
+     (
+      (:mapping (:identifier o2 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z22 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z24 $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier z26 $nil $nil) (:identifier i3 $nil $nil))
+      (:mapping (:identifier z28 $nil $nil) (:identifier i4 $nil $nil))
+      (:mapping (:identifier z29 $nil $nil) (:identifier i5 $nil $nil))
+     )
+    )
+    (
+     :edge
+     or5
+     gate108
+     $nil
+     (
+      (:mapping (:identifier o3 $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier z21 $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z23 $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier z25 $nil $nil) (:identifier i3 $nil $nil))
+      (:mapping (:identifier z27 $nil $nil) (:identifier i4 $nil $nil))
+      (:mapping (:identifier z30 $nil $nil) (:identifier i5 $nil $nil))
+     )
+    )
+   )
+   (
+    :csp
+    ()
+    (
+     (
+      :bool_variable
+      (:identifier i1 $nil $nil)
+      (
+       (:bool_variable_attribute input (t t))
+       (:bool_variable_attribute observable (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i2 $nil $nil)
+      (
+       (:bool_variable_attribute input (t t))
+       (:bool_variable_attribute observable (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i3 $nil $nil)
+      (
+       (:bool_variable_attribute input (t t))
+       (:bool_variable_attribute observable (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i4 $nil $nil)
+      (
+       (:bool_variable_attribute input (t t))
+       (:bool_variable_attribute observable (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i5 $nil $nil)
+      (
+       (:bool_variable_attribute input (t t))
+       (:bool_variable_attribute observable (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i6 $nil $nil)
+      (
+       (:bool_variable_attribute input (t t))
+       (:bool_variable_attribute observable (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i7 $nil $nil)
+      (
+       (:bool_variable_attribute input (t t))
+       (:bool_variable_attribute observable (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i8 $nil $nil)
+      (
+       (:bool_variable_attribute input (t t))
+       (:bool_variable_attribute observable (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i9 $nil $nil)
+      (
+       (:bool_variable_attribute input (t t))
+       (:bool_variable_attribute observable (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i10 $nil $nil)
+      (
+       (:bool_variable_attribute input (t t))
+       (:bool_variable_attribute observable (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i11 $nil $nil)
+      (
+       (:bool_variable_attribute input (t t))
+       (:bool_variable_attribute observable (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier o1 $nil $nil)
+      (
+       (:bool_variable_attribute output (t t))
+       (:bool_variable_attribute observable (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier o2 $nil $nil)
+      (
+       (:bool_variable_attribute output (t t))
+       (:bool_variable_attribute observable (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier o3 $nil $nil)
+      (
+       (:bool_variable_attribute output (t t))
+       (:bool_variable_attribute observable (t t))
+      )
+      -1
+     )
+     (:bool_variable (:identifier z1 $nil $nil) () -1)
+     (:bool_variable (:identifier z2 $nil $nil) () -1)
+     (:bool_variable (:identifier z3 $nil $nil) () -1)
+     (:bool_variable (:identifier z4 $nil $nil) () -1)
+     (:bool_variable (:identifier z5 $nil $nil) () -1)
+     (:bool_variable (:identifier z6 $nil $nil) () -1)
+     (:bool_variable (:identifier z7 $nil $nil) () -1)
+     (:bool_variable (:identifier z8 $nil $nil) () -1)
+     (:bool_variable (:identifier z9 $nil $nil) () -1)
+     (:bool_variable (:identifier z10 $nil $nil) () -1)
+     (:bool_variable (:identifier z11 $nil $nil) () -1)
+     (:bool_variable (:identifier z12 $nil $nil) () -1)
+     (:bool_variable (:identifier z13 $nil $nil) () -1)
+     (:bool_variable (:identifier z14 $nil $nil) () -1)
+     (:bool_variable (:identifier z15 $nil $nil) () -1)
+     (:bool_variable (:identifier z16 $nil $nil) () -1)
+     (:bool_variable (:identifier z17 $nil $nil) () -1)
+     (:bool_variable (:identifier z18 $nil $nil) () -1)
+     (:bool_variable (:identifier z19 $nil $nil) () -1)
+     (:bool_variable (:identifier z20 $nil $nil) () -1)
+     (:bool_variable (:identifier z21 $nil $nil) () -1)
+     (:bool_variable (:identifier z22 $nil $nil) () -1)
+     (:bool_variable (:identifier z23 $nil $nil) () -1)
+     (:bool_variable (:identifier z24 $nil $nil) () -1)
+     (:bool_variable (:identifier z25 $nil $nil) () -1)
+     (:bool_variable (:identifier z26 $nil $nil) () -1)
+     (:bool_variable (:identifier z27 $nil $nil) () -1)
+     (:bool_variable (:identifier z28 $nil $nil) () -1)
+     (:bool_variable (:identifier z29 $nil $nil) () -1)
+     (:bool_variable (:identifier z30 $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

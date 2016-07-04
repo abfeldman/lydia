@@ -1,0 +1,15 @@
+warn_unused_part.sys: In system `test':
+warn_unused_part.sys:23: warning: unused variable `c'
+warn_unused_part.sys:25: warning: unused variable structure `d'
+warn_unused_part.sys:30: warning: unused variable structure member `f.b'
+warn_unused_part.sys:30: warning: (Reporting only the first unused
+warn_unused_part.sys:30: warning: member for each structure.)
+warn_unused_part.sys:33: warning: unused variable structure `g'
+warn_unused_part.sys:35: warning: unused variable array element `h.a[1]'
+warn_unused_part.sys:35: warning: (Reporting only the first unused
+warn_unused_part.sys:35: warning: element for each array.)
+warn_unused_part.sys:43: warning: unused variable array `j'
+warn_unused_part.sys:47: warning: unused variable array element `l[1]'
+warn_unused_part.sys:52: warning: unused variable array element `n[0][0]'
+warn_unused_part.sys:55: warning: unused variable array element `o.a.a[1]'
+warn_unused_part.sys:58: warning: unused variable structure member `p.a.b'

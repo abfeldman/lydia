@@ -1,0 +1,205 @@
+type mass = enum { zero, low, nominal, high };
+
+type hContain = enum { nominal, leak, unknown };
+type hSensor = enum { nominal, stuckLow, stuckHigh, unknown };
+
+system fuelTank(mass quantity, flow, lineFlow)
+{
+    hContain h;
+    
+    attribute health(h) = cond (h) (
+        hContain.nominal -> true;
+        hContain.leak -> false;
+        hContain.unknown -> false);
+    attribute probability(h) = cond (h) (
+        hContain.nominal -> 0.97;
+        hContain.leak -> 0.02;
+        hContain.unknown -> 0.01);
+
+    if (h = hContain.nominal) {
+        if (quantity = mass.zero) {
+            flow = mass.zero;
+        }
+        lineFlow = flow;
+    }
+
+    if (h = hContain.leak) {
+        if (quantity = mass.zero) {
+            flow = mass.zero;
+        }
+        lineFlow = cond (flow) (
+            mass.high -> mass.nominal;
+            mass.nominal -> mass.low;
+            mass.low -> mass.zero;
+            default -> mass.zero);
+            
+    }
+    
+}
+
+system sensor(mass real, deltaReal, indicated, deltaIndicated)
+{
+    hSensor h;
+    
+    attribute health(h) = cond (h) (
+        hSensor.nominal -> true;
+        hSensor.stuckLow -> false;
+        hSensor.stuckHigh -> false;
+        hSensor.unknown -> false);
+    attribute probability(h) = cond (h) (
+        hSensor.nominal -> 0.98;
+        hSensor.stuckLow -> 0.009;
+        hSensor.stuckHigh -> 0.009;
+        hSensor.unknown -> 0.002);
+    
+    if (h = hSensor.nominal) {
+        indicated = real;
+        deltaIndicated = deltaReal;
+    }
+    
+    if (h = hSensor.stuckLow) {
+        (indicated = mass.zero) or (indicated = mass.low);
+        deltaIndicated = mass.zero;
+    }
+    
+    if (h = hSensor.stuckHigh) {
+        indicated = mass.high;
+        deltaIndicated = mass.zero;
+    }
+}
+
+system line(mass flowIn, flowOut)
+{
+    hContain h;
+    
+    attribute health(h) = cond (h) (
+        hContain.nominal -> true;
+        hContain.leak -> false;
+        hContain.unknown -> false);
+    attribute probability(h) = cond (h) (
+        hContain.nominal -> 0.97;
+        hContain.leak -> 0.02;
+        hContain.unknown -> 0.01);
+    
+    if (h = hContain.nominal) {
+        flowOut = flowIn;
+    }
+
+    if (h = hContain.leak) {
+        flowOut = cond (flowIn) (
+            mass.high -> mass.nominal;
+            mass.nominal -> mass.low;
+            mass.low -> mass.zero;
+            default -> mass.zero);
+    }
+}
+
+type selectorPosition = enum { off, left, right };
+type hSelector = enum { nominal, stuckLeft, stuckRight, stuckOff, unknown };
+
+system selectorValve(selectorPosition selector, mass flowLeft, flowRight, flowOut)
+{
+    hSelector h;
+    
+    attribute health(h) = cond (h) (
+        hSelector.nominal -> true;
+        hSelector.stuckLeft -> false;
+        hSelector.stuckRight -> false;
+        hSelector.stuckOff -> false;
+        hSelector.unknown -> false);
+    attribute probability(h) = cond (h) (
+        hSelector.nominal -> 0.97;
+        hSelector.stuckLeft -> 0.009;
+        hSelector.stuckRight -> 0.009;
+        hSelector.stuckOff -> 0.009;
+        hSelector.unknown -> 0.003);
+        
+    if (h = hSelector.nominal) {
+        flowOut =cond (selector) (
+            selectorPosition.off -> mass.zero;
+            selectorPosition.left -> flowLeft;
+            selectorPosition.right -> flowRight;
+            default -> mass.zero);
+    }
+    
+    if (h = hSelector.stuckLeft) {
+        flowOut = flowLeft;
+    }
+    if (h = hSelector.stuckRight) {
+        flowOut = flowRight;
+    }
+    if (h = hSelector.stuckOff) {
+        flowOut = mass.zero;
+    }
+}
+
+type hPump = enum { nominal, low, high, unknown };
+
+system pump(bool running, mass flow)
+{
+    hPump h;
+    
+    attribute health (h) = cond (h) (
+        hPump.nominal -> true;
+        hPump.low -> false;
+        hPump.high -> false;
+        hPump.unknown -> false);
+    attribute probability (h) = cond (h) (
+        hPump.nominal -> 0.98;
+        hPump.low -> 0.009;
+        hPump.high -> 0.009;
+        hPump.unknown -> 0.002);
+    
+    if ((h = hPump.nominal) && running) {
+        flow = mass.nominal;
+    }
+    if ((h = hPump.low) && running) {
+        (flow = mass.low) or (flow = mass.zero);
+    }
+    if ((h = hPump.high) && running) {
+        flow = mass.high;
+    }
+}
+
+system fuelSystem(selectorPosition selector, 
+                  bool enginePumpOn, electricPumpOn,
+                  mass leftSensorMass, leftSensorFlow, rightSensorMass, rightSensorFlow, mainSensorFlowOut)
+{
+    system fuelTank leftTank, rightTank;
+    system line leftLine, rightLine, mainLine;
+    system sensor leftSensor, rightSensor, mainSensor;
+    system selectorValve valve;
+    system pump enginePump, electricPump;
+
+    mass leftMass, leftFlow, rightMass, rightFlow, leftLineFlow, rightLineFlow, mainFlow;
+    mass leftLineFlowOut, rightLineFlowOut, mainFlowOut;
+// Dummy variables
+    mass mainMassOut, mainSensorMassOut;
+
+    attribute observable(selector) = true;
+    attribute observable(enginePumpOn) = true;  
+    attribute observable(electricPumpOn) = true;
+    attribute observable(leftSensorMass) = true;
+    attribute observable(leftSensorFlow) = true;
+    attribute observable(rightSensorMass) = true;
+    attribute observable(rightSensorFlow) = true;
+    attribute observable(mainSensorFlowOut) = true;
+        
+    leftTank(leftMass, leftFlow, leftLineFlow);
+    rightTank(rightMass, rightFlow, rightLineFlow);
+
+    leftSensor(leftMass, leftFlow, leftSensorMass, leftSensorFlow);
+    rightSensor(rightMass, rightFlow, rightSensorMass, rightSensorFlow);
+
+    leftLine(leftLineFlow, leftLineFlowOut);
+    rightLine(rightLineFlow, rightLineFlowOut);
+
+    valve(selector, leftLineFlowOut, rightLineFlowOut, mainFlow);
+
+    enginePump(enginePumpOn, mainFlow);
+    electricPump(electricPumpOn, mainFlow);
+
+    mainLine(mainFlow, mainFlowOut);
+
+    mainSensor(mainMassOut, mainFlowOut, mainSensorMassOut, mainSensorFlowOut);
+}

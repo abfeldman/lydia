@@ -1,0 +1,5 @@
+err_reinst.sys: In system `foo':
+err_reinst.sys:9: error: system `S1' is already instantiated
+err_reinst.sys:14: error: `S2[1]' is already instantiated
+err_reinst.sys:14: error: (Reporting only the first doubly-instantiated
+err_reinst.sys:14: error: element for each system array.)

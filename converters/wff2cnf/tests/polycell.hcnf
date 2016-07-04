@@ -1,0 +1,204 @@
+(
+ :tv_cnf_hierarchy
+ (
+  (
+   :node
+   or2
+   ()
+   (
+    :tv_cnf
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (:tv_clause (1 2) (0 3))
+     (:tv_clause (0) (1 3))
+     (:tv_clause (0) (2 3))
+    )
+   )
+  )
+  (
+   :node
+   and2
+   ()
+   (
+    :tv_cnf
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (:tv_clause (1) (0 3))
+     (:tv_clause (2) (0 3))
+     (:tv_clause (0) (1 2 3))
+    )
+   )
+  )
+  (
+   :node
+   polycell
+   (
+    (
+     :edge
+     and2
+     and2A
+     $nil
+     (
+      (:mapping (:identifier x $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier a $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier c $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     and2B
+     $nil
+     (
+      (:mapping (:identifier y $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier b $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier d $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     and2C
+     $nil
+     (
+      (:mapping (:identifier z $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier c $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier e $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     or2
+     or2A
+     $nil
+     (
+      (:mapping (:identifier f $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier x $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier y $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     or2
+     or2B
+     $nil
+     (
+      (:mapping (:identifier g $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier y $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier z $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+   )
+   (
+    :tv_cnf
+    ()
+    (
+     (
+      :bool_variable
+      (:identifier a $nil $nil)
+      (
+       (:bool_variable_attribute observable (t t))
+       (:bool_variable_attribute input (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier b $nil $nil)
+      (
+       (:bool_variable_attribute observable (t t))
+       (:bool_variable_attribute input (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier c $nil $nil)
+      (
+       (:bool_variable_attribute observable (t t))
+       (:bool_variable_attribute input (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier d $nil $nil)
+      (
+       (:bool_variable_attribute observable (t t))
+       (:bool_variable_attribute input (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier e $nil $nil)
+      (
+       (:bool_variable_attribute observable (t t))
+       (:bool_variable_attribute input (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier f $nil $nil)
+      (
+       (:bool_variable_attribute observable (t t))
+       (:bool_variable_attribute output (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier g $nil $nil)
+      (
+       (:bool_variable_attribute observable (t t))
+       (:bool_variable_attribute output (t t))
+      )
+      -1
+     )
+     (:bool_variable (:identifier x $nil $nil) () -1)
+     (:bool_variable (:identifier y $nil $nil) () -1)
+     (:bool_variable (:identifier z $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

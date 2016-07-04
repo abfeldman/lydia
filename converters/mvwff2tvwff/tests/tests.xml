@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+  <separator>Arithmetic Circuits:</separator>
+  <test>
+    <title>inverter</title>
+    <input>inverter-mv.mvhwff</input>
+    <output>inverter-mv.hwff</output>
+  </test>
+
+  <separator>Regression Tests:</separator>
+  <test>
+    <title>issue 81</title>
+    <input>issue81.mvhwff</input>
+    <output>issue81.hwff</output>
+  </test>
+  <test>
+    <title>issue 133</title>
+    <input>issue133.mvhwff</input>
+    <output>issue133.hwff</output>
+  </test>
+</testsuite>

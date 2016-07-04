@@ -1,0 +1,210 @@
+(
+ :tv_cnf_flat_kb
+ fulladder
+ (
+  :tv_cnf
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier i1 $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i2 $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ci $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier sum $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier carry $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (:bool_variable (:identifier f $nil ((:qualifier FA $nil))) () -1)
+   (:bool_variable (:identifier p $nil ((:qualifier FA $nil))) () -1)
+   (:bool_variable (:identifier q $nil ((:qualifier FA $nil))) () -1)
+   (
+    :bool_variable
+    (
+     :identifier
+     f0
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA1 $nil) (:qualifier A $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f1
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA1 $nil) (:qualifier A $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f0
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA1 $nil) (:qualifier X $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f1
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA1 $nil) (:qualifier X $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f0
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA2 $nil) (:qualifier A $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f1
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA2 $nil) (:qualifier A $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f0
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA2 $nil) (:qualifier X $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     f1
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA2 $nil) (:qualifier X $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f0 $nil ((:qualifier FA $nil) (:qualifier O $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier f1 $nil ((:qualifier FA $nil) (:qualifier O $nil)))
+    (
+     (:float_variable_attribute probability (0.99 0.01))
+     (:bool_variable_attribute health (t nil))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (:tv_clause () (16 17))
+   (:tv_clause () (14 15))
+   (:tv_clause () (12 13))
+   (:tv_clause () (10 11))
+   (:tv_clause () (8 9))
+   (:tv_clause (7) (13))
+   (:tv_clause () (7 12))
+   (:tv_clause (6) (9))
+   (:tv_clause () (6 8))
+   (:tv_clause (5) (11))
+   (:tv_clause (5 13) (7))
+   (:tv_clause () (5 10))
+   (:tv_clause (4) (17))
+   (:tv_clause (4 16) (7))
+   (:tv_clause (4 16) (6))
+   (:tv_clause () (4 16))
+   (:tv_clause (6 7 17) (4))
+   (:tv_clause (3) (15))
+   (:tv_clause () (3 14))
+   (:tv_clause (2 13) (7))
+   (:tv_clause (2 3 14) (5))
+   (:tv_clause (2 5 15) (3))
+   (:tv_clause (7 12) (2 5))
+   (:tv_clause (3 5 14) (2))
+   (:tv_clause (15) (2 3 5))
+   (:tv_clause (1 9) (6))
+   (:tv_clause (0 9) (6))
+   (:tv_clause (0 1 11) (5))
+   (:tv_clause (0 5 10) (1))
+   (:tv_clause (1 5 10) (0))
+   (:tv_clause (6 8) (0 1))
+   (:tv_clause (11) (0 1 5))
+  )
+ )
+)

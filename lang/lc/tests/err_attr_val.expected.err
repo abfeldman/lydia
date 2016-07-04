@@ -1,0 +1,9 @@
+err_attr_val.sys: In system `s':
+err_attr_val.sys:8: error: invalid attribute value type
+err_attr_val.sys:8: error: expected bool, found float
+err_attr_val.sys:9: error: invalid attribute value type
+err_attr_val.sys:9: error: expected bool, found float
+err_attr_val.sys:10: error: invalid attribute value type
+err_attr_val.sys:10: error: expected bool, found float
+err_attr_val.sys:11: error: invalid attribute value type
+err_attr_val.sys:11: error: expected bool, found float

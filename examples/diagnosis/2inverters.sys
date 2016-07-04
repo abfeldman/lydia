@@ -1,0 +1,21 @@
+system invert(bool i, o)
+{
+	bool h;
+
+	attribute health(h) = h;
+	attribute probability(h) = h ? 0.99 : 0.01;
+	
+	h => (i = !o);
+}
+
+system main(bool x, y, z)
+{
+	attribute observable(x) = true;
+	attribute observable(y) = true;
+	attribute observable(z) = true;
+
+	system invert I0, I1;
+
+	I0(x, y);
+	I1(y, z);
+}

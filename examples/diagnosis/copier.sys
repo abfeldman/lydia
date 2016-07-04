@@ -1,0 +1,65 @@
+// A diagnosis model of a copier.
+
+// A model of a fallible led. The variable "inp" represents the actual
+// signal, and "out" is what the led indicates. Weak fault model.
+system led(bool inp, out)
+{
+	bool f;
+
+	attribute probability(f) = f ? 0.00001 : 0.99999;
+	attribute health(f) = !f;
+
+	out = (inp and !f);
+}
+
+// A model of a fallible paper sensor. The variable "inp" is what we measure
+// and "out" is the reading of the sensor. This is a weak fault model, i.e.
+// we say that the reading is equal to the sensed value if the sensor is
+// working correctly, but we do not say how the sensor behaves when it is
+// faulty.
+system paper_sensor(bool inp, bool out)
+{
+	bool f;
+
+	attribute probability(f) = f ? 0.001 : 0.999;
+	attribute health(f) = !f;
+
+	!f => (out = inp);
+}
+
+system copier()
+{
+	bool pwr, original_rdy, paper_rdy, rdy;
+
+	bool f_pwr, f_no_original, f_no_paper;
+
+	attribute probability(f_pwr) = f_pwr ? 0.003 : 0.997;
+	attribute probability(f_no_original) = f_no_original ? 0.03 : 0.97;
+	attribute probability(f_no_paper) = f_no_paper ? 0.025 : 0.975;
+
+	attribute health(f_pwr, f_no_original, f_no_paper) = \x !x;
+
+	f_pwr = !pwr;
+	f_no_original = !in_tray_filled;
+	f_no_paper = !paper_tray_filled;
+
+	rdy = pwr and paper_rdy and original_rdy;
+
+// These are our two paper sensors. The input is the actual state of the tray
+// and power.
+	bool in_tray_filled, paper_tray_filled;
+
+	attribute observable(in_tray_filled, paper_tray_filled) = true;
+
+	system paper_sensor in_paper_sensor(in_tray_filled and pwr, original_rdy);
+	system paper_sensor copier_paper_sensor(paper_tray_filled and pwr, paper_rdy);
+
+// We have three leds - power led, ready led and paper ready led.
+	bool pwr_led, rdy_led, paper_rdy_led;
+
+	attribute observable(pwr_led, rdy_led, paper_rdy_led) = true;
+
+	system led pwr_led(pwr, pwr_led);
+	system led rdy_led(rdy, rdy_led);
+	system led paper_rdy_led(paper_rdy, paper_rdy_led);
+}

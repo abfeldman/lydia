@@ -1,0 +1,61 @@
+type boo = struct
+{
+	bool a,
+	bool b
+};
+
+type foo = struct
+{
+	bool a[2],
+	bool b
+};
+
+type moo = struct
+{
+	foo a
+};
+
+
+system test()
+{
+	bool b;
+	b = true;
+	bool c;
+
+	boo d;
+	boo e;
+	e.a = true;
+	e.b = true;
+
+	boo f;
+	f.a = false;
+
+	foo g;
+
+	foo h;
+	h.a[0] = true;
+
+	foo i;
+	i.a[0] = true;
+	i.a[1] = true;
+	i.b = false;
+
+	bool j[2];
+	bool k[2];
+	k[0] = true;
+	k[1] = false;
+	bool l[2];
+	l[0] = true;
+
+	bool m = true;
+
+	bool n[2][2];
+	n[1][1] = true;
+
+	moo o;
+	o.a.a[0] = true;
+
+	moo p;
+	p.a.a[0] = true;
+	p.a.a[1] = false;
+}

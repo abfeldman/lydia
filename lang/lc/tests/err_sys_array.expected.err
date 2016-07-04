@@ -1,0 +1,9 @@
+err_sys_array.sys: In system `main':
+err_sys_array.sys:18: error: incompatible array type of `I1'
+err_sys_array.sys:15: error: declaration is an array of 2 dimensions
+err_sys_array.sys:18: error: but the expression specifies 1 dimension
+err_sys_array.sys:20: error: incompatible array type of `I1'
+err_sys_array.sys:15: error: declaration is an array of 2 dimensions
+err_sys_array.sys:20: error: but the expression specifies 3 dimensions
+err_sys_array.sys:22: error: subscript out of range
+err_sys_array.sys:24: error: subscript of non-array

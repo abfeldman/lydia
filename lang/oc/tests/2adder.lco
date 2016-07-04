@@ -1,0 +1,71 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   alpha_1
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier ci $nil $nil) () -1)
+     (:bool_variable (:identifier sum $nil $nil) () -1)
+     (:bool_variable (:identifier carry $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_and_sentence
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(
+	 :csp_and_sentence
+	 (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 0)))
+	 (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 1)))
+	)
+	(:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 2)))
+       )
+       (:csp_atomic_sentence (:csp_variable_term 3))
+      )
+      (:csp_atomic_sentence (:csp_variable_term 4))
+     )
+    )
+   )
+  )
+  (
+   :node
+   alpha_2
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier ci $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_and_sentence
+      (
+       :csp_and_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (:csp_atomic_sentence (:csp_variable_term 1))
+      )
+      (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 2)))
+     )
+    )
+   )
+  )
+ )
+)

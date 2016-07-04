@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+
+  <separator>Basic Tests:</separator>
+  <test>
+    <title>empty hierarchy</title>
+    <model>realempty.sys</model>
+    <output>realempty.lcm</output>
+  </test>
+  <test>
+    <title>empty system</title>
+    <model>empty.sys</model>
+    <output>empty.lcm</output>
+  </test>
+  <test>
+    <title>attributes lambda expression</title>
+    <model>attr_lambda.sys</model>
+    <output>attr_lambda.lcm</output>
+  </test>
+  <test>
+    <title>basic structure expressions</title>
+    <model>struct.sys</model>
+    <output>struct.lcm</output>
+    <errors>struct.expected.err</errors>
+  </test>
+  <test>
+    <title>basic array expressions</title>
+    <model>basic_arrays.sys</model>
+    <output>basic_arrays.lcm</output>
+  </test>
+  <test>
+    <title>open bound array expressions</title>
+    <model>arr_open.sys</model>
+    <output>arr_open.lcm</output>
+  </test>
+  <test>
+    <title>basic constant types</title>
+    <model>basic_const.sys</model>
+    <output>basic_const.lcm</output>
+  </test>
+  <test>
+    <title>basic universal quantifier</title>
+    <model>basic_forall.sys</model>
+    <output>basic_forall.lcm</output>
+  </test>
+  <test>
+    <title>basic existential quantifier</title>
+    <model>basic_exists.sys</model>
+    <output>basic_exists.lcm</output>
+  </test>
+  <test>
+    <title>systems as expression</title>
+    <model>sys_expr.sys</model>
+    <output>sys_expr.lcm</output>
+  </test>
+
+  <separator>Arithmetic Circuits (Boolean, WFM):</separator>
+  <test>
+    <title>2 chained inverters</title>
+    <model>2inverters.sys</model>
+    <output>2inverters.lcm</output>
+  </test>
+  <test>
+    <title>3 inverters</title>
+    <model>3inverters.sys</model>
+    <output>3inverters.lcm</output>
+  </test>
+  <test>
+    <title>4 chained inverters</title>
+    <model>4inverters.sys</model>
+    <output>4inverters.lcm</output>
+  </test>
+  <test>
+    <title>10 chained inverters</title>
+    <model>10inverters.sys</model>
+    <output>10inverters.lcm</output>
+  </test>
+  <test>
+    <title>Boolean polycell</title>
+    <model>polycell.sys</model>
+    <output>polycell.lcm</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <model>2adder-weak.sys</model>
+    <output>2adder-weak.lcm</output>
+  </test>
+  <test>
+    <title>1-bit subtractor</title>
+    <model>2subtractor.sys</model>
+    <output>2subtractor.lcm</output>
+  </test>
+  <test>
+    <title>3 inverters and an AND gate</title>
+    <model>inverted-and.sys</model>
+    <output>inverted-and.lcm</output>
+  </test>
+  <test>
+    <title>74182</title>
+    <model>74182.sys</model>
+    <output>74182.lcm</output>
+  </test>
+  <test>
+    <title>74L85</title>
+    <model>74L85.sys</model>
+    <output>74L85.lcm</output>
+  </test>
+  <test>
+    <title>74283</title>
+    <model>74283.sys</model>
+    <output>74283.lcm</output>
+  </test>
+  <test>
+    <title>74181</title>
+    <model>74181.sys</model>
+    <output>74181.lcm</output>
+  </test>
+
+  <separator>Arithmetic Circuits (Boolean, SFM):</separator>
+  <test>
+    <title>1-bit full adder</title>
+    <model>2adder-strong.sys</model>
+    <output>2adder-strong.lcm</output>
+  </test>
+
+  <separator>Arithmetic Circuits (Custom Boolean Type, WFM):</separator>
+  <test>
+    <title>inverter</title>
+    <model>inverter-mv.sys</model>
+    <output>inverter-mv.lcm</output>
+  </test>
+  <test>
+    <title>2 chained inverters</title>
+    <model>2inverters-mv.sys</model>
+    <output>2inverters-mv.lcm</output>
+  </test>
+
+  <separator>Error Handling:</separator>
+  <test>
+    <title>wrong argument types</title>
+    <model>err_arg_type.sys</model>
+    <errors>err_arg_type.expected.err</errors>
+  </test>
+  <test>
+    <title>wrong argument count</title>
+    <model>err_args_cnt.sys</model>
+    <errors>err_args_cnt.expected.err</errors>
+  </test>
+  <test>
+    <title>attribute redefinition</title>
+    <model>err_attr_redef.sys</model>
+    <errors>err_attr_redef.expected.err</errors>
+  </test>
+  <test>
+    <title>wrong types in arithmetic if</title>
+    <model>err_cond.sys</model>
+    <errors>err_cond.expected.err</errors>
+  </test>
+  <test>
+    <title>missing default in 'cond'</title>
+    <model>err_def.sys</model>
+    <errors>err_def.expected.err</errors>
+  </test>
+  <test>
+    <title>attribute evaluation error</title>
+    <model>err_eval_attr.sys</model>
+    <errors>err_eval_attr.expected.err</errors>
+  </test>
+  <test>
+    <title>qunatifier index type error</title>
+    <model>err_expr_quantifier.sys</model>
+    <errors>err_expr_quantifier.expected.err</errors>
+  </test>
+  <test>
+    <title>identifier redefinitions</title>
+    <model>err_redef.sys</model>
+    <errors>err_redef.expected.err</errors>
+  </test>
+  <test>
+    <title>bad return type</title>
+    <model>err_ret_type.sys</model>
+    <errors>err_ret_type.expected.err</errors>
+  </test>
+  <test>
+    <title>wrong enumeration selectors</title>
+    <model>err_sel.sys</model>
+    <errors>err_sel.expected.err</errors>
+  </test>
+  <test>
+    <title>wrong operator types</title>
+    <model>err_type.sys</model>
+    <errors>err_type.expected.err</errors>
+  </test>
+  <test>
+    <title>undefined identifiers</title>
+    <model>err_undefined_identifier.sys</model>
+    <errors>err_undefined_identifier.expected.err</errors>
+  </test>
+  <test>
+    <title>undefined types</title>
+    <model>err_undefined_type.sys</model>
+    <errors>err_undefined_type.expected.err</errors>
+  </test>
+  <test>
+    <title>wrong variable initializer type</title>
+    <model>err_var_init.sys</model>
+    <errors>err_var_init.expected.err</errors>
+  </test>
+  <test>
+    <title>formal redefiniton</title>
+    <model>err_redef_formal.sys</model>
+    <errors>err_redef_formal.expected.err</errors>
+  </test>
+  <test>
+    <title>wrong types in casting</title>
+    <model>err_cast.sys</model>
+    <errors>err_cast.expected.err</errors>
+  </test>
+  <test>
+    <title>reinstantiation</title>
+    <model>err_reinst.sys</model>
+    <errors>err_reinst.expected.err</errors>
+  </test>
+  <test>
+    <title>unused variables</title>
+    <model>warn_unused.sys</model>
+    <output>warn_unused.lcm</output>
+    <errors>warn_unused.expected.err</errors>
+  </test>
+  <test>
+    <title>partially unused data structures</title>
+    <model>warn_unused_part.sys</model>
+    <output>warn_unused_part.lcm</output>
+    <errors>warn_unused_part.expected.err</errors>
+  </test>
+  <test>
+    <title>wrong attribute values</title>
+    <model>err_attr_val.sys</model>
+    <errors>err_attr_val.expected.err</errors>
+  </test>
+  <test>
+    <title>wrong attribute types</title>
+    <model>err_attr.sys</model>
+    <errors>err_attr.expected.err</errors>
+  </test>
+  <test>
+    <title>wrong attribute values</title>
+    <model>err_attr_val.sys</model>
+    <errors>err_attr_val.expected.err</errors>
+  </test>
+  <test>
+    <title>cyclic types</title>
+    <model>err_cylic_types.sys</model>
+    <errors>err_cylic_types.expected.err</errors>
+  </test>
+  <test>
+    <title>attribute redefinition</title>
+    <model>err_redef_attr.sys</model>
+    <errors>err_redef_attr.expected.err</errors>
+  </test>
+  <test>
+    <title>attribute type redefinition</title>
+    <model>err_redef_type.sys</model>
+    <errors>err_redef_type.expected.err</errors>
+  </test>
+  <test>
+    <title>arrays of systems errors</title>
+    <model>err_sys_array.sys</model>
+    <errors>err_sys_array.expected.err</errors>
+  </test>
+  <test>
+    <title>array typing errors</title>
+    <model>err_array.sys</model>
+    <errors>err_array.expected.err</errors>
+  </test>
+  <test>
+    <title>attribute warnings</title>
+    <model>warn_attr.sys</model>
+    <output>warn_attr.lcm</output>
+    <errors>warn_attr.expected.err</errors>
+  </test>
+  <test>
+    <title>structure expressions errors</title>
+    <model>err_struct.sys</model>
+    <errors>err_struct.expected.err</errors>
+  </test>
+
+  <separator>Modelling Tests:</separator>
+  <test>
+    <title>copier</title>
+    <model>copier.sys</model>
+    <output>copier.lcm</output>
+  </test>
+  <test>
+    <title>stereo</title>
+    <model>stereo.sys</model>
+    <output>stereo.lcm</output>
+  </test>
+
+  <separator>Mastermind:</separator>
+  <test>
+    <title>mastermind 2 pins, 3 colors</title>
+    <model>mastermind-2x3.sys</model>
+    <output>mastermind-2x3.lcm</output>
+  </test>
+  <test>
+    <title>mastermind 2 pins, 4 colors</title>
+    <model>mastermind-2x4.sys</model>
+    <output>mastermind-2x4.lcm</output>
+  </test>
+  <test>
+    <title>mastermind 2 pins, 5 colors</title>
+    <model>mastermind-2x5.sys</model>
+    <output>mastermind-2x5.lcm</output>
+  </test>
+  <test>
+    <title>mastermind 2 pins, 6 colors</title>
+    <model>mastermind-2x6.sys</model>
+    <output>mastermind-2x6.lcm</output>
+  </test>
+  <test>
+    <title>mastermind 3 pins, 3 colors</title>
+    <model>mastermind-3x3.sys</model>
+    <output>mastermind-3x3.lcm</output>
+  </test>
+  <test>
+    <title>mastermind 3 pins, 4 colors</title>
+    <model>mastermind-3x4.sys</model>
+    <output>mastermind-3x4.lcm</output>
+  </test>
+  <test>
+    <title>mastermind 3 pins, 5 colors</title>
+    <model>mastermind-3x5.sys</model>
+    <output>mastermind-3x5.lcm</output>
+  </test>
+  <test>
+    <title>mastermind 3 pins, 6 colors</title>
+    <model>mastermind-3x6.sys</model>
+    <output>mastermind-3x6.lcm</output>
+  </test>
+  <test>
+    <title>mastermind 4 pins, 3 colors</title>
+    <model>mastermind-4x3.sys</model>
+    <output>mastermind-4x3.lcm</output>
+  </test>
+  <test>
+    <title>mastermind 4 pins, 4 colors</title>
+    <model>mastermind-4x4.sys</model>
+    <output>mastermind-4x4.lcm</output>
+  </test>
+  <test>
+    <title>mastermind 4 pins, 5 colors</title>
+    <model>mastermind-4x5.sys</model>
+    <output>mastermind-4x5.lcm</output>
+  </test>
+  <test>
+    <title>mastermind 4 pins, 6 colors</title>
+    <model>mastermind-4x6.sys</model>
+    <output>mastermind-4x6.lcm</output>
+  </test>
+
+  <separator>Sudoku:</separator>
+  <test>
+    <title>sudoku 4x4 grid (layout 1)</title>
+    <model>sudoku-4x4-1.sys</model>
+    <output>sudoku-4x4-1.lcm</output>
+  </test>
+  <test>
+    <title>sudoku 9x9 grid (layout 1)</title>
+    <model>sudoku-9x9-1.sys</model>
+    <output>sudoku-9x9-1.lcm</output>
+  </test>
+  <test>
+    <title>sudoku 9x9 grid (layout 2)</title>
+    <model>sudoku-9x9-2.sys</model>
+    <output>sudoku-9x9-2.lcm</output>
+  </test>
+  <test>
+    <title>sudoku 9x9 grid (layout 3)</title>
+    <model>sudoku-9x9-3.sys</model>
+    <output>sudoku-9x9-3.lcm</output>
+  </test>
+
+  <separator>Regression Tests:</separator>
+  <test>
+    <title>issue 41</title>
+    <model>issue41.sys</model>
+    <output>issue41.lcm</output>
+  </test>
+  <test>
+    <title>issue 42</title>
+    <model>issue42.sys</model>
+    <output>issue42.lcm</output>
+  </test>
+  <test>
+    <title>issue 44</title>
+    <model>issue44.sys</model>
+    <output>issue44.lcm</output>
+  </test>
+  <test>
+    <title>issue 46</title>
+    <model>issue46.sys</model>
+    <errors>issue46.expected.err</errors>
+  </test>
+  <test>
+    <title>issue 47</title>
+    <model>issue47.sys</model>
+    <output>issue47.lcm</output>
+  </test>
+  <test>
+    <title>issue 54</title>
+    <model>issue54.sys</model>
+    <errors>issue54.expected.err</errors>
+  </test>
+  <test>
+    <title>issue 55</title>
+    <model>issue55.sys</model>
+    <output>issue55.lcm</output>
+  </test>
+  <test>
+    <title>issue 57</title>
+    <model>issue57.sys</model>
+    <output>issue57.lcm</output>
+  </test>
+  <test>
+    <title>issue 81</title>
+    <model>issue81.sys</model>
+    <output>issue81.lcm</output>
+  </test>
+  <test>
+    <title>issue 102</title>
+    <model>issue102.sys</model>
+    <errors>issue102.expected.err</errors>
+  </test>
+  <test>
+    <title>issue 110</title>
+    <model>issue110.sys</model>
+    <output>issue110.lcm</output>
+  </test>
+  <test>
+    <title>issue 119</title>
+    <model>issue119.sys</model>
+    <output>issue119.lcm</output>
+    <errors>issue119.expected.err</errors>
+  </test>
+  <test>
+    <title>issue 130</title>
+    <model>issue130.sys</model>
+    <output>issue130.lcm</output>
+  </test>
+  <test>
+    <title>issue 133</title>
+    <model>issue133.sys</model>
+    <output>issue133.lcm</output>
+  </test>
+  <test>
+    <title>issue 140</title>
+    <model>issue140.sys</model>
+    <output>issue140.lcm</output>
+  </test>
+  <test>
+    <title>issue 143</title>
+    <model>issue143.sys</model>
+    <output>issue143.lcm</output>
+  </test>
+  <test>
+    <title>issue 149</title>
+    <model>issue149.sys</model>
+    <output>issue149.lcm</output>
+  </test>
+  <test>
+    <title>issue 151</title>
+    <model>issue151.sys</model>
+    <output>issue151.lcm</output>
+  </test>
+</testsuite>

@@ -1,0 +1,101 @@
+(
+ :tv_cnf_hierarchy
+ (
+  (
+   :node
+   inverter
+   ()
+   (
+    :tv_cnf
+    ()
+    (
+     (:bool_variable (:identifier x (0) $nil) () -1)
+     (:bool_variable (:identifier x (1) $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:bool_variable_attribute health (nil t))
+       (:float_variable_attribute probability (0.05 0.95))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    ((:tv_clause () (0 1 2)) (:tv_clause (0 1) (2)))
+   )
+  )
+  (
+   :node
+   main
+   (
+    (
+     :edge
+     inverter
+     I
+     (0)
+     (
+      (:mapping (:identifier i (0) $nil) (:identifier x (0) $nil))
+      (:mapping (:identifier i (1) $nil) (:identifier x (1) $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     I
+     (1)
+     (
+      (:mapping (:identifier i (1) $nil) (:identifier x (0) $nil))
+      (:mapping (:identifier i (2) $nil) (:identifier x (1) $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     I
+     (2)
+     (
+      (:mapping (:identifier i (2) $nil) (:identifier x (0) $nil))
+      (:mapping (:identifier i (3) $nil) (:identifier x (1) $nil))
+     )
+    )
+   )
+   (
+    :tv_cnf
+    ()
+    (
+     (
+      :bool_variable
+      (:identifier i (0) $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i (1) $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i (2) $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i (3) $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

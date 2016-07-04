@@ -1,0 +1,1122 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   boo
+   ()
+   (
+    :csp
+    ()
+    (
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier arg1 $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+    )
+    ()
+    ((:bool_constant $nil t))
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 8))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+    )
+   )
+  )
+  (
+   :node
+   tank
+   ()
+   (
+    :csp
+    (
+     (:values_set range (aboveThreshold inRange belowThreshold))
+     (:values_set content (liquidOxygen rocketPropellant helium))
+     (:values_set tankState (full empty unknown))
+    )
+    (
+     (
+      :enum_variable
+      (:identifier pressure $nil ((:qualifier outlet $nil)))
+      ()
+      0
+     )
+     (
+      :enum_variable
+      (:identifier temperature $nil ((:qualifier outlet $nil)))
+      ()
+      0
+     )
+     (
+      :enum_variable
+      (:identifier content $nil ((:qualifier outlet $nil)))
+      ()
+      1
+     )
+     (
+      :enum_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.475 0.475 0.05))
+       (:bool_variable_attribute health (t nil nil))
+      )
+      2
+     )
+    )
+    ()
+    (
+     (:enum_constant $nil helium 1)
+     (:enum_constant $nil full 2)
+     (:enum_constant $nil inRange 0)
+     (:enum_constant $nil empty 2)
+     (:enum_constant $nil belowThreshold 0)
+    )
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 2))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_impl_sentence
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 3))
+       (:csp_atomic_sentence (:csp_constant_term 1))
+      )
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 2))
+	 (:csp_atomic_sentence (:csp_constant_term 0))
+	)
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 0))
+	 (:csp_atomic_sentence (:csp_constant_term 2))
+	)
+       )
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 1))
+	(:csp_atomic_sentence (:csp_constant_term 2))
+       )
+      )
+     )
+     (
+      :csp_impl_sentence
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 3))
+       (:csp_atomic_sentence (:csp_constant_term 3))
+      )
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 2))
+	 (:csp_atomic_sentence (:csp_constant_term 0))
+	)
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 0))
+	 (:csp_atomic_sentence (:csp_constant_term 4))
+	)
+       )
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 1))
+	(:csp_atomic_sentence (:csp_constant_term 2))
+       )
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   main
+   (
+    (
+     :edge
+     tank
+     tk01
+     $nil
+     (
+      (
+       :mapping
+       (:identifier pressure $nil ((:qualifier outlet $nil)))
+       (:identifier pressure $nil ((:qualifier outlet $nil)))
+      )
+      (
+       :mapping
+       (:identifier temperature $nil ((:qualifier outlet $nil)))
+       (:identifier temperature $nil ((:qualifier outlet $nil)))
+      )
+      (
+       :mapping
+       (:identifier content $nil ((:qualifier outlet $nil)))
+       (:identifier content $nil ((:qualifier outlet $nil)))
+      )
+     )
+    )
+    (
+     :edge
+     boo
+     B
+     $nil
+     (
+      (
+       :mapping
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q1 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z1 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y1 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+       (
+	:identifier
+	x1
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+      )
+      (
+       :mapping
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier x $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+       (
+	:identifier
+	x2
+	$nil
+	(
+	 (:qualifier arg1 $nil)
+	 (:qualifier q2 $nil)
+	 (:qualifier z2 $nil)
+	 (:qualifier y2 $nil)
+	)
+       )
+      )
+     )
+    )
+   )
+   (
+    :csp
+    (
+     (:values_set range (aboveThreshold inRange belowThreshold))
+     (:values_set content (liquidOxygen rocketPropellant helium))
+    )
+    (
+     (
+      :enum_variable
+      (:identifier pressure $nil ((:qualifier outlet $nil)))
+      ()
+      0
+     )
+     (
+      :enum_variable
+      (:identifier temperature $nil ((:qualifier outlet $nil)))
+      ()
+      0
+     )
+     (
+      :enum_variable
+      (:identifier content $nil ((:qualifier outlet $nil)))
+      ()
+      1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q1 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z1 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y1 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x1
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (
+       :identifier
+       x2
+       $nil
+       (
+	(:qualifier x $nil)
+	(:qualifier q2 $nil)
+	(:qualifier z2 $nil)
+	(:qualifier y2 $nil)
+       )
+      )
+      ()
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

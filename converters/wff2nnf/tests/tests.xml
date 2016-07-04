@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+  <separator>Arithmetic Circuits:</separator>
+  <test>
+    <title>Boolean polycell</title>
+    <input>polycell.hwff</input>
+    <output>polycell.hnnf</output>
+  </test>
+</testsuite>
+    

@@ -1,0 +1,409 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   Flipflop
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier h $nil $nil) () -1)
+     (:bool_variable (:identifier dataIn (2) $nil) () -1)
+     (:bool_variable (:identifier dataOut (1) $nil) () -1)
+     (:bool_variable (:identifier dataOut (2) $nil) () -1)
+     (:bool_variable (:identifier set (1) $nil) () -1)
+     (:bool_variable (:identifier set (2) $nil) () -1)
+     (:bool_variable (:identifier reset (1) $nil) () -1)
+     (:bool_variable (:identifier reset (2) $nil) () -1)
+     (:bool_variable (:identifier setEvent $nil $nil) () -1)
+     (:bool_variable (:identifier resetEvent $nil $nil) () -1)
+    )
+    ()
+    ((:bool_constant $nil nil))
+    0
+    (
+     (
+      :csp_or_sentence
+      (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 0)))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 8))
+       (
+	:csp_and_sentence
+	(:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 4)))
+	(:csp_atomic_sentence (:csp_variable_term 4))
+       )
+      )
+     )
+     (
+      :csp_or_sentence
+      (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 0)))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 9))
+       (
+	:csp_and_sentence
+	(:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 6)))
+	(:csp_atomic_sentence (:csp_variable_term 6))
+       )
+      )
+     )
+     (
+      :csp_or_sentence
+      (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 0)))
+      (
+       :csp_atomic_sentence
+       (
+	:csp_function_term
+	arith_if
+	(
+	 (:csp_variable_term 9)
+	 (
+	  :csp_function_term
+	  equiv
+	  ((:csp_variable_term 3) (:csp_constant_term 0))
+	 )
+	 (
+	  :csp_function_term
+	  arith_if
+	  (
+	   (:csp_variable_term 8)
+	   (
+	    :csp_function_term
+	    equiv
+	    ((:csp_variable_term 3) (:csp_variable_term 1))
+	   )
+	   (
+	    :csp_function_term
+	    equiv
+	    ((:csp_variable_term 3) (:csp_variable_term 2))
+	   )
+	  )
+	 )
+	)
+       )
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   DynamicFlipflop
+   (
+    (
+     :edge
+     Flipflop
+     flipflop
+     (1)
+     (
+      (:mapping (:identifier h $nil $nil) (:identifier h $nil $nil))
+      (
+       :mapping
+       (:identifier dataIn (2) $nil)
+       (:identifier dataIn (2) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (1) $nil)
+       (:identifier dataOut (1) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (2) $nil)
+       (:identifier dataOut (2) $nil)
+      )
+      (:mapping (:identifier set (1) $nil) (:identifier set (1) $nil))
+      (:mapping (:identifier set (2) $nil) (:identifier set (2) $nil))
+      (:mapping (:identifier reset (1) $nil) (:identifier reset (1) $nil))
+      (:mapping (:identifier reset (2) $nil) (:identifier reset (2) $nil))
+     )
+    )
+    (
+     :edge
+     Flipflop
+     flipflop
+     (2)
+     (
+      (:mapping (:identifier h $nil $nil) (:identifier h $nil $nil))
+      (
+       :mapping
+       (:identifier dataIn (3) $nil)
+       (:identifier dataIn (2) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (2) $nil)
+       (:identifier dataOut (1) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (3) $nil)
+       (:identifier dataOut (2) $nil)
+      )
+      (:mapping (:identifier set (2) $nil) (:identifier set (1) $nil))
+      (:mapping (:identifier set (3) $nil) (:identifier set (2) $nil))
+      (:mapping (:identifier reset (2) $nil) (:identifier reset (1) $nil))
+      (:mapping (:identifier reset (3) $nil) (:identifier reset (2) $nil))
+     )
+    )
+    (
+     :edge
+     Flipflop
+     flipflop
+     (3)
+     (
+      (:mapping (:identifier h $nil $nil) (:identifier h $nil $nil))
+      (
+       :mapping
+       (:identifier dataIn (4) $nil)
+       (:identifier dataIn (2) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (3) $nil)
+       (:identifier dataOut (1) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (4) $nil)
+       (:identifier dataOut (2) $nil)
+      )
+      (:mapping (:identifier set (3) $nil) (:identifier set (1) $nil))
+      (:mapping (:identifier set (4) $nil) (:identifier set (2) $nil))
+      (:mapping (:identifier reset (3) $nil) (:identifier reset (1) $nil))
+      (:mapping (:identifier reset (4) $nil) (:identifier reset (2) $nil))
+     )
+    )
+    (
+     :edge
+     Flipflop
+     flipflop
+     (4)
+     (
+      (:mapping (:identifier h $nil $nil) (:identifier h $nil $nil))
+      (
+       :mapping
+       (:identifier dataIn (5) $nil)
+       (:identifier dataIn (2) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (4) $nil)
+       (:identifier dataOut (1) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (5) $nil)
+       (:identifier dataOut (2) $nil)
+      )
+      (:mapping (:identifier set (4) $nil) (:identifier set (1) $nil))
+      (:mapping (:identifier set (5) $nil) (:identifier set (2) $nil))
+      (:mapping (:identifier reset (4) $nil) (:identifier reset (1) $nil))
+      (:mapping (:identifier reset (5) $nil) (:identifier reset (2) $nil))
+     )
+    )
+    (
+     :edge
+     Flipflop
+     flipflop
+     (5)
+     (
+      (:mapping (:identifier h $nil $nil) (:identifier h $nil $nil))
+      (
+       :mapping
+       (:identifier dataIn (6) $nil)
+       (:identifier dataIn (2) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (5) $nil)
+       (:identifier dataOut (1) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (6) $nil)
+       (:identifier dataOut (2) $nil)
+      )
+      (:mapping (:identifier set (5) $nil) (:identifier set (1) $nil))
+      (:mapping (:identifier set (6) $nil) (:identifier set (2) $nil))
+      (:mapping (:identifier reset (5) $nil) (:identifier reset (1) $nil))
+      (:mapping (:identifier reset (6) $nil) (:identifier reset (2) $nil))
+     )
+    )
+    (
+     :edge
+     Flipflop
+     flipflop
+     (6)
+     (
+      (:mapping (:identifier h $nil $nil) (:identifier h $nil $nil))
+      (
+       :mapping
+       (:identifier dataIn (7) $nil)
+       (:identifier dataIn (2) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (6) $nil)
+       (:identifier dataOut (1) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (7) $nil)
+       (:identifier dataOut (2) $nil)
+      )
+      (:mapping (:identifier set (6) $nil) (:identifier set (1) $nil))
+      (:mapping (:identifier set (7) $nil) (:identifier set (2) $nil))
+      (:mapping (:identifier reset (6) $nil) (:identifier reset (1) $nil))
+      (:mapping (:identifier reset (7) $nil) (:identifier reset (2) $nil))
+     )
+    )
+    (
+     :edge
+     Flipflop
+     flipflop
+     (7)
+     (
+      (:mapping (:identifier h $nil $nil) (:identifier h $nil $nil))
+      (
+       :mapping
+       (:identifier dataIn (8) $nil)
+       (:identifier dataIn (2) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (7) $nil)
+       (:identifier dataOut (1) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (8) $nil)
+       (:identifier dataOut (2) $nil)
+      )
+      (:mapping (:identifier set (7) $nil) (:identifier set (1) $nil))
+      (:mapping (:identifier set (8) $nil) (:identifier set (2) $nil))
+      (:mapping (:identifier reset (7) $nil) (:identifier reset (1) $nil))
+      (:mapping (:identifier reset (8) $nil) (:identifier reset (2) $nil))
+     )
+    )
+    (
+     :edge
+     Flipflop
+     flipflop
+     (8)
+     (
+      (:mapping (:identifier h $nil $nil) (:identifier h $nil $nil))
+      (
+       :mapping
+       (:identifier dataIn (9) $nil)
+       (:identifier dataIn (2) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (8) $nil)
+       (:identifier dataOut (1) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (9) $nil)
+       (:identifier dataOut (2) $nil)
+      )
+      (:mapping (:identifier set (8) $nil) (:identifier set (1) $nil))
+      (:mapping (:identifier set (9) $nil) (:identifier set (2) $nil))
+      (:mapping (:identifier reset (8) $nil) (:identifier reset (1) $nil))
+      (:mapping (:identifier reset (9) $nil) (:identifier reset (2) $nil))
+     )
+    )
+    (
+     :edge
+     Flipflop
+     flipflop
+     (9)
+     (
+      (:mapping (:identifier h $nil $nil) (:identifier h $nil $nil))
+      (
+       :mapping
+       (:identifier dataIn (10) $nil)
+       (:identifier dataIn (2) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (9) $nil)
+       (:identifier dataOut (1) $nil)
+      )
+      (
+       :mapping
+       (:identifier dataOut (10) $nil)
+       (:identifier dataOut (2) $nil)
+      )
+      (:mapping (:identifier set (9) $nil) (:identifier set (1) $nil))
+      (:mapping (:identifier set (10) $nil) (:identifier set (2) $nil))
+      (:mapping (:identifier reset (9) $nil) (:identifier reset (1) $nil))
+      (:mapping (:identifier reset (10) $nil) (:identifier reset (2) $nil))
+     )
+    )
+   )
+   (
+    :csp
+    ()
+    (
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:bool_variable_attribute health (nil t))
+       (:float_variable_attribute probability (0.01 0.99))
+      )
+      -1
+     )
+     (:bool_variable (:identifier dataIn (2) $nil) () -1)
+     (:bool_variable (:identifier dataIn (3) $nil) () -1)
+     (:bool_variable (:identifier dataIn (4) $nil) () -1)
+     (:bool_variable (:identifier dataIn (5) $nil) () -1)
+     (:bool_variable (:identifier dataIn (6) $nil) () -1)
+     (:bool_variable (:identifier dataIn (7) $nil) () -1)
+     (:bool_variable (:identifier dataIn (8) $nil) () -1)
+     (:bool_variable (:identifier dataIn (9) $nil) () -1)
+     (:bool_variable (:identifier dataIn (10) $nil) () -1)
+     (:bool_variable (:identifier dataOut (1) $nil) () -1)
+     (:bool_variable (:identifier dataOut (2) $nil) () -1)
+     (:bool_variable (:identifier dataOut (3) $nil) () -1)
+     (:bool_variable (:identifier dataOut (4) $nil) () -1)
+     (:bool_variable (:identifier dataOut (5) $nil) () -1)
+     (:bool_variable (:identifier dataOut (6) $nil) () -1)
+     (:bool_variable (:identifier dataOut (7) $nil) () -1)
+     (:bool_variable (:identifier dataOut (8) $nil) () -1)
+     (:bool_variable (:identifier dataOut (9) $nil) () -1)
+     (:bool_variable (:identifier dataOut (10) $nil) () -1)
+     (:bool_variable (:identifier set (1) $nil) () -1)
+     (:bool_variable (:identifier set (2) $nil) () -1)
+     (:bool_variable (:identifier set (3) $nil) () -1)
+     (:bool_variable (:identifier set (4) $nil) () -1)
+     (:bool_variable (:identifier set (5) $nil) () -1)
+     (:bool_variable (:identifier set (6) $nil) () -1)
+     (:bool_variable (:identifier set (7) $nil) () -1)
+     (:bool_variable (:identifier set (8) $nil) () -1)
+     (:bool_variable (:identifier set (9) $nil) () -1)
+     (:bool_variable (:identifier set (10) $nil) () -1)
+     (:bool_variable (:identifier reset (1) $nil) () -1)
+     (:bool_variable (:identifier reset (2) $nil) () -1)
+     (:bool_variable (:identifier reset (3) $nil) () -1)
+     (:bool_variable (:identifier reset (4) $nil) () -1)
+     (:bool_variable (:identifier reset (5) $nil) () -1)
+     (:bool_variable (:identifier reset (6) $nil) () -1)
+     (:bool_variable (:identifier reset (7) $nil) () -1)
+     (:bool_variable (:identifier reset (8) $nil) () -1)
+     (:bool_variable (:identifier reset (9) $nil) () -1)
+     (:bool_variable (:identifier reset (10) $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

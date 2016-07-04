@@ -1,0 +1,20 @@
+(
+ :obdd_hierarchy
+ (
+  (
+   :node
+   empty
+   ()
+   (
+    :obdd
+    ()
+    ()
+    ()
+    ()
+    0
+    ((:obdd_terminal_node nil) (:obdd_terminal_node t))
+    1
+   )
+  )
+ )
+)

@@ -1,0 +1,14 @@
+system foo()
+{
+	bool a, b, c, d, e, f, g;
+
+	if (a) {
+		b;
+	} else if (c) {
+		d;
+	} else if (e) {
+		f;
+	} else {
+		g;
+	}
+}

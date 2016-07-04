@@ -1,0 +1,206 @@
+type woman = enum
+{
+	Norwegian,
+	English,
+	Spaniard,
+	Ukrainian,
+	Japanese
+};
+
+type color = enum
+{
+	red,
+	green,
+	ivory,
+	yellow,
+	blue
+};
+
+type smoke = enum
+{
+	Oldgold,
+	Kools,
+	Chesterfield,
+	LuckyStrike,
+	Parliament
+};
+
+type drink = enum
+{
+	coffee,
+	tea,
+	milk,
+	orangeJuice,
+	water
+};
+
+type pet = enum
+{
+	dog,
+	snail,
+	fox,
+	horse,
+	zebra
+};
+
+system zebra()
+{
+	woman h1woman, h2woman, h3woman, h4woman, h5woman;
+	color h1color, h2color, h3color, h4color, h5color;
+	smoke h1smoke, h2smoke, h3smoke, h4smoke, h5smoke;
+	drink h1drink, h2drink, h3drink, h4drink, h5drink;
+	pet h1pet, h2pet, h3pet, h4pet, h5pet;
+
+	attribute health(h1woman) = true, health(h2woman) = true, health(h3woman) = true, health(h4woman) = true, health(h5woman) = true;
+	attribute health(h1drink) = true, health(h2drink) = true, health(h3drink) = true, health(h4drink) = true, health(h5drink) = true;
+	attribute health(h1pet) = true, health(h2pet) = true, health(h3pet) = true, health(h4pet) = true, health(h5pet) = true;
+
+	attribute probability(h1woman) = 0.2, probability(h2woman) = 0.2, probability(h3woman) = 0.2, probability(h4woman) = 0.2, probability(h5woman) = 0.2;
+	attribute probability(h1drink) = 0.2, probability(h2drink) = 0.2, probability(h3drink) = 0.2, probability(h4drink) = 0.2, probability(h5drink) = 0.2;
+	attribute probability(h1pet) = 0.2, probability(h2pet) = 0.2, probability(h3pet) = 0.2, probability(h4pet) = 0.2, probability(h5pet) = 0.2;
+
+	h1woman != h2woman;
+	h1woman != h3woman;
+	h1woman != h4woman;
+	h1woman != h5woman;
+	h2woman != h3woman;
+	h2woman != h4woman;
+	h2woman != h5woman;
+	h3woman != h4woman;
+	h3woman != h5woman;
+	h4woman != h5woman;
+
+	h1color != h2color;
+	h1color != h3color;
+	h1color != h4color;
+	h1color != h5color;
+	h2color != h3color;
+	h2color != h4color;
+	h2color != h5color;
+	h3color != h4color;
+	h3color != h5color;
+	h4color != h5color;
+
+	h1drink != h2drink;
+	h1drink != h3drink;
+	h1drink != h4drink;
+	h1drink != h5drink;
+	h2drink != h3drink;
+	h2drink != h4drink;
+	h2drink != h5drink;
+	h3drink != h4drink;
+	h3drink != h5drink;
+	h4drink != h5drink;
+
+	h1smoke != h2smoke;
+	h1smoke != h3smoke;
+	h1smoke != h4smoke;
+	h1smoke != h5smoke;
+	h2smoke != h3smoke;
+	h2smoke != h4smoke;
+	h2smoke != h5smoke;
+	h3smoke != h4smoke;
+	h3smoke != h5smoke;
+	h4smoke != h5smoke;
+
+	h1pet != h2pet;
+	h1pet != h3pet;
+	h1pet != h4pet;
+	h1pet != h5pet;
+	h2pet != h3pet;
+	h2pet != h4pet;
+	h2pet != h5pet;
+	h3pet != h4pet;
+	h3pet != h5pet;
+	h4pet != h5pet;
+
+// The Englishwoman lives in the red house.
+	(h1woman = woman.English) => (h1color = color.red);
+	(h2woman = woman.English) => (h2color = color.red);
+	(h3woman = woman.English) => (h3color = color.red);
+	(h4woman = woman.English) => (h4color = color.red);
+	(h5woman = woman.English) => (h5color = color.red);
+
+// The Spaniard owns a dog.
+	(h1woman = woman.Spaniard) => (h1pet = pet.dog);
+	(h2woman = woman.Spaniard) => (h2pet = pet.dog);
+	(h3woman = woman.Spaniard) => (h3pet = pet.dog);
+	(h4woman = woman.Spaniard) => (h4pet = pet.dog);
+	(h5woman = woman.Spaniard) => (h5pet = pet.dog);
+
+// Coffee is drunk in the green house.
+	(h1drink = drink.coffee) => (h1color = color.green);
+	(h2drink = drink.coffee) => (h2color = color.green);
+	(h3drink = drink.coffee) => (h3color = color.green);
+	(h4drink = drink.coffee) => (h4color = color.green);
+	(h5drink = drink.coffee) => (h5color = color.green);
+
+// The Ukrainian drinks tea.
+	(h1woman = woman.Ukrainian) => (h1drink = drink.tea);
+	(h2woman = woman.Ukrainian) => (h2drink = drink.tea);
+	(h3woman = woman.Ukrainian) => (h3drink = drink.tea);
+	(h4woman = woman.Ukrainian) => (h4drink = drink.tea);
+	(h5woman = woman.Ukrainian) => (h5drink = drink.tea);
+
+// The green house is immediately to the right of the ivory house.
+	(h1color = color.ivory) => (h2color = color.green);
+	(h2color = color.ivory) => (h3color = color.green);
+	(h3color = color.ivory) => (h4color = color.green);
+	(h4color = color.ivory) => (h5color = color.green);
+	(h5color != color.ivory);
+
+// The Oldgold smoker owns the snail.
+	(h1smoke = smoke.Oldgold) => (h1pet = pet.snail);
+	(h2smoke = smoke.Oldgold) => (h2pet = pet.snail);
+	(h3smoke = smoke.Oldgold) => (h3pet = pet.snail);
+	(h4smoke = smoke.Oldgold) => (h4pet = pet.snail);
+	(h5smoke = smoke.Oldgold) => (h5pet = pet.snail);
+
+// Kools are smoked in the yellow house.
+	(h1smoke = smoke.Kools) => (h1color = color.yellow);
+	(h2smoke = smoke.Kools) => (h2color = color.yellow);
+	(h3smoke = smoke.Kools) => (h3color = color.yellow);
+	(h4smoke = smoke.Kools) => (h4color = color.yellow);
+	(h5smoke = smoke.Kools) => (h5color = color.yellow);
+
+// Milk is drunk in the middle house.
+	h3drink = drink.milk;
+
+// The Norwegian lives in the first house on the left.
+	h1woman = woman.Norwegian;
+
+// The Chesterfield smoker lives next to the fox owner.
+	(h1smoke = smoke.Chesterfield) =>                       (h2pet = pet.fox);
+	(h2smoke = smoke.Chesterfield) => ((h1pet = pet.fox) or (h3pet = pet.fox));
+	(h3smoke = smoke.Chesterfield) => ((h2pet = pet.fox) or (h4pet = pet.fox));
+	(h4smoke = smoke.Chesterfield) => ((h3pet = pet.fox) or (h5pet = pet.fox));
+	(h5smoke = smoke.Chesterfield) =>  (h4pet = pet.fox);
+
+// The yellow house is next to the horse owner.
+	(h1color = color.yellow) =>                         (h2pet = pet.horse);
+	(h2color = color.yellow) => ((h1pet = pet.horse) or (h3pet = pet.horse));
+	(h3color = color.yellow) => ((h2pet = pet.horse) or (h4pet = pet.horse));
+	(h4color = color.yellow) => ((h3pet = pet.horse) or (h5pet = pet.horse));
+	(h5color = color.yellow) =>  (h4pet = pet.horse);
+
+// The Luck Strike smoker drinks orange juice.
+	(h1smoke = smoke.LuckyStrike) => (h1drink = drink.orangeJuice);
+	(h2smoke = smoke.LuckyStrike) => (h2drink = drink.orangeJuice);
+	(h3smoke = smoke.LuckyStrike) => (h3drink = drink.orangeJuice);
+	(h4smoke = smoke.LuckyStrike) => (h4drink = drink.orangeJuice);
+	(h5smoke = smoke.LuckyStrike) => (h5drink = drink.orangeJuice);
+
+// The Japanese smokes Parliament.
+	(h1woman = woman.Japanese) => (h1smoke = smoke.Parliament);
+	(h2woman = woman.Japanese) => (h2smoke = smoke.Parliament);
+	(h3woman = woman.Japanese) => (h3smoke = smoke.Parliament);
+	(h4woman = woman.Japanese) => (h4smoke = smoke.Parliament);
+	(h5woman = woman.Japanese) => (h5smoke = smoke.Parliament);
+
+// The Norwegian lives next to the blue house.
+	(h1woman = woman.Norwegian) =>                            (h2color = color.blue);
+	(h2woman = woman.Norwegian) => ((h1color = color.blue) or (h3color = color.blue));
+	(h3woman = woman.Norwegian) => ((h2color = color.blue) or (h4color = color.blue));
+	(h4woman = woman.Norwegian) => ((h3color = color.blue) or (h5color = color.blue));
+	(h5woman = woman.Norwegian) =>  (h4color = color.blue);
+}

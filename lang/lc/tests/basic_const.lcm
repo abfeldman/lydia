@@ -1,0 +1,33 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   test
+   ()
+   (
+    :csp
+    ((:values_set color (R G B)))
+    (
+     (:bool_variable (:identifier a $nil $nil) () -1)
+     (:enum_variable (:identifier c $nil $nil) () 0)
+    )
+    ()
+    ((:bool_constant $nil nil) (:enum_constant $nil R 0))
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 0))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 1))
+      (:csp_atomic_sentence (:csp_constant_term 1))
+     )
+    )
+   )
+  )
+ )
+)

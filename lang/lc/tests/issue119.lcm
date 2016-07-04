@@ -1,0 +1,228 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   bar
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier A $nil ((:qualifier c (0)))) () -1)
+     (:bool_variable (:identifier B $nil ((:qualifier c (0)))) () -1)
+     (:bool_variable (:identifier C $nil ((:qualifier c (0)))) () -1)
+     (
+      :bool_variable
+      (:identifier D $nil ((:qualifier c (0)) (:qualifier G (0))))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier E $nil ((:qualifier c (0)) (:qualifier G (0))))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier D $nil ((:qualifier c (0)) (:qualifier G (1))))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier E $nil ((:qualifier c (0)) (:qualifier G (1))))
+      ()
+      -1
+     )
+     (:bool_variable (:identifier A $nil ((:qualifier c (1)))) () -1)
+     (:bool_variable (:identifier B $nil ((:qualifier c (1)))) () -1)
+     (:bool_variable (:identifier C $nil ((:qualifier c (1)))) () -1)
+     (
+      :bool_variable
+      (:identifier D $nil ((:qualifier c (1)) (:qualifier G (0))))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier E $nil ((:qualifier c (1)) (:qualifier G (0))))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier D $nil ((:qualifier c (1)) (:qualifier G (1))))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier E $nil ((:qualifier c (1)) (:qualifier G (1))))
+      ()
+      -1
+     )
+     (:bool_variable (:identifier q $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+  (
+   :node
+   foo
+   (
+    (
+     :edge
+     bar
+     B
+     $nil
+     (
+      (
+       :mapping
+       (:identifier A $nil ((:qualifier c (0))))
+       (:identifier A $nil ((:qualifier c (0))))
+      )
+      (
+       :mapping
+       (:identifier B $nil ((:qualifier c (0))))
+       (:identifier B $nil ((:qualifier c (0))))
+      )
+      (
+       :mapping
+       (:identifier C $nil ((:qualifier c (0))))
+       (:identifier C $nil ((:qualifier c (0))))
+      )
+      (
+       :mapping
+       (:identifier D $nil ((:qualifier c (0)) (:qualifier G (0))))
+       (:identifier D $nil ((:qualifier c (0)) (:qualifier G (0))))
+      )
+      (
+       :mapping
+       (:identifier E $nil ((:qualifier c (0)) (:qualifier G (0))))
+       (:identifier E $nil ((:qualifier c (0)) (:qualifier G (0))))
+      )
+      (
+       :mapping
+       (:identifier D $nil ((:qualifier c (0)) (:qualifier G (1))))
+       (:identifier D $nil ((:qualifier c (0)) (:qualifier G (1))))
+      )
+      (
+       :mapping
+       (:identifier E $nil ((:qualifier c (0)) (:qualifier G (1))))
+       (:identifier E $nil ((:qualifier c (0)) (:qualifier G (1))))
+      )
+      (
+       :mapping
+       (:identifier A $nil ((:qualifier c (1))))
+       (:identifier A $nil ((:qualifier c (1))))
+      )
+      (
+       :mapping
+       (:identifier B $nil ((:qualifier c (1))))
+       (:identifier B $nil ((:qualifier c (1))))
+      )
+      (
+       :mapping
+       (:identifier C $nil ((:qualifier c (1))))
+       (:identifier C $nil ((:qualifier c (1))))
+      )
+      (
+       :mapping
+       (:identifier D $nil ((:qualifier c (1)) (:qualifier G (0))))
+       (:identifier D $nil ((:qualifier c (1)) (:qualifier G (0))))
+      )
+      (
+       :mapping
+       (:identifier E $nil ((:qualifier c (1)) (:qualifier G (0))))
+       (:identifier E $nil ((:qualifier c (1)) (:qualifier G (0))))
+      )
+      (
+       :mapping
+       (:identifier D $nil ((:qualifier c (1)) (:qualifier G (1))))
+       (:identifier D $nil ((:qualifier c (1)) (:qualifier G (1))))
+      )
+      (
+       :mapping
+       (:identifier E $nil ((:qualifier c (1)) (:qualifier G (1))))
+       (:identifier E $nil ((:qualifier c (1)) (:qualifier G (1))))
+      )
+      (
+       :mapping
+       (:identifier D $nil ((:qualifier c (0)) (:qualifier G (0))))
+       (:identifier q $nil $nil)
+      )
+     )
+    )
+   )
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier A $nil ((:qualifier c (0)))) () -1)
+     (:bool_variable (:identifier B $nil ((:qualifier c (0)))) () -1)
+     (:bool_variable (:identifier C $nil ((:qualifier c (0)))) () -1)
+     (
+      :bool_variable
+      (:identifier D $nil ((:qualifier c (0)) (:qualifier G (0))))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier E $nil ((:qualifier c (0)) (:qualifier G (0))))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier D $nil ((:qualifier c (0)) (:qualifier G (1))))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier E $nil ((:qualifier c (0)) (:qualifier G (1))))
+      ()
+      -1
+     )
+     (:bool_variable (:identifier A $nil ((:qualifier c (1)))) () -1)
+     (:bool_variable (:identifier B $nil ((:qualifier c (1)))) () -1)
+     (:bool_variable (:identifier C $nil ((:qualifier c (1)))) () -1)
+     (
+      :bool_variable
+      (:identifier D $nil ((:qualifier c (1)) (:qualifier G (0))))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier E $nil ((:qualifier c (1)) (:qualifier G (0))))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier D $nil ((:qualifier c (1)) (:qualifier G (1))))
+      ()
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier E $nil ((:qualifier c (1)) (:qualifier G (1))))
+      ()
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

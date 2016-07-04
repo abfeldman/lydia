@@ -1,0 +1,32 @@
+const int N = 4;
+
+system nqueens()
+{
+	bool board[1:N][1:N];
+
+	attribute probability(board) = \x x ? 0.01 : 0.99;
+	attribute health(board) = \x x;
+
+	forall (i in 1 .. N) {
+		exists (j in 1 .. N) { // At Least One
+			board[i][j];
+		}
+		forall (k in 1 .. N - 1) { // At Most One
+			forall (l in k + 1 .. N) {
+				!board[i][k] || !board[i][l];
+				!board[k][i] || !board[l][i];
+			}
+		}
+	}
+
+	forall (i in 1 .. N - 1) { // At Most One
+		forall (j in 1 .. N - i) {
+			forall (k in 1 .. N - i - j + 1) {
+				!board[i + j - 1][j] || !board[i + j + k - 1][j + k];
+				!board[j][i + j - 1] || !board[j + k][i + j + k - 1];
+				!board[N - i - j + 2][j] || !board[N - i - j - k + 2][j + k];
+				!board[N - j + 1][i + j - 1] || !board[N - j - k + 1][i + j + k - 1];
+			}
+		}
+	}
+}

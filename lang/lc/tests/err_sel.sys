@@ -1,0 +1,15 @@
+type color = enum { R, G, B };
+
+system test()
+{
+	color r;
+
+	r.Y;
+
+	r = color.G;
+	r = color.M;
+	r = color;
+	r = color[12].B;
+	r = color.B;
+	r = color.B[12];
+}

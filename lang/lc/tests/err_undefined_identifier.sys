@@ -1,0 +1,12 @@
+int function moo()
+{
+	zoo
+}
+
+system foo()
+{
+	bar;
+	moo();
+
+	attribute health(x) = true;
+}

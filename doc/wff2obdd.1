@@ -1,0 +1,59 @@
+.TH wff2obdd 1 "07 February 2006" "Lydia 2.0" "Lydia toolkit"
+.SH NAME
+wff2obdd \- convert Lydia Boolean Propositional Wff to OBDD
+.SH SYNOPSIS
+.B wff2obdd
+[\fIOPTIONS\fR] [\fISOURCE\fR] [\fIDEST\fR]
+.br
+.B wff2obdd
+[\fB\-h\fR]
+.br
+.B wff2obdd
+[\fB\-v\fR]
+.SH DESCRIPTION
+The purpose of the "wff2obdd" utility is to convert a Boolean
+Propositional Wff (Well-Formed Formula) to an Ordered Binary Decision
+Diagram (OBDD). A description of the OBDD format is outside the scope
+of this manual page, but beware of the fact that the size of the
+output grows pretty quickly as a function of the input size. More
+information you can find in the Lydia documentation and following the
+links at the Lydia web-site.
+.PP
+The "wff2obdd" utility works both on flat and hierarchical Boolean Wff
+representations.
+.PP
+If SOURCE is not specified, model will be read from standard input. If
+DEST is not specified the compiled model will be sent to standard output.
+.SH OPTIONS
+.TP
+\-f
+Use an obsolete brute force method (used for testing purposes).
+.TP
+-V
+Send execution statistics to the standard error after finishing the
+compilation.
+.TP
+\-h
+Display a short help text.
+.TP
+\-v
+Show version information and exit.
+.SH "REPORTING BUGS"
+Report bugs to <lydia-bugs@fdir.org>.
+.SH "SEE ALSO"
+.BR lydia (1),
+.BR lc (1),
+.BR lcm2wff (1),
+.BR wff2cnf (1),
+.BR obdd2dnf (1),
+.BR smoothy (1),
+.BR lsim (1),
+.BR cdas (1),
+.BR cnf2dnf (1),
+.BR scotty (1),
+.BR gotcha (1)
+.SH COPYRIGHT
+Copyright \(co 2005-2006, Delft University of Technology.
+.SH AUTHOR
+Written by Alexander Feldman, some parts of the language and the
+tool kit are based on a prototype Lydia 1.0 implementation.

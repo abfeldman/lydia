@@ -1,0 +1,10 @@
+system test()
+{
+	bool x[5];
+	forall (i in 0 .. 4) {
+		i.boo = true;
+		i[3] = true;
+		i[3].boo = true;
+		i.boo[3] = true;
+	}
+}

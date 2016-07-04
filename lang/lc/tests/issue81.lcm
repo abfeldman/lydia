@@ -1,0 +1,51 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   sub
+   ()
+   (
+    :csp
+    ()
+    ((:bool_variable (:identifier b $nil $nil) () -1))
+    ()
+    ()
+    0
+    ((:csp_atomic_sentence (:csp_variable_term 0)))
+   )
+  )
+  (
+   :node
+   main
+   (
+    (
+     :edge
+     sub
+     s
+     $nil
+     ((:mapping (:identifier z $nil $nil) (:identifier b $nil $nil)))
+    )
+   )
+   (
+    :csp
+    ()
+    (
+     (
+      :bool_variable
+      (:identifier z $nil $nil)
+      (
+       (:bool_variable_attribute health (nil t))
+       (:float_variable_attribute probability (0.5 0.5))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

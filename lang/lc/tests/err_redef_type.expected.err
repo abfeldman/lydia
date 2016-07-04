@@ -1,0 +1,8 @@
+err_redef_type.sys:2: error: redefinition of `color'
+err_redef_type.sys:1: error: `color' previously defined here
+err_redef_type.sys:3: error: redefinition of `color'
+err_redef_type.sys:2: error: `color' previously defined here
+err_redef_type.sys:5: error: redefinition of `boo'
+err_redef_type.sys:4: error: `boo' previously defined here
+err_redef_type.sys:6: warning: redefinition of `A'
+err_redef_type.sys:6: warning: `A' previously defined here

@@ -1,0 +1,4 @@
+(
+ :tv_dnf_hierarchy
+ ((:node empty () (:tv_dnf () () () () 0 ((:tv_term () ())))))
+)

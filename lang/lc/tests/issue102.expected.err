@@ -1,0 +1,4 @@
+issue102.sys:4: error: `sigxxx' undefined here (neither in a system nor in a function)
+issue102.sys:4: error: (Each undefined type is reported only once.)
+issue102.sys: In system `test':
+issue102.sys:8: warning: unused variable structure `x'

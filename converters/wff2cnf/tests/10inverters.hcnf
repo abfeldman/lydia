@@ -1,0 +1,158 @@
+(
+ :tv_cnf_hierarchy
+ (
+  (
+   :node
+   inverter
+   ()
+   (
+    :tv_cnf
+    ()
+    (
+     (:bool_variable (:identifier i $nil $nil) () -1)
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.05 0.95))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    ((:tv_clause () (0 1 2)) (:tv_clause (0 1) (2)))
+   )
+  )
+  (
+   :node
+   main
+   (
+    (
+     :edge
+     inverter
+     I0
+     $nil
+     (
+      (:mapping (:identifier ix $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier y1 $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     I1
+     $nil
+     (
+      (:mapping (:identifier y1 $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier y2 $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     I2
+     $nil
+     (
+      (:mapping (:identifier y2 $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier y3 $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     I3
+     $nil
+     (
+      (:mapping (:identifier y3 $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier y4 $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     I4
+     $nil
+     (
+      (:mapping (:identifier y4 $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier y5 $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     I5
+     $nil
+     (
+      (:mapping (:identifier y5 $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier y6 $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     I6
+     $nil
+     (
+      (:mapping (:identifier y6 $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier y7 $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     I7
+     $nil
+     (
+      (:mapping (:identifier y7 $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier y8 $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     I8
+     $nil
+     (
+      (:mapping (:identifier y8 $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier y9 $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     I9
+     $nil
+     (
+      (:mapping (:identifier y9 $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier y10 $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+   )
+   (
+    :tv_cnf
+    ()
+    (
+     (:bool_variable (:identifier ix $nil $nil) () -1)
+     (:bool_variable (:identifier y1 $nil $nil) () -1)
+     (:bool_variable (:identifier y2 $nil $nil) () -1)
+     (:bool_variable (:identifier y3 $nil $nil) () -1)
+     (:bool_variable (:identifier y4 $nil $nil) () -1)
+     (:bool_variable (:identifier y5 $nil $nil) () -1)
+     (:bool_variable (:identifier y6 $nil $nil) () -1)
+     (:bool_variable (:identifier y7 $nil $nil) () -1)
+     (:bool_variable (:identifier y8 $nil $nil) () -1)
+     (:bool_variable (:identifier y9 $nil $nil) () -1)
+     (:bool_variable (:identifier y10 $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

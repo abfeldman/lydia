@@ -1,0 +1,43 @@
+(
+ :tv_dnf_hierarchy
+ (
+  (
+   :node
+   alpha_1
+   ()
+   (
+    :tv_dnf
+    ()
+    (
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier ci $nil $nil) () -1)
+     (:bool_variable (:identifier sum $nil $nil) () -1)
+     (:bool_variable (:identifier carry $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ((:tv_term (3 4) (0 1 2)))
+   )
+  )
+  (
+   :node
+   alpha_2
+   ()
+   (
+    :tv_dnf
+    ()
+    (
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier ci $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ((:tv_term (0 1) (2)))
+   )
+  )
+ )
+)

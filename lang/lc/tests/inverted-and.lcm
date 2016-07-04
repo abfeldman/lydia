@@ -1,0 +1,221 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   invert
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier i $nil $nil) () -1)
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier f $nil $nil)
+      (
+       (:float_variable_attribute probability (0.99 0.01))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_impl_sentence
+      (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 2)))
+      (
+       :csp_not_sentence
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 1))
+	(:csp_atomic_sentence (:csp_variable_term 0))
+       )
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   and2
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier f_i1 $nil $nil)
+      (
+       (:float_variable_attribute probability (0.99 0.01))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier f_i2 $nil $nil)
+      (
+       (:float_variable_attribute probability (0.99 0.01))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_not_sentence
+      (
+       :csp_and_sentence
+       (:csp_atomic_sentence (:csp_variable_term 3))
+       (:csp_atomic_sentence (:csp_variable_term 4))
+      )
+     )
+     (
+      :csp_atomic_sentence
+      (
+       :csp_function_term
+       arith_if
+       (
+	(:csp_variable_term 3)
+	(
+	 :csp_function_term
+	 equiv
+	 ((:csp_variable_term 2) (:csp_variable_term 0))
+	)
+	(
+	 :csp_function_term
+	 arith_if
+	 (
+	  (:csp_variable_term 4)
+	  (
+	   :csp_function_term
+	   equiv
+	   ((:csp_variable_term 2) (:csp_variable_term 1))
+	  )
+	  (
+	   :csp_function_term
+	   equiv
+	   (
+	    (:csp_variable_term 2)
+	    (
+	     :csp_function_term
+	     and
+	     ((:csp_variable_term 0) (:csp_variable_term 1))
+	    )
+	   )
+	  )
+	 )
+	)
+       )
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   main
+   (
+    (
+     :edge
+     invert
+     I1
+     $nil
+     (
+      (:mapping (:identifier a $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier b $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     invert
+     I2
+     $nil
+     (
+      (:mapping (:identifier c $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier d $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     A1
+     $nil
+     (
+      (:mapping (:identifier b $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier d $nil $nil) (:identifier i2 $nil $nil))
+      (:mapping (:identifier e $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     invert
+     I3
+     $nil
+     (
+      (:mapping (:identifier e $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier f $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+   )
+   (
+    :csp
+    ()
+    (
+     (
+      :bool_variable
+      (:identifier a $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier b $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier c $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier d $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier e $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier f $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

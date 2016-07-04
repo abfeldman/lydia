@@ -1,0 +1,10 @@
+observation alpha_1
+{
+// MC = 1
+    a && b && c && d && e && !f && g;
+}
+
+observation alpha_2
+{
+    !a && !b && !c && !d && !e;
+}

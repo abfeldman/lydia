@@ -1,0 +1,59 @@
+(
+ :obdd_hierarchy
+ (
+  (
+   :node
+   alpha_1
+   ()
+   (
+    :obdd
+    ()
+    (
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier ci $nil $nil) () -1)
+     (:bool_variable (:identifier sum $nil $nil) () -1)
+     (:bool_variable (:identifier carry $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (:obdd_terminal_node nil)
+     (:obdd_terminal_node t)
+     (:obdd_non_terminal_node 4 0 1)
+     (:obdd_non_terminal_node 3 0 2)
+     (:obdd_non_terminal_node 2 3 0)
+     (:obdd_non_terminal_node 1 4 0)
+     (:obdd_non_terminal_node 0 5 0)
+    )
+    6
+   )
+  )
+  (
+   :node
+   alpha_2
+   ()
+   (
+    :obdd
+    ()
+    (
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier ci $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (:obdd_terminal_node nil)
+     (:obdd_terminal_node t)
+     (:obdd_non_terminal_node 2 1 0)
+     (:obdd_non_terminal_node 1 0 2)
+     (:obdd_non_terminal_node 0 0 3)
+    )
+    4
+   )
+  )
+ )
+)

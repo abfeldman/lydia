@@ -1,0 +1,3 @@
+err_undefined_type.sys:1: error: `moo' undefined here (neither in a system nor in a function)
+err_undefined_type.sys:1: error: (Each undefined type is reported only once.)
+err_undefined_type.sys:2: error: `zoo' undefined here (neither in a system nor in a function)

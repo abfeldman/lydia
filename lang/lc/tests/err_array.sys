@@ -1,0 +1,17 @@
+type foo = struct { bool a[10] };
+
+system test()
+{
+	bool a;
+	a[20] = true;
+	a = true;
+
+	bool b[4][4];
+	b[4] = true;
+	b[1][2] = true;
+	b = true;
+
+	foo c[10];
+	c[1].a[1][2] = true;
+	c[11].a[1] = true;
+}

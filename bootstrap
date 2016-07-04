@@ -1,0 +1,13 @@
+#!/bin/sh
+
+rm -rf auxdir
+mkdir auxdir \
+    || { echo "mkdir auxdir failed"; exit 1; }
+aclocal -I m4 \
+    || { echo "aclocal failed"; exit 1; }
+autoheader --warnings=all \
+    || { echo "autoheader failed"; exit 1; }
+automake --warnings=all --warnings=no-syntax --gnu --add-missing --copy \
+    || { echo "automake failed"; exit 1; }
+autoconf --warnings=all \
+    || { echo "autoconf failed"; exit 1; }

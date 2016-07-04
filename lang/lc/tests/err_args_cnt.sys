@@ -1,0 +1,18 @@
+bool function bar(bool a)
+{
+	a
+}
+
+system foo(bool a)
+{
+}
+
+system main()
+{
+	bar();
+	bar(true, true);
+	system foo f1();
+	system foo f2;
+	
+	f2(true, true);
+}

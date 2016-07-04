@@ -1,0 +1,63 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   test
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier a (1) $nil) () -1)
+     (:bool_variable (:identifier a (2) $nil) () -1)
+     (:bool_variable (:identifier a (3) $nil) () -1)
+     (:bool_variable (:identifier a (4) $nil) () -1)
+     (:bool_variable (:identifier a (5) $nil) () -1)
+    )
+    ()
+    ((:bool_constant $nil t))
+    0
+    (
+     (
+      :csp_or_sentence
+      (
+       :csp_or_sentence
+       (
+	:csp_or_sentence
+	(
+	 :csp_or_sentence
+	 (
+	  :csp_equiv_sentence
+	  (:csp_atomic_sentence (:csp_variable_term 0))
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	 (
+	  :csp_equiv_sentence
+	  (:csp_atomic_sentence (:csp_variable_term 1))
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	)
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 2))
+	 (:csp_atomic_sentence (:csp_constant_term 0))
+	)
+       )
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 3))
+	(:csp_atomic_sentence (:csp_constant_term 0))
+       )
+      )
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 4))
+       (:csp_atomic_sentence (:csp_constant_term 0))
+      )
+     )
+    )
+   )
+  )
+ )
+)

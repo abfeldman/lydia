@@ -1,0 +1,111 @@
+// First attempt to model the LOFAR active antenna system in Lydia.
+// The antenna system is (for the time being) completely modeled
+// using Boolean values. That is, a variable gets the value 'true'
+// in case (enough) signal is present (and 'false' if no signal is present).
+// [[To define: what means 'signal is present']]
+// Most likely a more elaborate finite domain characterisation of variable
+// values is needed in the future.
+
+//
+// The sensor.
+// We assume that a health sensor always is capable of sensing a signal.
+system sensor(bool out, bool h)
+{
+  h => (out = true);
+}
+
+
+//
+// The coarse modeling formalism we have used doesn't allow us to
+// specify that the signal is really amplified.
+// So, the amplifier is modeled as a buffer.
+// (it is assumed that the low output in case the amplifier is not powered
+// can be clearly distinguished from the normal output)
+system amp(bool x, bool y, bool pwr, bool h)
+{
+  h => (y=(x * pwr));
+}
+
+//
+// Connection does not reduce signal.
+system connection(bool x, bool y, bool h)
+{
+  h => (x=y);
+}
+
+//
+// Filter
+// The coarse modeling formalism we have used it is hard
+// to express that certain frequency components are discarded by the
+// filter component.
+// for the moment we model the filter as a simple connection.
+//
+system filter(bool x, bool y, bool h)
+{
+  h => (x=y);
+}
+
+//
+// Analog / Digital converter
+system a_d(bool x, bool y, bool pwr, bool h)
+{
+  h => (y=(x * pwr));
+}
+
+system active_antenna(bool y, bool pwr, bool h)
+{
+  system sensor     sensor1;
+  system amp        amp1;
+  system amp        amp2;
+  system connection connection1;
+  system filter     filter1;
+  system a_d        a_d1;
+  bool raw_as, ampl_as, ampl_as_acc, ampl_as_acc_f, analog_y;
+
+  sensor1(raw_as, h);
+  amp1(raw_as, ampl_as, pwr, h);
+  connection1(ampl_as, ampl_as_acc, h);
+  filter1(ampl_as_acc, ampl_as_acc_f, h);
+  amp2(ampl_as_acc_f, analog_y, pwr, h);
+  a_d1(analog_y, y, pwr, h);
+}
+
+//
+// Power source
+system power_src(bool out, bool h)
+{
+  h => (out = true);
+}
+
+system lofar1(bool y1,  bool y2, bool y3,
+              bool ih1, bool ih2, bool ih3,
+              bool ih_pwr1, bool ih_pwr2 )
+{
+  system power_src        power_src1;
+  system power_src        power_src2;
+  system active_antenna   active_antenna1;
+  system active_antenna   active_antenna2;
+  system active_antenna   active_antenna3;
+  bool pwr1, pwr2;
+
+  attribute probability(ih1) = ih1 ? 0.999 : 0.001;
+  attribute probability(ih2) = ih2 ? 0.999 : 0.001;
+  attribute probability(ih3) = ih3 ? 0.999 : 0.001;
+
+  attribute probability(ih_pwr1) = ih_pwr1 ? 0.999 : 0.001;
+  attribute probability(ih_pwr2) = ih_pwr2 ? 0.999 : 0.001;
+
+  attribute health(ih1) = true;
+  attribute health(ih2) = true;
+  attribute health(ih3) = true;
+  attribute health(ih_pwr1) = true;
+  attribute health(ih_pwr2) = true;
+  
+
+  power_src1(pwr1, ih_pwr1);
+  power_src2(pwr2, ih_pwr2);
+
+  active_antenna1(y1, pwr1, ih1);
+  active_antenna2(y2, pwr2, ih2);
+  active_antenna3(y3, pwr2, ih3);
+}

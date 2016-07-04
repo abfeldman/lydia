@@ -1,0 +1,69 @@
+#include "config.h"
+
+#include "tv.h"
+#include "mv.h"
+#include "lcm.h"
+#include "mdd.h"
+#include "obdd.h"
+#include "fread.h"
+#include "fscan.h"
+#include "fwrite.h"
+#include "variable.h"
+#include "hierarchy.h"
+
+#include <assert.h>
+
+.insert hierarchyconf.t
+.include lydia.ct
+#line $[1+${tpllineno}] "${tplfilename}"
+
+int search_node_list(const_node_list haystack, lydia_symbol needle, unsigned int *pos)
+{
+    register unsigned int ix;
+
+    for (ix = 0; ix < haystack->sz; ix++) {
+        if (haystack->arr[ix]->type == needle) {
+            *pos = ix;
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int member_node_list(const_node_list haystack, lydia_symbol needle, unsigned int *pos)
+{
+    register unsigned int ix;
+
+    for (ix = 0; ix < haystack->sz; ix++) {
+        if (haystack->arr[ix]->type == needle) {
+            *pos = ix;
+            return 1;
+        }
+    }
+    return 0;
+}
+
+node find_root_node(const_hierarchy hier)
+{
+    if (hier->nodes->sz > 0) {
+/*
+ * For the moment this is implemented by assuming that the last node
+ * in the list is the root one.
+ */
+        return hier->nodes->arr[hier->nodes->sz - 1];
+    }
+    return nodeNIL;
+}
+
+node find_node(const_hierarchy hier, const_lydia_symbol name)
+{
+    register unsigned int i;
+
+    for (i = 0; i < hier->nodes->sz; i++) {
+        if (hier->nodes->arr[i]->type == name) {
+            return hier->nodes->arr[i];
+        }
+    }
+
+    return nodeNIL;
+}

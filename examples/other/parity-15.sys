@@ -1,0 +1,9 @@
+bool function xor(bool a, bool b)
+{
+	not(a = b)
+}
+
+system parity(bool a[16])
+{
+	xor(a[15], xor(a[14], xor(a[13], xor(a[12], xor(a[11], xor(a[10], xor(a[9], xor(a[8], xor(a[7], xor(a[6], xor(a[5], xor(a[4], xor(a[3], xor(a[2], xor(a[1], a[0]))))))))))))))) = true;
+}

@@ -1,0 +1,581 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   Mastermind
+   ()
+   (
+    :csp
+    (
+     (:values_set Color (RED YELLOW BLUE))
+     (:values_set Clue (NONE W B WW WB BB))
+    )
+    (
+     (
+      :enum_variable
+      (:identifier g1 $nil $nil)
+      ((:bool_variable_attribute observable (t t t)))
+      0
+     )
+     (
+      :enum_variable
+      (:identifier g2 $nil $nil)
+      ((:bool_variable_attribute observable (t t t)))
+      0
+     )
+     (
+      :enum_variable
+      (:identifier h1 $nil $nil)
+      (
+       (:bool_variable_attribute health (t nil nil))
+       (
+	:float_variable_attribute
+	probability
+	(0.3333333333333333 0.3333333333333333 0.3333333333333333)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier h2 $nil $nil)
+      (
+       (:bool_variable_attribute health (t nil nil))
+       (
+	:float_variable_attribute
+	probability
+	(0.3333333333333333 0.3333333333333333 0.3333333333333333)
+       )
+      )
+      0
+     )
+     (
+      :enum_variable
+      (:identifier clue $nil $nil)
+      ((:bool_variable_attribute observable (t t t t t t)))
+      1
+     )
+     (:bool_variable (:identifier e11 $nil $nil) () -1)
+     (:bool_variable (:identifier e12 $nil $nil) () -1)
+     (:bool_variable (:identifier e21 $nil $nil) () -1)
+     (:bool_variable (:identifier e22 $nil $nil) () -1)
+     (:bool_variable (:identifier f11 $nil $nil) () -1)
+     (:bool_variable (:identifier f12 $nil $nil) () -1)
+     (:bool_variable (:identifier f21 $nil $nil) () -1)
+     (:bool_variable (:identifier f22 $nil $nil) () -1)
+    )
+    ()
+    (
+     (:bool_constant $nil t)
+     (:bool_constant $nil nil)
+     (:enum_constant $nil NONE 1)
+     (:enum_constant $nil W 1)
+     (:enum_constant $nil WW 1)
+     (:enum_constant $nil B 1)
+     (:enum_constant $nil WB 1)
+     (:enum_constant $nil BB 1)
+    )
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 5))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (:csp_atomic_sentence (:csp_variable_term 2))
+      )
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 6))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (:csp_atomic_sentence (:csp_variable_term 3))
+      )
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 7))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 1))
+       (:csp_atomic_sentence (:csp_variable_term 2))
+      )
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 8))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 1))
+       (:csp_atomic_sentence (:csp_variable_term 3))
+      )
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 9))
+      (:csp_atomic_sentence (:csp_variable_term 5))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 12))
+      (:csp_atomic_sentence (:csp_variable_term 8))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 10))
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(:csp_atomic_sentence (:csp_variable_term 6))
+	(:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 9)))
+       )
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 12)))
+      )
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 11))
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(:csp_atomic_sentence (:csp_variable_term 7))
+	(:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 12)))
+       )
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 9)))
+      )
+     )
+     (
+      :csp_impl_sentence
+      (
+       :csp_or_sentence
+       (
+	:csp_and_sentence
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 9))
+	 (:csp_atomic_sentence (:csp_constant_term 0))
+	)
+	(:csp_atomic_sentence (:csp_constant_term 1))
+       )
+       (
+	:csp_and_sentence
+	(
+	 :csp_not_sentence
+	 (
+	  :csp_equiv_sentence
+	  (:csp_atomic_sentence (:csp_variable_term 9))
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	)
+	(
+	 :csp_or_sentence
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_equiv_sentence
+	   (:csp_atomic_sentence (:csp_variable_term 12))
+	   (:csp_atomic_sentence (:csp_constant_term 0))
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 1))
+	 )
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_not_sentence
+	   (
+	    :csp_equiv_sentence
+	    (:csp_atomic_sentence (:csp_variable_term 12))
+	    (:csp_atomic_sentence (:csp_constant_term 0))
+	   )
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	)
+       )
+      )
+      (
+       :csp_or_sentence
+       (
+	:csp_or_sentence
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 4))
+	 (:csp_atomic_sentence (:csp_constant_term 2))
+	)
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 4))
+	 (:csp_atomic_sentence (:csp_constant_term 3))
+	)
+       )
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 4))
+	(:csp_atomic_sentence (:csp_constant_term 4))
+       )
+      )
+     )
+     (
+      :csp_impl_sentence
+      (
+       :csp_or_sentence
+       (
+	:csp_and_sentence
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 9))
+	 (:csp_atomic_sentence (:csp_constant_term 0))
+	)
+	(
+	 :csp_or_sentence
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_equiv_sentence
+	   (:csp_atomic_sentence (:csp_variable_term 12))
+	   (:csp_atomic_sentence (:csp_constant_term 0))
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 1))
+	 )
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_not_sentence
+	   (
+	    :csp_equiv_sentence
+	    (:csp_atomic_sentence (:csp_variable_term 12))
+	    (:csp_atomic_sentence (:csp_constant_term 0))
+	   )
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	)
+       )
+       (
+	:csp_and_sentence
+	(
+	 :csp_not_sentence
+	 (
+	  :csp_equiv_sentence
+	  (:csp_atomic_sentence (:csp_variable_term 9))
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	)
+	(
+	 :csp_or_sentence
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_equiv_sentence
+	   (:csp_atomic_sentence (:csp_variable_term 12))
+	   (:csp_atomic_sentence (:csp_constant_term 0))
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_not_sentence
+	   (
+	    :csp_equiv_sentence
+	    (:csp_atomic_sentence (:csp_variable_term 12))
+	    (:csp_atomic_sentence (:csp_constant_term 0))
+	   )
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 1))
+	 )
+	)
+       )
+      )
+      (
+       :csp_or_sentence
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 4))
+	(:csp_atomic_sentence (:csp_constant_term 5))
+       )
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 4))
+	(:csp_atomic_sentence (:csp_constant_term 6))
+       )
+      )
+     )
+     (
+      :csp_impl_sentence
+      (
+       :csp_or_sentence
+       (
+	:csp_and_sentence
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 9))
+	 (:csp_atomic_sentence (:csp_constant_term 0))
+	)
+	(
+	 :csp_or_sentence
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_equiv_sentence
+	   (:csp_atomic_sentence (:csp_variable_term 12))
+	   (:csp_atomic_sentence (:csp_constant_term 0))
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_not_sentence
+	   (
+	    :csp_equiv_sentence
+	    (:csp_atomic_sentence (:csp_variable_term 12))
+	    (:csp_atomic_sentence (:csp_constant_term 0))
+	   )
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 1))
+	 )
+	)
+       )
+       (
+	:csp_and_sentence
+	(
+	 :csp_not_sentence
+	 (
+	  :csp_equiv_sentence
+	  (:csp_atomic_sentence (:csp_variable_term 9))
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	)
+	(:csp_atomic_sentence (:csp_constant_term 1))
+       )
+      )
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 4))
+       (:csp_atomic_sentence (:csp_constant_term 7))
+      )
+     )
+     (
+      :csp_impl_sentence
+      (
+       :csp_or_sentence
+       (
+	:csp_and_sentence
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 10))
+	 (:csp_atomic_sentence (:csp_constant_term 0))
+	)
+	(:csp_atomic_sentence (:csp_constant_term 1))
+       )
+       (
+	:csp_and_sentence
+	(
+	 :csp_not_sentence
+	 (
+	  :csp_equiv_sentence
+	  (:csp_atomic_sentence (:csp_variable_term 10))
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	)
+	(
+	 :csp_or_sentence
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_equiv_sentence
+	   (:csp_atomic_sentence (:csp_variable_term 11))
+	   (:csp_atomic_sentence (:csp_constant_term 0))
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 1))
+	 )
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_not_sentence
+	   (
+	    :csp_equiv_sentence
+	    (:csp_atomic_sentence (:csp_variable_term 11))
+	    (:csp_atomic_sentence (:csp_constant_term 0))
+	   )
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	)
+       )
+      )
+      (
+       :csp_or_sentence
+       (
+	:csp_or_sentence
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 4))
+	 (:csp_atomic_sentence (:csp_constant_term 2))
+	)
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 4))
+	 (:csp_atomic_sentence (:csp_constant_term 5))
+	)
+       )
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 4))
+	(:csp_atomic_sentence (:csp_constant_term 7))
+       )
+      )
+     )
+     (
+      :csp_impl_sentence
+      (
+       :csp_or_sentence
+       (
+	:csp_and_sentence
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 10))
+	 (:csp_atomic_sentence (:csp_constant_term 0))
+	)
+	(
+	 :csp_or_sentence
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_equiv_sentence
+	   (:csp_atomic_sentence (:csp_variable_term 11))
+	   (:csp_atomic_sentence (:csp_constant_term 0))
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 1))
+	 )
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_not_sentence
+	   (
+	    :csp_equiv_sentence
+	    (:csp_atomic_sentence (:csp_variable_term 11))
+	    (:csp_atomic_sentence (:csp_constant_term 0))
+	   )
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	)
+       )
+       (
+	:csp_and_sentence
+	(
+	 :csp_not_sentence
+	 (
+	  :csp_equiv_sentence
+	  (:csp_atomic_sentence (:csp_variable_term 10))
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	)
+	(
+	 :csp_or_sentence
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_equiv_sentence
+	   (:csp_atomic_sentence (:csp_variable_term 11))
+	   (:csp_atomic_sentence (:csp_constant_term 0))
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_not_sentence
+	   (
+	    :csp_equiv_sentence
+	    (:csp_atomic_sentence (:csp_variable_term 11))
+	    (:csp_atomic_sentence (:csp_constant_term 0))
+	   )
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 1))
+	 )
+	)
+       )
+      )
+      (
+       :csp_or_sentence
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 4))
+	(:csp_atomic_sentence (:csp_constant_term 3))
+       )
+       (
+	:csp_equiv_sentence
+	(:csp_atomic_sentence (:csp_variable_term 4))
+	(:csp_atomic_sentence (:csp_constant_term 6))
+       )
+      )
+     )
+     (
+      :csp_impl_sentence
+      (
+       :csp_or_sentence
+       (
+	:csp_and_sentence
+	(
+	 :csp_equiv_sentence
+	 (:csp_atomic_sentence (:csp_variable_term 10))
+	 (:csp_atomic_sentence (:csp_constant_term 0))
+	)
+	(
+	 :csp_or_sentence
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_equiv_sentence
+	   (:csp_atomic_sentence (:csp_variable_term 11))
+	   (:csp_atomic_sentence (:csp_constant_term 0))
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	 (
+	  :csp_and_sentence
+	  (
+	   :csp_not_sentence
+	   (
+	    :csp_equiv_sentence
+	    (:csp_atomic_sentence (:csp_variable_term 11))
+	    (:csp_atomic_sentence (:csp_constant_term 0))
+	   )
+	  )
+	  (:csp_atomic_sentence (:csp_constant_term 1))
+	 )
+	)
+       )
+       (
+	:csp_and_sentence
+	(
+	 :csp_not_sentence
+	 (
+	  :csp_equiv_sentence
+	  (:csp_atomic_sentence (:csp_variable_term 10))
+	  (:csp_atomic_sentence (:csp_constant_term 0))
+	 )
+	)
+	(:csp_atomic_sentence (:csp_constant_term 1))
+       )
+      )
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 4))
+       (:csp_atomic_sentence (:csp_constant_term 4))
+      )
+     )
+    )
+   )
+  )
+ )
+)

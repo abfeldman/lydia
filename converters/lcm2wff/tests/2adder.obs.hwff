@@ -1,0 +1,67 @@
+(
+ :tv_wff_hierarchy
+ (
+  (
+   :node
+   alpha_1
+   ()
+   (
+    :tv_wff
+    ()
+    (
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier ci $nil $nil) () -1)
+     (:bool_variable (:identifier sum $nil $nil) () -1)
+     (:bool_variable (:identifier carry $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_and
+       (
+	:tv_wff_e_and
+	(
+	 :tv_wff_e_and
+	 (:tv_wff_e_not (:tv_wff_e_var 0))
+	 (:tv_wff_e_not (:tv_wff_e_var 1))
+	)
+	(:tv_wff_e_not (:tv_wff_e_var 2))
+       )
+       (:tv_wff_e_var 3)
+      )
+      (:tv_wff_e_var 4)
+     )
+    )
+   )
+  )
+  (
+   :node
+   alpha_2
+   ()
+   (
+    :tv_wff
+    ()
+    (
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (:bool_variable (:identifier ci $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :tv_wff_e_and
+      (:tv_wff_e_and (:tv_wff_e_var 0) (:tv_wff_e_var 1))
+      (:tv_wff_e_not (:tv_wff_e_var 2))
+     )
+    )
+   )
+  )
+ )
+)

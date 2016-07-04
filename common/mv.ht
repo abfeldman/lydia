@@ -1,0 +1,81 @@
+#ifndef MV_H
+#define MV_H
+
+#include "hierarchy.h"
+#include "variable.h"
+#include "types.h"
+#include "list.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+.insert mvconf.t
+.include lydia.ht
+#line $[1+${tpllineno}] "${tplfilename}"
+
+/* Data types. */
+typedef struct str_mv_variables_cache *mv_variables_cache;
+typedef const struct str_mv_variables_cache *const_mv_variables_cache;
+
+struct str_mv_variables_cache
+{
+    const_variable_list list;
+
+    unsigned int variables;
+    unsigned int assumables;
+
+    unsigned int *a_to_v;
+    unsigned int *v_to_a;
+
+    double **p;
+    double **p_nominal;
+    double **p_faulty;
+
+    unsigned int **nominal;
+    unsigned int **faulty;
+
+    double *p_max;
+    unsigned int *p_max_idx;
+
+    unsigned int *num_nominal;
+    unsigned int *num_faulty;
+
+    unsigned int *domain_size;
+
+    signed char **health_states;
+
+    signed char *is_assumable;
+    signed char *is_observable;
+
+    unsigned int max_h_domain;
+};
+
+/* Function prototypes. */
+extern mv_variables_cache initialize_mv_variables_cache(const_variable_list, const_values_set_list);
+extern void destroy_mv_variables_cache(mv_variables_cache);
+
+extern mv_literal_list merge_sorted_mv_literal_list(mv_literal_list, mv_literal_list);
+extern mv_clause sort_mv_clause(mv_clause);
+extern mv_term sort_mv_term(mv_term);
+extern mv_clause_list sort_mv_clauses(mv_clause_list);
+extern mv_term_list sort_mv_terms(mv_term_list);
+extern mv_clause_list minimize_clauses(const_variable_list, const_values_set_list, mv_clause_list);
+extern mv_term term_remove_duplicates(mv_term);
+extern int search_mv_literal_list(mv_literal_list, int, unsigned int *);
+
+extern mv_term assignment_to_mv_term(const_variable_assignment_list);
+extern mv_clause_list term_to_mv_clause_list(const_mv_term);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+
+/*
+ * Local variables:
+ * mode: c
+ * End:
+ */

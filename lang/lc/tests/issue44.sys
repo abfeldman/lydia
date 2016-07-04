@@ -1,0 +1,9 @@
+system LowBandAntenna(bool sig)  
+{
+	bool h;
+	switch (sig) {
+		true -> { h = true; }
+		false -> { h = false; }
+		default -> { h = true; }
+	}
+}

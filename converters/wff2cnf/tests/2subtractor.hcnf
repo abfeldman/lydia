@@ -1,0 +1,267 @@
+(
+ :tv_cnf_hierarchy
+ (
+  (
+   :node
+   and2
+   ()
+   (
+    :tv_cnf
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (:tv_clause (1) (0 3))
+     (:tv_clause (2) (0 3))
+     (:tv_clause (0) (1 2 3))
+    )
+   )
+  )
+  (
+   :node
+   inverter
+   ()
+   (
+    :tv_cnf
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    ((:tv_clause () (0 1 2)) (:tv_clause (0 1) (2)))
+   )
+  )
+  (
+   :node
+   or2
+   ()
+   (
+    :tv_cnf
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (:tv_clause (1 2) (0 3))
+     (:tv_clause (0) (1 3))
+     (:tv_clause (0) (2 3))
+    )
+   )
+  )
+  (
+   :node
+   xor2
+   ()
+   (
+    :tv_cnf
+    ()
+    (
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (:bool_variable (:identifier i1 $nil $nil) () -1)
+     (:bool_variable (:identifier i2 $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:float_variable_attribute probability (0.01 0.99))
+       (:bool_variable_attribute health (nil t))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (:tv_clause (1 2) (0 3))
+     (:tv_clause () (0 1 2 3))
+     (:tv_clause (0 2) (1 3))
+     (:tv_clause (0 1) (2 3))
+    )
+   )
+  )
+  (
+   :node
+   subtractor
+   (
+    (
+     :edge
+     xor2
+     h1
+     $nil
+     (
+      (:mapping (:identifier i $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier y $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier p $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     xor2
+     h2
+     $nil
+     (
+      (:mapping (:identifier d $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier x $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier i $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     or2
+     h3
+     $nil
+     (
+      (:mapping (:identifier j $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier y $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier p $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     h4
+     $nil
+     (
+      (:mapping (:identifier m $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier j $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier l $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     or2
+     h5
+     $nil
+     (
+      (:mapping (:identifier b $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier m $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier k $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     h6
+     $nil
+     (
+      (:mapping (:identifier l $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier x $nil $nil) (:identifier i $nil $nil))
+     )
+    )
+    (
+     :edge
+     and2
+     h7
+     $nil
+     (
+      (:mapping (:identifier k $nil $nil) (:identifier o $nil $nil))
+      (:mapping (:identifier y $nil $nil) (:identifier i1 $nil $nil))
+      (:mapping (:identifier p $nil $nil) (:identifier i2 $nil $nil))
+     )
+    )
+   )
+   (
+    :tv_cnf
+    ()
+    (
+     (
+      :bool_variable
+      (:identifier x $nil $nil)
+      (
+       (:bool_variable_attribute observable (t t))
+       (:bool_variable_attribute input (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier y $nil $nil)
+      (
+       (:bool_variable_attribute observable (t t))
+       (:bool_variable_attribute input (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier p $nil $nil)
+      (
+       (:bool_variable_attribute observable (t t))
+       (:bool_variable_attribute input (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier d $nil $nil)
+      (
+       (:bool_variable_attribute observable (t t))
+       (:bool_variable_attribute output (t t))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier b $nil $nil)
+      (
+       (:bool_variable_attribute observable (t t))
+       (:bool_variable_attribute output (t t))
+      )
+      -1
+     )
+     (:bool_variable (:identifier i $nil $nil) () -1)
+     (:bool_variable (:identifier j $nil $nil) () -1)
+     (:bool_variable (:identifier k $nil $nil) () -1)
+     (:bool_variable (:identifier l $nil $nil) () -1)
+     (:bool_variable (:identifier m $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

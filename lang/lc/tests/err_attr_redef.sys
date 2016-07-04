@@ -1,0 +1,7 @@
+system main()
+{
+	bool a;
+
+	attribute health(a) = true;
+	attribute health(a) = false;
+}

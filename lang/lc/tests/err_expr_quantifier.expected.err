@@ -1,0 +1,6 @@
+err_expr_quantifier.sys: In system `test':
+err_expr_quantifier.sys:5: error: `i' is not a structure
+err_expr_quantifier.sys:6: error: `i' is not an array
+err_expr_quantifier.sys:7: error: `i' is not an array
+err_expr_quantifier.sys:8: error: `i' is not a structure
+err_expr_quantifier.sys:3: warning: unused variable array `x'

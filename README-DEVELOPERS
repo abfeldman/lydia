@@ -1,0 +1,58 @@
+LYDIA DEVELOPER INSTALL INSTRUCTIONS
+
+For the purposes of this document, a Lydia developer is defined
+as someone with access to the Lydia Subversion Repository.
+
+If you are such a developer, the instructions for compiling the
+sources require one additional first step with respect to the
+conventional instructions. This step will cause the ./configure
+script to be generated.
+
+This is done by executing:
+
+	./bootstrap
+
+at the top level Lydia directory. After that, just say
+
+	./configure
+
+as usual, and proceed from there.
+
+(During the bootstrap, you may see a number of 'm4' warnings
+mentioning 'underquoted definition of <foo>'. These are an
+artifact of your Linux distribution and can be safely
+disregarded.)
+
+-----------------------------------------------------------------
+
+As developer, you can always just execute:
+
+	./bootstrap clean
+
+if you solely want to get rid of all the generated files. (Always
+make sure that you do not add any generated files to the
+repository!)
+
+If you want to generate a tarball for distribution purposes, say:
+
+	make dist
+
+and files called 'lydia-<versionnumber>.tar.gz' and
+'lydia-<versionnumber>.zip' will be generated in the top level
+directory.
+
+These files can be distributed: they contain no CVS-related
+directories, nor any files/directories not immediately related to
+the primary lydia sources. The 'configure' script *is* included,
+so people should be able to compile and install their version of
+Lydia in the familiar way.
+
+Nevertheless, we should be careful about distributing such
+development tarballs too often or too widely -- they are mostly
+for our own convenience. Proper Lydia releases for outside
+distribution will undoubtedly happen one day soon.
+
+-- 
+Leo Breebaart <breebaart@science-and-technology.nl>
+
+-----------------------------------------------------------------

@@ -1,0 +1,9 @@
+type latchTabState = enum { engaged, disengaged, faulty };
+type threshold = enum { below, above };
+type sig = enum { minus, zero, plus };
+type loadSensingBolt = struct { threshold load, sigxxx fderSign };
+
+system test()
+{
+	loadSensingBolt x;
+}

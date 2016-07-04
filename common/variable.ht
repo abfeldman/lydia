@@ -1,0 +1,56 @@
+#ifndef VARIABLE_H
+#define VARIABLE_H
+
+#include <stdio.h>
+
+#include "serializable.h"
+#include "types.h"
+#include "list.h"
+
+#define ENCODING_NONE   0
+#define ENCODING_SPARSE 1
+#define ENCODING_DENSE  2
+
+.insert variableconf.t
+.include lydia.ht
+#line $[1+${tpllineno}] "${tplfilename}"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+extern identifier make_variable_identifier(const char *);
+extern char *get_variable_name(const_identifier);
+extern int search_values_set_list(const_values_set_list, lydia_symbol, unsigned int *);
+extern int search_constant_list(const_constant_list, const_constant, unsigned int *);
+extern int search_variable_list(const_variable_list, const_identifier, unsigned int *);
+extern int search_variable_list_by_name(const_variable_list, lydia_symbol, unsigned int *);
+extern int search_variable_attribute_list(const_variable_attribute_list, lydia_symbol, unsigned int *);
+extern int search_variable_assignment_list(const_variable_assignment_list, int, unsigned int *);
+extern int member_variable_assignment_list(const_variable_assignment_list, int);
+extern const_variable_attribute find_attribute(const_variable_attribute_list, lydia_symbol);
+
+extern int is_assumable(const_variable);
+extern int is_health(const_variable);
+extern int is_observable(const_variable);
+extern int is_input(const_variable);
+extern int is_output(const_variable);
+
+extern int get_health_bool(const_variable, int);
+extern double get_probability_bool(const_variable, int);
+extern double_list get_probabilities(const_variable);
+
+extern void replace_bool_variables(variable_list, values_set_list);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+
+/*
+ * Local variables:
+ * mode: c
+ * End:
+ */

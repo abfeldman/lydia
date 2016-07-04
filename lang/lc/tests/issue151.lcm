@@ -1,0 +1,33 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   issue151
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier foo $nil $nil) () -1)
+     (:bool_variable (:identifier zoo $nil $nil) () -1)
+    )
+    ()
+    ((:bool_constant $nil nil) (:bool_constant $nil t))
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 0))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 1))
+      (:csp_atomic_sentence (:csp_constant_term 1))
+     )
+    )
+   )
+  )
+ )
+)

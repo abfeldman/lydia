@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+  <separator>Basic Tests:</separator>
+  <test>
+    <title>empty system</title>
+    <model>empty.dnf</model>
+    <input>empty.commands.input</input>
+    <observation>empty.terms</observation>
+    <output>empty.expected.out</output>
+  </test>
+  <test>
+    <title>empty hierarchy</title>
+    <model>realempty.dnf</model>
+    <observation>empty.terms</observation>
+    <errors>realempty.expected.err</errors>
+  </test>
+
+  <separator>Arithmetic Circuits:</separator>
+  <test>
+    <title>2 chained inverters</title>
+    <model>2inverters.dnf</model> 
+    <input>2inverters.commands.input</input>
+    <observation>2inverters.terms</observation>
+    <output>2inverters.expected.out</output>
+  </test>
+  <test>
+    <title>3 inverters</title>
+    <model>3inverters.dnf</model>
+    <input>3inverters.commands.input</input>
+    <observation>3inverters.terms</observation>
+    <output>3inverters.expected.out</output>
+  </test>
+  <test>
+    <title>4 chained inverters</title>
+    <model>4inverters.dnf</model>
+    <input>4inverters.commands.input</input>
+    <observation>4inverters.terms</observation>
+    <output>4inverters.expected.out</output>
+  </test>
+  <test>
+    <title>Boolean polycell</title>
+    <model>polycell.dnf</model>
+    <input>polycell.commands.input</input>
+    <observation>polycell.terms</observation>
+    <output>polycell.expected.out</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <model>2adder-weak.dnf</model>
+    <input>2adder.commands.input</input>
+    <observation>2adder.terms</observation>
+    <output>2adder-weak.expected.out</output>
+  </test>
+  <test>
+    <title>1-bit subtractor</title>
+    <model>2subtractor.dnf</model>
+    <input>2subtractor.commands.input</input>
+    <observation>2subtractor.terms</observation>
+    <output>2subtractor.expected.out</output>
+  </test>
+
+  <separator>Arithmetic Circuits (SFM):</separator>
+  <test>
+    <title>1-bit full adder</title>
+    <model>2adder-strong.dnf</model>
+    <input>2adder.commands.input</input>
+    <observation>2adder.terms</observation>
+    <output>2adder-strong.expected.out</output>
+  </test>
+</testsuite>
+

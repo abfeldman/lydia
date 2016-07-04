@@ -1,0 +1,2 @@
+err_ret_type.sys: In function `foo':
+err_ret_type.sys:1: error: incompatible type in return

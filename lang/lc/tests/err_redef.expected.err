@@ -1,0 +1,15 @@
+err_redef.sys: In function `foo':
+err_redef.sys:1: error: redefinition of `a'
+err_redef.sys:1: error: `a' previously defined here
+err_redef.sys: In system `main':
+err_redef.sys:6: error: redefinition of `foo'
+err_redef.sys:6: error: `foo' previously defined here
+err_redef.sys:8: error: `boo' undefined (first use in this system)
+err_redef.sys:8: error: (Each undefined identifier is reported only once
+err_redef.sys:8: error: for each system it appears in.)
+err_redef.sys:10: error: redefinition of `a'
+err_redef.sys:9: error: `a' previously defined here
+err_redef.sys:10: error: redefinition of `a'
+err_redef.sys:10: error: `a' previously defined here
+err_redef.sys:11: error: redefinition of `foo'
+err_redef.sys:6: error: `foo' previously defined here

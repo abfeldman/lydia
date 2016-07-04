@@ -1,0 +1,12 @@
+type color = enum { R, G, B };
+
+system test()
+{
+	color a;
+	float b;
+	bool c;
+	attribute probability(a) = b;
+	attribute probability(c) = (cond(c) (true -> b; false -> 2.0));
+	a = color.R;
+	c = false;
+}

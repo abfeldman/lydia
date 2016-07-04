@@ -1,0 +1,53 @@
+type letter = enum { A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z };
+type digit = enum { _0, _1, _2, _3, _4, _5, _6, _7, _8, _9 };
+
+system adder1(digit i1, i2, ci, sum, co)
+{
+	digit table[10];
+
+	table =
+	[
+		digit._0, digit._1, digit._2, digit._3, digit._4,
+		digit._5, digit._6, digit._7, digit._8, digit._9
+	];
+
+	forall (i in 0 .. 1) {
+		forall (j in 0 .. 9) {
+			forall ( k in 0 .. 9) {
+				if ((ci = table[i]) and (i1 = table[j]) and (i2 = table[k])) {
+					sum = table[(i + j + k) mod 10];
+					co = table[(i + j + k) / 10];
+				}
+			}
+		}
+	}
+}
+
+system adder4(digit i1[4], i2[4], o[5])
+{
+	digit carry[3];
+
+	system adder1 A1(i1[0], i2[0], digit._0, o[0], carry[0]);
+	system adder1 A2(i1[1], i2[1], carry[0], o[1], carry[1]);
+	system adder1 A3(i1[2], i2[2], carry[1], o[2], carry[2]);
+	system adder1 A4(i1[3], i2[3], carry[2], o[3], o[4]);
+}
+
+system puzzle()
+{
+	digit d[13];
+
+	system adder4 A(d[:3], d[4:7], d[8:]);
+
+	letter l[13];
+
+	l = [ letter.S, letter.E, letter.N, letter.D,
+	      letter.M, letter.O, letter.R, letter.E,
+	      letter.M, letter.O, letter.N, letter.E, letter.Y ];
+
+	forall (i in 0 .. 12) {
+		forall (j in i + 1 .. 12) {
+			(d[i] = d[j]) = (l[i] = l[j]);
+		}
+	}
+}

@@ -1,0 +1,8 @@
+type boolean = enum { T, F }; 
+	 
+system main() 
+{ 
+	boolean a, b, c; 
+	      
+	(a != b) ? (c = boolean.T) : (c = boolean.F); 
+}

@@ -1,0 +1,600 @@
+#include "mv.h"
+#include "list.h"
+#include "defs.h"
+#include "qsort.h"
+#include "fscan.h"
+#include "fread.h"
+#include "fwrite.h"
+#include "variable.h"
+
+#include <assert.h>
+
+.insert mvconf.t
+.include lydia.ct
+#line $[1+${tpllineno}] "${tplfilename}"
+
+mv_variables_cache initialize_mv_variables_cache(const_variable_list variables,
+                                                 const_values_set_list domains)
+{
+    register unsigned int ix;
+    register unsigned int iy;
+    register unsigned int iz;
+
+    double p;
+
+    mv_variables_cache result = (mv_variables_cache)malloc(sizeof(struct str_mv_variables_cache));
+    if (NULL == result) {
+        return result;
+    }
+    memset(result, 0, sizeof(struct str_mv_variables_cache));
+
+    result->list = variables;
+
+    if (NULL == (result->is_assumable = (signed char *)malloc(variables->sz * sizeof(signed char))) ||
+        NULL == (result->is_observable = (signed char *)malloc(variables->sz * sizeof(signed char))) ||
+
+        NULL == (result->v_to_a = (unsigned int *)malloc(variables->sz * sizeof(unsigned int))) ||
+
+        NULL == (result->domain_size = (unsigned int *)malloc(variables->sz * sizeof(unsigned int))) ||
+
+        NULL == (result->a_to_v = (unsigned int *)malloc(variables->sz * sizeof(unsigned int))) ||
+
+        NULL == (result->p = (double **)malloc(variables->sz * sizeof(double *))) ||
+        NULL == (result->p_nominal = (double **)malloc(variables->sz * sizeof(double *))) ||
+        NULL == (result->p_faulty = (double **)malloc(variables->sz * sizeof(double *))) ||
+
+        NULL == (result->nominal = (unsigned int **)malloc(variables->sz * sizeof(unsigned int *))) ||
+        NULL == (result->faulty = (unsigned int **)malloc(variables->sz * sizeof(unsigned int *))) ||
+
+        NULL == (result->p_max = (double *)malloc(variables->sz * sizeof(double))) ||
+        NULL == (result->p_max_idx = (unsigned int *)malloc(variables->sz * sizeof(unsigned int))) ||
+
+        NULL == (result->num_nominal = (unsigned int *)malloc(variables->sz * sizeof(unsigned int))) ||
+        NULL == (result->num_faulty = (unsigned int *)malloc(variables->sz * sizeof(unsigned int))) ||
+
+        NULL == (result->health_states = (signed char **)malloc(variables->sz * sizeof(signed char *)))) {
+
+        destroy_mv_variables_cache(result);
+
+        return NULL;
+    }
+
+    memset(result->health_states, 0, variables->sz * sizeof(signed char *));
+    memset(result->p, 0, variables->sz * sizeof(double *));
+    memset(result->p_nominal, 0, variables->sz * sizeof(double *));
+    memset(result->p_faulty, 0, variables->sz * sizeof(double *));
+    memset(result->nominal, 0, variables->sz * sizeof(unsigned int *));
+    memset(result->faulty, 0, variables->sz * sizeof(unsigned int *));
+
+    result->assumables = 0;
+    result->variables = variables->sz;
+
+    for (ix = 0; ix < variables->sz; ix++) {
+        unsigned int domain_size;
+
+        if (TAGbool_variable == variables->arr[ix]->tag) {
+            continue;
+        }
+
+        assert(TAGenum_variable == variables->arr[ix]->tag);
+
+        domain_size = domains->arr[to_enum_variable(variables->arr[ix])->values_set]->entries->sz;
+
+        result->domain_size[ix] = domain_size;
+
+        if (is_observable(variables->arr[ix])) {
+            result->is_observable[ix] = 1;
+        } else {
+            result->is_observable[ix] = 0;
+        }
+
+        if (is_health(variables->arr[ix])) {
+            iy = result->assumables;
+
+            result->v_to_a[ix] = iy;
+            result->a_to_v[iy] = ix;
+
+            result->p[iy] = (double *)malloc(sizeof(double) * domain_size);
+
+            result->p_nominal[iy] = (double *)malloc(sizeof(double) * domain_size);
+            result->p_faulty[iy] = (double *)malloc(sizeof(double) * domain_size);
+            result->nominal[iy] = (unsigned int *)malloc(sizeof(unsigned int) * domain_size);
+            result->faulty[iy] = (unsigned int *)malloc(sizeof(unsigned int) * domain_size);
+
+            result->health_states[iy] = (signed char *)malloc(sizeof(signed char) * domain_size);
+
+            if (NULL == result->p[iy] ||
+
+                NULL == result->p_nominal[iy] ||
+                NULL == result->p_faulty[iy] ||
+                NULL == result->nominal[iy] ||
+                NULL == result->faulty[iy] ||
+                NULL == result->health_states[iy]) {
+
+                destroy_mv_variables_cache(result);
+
+                return NULL;
+            }
+
+            result->num_nominal[iy] = 0;
+            result->num_faulty[iy] = 0;
+
+            for (iz = 0; iz < domain_size; iz++) {
+                p = get_probability_bool(variables->arr[ix], iz);
+
+                if (iz == 0 || result->p_max[iy] < p) {
+                    result->p_max[iy] = p;
+                    result->p_max_idx[iy] = iz;
+                }
+
+                result->p[iy][iz] = p;
+
+                if (get_health_bool(variables->arr[ix], iz)) {
+                    result->health_states[iy][iz] = 1;
+                    result->nominal[iy][result->num_nominal[iy]] = iz;
+                    result->p_nominal[iy][result->num_nominal[iy]] = p;
+                    result->num_nominal[iy] += 1;
+                } else {
+                    result->health_states[iy][iz] = 0;
+                    result->faulty[iy][result->num_faulty[iy]] = iz;
+                    result->p_faulty[iy][result->num_faulty[iy]] = p;
+                    result->num_faulty[iy] += 1;
+                }
+            }
+            if (result->max_h_domain < domain_size) {
+                result->max_h_domain = domain_size;
+            }
+
+            result->p_nominal[iy] = (double *)realloc(result->p_nominal[iy], sizeof(double) * result->num_nominal[iy]);
+            result->p_faulty[iy] = (double *)realloc(result->p_faulty[iy], sizeof(double) * result->num_faulty[iy]);
+            result->nominal[iy] = (unsigned int *)realloc(result->nominal[iy], sizeof(unsigned int) * result->num_nominal[iy]);
+            result->faulty[iy] = (unsigned int *)realloc(result->faulty[iy], sizeof(unsigned int) * result->num_faulty[iy]);
+
+            result->assumables += 1;
+
+            result->is_assumable[ix] = 1;
+        } else {
+            result->is_assumable[ix] = 0;
+        }
+    }
+
+    result->a_to_v = (unsigned int *)realloc(result->a_to_v, result->assumables * sizeof(unsigned int));
+
+    result->p = (double **)realloc(result->p, result->assumables * sizeof(double *));
+    result->p_nominal = (double **)realloc(result->p_nominal, result->assumables * sizeof(double *));
+    result->p_faulty = (double **)realloc(result->p_faulty, result->assumables * sizeof(double *));
+
+    result->nominal = (unsigned int **)realloc(result->nominal, result->assumables * sizeof(unsigned int *));
+    result->faulty = (unsigned int **)realloc(result->faulty, result->assumables * sizeof(unsigned int *));
+
+    result->p_max = (double *)realloc(result->p_max, result->assumables * sizeof(double));
+    result->p_max_idx = (unsigned int *)realloc(result->p_max_idx, result->assumables * sizeof(unsigned int));
+
+    result->num_nominal = (unsigned int *)realloc(result->num_nominal, result->assumables * sizeof(unsigned int));
+    result->num_faulty = (unsigned int *)realloc(result->num_faulty, result->assumables * sizeof(unsigned int));
+
+    result->health_states = (signed char **)realloc(result->health_states, result->assumables * sizeof(signed char *));
+
+    return result;
+}
+
+void destroy_mv_variables_cache(mv_variables_cache cache)
+{
+    register unsigned int ix;
+
+    if (NULL != cache->v_to_a) {
+        free(cache->v_to_a);
+    }
+    if (NULL != cache->a_to_v) {
+        free(cache->a_to_v);
+    }
+
+    if (NULL != cache->is_assumable) {
+        free(cache->is_assumable);
+    }
+    if (NULL != cache->is_observable) {
+        free(cache->is_observable);
+    }
+
+    if (NULL != cache->domain_size) {
+        free(cache->domain_size);
+    }
+
+    for (ix = 0; ix < cache->assumables; ix++) {
+        if (NULL != cache->p[ix]) {
+            free(cache->p[ix]);
+        }
+        if (NULL != cache->p_nominal[ix]) {
+            free(cache->p_nominal[ix]);
+        }
+        if (NULL != cache->p_faulty[ix]) {
+            free(cache->p_faulty[ix]);
+        }
+        if (NULL != cache->nominal[ix]) {
+            free(cache->nominal[ix]);
+        }
+        if (NULL != cache->faulty[ix]) {
+            free(cache->faulty[ix]);
+        }
+
+        if (NULL != cache->health_states[ix]) {
+            free(cache->health_states[ix]);
+        }
+    }
+
+    if (NULL != cache->p) {
+        free(cache->p);
+    }
+    if (NULL != cache->p_nominal) {
+        free(cache->p_nominal);
+    }
+    if (NULL != cache->p_faulty) {
+        free(cache->p_faulty);
+    }
+    if (NULL != cache->nominal) {
+        free(cache->nominal);
+    }
+    if (NULL != cache->faulty) {
+        free(cache->faulty);
+    }
+
+    if (NULL != cache->health_states) {
+        free(cache->health_states);
+    }
+
+    if (NULL != cache->p_max) {
+        free(cache->p_max);
+    }
+    if (NULL != cache->p_max_idx) {
+        free(cache->p_max_idx);
+    }
+    if (NULL != cache->num_nominal) {
+        free(cache->num_nominal);
+    }
+    if (NULL != cache->num_faulty) {
+        free(cache->num_faulty);
+    }
+
+    free(cache);
+}
+
+static int cmp_mv_literals(const void *a, const void *b)
+{
+    const_mv_literal sa = *((const mv_literal *)a);
+    const_mv_literal sb = *((const mv_literal *)b);
+
+    return ((sa->var == sb->var) ? (sa->val - sb->val) : (sa->var - sb->var));
+}
+
+mv_literal_list merge_sorted_mv_literal_list(mv_literal_list x,
+                                             mv_literal_list y)
+{
+    register unsigned int ix, iy = 0, iz = 0;
+
+    mv_literal_list result = setroom_mv_literal_list(new_mv_literal_list(),
+                                                     x->sz + y->sz);
+    for (ix = 0; ix < x->sz; ix++) {
+        while (iy < y->sz && cmp_mv_literals(&y->arr[iy], &x->arr[ix]) < 0) {
+            result->arr[iz++] = rdup_mv_literal(y->arr[iy]);
+            iy += 1;
+        }
+        if (iy == y->sz) {
+            result->arr[iz++] = x->arr[ix];
+            continue;
+        }
+        if (cmp_mv_literals(&y->arr[iy], &x->arr[ix]) != 0) {
+            result->arr[iz++] = x->arr[ix];
+            continue;
+        }
+        fre_mv_literal(x->arr[ix]);
+    }
+    while (iy < y->sz) {
+        result->arr[iz++] = rdup_mv_literal(y->arr[iy]);
+        iy += 1;
+    }
+    result->sz = iz;
+
+    fre_mv_literal_list(x);
+
+    return result;
+}
+
+#if 0
+static int cmp_mv_clauses(const void *a, const void *b)
+{
+    const_mv_clause sa = *((const mv_clause *)a);
+    const_mv_clause sb = *((const mv_clause *)b);
+
+    unsigned int na = sa->pos->sz + sa->neg->sz;
+    unsigned int nb = sb->pos->sz + sb->neg->sz;
+
+    if (na < nb) {
+        return -1;
+    }
+    if (na > nb) {
+        return 1;
+    }
+    return cmp_mv_clause(sa, sb);
+}
+#endif
+
+mv_clause sort_mv_clause(mv_clause clause)
+{
+    if ((clause->pos != mv_literal_listNIL) && (clause->pos->sz > 1)) {
+        lydia_qsort(clause->pos->arr, clause->pos->sz, sizeof(clause->pos->arr[0]), cmp_mv_literals);
+    }
+    if ((clause->neg != mv_literal_listNIL) && (clause->neg->sz > 1)) {
+        lydia_qsort(clause->neg->arr, clause->neg->sz, sizeof(clause->neg->arr[0]), cmp_mv_literals);
+    }
+    return clause;
+}
+
+mv_term sort_mv_term(mv_term term)
+{
+    if ((term->pos != mv_literal_listNIL) && (term->pos->sz > 1)) {
+        lydia_qsort(term->pos->arr, term->pos->sz, sizeof(term->pos->arr[0]), cmp_mv_literals);
+    }
+    if ((term->neg != mv_literal_listNIL) && (term->neg->sz > 1)) {
+        lydia_qsort(term->neg->arr, term->neg->sz, sizeof(term->neg->arr[0]), cmp_mv_literals);
+    }
+    return term;
+}
+
+mv_clause_list sort_mv_clauses(mv_clause_list clauses)
+{
+    register unsigned int ix;
+    for (ix = 0; ix < clauses->sz; ix++) {
+        clauses->arr[ix] = sort_mv_clause(clauses->arr[ix]);
+    }
+
+    return clauses;
+}
+
+mv_term_list sort_mv_terms(mv_term_list terms)
+{
+    register unsigned int ix;
+    for (ix = 0; ix < terms->sz; ix++) {
+        terms->arr[ix] = sort_mv_term(terms->arr[ix]);
+    }
+
+    return terms;
+}
+
+static mv_clause minimize_clause(const_variable_list variables,
+                                 const_values_set_list domains,
+                                 mv_clause clause,
+                                 int_list buffer)
+{
+/* Make sure clause is sorted. */
+    mv_literal_list pos = clause->pos;
+    mv_literal_list neg = clause->neg;
+
+    register unsigned int ix, iy, start = 0, end;
+
+    unsigned int cnt = 0;
+
+    int var, values, used;
+
+    sort_mv_clause(clause);
+
+/* Remove redundant literals. */
+    for (ix = 1; ix < pos->sz; ix++) {
+        if (pos->arr[ix]->var == pos->arr[ix - 1]->var &&
+            pos->arr[ix]->val == pos->arr[ix - 1]->val) {
+            delete_mv_literal_list(pos, ix);
+            ix -= 1;
+            cnt += 1;
+        }
+    }
+    for (ix = 1; ix < neg->sz; ix++) {
+        if (neg->arr[ix]->var == neg->arr[ix - 1]->var &&
+            neg->arr[ix]->val == neg->arr[ix - 1]->val) {
+            delete_mv_literal_list(neg, ix);
+            ix -= 1;
+            cnt += 1;
+        }
+    }
+
+    for (ix = 0; ix <= pos->sz; ix++) {
+        if (ix != 0 && (ix == pos->sz || pos->arr[ix]->var != pos->arr[ix - 1]->var)) {
+            end = ix - 1;
+            var = pos->arr[end]->var;
+            assert(TAGenum_variable == variables->arr[var]->tag);
+            values = domains->arr[to_enum_variable(variables->arr[var])->values_set]->entries->sz;
+            used = end - start + 1;
+            if (values == used) {
+                rfre_mv_clause(clause);
+                return mv_clauseNIL;
+            }
+            if (values > 2 && (values == used - 1)) {
+                for (iy = start; iy <= end; iy++) {
+                    buffer->arr[iy - start] = pos->arr[iy]->val;
+                    rfre_mv_literal(pos->arr[iy]);
+                    pos->arr[iy] = mv_literalNIL;
+                }
+
+                buffer->sz = used;
+                for (iy = 0; iy < (unsigned int)values; iy++) {
+                    if (!member_int_list(buffer, iy)) {
+                        append_mv_literal_list(neg, new_mv_literal(var, iy));
+                    }
+                }
+
+            }
+            start = ix;
+        }
+    }
+
+    start = 0;
+    for (ix = 0; ix <= neg->sz; ix++) {
+        if (ix != 0 && (ix == neg->sz || neg->arr[ix]->var != neg->arr[ix - 1]->var)) {
+            end = ix - 1;
+            var = neg->arr[end]->var;
+            assert(TAGenum_variable == variables->arr[var]->tag);
+            values = domains->arr[to_enum_variable(variables->arr[var])->values_set]->entries->sz;
+            used = end - start + 1;
+            if (used > 1 && values > 1) {
+                rfre_mv_clause(clause);
+                return mv_clauseNIL;
+            }
+            if (used == 1 && values == 2 /* Move a single negated variable to the positive set, so the simple unit rule works. */) {
+                for (iy = start; iy <= end; iy++) {
+                    buffer->arr[iy - start] = neg->arr[iy]->val;
+                    rfre_mv_literal(neg->arr[iy]);
+                    neg->arr[iy] = mv_literalNIL;
+                }
+                buffer->sz = used;
+                for (iy = 0; iy < (unsigned int)values; iy++) {
+                    if (!member_int_list(buffer, iy)) {
+                        append_mv_literal_list(pos, new_mv_literal(var, iy));
+                    }
+                }
+            }
+            start = ix;
+        }
+    }
+
+/* Garbage collect the removed literals. */
+    for (ix = 0; ix < pos->sz; ix++) {
+        if (mv_literalNIL == pos->arr[ix]) {
+            delete_mv_literal_list(pos, ix);
+            ix -= 1;
+        }
+    }
+    for (ix = 0; ix < neg->sz; ix++) {
+        if (mv_literalNIL == neg->arr[ix]) {
+            delete_mv_literal_list(neg, ix);
+            ix -= 1;
+        }
+    }
+
+    clause = sort_mv_clause(clause);
+
+/* Now remove duplicate literals. */
+    pos = clause->pos;
+    neg = clause->neg;
+
+    for (ix = 1; ix < pos->sz; ix++) {
+        if (isequal_mv_literal(pos->arr[ix], pos->arr[ix - 1])) {
+            delete_mv_literal_list(pos, ix);
+            ix -= 1;
+        }
+    }
+
+    for (ix = 1; ix < neg->sz; ix++) {
+        if (isequal_mv_literal(neg->arr[ix], neg->arr[ix - 1])) {
+            delete_mv_literal_list(neg, ix);
+            ix -= 1;
+        }
+    }
+
+    return clause;
+}
+
+mv_clause_list minimize_clauses(const_variable_list variables,
+                                const_values_set_list domains,
+                                mv_clause_list clauses)
+{
+    register unsigned int ix;
+
+    int_list buffer = new_int_list();
+    for (ix = 0; ix < clauses->sz; ix++) {
+        if (buffer->sz < clauses->arr[ix]->pos->sz + clauses->arr[ix]->neg->sz) {
+            buffer = setroom_int_list(buffer, clauses->arr[ix]->pos->sz + clauses->arr[ix]->neg->sz);
+        }
+        clauses->arr[ix] = minimize_clause(variables, domains, clauses->arr[ix], buffer);
+        if (mv_clauseNIL == clauses->arr[ix]) {
+            delete_mv_clause_list(clauses, ix);
+            ix -= 1;
+        }
+    }
+    rfre_int_list(buffer);
+
+    return clauses;
+}
+
+mv_term term_remove_duplicates(mv_term term /* sorted */)
+{
+/* Now remove duplicate literals. */
+    mv_literal_list pos = term->pos;
+    mv_literal_list neg = term->neg;
+
+    register unsigned int ix;
+
+    for (ix = 1; ix < pos->sz; ix++) {
+        if (isequal_mv_literal(pos->arr[ix], pos->arr[ix - 1])) {
+            delete_mv_literal_list(pos, ix);
+            ix -= 1;
+        }
+    }
+
+    for (ix = 1; ix < neg->sz; ix++) {
+        if (isequal_mv_literal(neg->arr[ix], neg->arr[ix - 1])) {
+            delete_mv_literal_list(neg, ix);
+            ix -= 1;
+        }
+    }
+
+    return term;
+}
+
+int search_mv_literal_list(mv_literal_list haystack, int needle, unsigned int *pos)
+{
+    register unsigned int ix;
+
+    for (ix = 0; ix < haystack->sz; ix++) {
+        if (haystack->arr[ix]->var == needle) {
+            *pos = ix;
+            return 1;
+        }
+    }
+
+    return 0;
+}
+
+mv_term assignment_to_mv_term(const_variable_assignment_list assignments)
+{
+    enum_variable_assignment assignment;
+
+    unsigned int ix;
+
+    mv_term term;
+
+    term = new_mv_term(new_mv_literal_list(), new_mv_literal_list());
+
+    for (ix = 0; ix < assignments->sz; ix++) {
+        assignment = to_enum_variable_assignment(assignments->arr[ix]);
+        assert(TAGenum_variable_assignment == assignments->arr[ix]->tag);
+        append_mv_literal_list(term->pos,
+                               new_mv_literal(assignment->var,
+                                              assignment->value));
+    }
+
+    return term;
+}
+
+mv_clause_list term_to_mv_clause_list(const_mv_term t)
+{
+    register unsigned int ix;
+    mv_clause_list result = new_mv_clause_list();
+
+    for (ix = 0; ix < t->pos->sz; ix++) {
+        mv_clause cl = new_mv_clause(new_mv_literal_list(), new_mv_literal_list());
+        cl->pos = append_mv_literal_list(cl->pos, rdup_mv_literal(t->pos->arr[ix]));
+        result = append_mv_clause_list(result, cl);
+    }
+
+    for (ix = 0; ix < t->neg->sz; ix++) {
+        mv_clause cl = new_mv_clause(new_mv_literal_list(), new_mv_literal_list());
+        cl->neg = append_mv_literal_list(cl->neg, rdup_mv_literal(t->neg->arr[ix]));
+        result = append_mv_clause_list(result, cl);
+    }
+
+    return result;
+}
+
+/*
+ * Local variables:
+ * mode: c
+ * End:
+ */

@@ -1,0 +1,11 @@
+<!-- A DTD for Lydia Testsuites -->
+
+<!ELEMENT testsuite (test|separator)*>
+<!ELEMENT test (skip?, title, model?, input?, output?, errors?, description?)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT input (#PCDATA)>
+<!ELEMENT output (#PCDATA)>
+<!ELEMENT errors (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT skip EMPTY>

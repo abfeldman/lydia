@@ -1,0 +1,41 @@
+type boolean = enum {
+    F,
+    T
+};
+
+type ComponentHealthState = enum {
+    CLOSED,
+    OPEN
+};
+
+system Component(boolean x, y, ComponentHealthState h)
+{
+    attribute health(h) = (h = ComponentHealthState.CLOSED) ? true : false;
+
+    attribute probability(h) = cond(h) (
+        ComponentHealthState.CLOSED -> 0.90;
+        ComponentHealthState.OPEN   -> 0.10;
+    );
+
+    (h = ComponentHealthState.CLOSED) => (y = boolean.F);
+    (h = ComponentHealthState.OPEN)   => (y = x);
+}
+
+system ThreeComponents(ComponentHealthState h1, h2)
+{
+    boolean x, y, z;
+
+    attribute observable(x) = true;
+    attribute observable(z) = true;
+
+    system Component inv1(x, y, h1);
+    system Component inv2(y, z, h2);
+}
+
+system TimeConjunctiveDiagnosis()
+{
+    ComponentHealthState h1, h2;
+
+    system ThreeComponents t1(h1, h2);
+    system ThreeComponents t2(h1, h2);
+}

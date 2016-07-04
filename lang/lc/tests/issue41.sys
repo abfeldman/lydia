@@ -1,0 +1,36 @@
+type e1 = enum
+{
+	ce1_0,
+	ce2_0
+};
+
+type e2 = enum
+{
+	ce2_0,
+	ce2_1
+};
+
+type e3 = enum
+{
+	ce3_0,
+	ce3_1,
+	ce3_2
+};
+
+system X34PropulsionSystem()
+{
+	e1 h1;
+	e2 h2;
+	e3 a, b;
+
+	attribute probability(h1) = cond(h1) (e1.ce1_0 -> 0.9; e1.ce2_0 -> 0.1);
+	attribute probability(h2) = cond(h2) (e2.ce2_0 -> 0.9; e2.ce2_1 -> 0.1);
+
+	attribute health(h1) = cond(h1) (e1.ce1_0 -> true; e1.ce2_0 -> false);
+	attribute health(h2) = cond(h2) (e2.ce2_0 -> true; e2.ce2_1 -> false);
+
+	(h2 = e2.ce2_0) => (a = e3.ce3_2);
+	(h1 = e1.ce1_0) => (b = a);
+	h2 = e2.ce2_0;
+	h1 = e1.ce1_0;
+}

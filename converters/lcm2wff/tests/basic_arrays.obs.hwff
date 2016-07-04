@@ -1,0 +1,34 @@
+(
+ :tv_wff_hierarchy
+ (
+  (
+   :node
+   alpha_1
+   ()
+   (
+    :tv_wff
+    ()
+    (
+     (:bool_variable (:identifier i (0) $nil) () -1)
+     (:bool_variable (:identifier i (1) $nil) () -1)
+     (:bool_variable (:identifier i (2) $nil) () -1)
+     (:bool_variable (:identifier i (3) $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :tv_wff_e_and
+      (
+       :tv_wff_e_and
+       (:tv_wff_e_and (:tv_wff_e_var 0) (:tv_wff_e_var 1))
+       (:tv_wff_e_var 2)
+      )
+      (:tv_wff_e_var 3)
+     )
+    )
+   )
+  )
+ )
+)

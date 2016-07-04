@@ -1,0 +1,8 @@
+system Foo(bool h1) 
+{ 
+} 
+ 
+system Bar() 
+{ 
+	system Foo inst(); 
+}

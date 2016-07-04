@@ -1,0 +1,18 @@
+#ifndef OC_H
+#define OC_H
+
+#include "lcm.h"
+#include "list.h"
+#include "variable.h"
+
+.insert occonf.t
+.include lydia.ht
+
+extern int oc(FILE *,
+              char *,
+              char **,
+              unsigned int,
+              values_set_list,
+              variable_list,
+              csp_hierarchy *);
+#endif

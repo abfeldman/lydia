@@ -1,0 +1,73 @@
+#ifndef TV_H
+#define TV_H
+
+#include "serializable.h"
+#include "hierarchy.h"
+#include "variable.h"
+#include "types.h"
+#include "array.h"
+#include "list.h"
+#include "mv.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+.insert tvconf.t
+.include lydia.ht
+#line $[1+${tpllineno}] "${tplfilename}"
+
+/* Data types. */
+typedef struct str_tv_variables_cache *tv_variables_cache;
+typedef const struct str_tv_variables_cache *const_tv_variables_cache;
+
+struct str_tv_variables_cache
+{
+    const_variable_list list;
+
+    unsigned int variables;
+    unsigned int assumables;
+
+    unsigned int *a_to_v;
+    unsigned int *v_to_a;
+
+    double *p_true;
+    double *p_false;
+    double *p_max;
+
+    unsigned char *health_states;
+
+    signed char *is_assumable;
+    signed char *is_observable;
+};
+
+/* Function prototypes. */
+extern tv_variables_cache initialize_tv_variables_cache(const_variable_list);
+extern void destroy_tv_variables_cache(tv_variables_cache);
+
+extern array literal_set_to_sorted_int_list(const_tv_literal_set);
+extern tv_literal_set int_list_to_literal_set(array, tv_literal_set);
+
+extern tv_clause_list term_to_tv_clause_list(const_tv_term);
+extern int is_tv_cnf_wfm(const_tv_cnf, int *);
+extern int are_sorted_tv_terms_consistent(const_tv_term, const_tv_term);
+extern unsigned int get_tv_term_cardinality(tv_variables_cache, const_tv_term);
+
+extern int is_subsumed_literal_set(const_tv_literal_set, const_tv_literal_set);
+extern tv_literal_set_list get_literal_sets(const_tv_nf);
+extern tv_literal_set_list set_literal_sets(tv_nf, tv_literal_set_list);
+
+extern tv_term assignment_to_tv_term(const_variable_assignment_list);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+
+/*
+ * Local variables:
+ * mode: c
+ * End:
+ */

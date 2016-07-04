@@ -1,0 +1,130 @@
+(
+ :tv_cnf_flat_kb
+ fulladder
+ (
+  :tv_cnf
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier i1 $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i2 $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier ci $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier sum $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier carry $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (:bool_variable (:identifier f $nil ((:qualifier FA $nil))) () -1)
+   (:bool_variable (:identifier p $nil ((:qualifier FA $nil))) () -1)
+   (:bool_variable (:identifier q $nil ((:qualifier FA $nil))) () -1)
+   (
+    :bool_variable
+    (
+     :identifier
+     h
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA1 $nil) (:qualifier A $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     h
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA1 $nil) (:qualifier X $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     h
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA2 $nil) (:qualifier A $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (
+     :identifier
+     h
+     $nil
+     ((:qualifier FA $nil) (:qualifier HA2 $nil) (:qualifier X $nil))
+    )
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier FA $nil) (:qualifier O $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (:tv_clause (0) (6 8))
+   (:tv_clause (1) (6 8))
+   (:tv_clause (2) (7 10))
+   (:tv_clause (4) (6 12))
+   (:tv_clause (4) (7 12))
+   (:tv_clause (5) (7 10))
+   (:tv_clause () (0 1 5 9))
+   (:tv_clause () (2 3 5 11))
+   (:tv_clause (0 1) (5 9))
+   (:tv_clause (0 5) (1 9))
+   (:tv_clause (1 5) (0 9))
+   (:tv_clause (2 3) (5 11))
+   (:tv_clause (2 5) (3 11))
+   (:tv_clause (3 5) (2 11))
+   (:tv_clause (6) (0 1 8))
+   (:tv_clause (6 7) (4 12))
+   (:tv_clause (7) (2 5 10))
+  )
+ )
+)

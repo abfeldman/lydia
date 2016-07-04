@@ -1,0 +1,3 @@
+err_redef_attr.sys:1: error: redefinition of the internal attribute `probability'
+err_redef_attr.sys:4: error: redefinition of `cost'
+err_redef_attr.sys:3: error: `cost' previously defined here

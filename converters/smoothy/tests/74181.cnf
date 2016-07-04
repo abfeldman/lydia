@@ -1,0 +1,1083 @@
+(
+ :tv_cnf_flat_kb
+ m74181
+ (
+  :tv_cnf
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier i1 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i2 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i3 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i4 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i5 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i6 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i7 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i8 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i9 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i10 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i11 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i12 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i13 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier i14 $nil $nil)
+    (
+     (:bool_variable_attribute input (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier o1 $nil $nil)
+    (
+     (:bool_variable_attribute output (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier o2 $nil $nil)
+    (
+     (:bool_variable_attribute output (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier o3 $nil $nil)
+    (
+     (:bool_variable_attribute output (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier o4 $nil $nil)
+    (
+     (:bool_variable_attribute output (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier o5 $nil $nil)
+    (
+     (:bool_variable_attribute output (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier o6 $nil $nil)
+    (
+     (:bool_variable_attribute output (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier o7 $nil $nil)
+    (
+     (:bool_variable_attribute output (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier o8 $nil $nil)
+    (
+     (:bool_variable_attribute output (t t))
+     (:bool_variable_attribute observable (t t))
+    )
+    -1
+   )
+   (:bool_variable (:identifier z1 $nil $nil) () -1)
+   (:bool_variable (:identifier z2 $nil $nil) () -1)
+   (:bool_variable (:identifier z3 $nil $nil) () -1)
+   (:bool_variable (:identifier z4 $nil $nil) () -1)
+   (:bool_variable (:identifier z5 $nil $nil) () -1)
+   (:bool_variable (:identifier z6 $nil $nil) () -1)
+   (:bool_variable (:identifier z7 $nil $nil) () -1)
+   (:bool_variable (:identifier z8 $nil $nil) () -1)
+   (:bool_variable (:identifier z9 $nil $nil) () -1)
+   (:bool_variable (:identifier z10 $nil $nil) () -1)
+   (:bool_variable (:identifier z11 $nil $nil) () -1)
+   (:bool_variable (:identifier z12 $nil $nil) () -1)
+   (:bool_variable (:identifier z13 $nil $nil) () -1)
+   (:bool_variable (:identifier z14 $nil $nil) () -1)
+   (:bool_variable (:identifier z15 $nil $nil) () -1)
+   (:bool_variable (:identifier z16 $nil $nil) () -1)
+   (:bool_variable (:identifier z17 $nil $nil) () -1)
+   (:bool_variable (:identifier z18 $nil $nil) () -1)
+   (:bool_variable (:identifier z19 $nil $nil) () -1)
+   (:bool_variable (:identifier z20 $nil $nil) () -1)
+   (:bool_variable (:identifier z21 $nil $nil) () -1)
+   (:bool_variable (:identifier z22 $nil $nil) () -1)
+   (:bool_variable (:identifier z23 $nil $nil) () -1)
+   (:bool_variable (:identifier z24 $nil $nil) () -1)
+   (:bool_variable (:identifier z25 $nil $nil) () -1)
+   (:bool_variable (:identifier z26 $nil $nil) () -1)
+   (:bool_variable (:identifier z27 $nil $nil) () -1)
+   (:bool_variable (:identifier z28 $nil $nil) () -1)
+   (:bool_variable (:identifier z29 $nil $nil) () -1)
+   (:bool_variable (:identifier z30 $nil $nil) () -1)
+   (:bool_variable (:identifier z31 $nil $nil) () -1)
+   (:bool_variable (:identifier z32 $nil $nil) () -1)
+   (:bool_variable (:identifier z33 $nil $nil) () -1)
+   (:bool_variable (:identifier z34 $nil $nil) () -1)
+   (:bool_variable (:identifier z35 $nil $nil) () -1)
+   (:bool_variable (:identifier z36 $nil $nil) () -1)
+   (:bool_variable (:identifier z37 $nil $nil) () -1)
+   (:bool_variable (:identifier z38 $nil $nil) () -1)
+   (:bool_variable (:identifier z39 $nil $nil) () -1)
+   (:bool_variable (:identifier z40 $nil $nil) () -1)
+   (:bool_variable (:identifier z41 $nil $nil) () -1)
+   (:bool_variable (:identifier z42 $nil $nil) () -1)
+   (:bool_variable (:identifier z43 $nil $nil) () -1)
+   (:bool_variable (:identifier z44 $nil $nil) () -1)
+   (:bool_variable (:identifier z45 $nil $nil) () -1)
+   (:bool_variable (:identifier z46 $nil $nil) () -1)
+   (:bool_variable (:identifier z47 $nil $nil) () -1)
+   (:bool_variable (:identifier z48 $nil $nil) () -1)
+   (:bool_variable (:identifier z49 $nil $nil) () -1)
+   (:bool_variable (:identifier z50 $nil $nil) () -1)
+   (:bool_variable (:identifier z51 $nil $nil) () -1)
+   (:bool_variable (:identifier z52 $nil $nil) () -1)
+   (:bool_variable (:identifier z53 $nil $nil) () -1)
+   (:bool_variable (:identifier z54 $nil $nil) () -1)
+   (:bool_variable (:identifier z55 $nil $nil) () -1)
+   (:bool_variable (:identifier z56 $nil $nil) () -1)
+   (:bool_variable (:identifier z57 $nil $nil) () -1)
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate27 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate28 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate29 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate30 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate31 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate68 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate69 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate70 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate71 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate72 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate73 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate74 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate75 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate76 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate77 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate78 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate79 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate80 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate81 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate82 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate83 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate84 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate85 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate86 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate87 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate88 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate89 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate90 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate91 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate92 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate93 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate94 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate95 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate153 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate154 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate155 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate156 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate157 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate158 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate159 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate160 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate161 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate162 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate163 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate164 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate165 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate166 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate167 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate168 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate169 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate170 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate171 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate172 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate173 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate176 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate177 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate178 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate179 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate180 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate181 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate182 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate185 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate188 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate191 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier gate194 $nil)))
+    (
+     (:float_variable_attribute probability (0.01 0.99))
+     (:bool_variable_attribute health (nil t))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (:tv_clause () (4 23 80))
+   (:tv_clause () (6 24 81))
+   (:tv_clause () (8 25 82))
+   (:tv_clause () (10 26 83))
+   (:tv_clause () (12 22 79))
+   (:tv_clause () (15 55 132))
+   (:tv_clause () (15 56 132))
+   (:tv_clause () (15 57 132))
+   (:tv_clause () (15 58 132))
+   (:tv_clause () (15 74 133))
+   (:tv_clause () (27 47 104))
+   (:tv_clause () (28 47 104))
+   (:tv_clause () (29 48 105))
+   (:tv_clause () (30 48 105))
+   (:tv_clause () (31 48 105))
+   (:tv_clause () (32 49 106))
+   (:tv_clause () (33 49 106))
+   (:tv_clause () (34 50 107))
+   (:tv_clause () (35 50 107))
+   (:tv_clause () (36 50 107))
+   (:tv_clause () (37 51 108))
+   (:tv_clause () (38 51 108))
+   (:tv_clause () (39 52 109))
+   (:tv_clause () (40 52 109))
+   (:tv_clause () (41 52 109))
+   (:tv_clause () (42 53 110))
+   (:tv_clause () (43 53 110))
+   (:tv_clause () (44 54 111))
+   (:tv_clause () (45 54 111))
+   (:tv_clause () (46 54 111))
+   (:tv_clause () (59 75 134))
+   (:tv_clause () (61 76 135))
+   (:tv_clause () (62 76 135))
+   (:tv_clause () (63 76 135))
+   (:tv_clause () (64 76 135))
+   (:tv_clause () (66 77 136))
+   (:tv_clause () (67 77 136))
+   (:tv_clause () (68 77 136))
+   (:tv_clause () (70 78 137))
+   (:tv_clause () (71 78 137))
+   (:tv_clause (0) (30 87))
+   (:tv_clause (0) (35 92))
+   (:tv_clause (0) (40 97))
+   (:tv_clause (0) (45 102))
+   (:tv_clause (1) (29 86))
+   (:tv_clause (1) (34 91))
+   (:tv_clause (1) (39 96))
+   (:tv_clause (1) (44 101))
+   (:tv_clause (2) (28 85))
+   (:tv_clause (2) (33 90))
+   (:tv_clause (2) (38 95))
+   (:tv_clause (2) (43 100))
+   (:tv_clause (3) (27 84))
+   (:tv_clause (3) (32 89))
+   (:tv_clause (3) (37 94))
+   (:tv_clause (3) (42 99))
+   (:tv_clause (4) (27 84))
+   (:tv_clause (4) (30 87))
+   (:tv_clause (4 23) (80))
+   (:tv_clause (5) (27 84))
+   (:tv_clause (5) (28 85))
+   (:tv_clause (5) (31 88))
+   (:tv_clause (6) (32 89))
+   (:tv_clause (6) (35 92))
+   (:tv_clause (6 24) (81))
+   (:tv_clause (7) (32 89))
+   (:tv_clause (7) (33 90))
+   (:tv_clause (7) (36 93))
+   (:tv_clause (8) (37 94))
+   (:tv_clause (8) (40 97))
+   (:tv_clause (8 25) (82))
+   (:tv_clause (9) (37 94))
+   (:tv_clause (9) (38 95))
+   (:tv_clause (9) (41 98))
+   (:tv_clause (10) (42 99))
+   (:tv_clause (10) (45 102))
+   (:tv_clause (10 26) (83))
+   (:tv_clause (11) (42 99))
+   (:tv_clause (11) (43 100))
+   (:tv_clause (11) (46 103))
+   (:tv_clause (12 22) (79))
+   (:tv_clause (13) (61 119))
+   (:tv_clause (13) (66 124))
+   (:tv_clause (13) (70 128))
+   (:tv_clause (13 59) (116))
+   (:tv_clause (13 73) (131))
+   (:tv_clause (14 47) (117))
+   (:tv_clause (14 49) (117))
+   (:tv_clause (14 51) (117))
+   (:tv_clause (14 53) (117))
+   (:tv_clause (15 74) (133))
+   (:tv_clause (16) (74 138))
+   (:tv_clause (16) (75 138))
+   (:tv_clause (17) (21 143))
+   (:tv_clause (18) (21 143))
+   (:tv_clause (19) (21 143))
+   (:tv_clause (20) (21 143))
+   (:tv_clause (22) (61 119))
+   (:tv_clause (22) (62 120))
+   (:tv_clause (22) (63 121))
+   (:tv_clause (22) (64 122))
+   (:tv_clause (22) (66 124))
+   (:tv_clause (22) (67 125))
+   (:tv_clause (22) (68 126))
+   (:tv_clause (22) (70 128))
+   (:tv_clause (22) (71 129))
+   (:tv_clause (22 73) (131))
+   (:tv_clause (23) (28 85))
+   (:tv_clause (23) (29 86))
+   (:tv_clause (24) (33 90))
+   (:tv_clause (24) (34 91))
+   (:tv_clause (25) (38 95))
+   (:tv_clause (25) (39 96))
+   (:tv_clause (26) (43 100))
+   (:tv_clause (26) (44 101))
+   (:tv_clause (31) (5 88))
+   (:tv_clause (36) (7 93))
+   (:tv_clause (41) (9 98))
+   (:tv_clause (46) (11 103))
+   (:tv_clause (47) (56 113))
+   (:tv_clause (47) (57 114))
+   (:tv_clause (47) (58 115))
+   (:tv_clause (47 59) (116))
+   (:tv_clause (48) (55 112))
+   (:tv_clause (49) (57 114))
+   (:tv_clause (49) (58 115))
+   (:tv_clause (49) (61 119))
+   (:tv_clause (49) (62 120))
+   (:tv_clause (49) (63 121))
+   (:tv_clause (49 59) (116))
+   (:tv_clause (50) (56 113))
+   (:tv_clause (50) (64 122))
+   (:tv_clause (51) (58 115))
+   (:tv_clause (51) (61 119))
+   (:tv_clause (51) (62 120))
+   (:tv_clause (51) (66 124))
+   (:tv_clause (51) (67 125))
+   (:tv_clause (51 59) (116))
+   (:tv_clause (52) (57 114))
+   (:tv_clause (52) (63 121))
+   (:tv_clause (52) (68 126))
+   (:tv_clause (53) (61 119))
+   (:tv_clause (53) (66 124))
+   (:tv_clause (53) (70 128))
+   (:tv_clause (53 59) (116))
+   (:tv_clause (54) (58 115))
+   (:tv_clause (54) (62 120))
+   (:tv_clause (54) (67 125))
+   (:tv_clause (54) (71 129))
+   (:tv_clause (55) (48 112))
+   (:tv_clause (59 75) (134))
+   (:tv_clause () (13 22 73 131))
+   (:tv_clause () (17 60 76 139))
+   (:tv_clause () (18 65 77 140))
+   (:tv_clause () (19 69 78 141))
+   (:tv_clause () (20 72 73 142))
+   (:tv_clause () (47 48 60 118))
+   (:tv_clause () (49 50 65 123))
+   (:tv_clause () (51 52 69 127))
+   (:tv_clause () (53 54 72 130))
+   (:tv_clause (17 60) (76 139))
+   (:tv_clause (17 76) (60 139))
+   (:tv_clause (18 65) (77 140))
+   (:tv_clause (18 77) (65 140))
+   (:tv_clause (19 69) (78 141))
+   (:tv_clause (19 78) (69 141))
+   (:tv_clause (20 72) (73 142))
+   (:tv_clause (20 73) (72 142))
+   (:tv_clause (27 28 47) (104))
+   (:tv_clause (29) (1 23 86))
+   (:tv_clause (30) (0 4 87))
+   (:tv_clause (32 33 49) (106))
+   (:tv_clause (34) (1 24 91))
+   (:tv_clause (35) (0 6 92))
+   (:tv_clause (37 38 51) (108))
+   (:tv_clause (39) (1 25 96))
+   (:tv_clause (40) (0 8 97))
+   (:tv_clause (42 43 53) (110))
+   (:tv_clause (44) (1 26 101))
+   (:tv_clause (45) (0 10 102))
+   (:tv_clause (47 48) (60 118))
+   (:tv_clause (47 60) (48 118))
+   (:tv_clause (48 60) (47 118))
+   (:tv_clause (49 50) (65 123))
+   (:tv_clause (49 65) (50 123))
+   (:tv_clause (50 65) (49 123))
+   (:tv_clause (51 52) (69 127))
+   (:tv_clause (51 69) (52 127))
+   (:tv_clause (52 69) (51 127))
+   (:tv_clause (53 54) (72 130))
+   (:tv_clause (53 72) (54 130))
+   (:tv_clause (54 72) (53 130))
+   (:tv_clause (56) (47 50 113))
+   (:tv_clause (60 76) (17 139))
+   (:tv_clause (64) (22 50 122))
+   (:tv_clause (65 77) (18 140))
+   (:tv_clause (68) (22 52 126))
+   (:tv_clause (69 78) (19 141))
+   (:tv_clause (70 71 78) (137))
+   (:tv_clause (71) (22 54 129))
+   (:tv_clause (72 73) (20 142))
+   (:tv_clause (74 75) (16 138))
+   (:tv_clause (27) (3 4 5 84))
+   (:tv_clause (28) (2 5 23 85))
+   (:tv_clause (29 30 31 48) (105))
+   (:tv_clause (32) (3 6 7 89))
+   (:tv_clause (33) (2 7 24 90))
+   (:tv_clause (34 35 36 50) (107))
+   (:tv_clause (37) (3 8 9 94))
+   (:tv_clause (38) (2 9 25 95))
+   (:tv_clause (39 40 41 52) (109))
+   (:tv_clause (42) (3 10 11 99))
+   (:tv_clause (43) (2 11 26 100))
+   (:tv_clause (44 45 46 54) (111))
+   (:tv_clause (57) (47 49 52 114))
+   (:tv_clause (63) (22 49 52 121))
+   (:tv_clause (66 67 68 77) (136))
+   (:tv_clause (67) (22 51 54 125))
+   (:tv_clause (70) (13 22 53 128))
+   (:tv_clause () (14 47 49 51 53 117))
+   (:tv_clause (15 55 56 57 58) (132))
+   (:tv_clause (21) (17 18 19 20 143))
+   (:tv_clause (58) (47 49 51 54 115))
+   (:tv_clause (61 62 63 64 76) (135))
+   (:tv_clause (62) (22 49 51 54 120))
+   (:tv_clause (66) (13 22 51 53 124))
+   (:tv_clause () (13 47 49 51 53 59 116))
+   (:tv_clause (61) (13 22 49 51 53 119))
+  )
+ )
+)

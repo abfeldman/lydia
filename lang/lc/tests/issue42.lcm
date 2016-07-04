@@ -1,0 +1,48 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   main
+   ()
+   (
+    :csp
+    ((:values_set boolean (T F)))
+    (
+     (:enum_variable (:identifier a $nil $nil) () 0)
+     (:enum_variable (:identifier b $nil $nil) () 0)
+     (:enum_variable (:identifier c $nil $nil) () 0)
+    )
+    ()
+    ((:enum_constant $nil T 0) (:enum_constant $nil F 0))
+    0
+    (
+     (
+      :csp_atomic_sentence
+      (
+       :csp_function_term
+       arith_if
+       (
+	(
+	 :csp_function_term
+	 ne
+	 ((:csp_variable_term 0) (:csp_variable_term 1))
+	)
+	(
+	 :csp_function_term
+	 equiv
+	 ((:csp_variable_term 2) (:csp_constant_term 0))
+	)
+	(
+	 :csp_function_term
+	 equiv
+	 ((:csp_variable_term 2) (:csp_constant_term 1))
+	)
+       )
+      )
+     )
+    )
+   )
+  )
+ )
+)

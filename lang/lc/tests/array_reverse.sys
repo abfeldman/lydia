@@ -1,0 +1,8 @@
+system test()
+{
+	bool a[2];
+	bool b[3][3];
+
+	a[1:0] = [ false, true ];
+	b[2:1][2:1] = [ [ false, true ], [ true, true ] ];
+}

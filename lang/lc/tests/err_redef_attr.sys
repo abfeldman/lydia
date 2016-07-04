@@ -1,0 +1,4 @@
+attribute bool probability;
+
+attribute float cost;
+attribute float cost;

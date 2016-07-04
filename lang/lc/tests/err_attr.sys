@@ -1,0 +1,11 @@
+type color = enum { R, G, B };
+
+attribute color cost;
+
+system test()
+{
+	bool a = true;
+	attribute health(a) = 1;
+	attribute probability(a) = color.G;
+	attribute cost(a) = 1;
+}

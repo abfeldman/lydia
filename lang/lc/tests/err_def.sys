@@ -1,0 +1,6 @@
+system test()
+{
+	bool a;
+
+	cond (a) (true -> true);
+}

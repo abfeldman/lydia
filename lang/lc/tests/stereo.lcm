@@ -1,0 +1,537 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   box
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier in_signal $nil $nil) () -1)
+     (:bool_variable (:identifier out_signal $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier f $nil $nil)
+      (
+       (:float_variable_attribute probability (0.99 0.01))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 1))
+      (
+       :csp_and_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 2)))
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   led
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier inp $nil $nil) () -1)
+     (:bool_variable (:identifier out $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier f $nil $nil)
+      (
+       (:float_variable_attribute probability (0.9999 0.0001))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 1))
+      (
+       :csp_and_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 2)))
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   amplifier
+   (
+    (
+     :edge
+     led
+     powerLed
+     $nil
+     (
+      (
+       :mapping
+       (:identifier switchedOn $nil $nil)
+       (:identifier inp $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier powerLight $nil $nil)
+       (:identifier out $nil $nil)
+      )
+     )
+    )
+   )
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier powerSwitch $nil $nil) () -1)
+     (:bool_variable (:identifier powerLight $nil $nil) () -1)
+     (:bool_variable (:identifier cdLeft $nil $nil) () -1)
+     (:bool_variable (:identifier cdRight $nil $nil) () -1)
+     (:bool_variable (:identifier audioLeft $nil $nil) () -1)
+     (:bool_variable (:identifier audioRight $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier f_power $nil $nil)
+      (
+       (:float_variable_attribute probability (0.9 0.1))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier f_channelLeft $nil $nil)
+      (
+       (:float_variable_attribute probability (0.999 0.001))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier f_channelRight $nil $nil)
+      (
+       (:float_variable_attribute probability (0.999 0.001))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+     (:bool_variable (:identifier switchedOn $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 9))
+      (
+       :csp_and_sentence
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 6)))
+       (:csp_atomic_sentence (:csp_variable_term 0))
+      )
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 4))
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(:csp_atomic_sentence (:csp_variable_term 9))
+	(:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 7)))
+       )
+       (:csp_atomic_sentence (:csp_variable_term 2))
+      )
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 5))
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(:csp_atomic_sentence (:csp_variable_term 9))
+	(:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 8)))
+       )
+       (:csp_atomic_sentence (:csp_variable_term 3))
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   cd
+   (
+    (
+     :edge
+     led
+     powerLed
+     $nil
+     (
+      (
+       :mapping
+       (:identifier switchedOn $nil $nil)
+       (:identifier inp $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier powerLight $nil $nil)
+       (:identifier out $nil $nil)
+      )
+     )
+    )
+    (
+     :edge
+     led
+     playingLed
+     $nil
+     (
+      (
+       :mapping
+       (:identifier playing $nil $nil)
+       (:identifier inp $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier playLight $nil $nil)
+       (:identifier out $nil $nil)
+      )
+     )
+    )
+   )
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier powerSwitch $nil $nil) () -1)
+     (:bool_variable (:identifier powerLight $nil $nil) () -1)
+     (:bool_variable (:identifier audioLeft $nil $nil) () -1)
+     (:bool_variable (:identifier audioRight $nil $nil) () -1)
+     (:bool_variable (:identifier playButton $nil $nil) () -1)
+     (:bool_variable (:identifier playLight $nil $nil) () -1)
+     (:bool_variable (:identifier stopButton $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier f_power $nil $nil)
+      (
+       (:float_variable_attribute probability (0.9 0.1))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier f_channelLeft $nil $nil)
+      (
+       (:float_variable_attribute probability (0.999 0.001))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier f_channelRight $nil $nil)
+      (
+       (:float_variable_attribute probability (0.999 0.001))
+       (:bool_variable_attribute health (t nil))
+      )
+      -1
+     )
+     (:bool_variable (:identifier switchedOn $nil $nil) () -1)
+     (:bool_variable (:identifier playing $nil $nil) () -1)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 10))
+      (
+       :csp_and_sentence
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 7)))
+       (:csp_atomic_sentence (:csp_variable_term 0))
+      )
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 11))
+      (
+       :csp_and_sentence
+       (
+	:csp_and_sentence
+	(:csp_atomic_sentence (:csp_variable_term 10))
+	(:csp_atomic_sentence (:csp_variable_term 4))
+       )
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 6)))
+      )
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 2))
+      (
+       :csp_and_sentence
+       (:csp_atomic_sentence (:csp_variable_term 11))
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 8)))
+      )
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 3))
+      (
+       :csp_and_sentence
+       (:csp_atomic_sentence (:csp_variable_term 11))
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 9)))
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   stereo
+   (
+    (
+     :edge
+     cd
+     cd
+     $nil
+     (
+      (
+       :mapping
+       (:identifier powerSwitchCD $nil $nil)
+       (:identifier powerSwitch $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier powerLightCD $nil $nil)
+       (:identifier powerLight $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier cdLeft $nil $nil)
+       (:identifier audioLeft $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier cdRight $nil $nil)
+       (:identifier audioRight $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier playButton $nil $nil)
+       (:identifier playButton $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier playLight $nil $nil)
+       (:identifier playLight $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier stopButton $nil $nil)
+       (:identifier stopButton $nil $nil)
+      )
+     )
+    )
+    (
+     :edge
+     amplifier
+     amplifier
+     $nil
+     (
+      (
+       :mapping
+       (:identifier powerSwitchAmp $nil $nil)
+       (:identifier powerSwitch $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier powerLightAmp $nil $nil)
+       (:identifier powerLight $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier cdLeft $nil $nil)
+       (:identifier cdLeft $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier cdRight $nil $nil)
+       (:identifier cdRight $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier speakerLeft $nil $nil)
+       (:identifier audioLeft $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier speakerRight $nil $nil)
+       (:identifier audioRight $nil $nil)
+      )
+     )
+    )
+    (
+     :edge
+     box
+     leftSpeaker
+     $nil
+     (
+      (
+       :mapping
+       (:identifier speakerLeft $nil $nil)
+       (:identifier in_signal $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier soundLeft $nil $nil)
+       (:identifier out_signal $nil $nil)
+      )
+     )
+    )
+    (
+     :edge
+     box
+     rightSpeaker
+     $nil
+     (
+      (
+       :mapping
+       (:identifier speakerRight $nil $nil)
+       (:identifier in_signal $nil $nil)
+      )
+      (
+       :mapping
+       (:identifier soundRight $nil $nil)
+       (:identifier out_signal $nil $nil)
+      )
+     )
+    )
+   )
+   (
+    :csp
+    ()
+    (
+     (
+      :bool_variable
+      (:identifier powerSwitchCD $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier playButton $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier playLight $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier stopButton $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier powerSwitchAmp $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier powerLightCD $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier powerLightAmp $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier speakerLeft $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier speakerRight $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier soundLeft $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier soundRight $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier sound $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier cdLeft $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier cdRight $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 11))
+      (
+       :csp_or_sentence
+       (:csp_atomic_sentence (:csp_variable_term 9))
+       (:csp_atomic_sentence (:csp_variable_term 10))
+      )
+     )
+    )
+   )
+  )
+ )
+)

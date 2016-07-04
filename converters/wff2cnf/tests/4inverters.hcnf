@@ -1,0 +1,143 @@
+(
+ :tv_cnf_hierarchy
+ (
+  (
+   :node
+   inverter
+   ()
+   (
+    :tv_cnf
+    ()
+    (
+     (:bool_variable (:identifier i $nil $nil) () -1)
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:bool_variable_attribute health (nil t))
+       (:float_variable_attribute probability (0.01 0.99))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    ((:tv_clause () (0 1 2)) (:tv_clause (0 1) (2)))
+   )
+  )
+  (
+   :node
+   inverterA
+   ()
+   (
+    :tv_cnf
+    ()
+    (
+     (:bool_variable (:identifier i $nil $nil) () -1)
+     (:bool_variable (:identifier o $nil $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:bool_variable_attribute health (nil t))
+       (:float_variable_attribute probability (0.025 0.975))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    ((:tv_clause () (0 1 2)) (:tv_clause (0 1) (2)))
+   )
+  )
+  (
+   :node
+   main
+   (
+    (
+     :edge
+     inverterA
+     A
+     $nil
+     (
+      (:mapping (:identifier a $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier b $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     B
+     $nil
+     (
+      (:mapping (:identifier b $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier c $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     C
+     $nil
+     (
+      (:mapping (:identifier c $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier d $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     D
+     $nil
+     (
+      (:mapping (:identifier d $nil $nil) (:identifier i $nil $nil))
+      (:mapping (:identifier e $nil $nil) (:identifier o $nil $nil))
+     )
+    )
+   )
+   (
+    :tv_cnf
+    ()
+    (
+     (
+      :bool_variable
+      (:identifier a $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier b $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier c $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier d $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier e $nil $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

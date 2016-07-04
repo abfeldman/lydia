@@ -1,0 +1,85 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   foo
+   ()
+   (
+    :csp
+    ((:values_set Bool (t f)))
+    (
+     (
+      :bool_variable
+      (:identifier a $nil $nil)
+      (
+       (:bool_variable_attribute health (nil t))
+       (:float_variable_attribute probability (0.05 0.95))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier b $nil $nil)
+      (
+       (:bool_variable_attribute health (nil t))
+       (:float_variable_attribute probability (0.05 0.95))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier c $nil $nil)
+      (
+       (:bool_variable_attribute health (nil t))
+       (:float_variable_attribute probability (0.5 0.5))
+      )
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier d $nil $nil)
+      ((:float_variable_attribute probability (0.5 0.5)))
+      -1
+     )
+     (
+      :enum_variable
+      (:identifier e $nil $nil)
+      ((:float_variable_attribute probability (0.95 0.05)))
+      0
+     )
+    )
+    ()
+    ((:bool_constant $nil t) (:enum_constant $nil t 0))
+    0
+    (
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 0))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 1))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 2))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 3))
+      (:csp_atomic_sentence (:csp_constant_term 0))
+     )
+     (
+      :csp_equiv_sentence
+      (:csp_atomic_sentence (:csp_variable_term 4))
+      (:csp_atomic_sentence (:csp_constant_term 1))
+     )
+    )
+   )
+  )
+ )
+)

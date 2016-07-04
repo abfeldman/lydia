@@ -1,0 +1,2 @@
+err_cast.sys: In system `test':
+err_cast.sys:7: error: invalid type conversion

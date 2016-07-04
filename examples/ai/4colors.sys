@@ -1,0 +1,35 @@
+type color = enum { R, G, B };
+
+bool function adjacent(color r1, r2)
+{
+	r1 != r2
+}
+
+system MapColoring()
+{
+	color region1;
+	color region2;
+	color region3;
+	color region4;
+	color region5;
+
+	adjacent(region1, region2);
+	adjacent(region1, region3);
+	adjacent(region1, region4);
+	adjacent(region1, region5);
+	adjacent(region2, region3);
+	adjacent(region2, region4);
+	adjacent(region3, region4);
+	adjacent(region4, region5);
+
+	attribute health(region1) = true;
+	attribute health(region2) = true;
+	attribute health(region3) = true;
+	attribute health(region4) = true;
+	attribute health(region5) = true;
+	attribute probability(region1) = 0.25;
+	attribute probability(region2) = 0.25;
+	attribute probability(region3) = 0.25;
+	attribute probability(region4) = 0.25;
+	attribute probability(region5) = 0.25;
+}

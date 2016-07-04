@@ -1,0 +1,6 @@
+err_sel.sys: In system `test':
+err_sel.sys:7: error: `r' is not a structure
+err_sel.sys:10: error: invalid enumeration selector in `color'
+err_sel.sys:11: error: missing enumeration selector in `color'
+err_sel.sys:12: error: `color' is not an array
+err_sel.sys:14: error: `B' is not an array

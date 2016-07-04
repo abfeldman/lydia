@@ -1,0 +1,91 @@
+(
+ :obdd_flat_kb
+ main
+ (
+  :obdd
+  ()
+  (
+   (
+    :bool_variable
+    (:identifier w $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier x $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier y $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier z $nil $nil)
+    ((:bool_variable_attribute observable (t t)))
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I0 $nil)))
+    (
+     (:bool_variable_attribute health (nil t))
+     (:float_variable_attribute probability (0.01 0.99))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I1 $nil)))
+    (
+     (:bool_variable_attribute health (nil t))
+     (:float_variable_attribute probability (0.01 0.99))
+    )
+    -1
+   )
+   (
+    :bool_variable
+    (:identifier h $nil ((:qualifier I2 $nil)))
+    (
+     (:bool_variable_attribute health (nil t))
+     (:float_variable_attribute probability (0.01 0.99))
+    )
+    -1
+   )
+  )
+  ()
+  ()
+  0
+  (
+   (:obdd_terminal_node nil)
+   (:obdd_terminal_node t)
+   (:obdd_non_terminal_node 6 1 0)
+   (:obdd_non_terminal_node 5 2 0)
+   (:obdd_non_terminal_node 4 3 0)
+   (:obdd_non_terminal_node 5 1 0)
+   (:obdd_non_terminal_node 4 5 0)
+   (:obdd_non_terminal_node 3 4 6)
+   (:obdd_non_terminal_node 4 2 0)
+   (:obdd_non_terminal_node 4 1 0)
+   (:obdd_non_terminal_node 3 8 9)
+   (:obdd_non_terminal_node 2 7 10)
+   (:obdd_non_terminal_node 3 3 5)
+   (:obdd_non_terminal_node 3 2 1)
+   (:obdd_non_terminal_node 2 12 13)
+   (:obdd_non_terminal_node 1 11 14)
+   (:obdd_non_terminal_node 3 1 2)
+   (:obdd_non_terminal_node 3 5 3)
+   (:obdd_non_terminal_node 2 16 17)
+   (:obdd_non_terminal_node 3 9 8)
+   (:obdd_non_terminal_node 3 6 4)
+   (:obdd_non_terminal_node 2 19 20)
+   (:obdd_non_terminal_node 1 18 21)
+   (:obdd_non_terminal_node 0 15 22)
+  )
+  23
+ )
+)

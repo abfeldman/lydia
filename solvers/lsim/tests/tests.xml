@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+  <separator>Arithmetic Circuits (CNF):</separator>
+  <test>
+    <title>Boolean polycell</title>
+    <model>polycell.cnf</model>
+    <input>polycell.commands.input</input>
+    <observation>polycell.terms</observation>
+    <output>polycell.expected.out</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <model>2adder-weak.cnf</model>
+    <input>2adder-weak.commands.input</input>
+    <observation>2adder.terms</observation>
+    <output>2adder-weak.expected.out</output>
+  </test>
+  <separator>Arithmetic Circuits (tDNF):</separator>
+  <test>
+    <title>Boolean polycell</title>
+    <model>polycell.hdnf</model>
+    <input>polycell.commands.input</input>
+    <observation>polycell.terms</observation>
+    <output>polycell.expected.out</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <model>2adder-weak.hdnf</model>
+    <input>2adder-weak.commands.input</input>
+    <observation>2adder.terms</observation>
+    <output>2adder-weak.expected.out</output>
+  </test>
+</testsuite>

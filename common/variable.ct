@@ -1,0 +1,444 @@
+#include <assert.h>
+#include <string.h>
+#include <ctype.h>
+#include <math.h>
+
+#include "variable.h"
+#include "strndup.h"
+#include "strdup.h"
+#include "fwrite.h"
+#include "fread.h"
+#include "fscan.h"
+#include "defs.h"
+#include "obdd.h"
+#include "mdd.h"
+#include "lcm.h"
+#include "mv.h"
+#include "tv.h"
+
+.insert variableconf.t
+.include lydia.ct
+#line $[1+${tpllineno}] "${tplfilename}"
+
+static int_list make_indices(const char *indices)
+{
+    int_list result = new_int_list();
+
+    int state = 0, index;
+
+    register unsigned int ix;
+
+    const char *start = NULL;
+    char *ptr = NULL;
+
+    for (ix = 0; indices[ix] != '\0'; ix++) {
+        if (indices[ix] == '[') {
+            if (state != 0 && state != 2) {
+                rfre_int_list(result);
+                return int_listNIL;
+            }
+            state = 1;
+            continue;
+        }
+        if (indices[ix] == ']') {
+            if (state != 3) {
+                return int_listNIL;
+            }
+            index = strtol(start, &ptr, 10);
+            if (ptr != indices + ix) {
+                rfre_int_list(result);
+                return int_listNIL;
+            }
+            append_int_list(result, index);
+            state = 2;
+            continue;
+        }
+        if (indices[ix] >= '0' && indices[ix] <= '9') {
+            if (state != 1 && state != 3) {
+                rfre_int_list(result);
+                return int_listNIL;
+            }
+            if (state == 1) {
+                start = indices + ix;
+            }
+            state = 3;
+            continue;
+        }
+        return int_listNIL;
+    }
+    if (state != 2) {
+        rfre_int_list(result);
+        return int_listNIL;
+    }
+
+    return result;
+}
+
+identifier make_variable_identifier(const char *id)
+{
+    identifier result = new_identifier(lydia_symbolNIL,
+                                       int_listNIL,
+                                       qualifier_listNIL);
+
+    int_list indices = int_listNIL;
+
+    register unsigned int ix;
+
+    const char *start, *end;
+    char *ptr, *token;
+
+    lydia_symbol name;
+
+    for (start = end = id; *end != '\0'; end++) {
+        if ('.' == *end) {
+            if (end - start == 0) {
+                rfre_identifier(result);
+                return identifierNIL;
+            }
+            token = strndup(start, end - start);
+            indices = int_listNIL;
+            if (result->qualifiers == qualifier_listNIL) {
+                result->qualifiers = new_qualifier_list();
+            }
+            if (NULL != (ptr = strchr(token, '['))) {
+                if (int_listNIL == (indices = make_indices(ptr))) {
+/* Can't parse the indices. */
+                    free(token);
+                    rfre_identifier(result);
+                    return identifierNIL;
+                }
+                *ptr = '\0';
+            }
+            for (ix = 0; token[ix] != '\0'; ix++) {
+                if (!isalnum(token[ix]) && token[ix] != '_') {
+                    free(token);
+                    rfre_identifier(result);
+                    return identifierNIL;
+                }
+            }
+            if ('\0' == *token) {
+                free(token);
+                rfre_identifier(result);
+                return identifierNIL;
+            }
+            name = add_lydia_symbol(token); /* What remained of it. */
+            append_qualifier_list(result->qualifiers,
+                                  new_qualifier(name, indices));
+            free(token);
+            start = end + 1;
+        }
+    }
+    if (end - start == 0) {
+        rfre_identifier(result);
+        return identifierNIL;
+    }
+    token = strdup(start);
+    indices = int_listNIL;
+    if (NULL != (ptr = strchr(token, '['))) {
+        if (int_listNIL == (indices = make_indices(ptr))) {
+/* Can't parse the indices. */
+            free(token);
+            rfre_identifier(result);
+            return identifierNIL;
+        }
+        *ptr = '\0';
+    }
+    for (ix = 0; token[ix] != '\0'; ix++) {
+        if (!isalnum(token[ix]) && token[ix] != '_' && token[ix] != '$$') {
+            free(token);
+            rfre_identifier(result);
+            return identifierNIL;
+        }
+    }
+    if ('\0' == *token) {
+        free(token);
+        rfre_identifier(result);
+        return identifierNIL;
+    }
+    result->name = add_lydia_symbol(token);
+    result->indices = indices;
+
+    free(token);
+
+    return result;
+}
+
+char *get_variable_name(const_identifier id)
+{
+    size_t length = 0;
+    unsigned int ix, iy;
+    char *result;
+
+    length += strlen(id->name->name);
+    if (int_listNIL != id->indices) {
+        for (ix = 0; ix < id->indices->sz; ix++) {
+            length += (size_t)log10(id->indices->arr[ix] + 10) + 3;
+        }
+    }
+    if (qualifier_listNIL != id->qualifiers) {
+        for (ix = 0; ix < id->qualifiers->sz; ix++) {
+            length += strlen(id->qualifiers->arr[ix]->name->name) + 1;
+            if (int_listNIL != id->qualifiers->arr[ix]->indices) {
+                for (iy = 0; iy < id->qualifiers->arr[ix]->indices->sz; iy++) {
+                    length += (size_t)log10(id->qualifiers->arr[ix]->indices->arr[iy] + 10) + 3;
+                }
+            }
+        }
+    }
+    result = malloc(length + 2);
+    result[0] = '\0';
+    if (qualifier_listNIL != id->qualifiers) {
+        for (ix = 0; ix < id->qualifiers->sz; ix++) {
+            sprintf(result + strlen(result), "%s", id->qualifiers->arr[ix]->name->name);
+            if (int_listNIL != id->qualifiers->arr[ix]->indices) {
+                for (iy = 0; iy < id->qualifiers->arr[ix]->indices->sz; iy++) {
+                    sprintf(result + strlen(result), "[%d]", id->qualifiers->arr[ix]->indices->arr[iy]);
+                }
+            }
+            sprintf(result + strlen(result), ".");
+        }
+    }
+    sprintf(result + strlen(result), "%s", id->name->name);
+    if (int_listNIL != id->indices) {
+        for (ix = 0; ix < id->indices->sz; ix++) {
+            sprintf(result + strlen(result), "[%d]", id->indices->arr[ix]);
+        }
+    }
+
+    return result;
+}
+
+int search_values_set_list(const_values_set_list domains, lydia_symbol name, unsigned int *pos)
+{
+    unsigned int ix;
+    for (ix = 0; ix < domains->sz; ix++) {
+        if (name == domains->arr[ix]->name) {
+            *pos = ix;
+            return 1;
+        }
+    }
+    return 0;    
+}
+
+int search_variable_list(const_variable_list haystack,
+                         const_identifier needle,
+                         unsigned int *pos)
+{
+    register unsigned int ix;
+
+    for (ix = 0; ix < haystack->sz; ix++) {
+        if (isequal_identifier(needle, haystack->arr[ix]->name)) {
+            *pos = ix;
+            return 1;
+        }
+    }
+
+    return 0;
+}
+
+int search_variable_list_by_name(const_variable_list haystack,
+                                 lydia_symbol needle,
+                                 unsigned int *pos)
+{
+    unsigned int i;
+
+    for (i = 0; i < haystack->sz; i++) {
+        if (needle == haystack->arr[i]->name->name) {
+            *pos = i;
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int search_variable_assignment_list(const_variable_assignment_list haystack, int needle, unsigned int *pos)
+{
+    unsigned int i;
+
+    for (i = 0; i < haystack->sz; i++) {
+        if (needle == haystack->arr[i]->var) {
+            *pos = i;
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int member_variable_assignment_list(const_variable_assignment_list haystack, int needle)
+{
+    unsigned int i;
+
+    for (i = 0; i < haystack->sz; i++) {
+        if (needle == haystack->arr[i]->var) {
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int search_constant_list(const_constant_list haystack, const_constant needle, unsigned int *pos)
+{
+    unsigned int i;
+
+    for (i = 0; i < haystack->sz; i++) {
+        if (0 == cmp_constant(haystack->arr[i], needle)) {
+            *pos = i;
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int search_variable_attribute_list(const_variable_attribute_list attributes, lydia_symbol name, unsigned int *pos)
+{
+    unsigned int ix;
+    for (ix = 0; ix < attributes->sz; ix++) {
+        if (name == attributes->arr[ix]->name) {
+            *pos = ix;
+            return 1;
+        }
+    }
+    return 0;
+}
+
+const_variable_attribute find_attribute(const_variable_attribute_list attrs, lydia_symbol name)
+{
+    unsigned int ix;
+
+    if (variable_attribute_listNIL == attrs) {
+        return variable_attributeNIL;   
+    }
+    for (ix = 0; ix < attrs->sz; ix++) {
+        if (attrs->arr[ix]->name == name) {
+            return attrs->arr[ix];
+        }
+    }
+    return variable_attributeNIL;
+}
+
+int is_health(const_variable var)
+{
+    const_variable_attribute attr = find_attribute(var->attributes, add_lydia_symbol("health"));
+    if (attr == variable_attributeNIL) {
+        return 0;
+    }
+    assert(attr->tag == TAGbool_variable_attribute);
+    return 1;
+}
+
+int is_assumable(const_variable var)
+{
+    const_variable_attribute attr = find_attribute(var->attributes, add_lydia_symbol("assumable"));
+    if (attr == variable_attributeNIL) {
+        return 0;
+    }
+    assert(attr->tag == TAGbool_variable_attribute);
+    return 1;
+}
+
+int is_observable(const_variable var)
+{
+    const_variable_attribute attr = find_attribute(var->attributes, add_lydia_symbol("observable"));
+    if (attr == variable_attributeNIL) {
+        return 0;
+    }
+    assert(attr->tag == TAGbool_variable_attribute);
+    return to_bool_variable_attribute(attr)->values->arr[0];
+}
+
+int is_input(const_variable var)
+{
+    const_variable_attribute attr;
+
+    attr = find_attribute(var->attributes, add_lydia_symbol("input"));
+    if (attr == variable_attributeNIL) {
+        return 0;
+    }
+    assert(attr->tag == TAGbool_variable_attribute);
+    return to_bool_variable_attribute(attr)->values->arr[0];
+}
+
+int is_output(const_variable var)
+{
+    const_variable_attribute attr;
+
+    attr = find_attribute(var->attributes, add_lydia_symbol("output"));
+    if (attr == variable_attributeNIL) {
+        return 0;
+    }
+    assert(attr->tag == TAGbool_variable_attribute);
+    return to_bool_variable_attribute(attr)->values->arr[0];
+}
+
+int get_health_bool(const_variable var, int val)
+{
+    const_variable_attribute attr = find_attribute(var->attributes,
+                                                   add_lydia_symbol("health"));
+
+    assert(attr != variable_attributeNIL);
+    assert(attr->tag == TAGbool_variable_attribute);
+
+    return to_bool_variable_attribute(attr)->values->arr[val];
+}
+
+double get_probability_bool(const_variable var, int val)
+{
+    const_variable_attribute attr = find_attribute(var->attributes, add_lydia_symbol("probability"));
+
+    assert(attr != variable_attributeNIL);
+    assert(attr->tag == TAGfloat_variable_attribute);
+
+    return to_float_variable_attribute(attr)->values->arr[val];
+}
+
+double_list get_probabilities(const_variable var)
+{
+    const_variable_attribute attr = find_attribute(var->attributes, add_lydia_symbol("probability"));
+
+    if (attr == variable_attributeNIL) {
+        return double_listNIL;
+    }
+    assert(attr->tag == TAGfloat_variable_attribute);
+
+    return to_float_variable_attribute(attr)->values;
+}
+
+void replace_bool_variables(variable_list variables, values_set_list domains)
+{
+    unsigned int pos = (unsigned int)-1;
+    unsigned int ix;
+    signed char flag = 1;
+
+    for (ix = 0; ix < variables->sz; ix++) {
+        variable var = variables->arr[ix], replacement;
+        if (TAGbool_variable == var->tag) {
+            if (flag) {
+                pos = (unsigned int)-1;
+                if (!search_values_set_list(domains, add_lydia_symbol("bool"), &pos)) {
+                    append_values_set_list(domains, new_values_set(add_lydia_symbol("bool"), append_lydia_symbol_list(append_lydia_symbol_list(new_lydia_symbol_list(), add_lydia_symbol("false")), add_lydia_symbol("true"))));
+                    pos = domains->sz - 1;
+                }
+                assert(pos != (unsigned int)-1);
+                assert(domains->arr[pos]->name == add_lydia_symbol("bool"));
+                assert(domains->arr[pos]->entries->sz == 2);
+                assert(domains->arr[pos]->entries->arr[0] == add_lydia_symbol("false"));
+                assert(domains->arr[pos]->entries->arr[1] == add_lydia_symbol("true"));
+
+                flag = 0;
+            }
+
+            assert(pos != (unsigned int)-1);
+            replacement = to_variable(new_enum_variable(rdup_identifier(var->name),
+                                                        rdup_variable_attribute_list(var->attributes),
+                                                        pos));
+            rfre_variable(var);
+            variables->arr[ix] = replacement;
+        }
+    }
+}
+
+/*
+ * Local variables:
+ * mode: c
+ * End:
+ */

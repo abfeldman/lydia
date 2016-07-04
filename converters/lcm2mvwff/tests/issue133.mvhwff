@@ -1,0 +1,96 @@
+(
+ :mv_wff_hierarchy
+ (
+  (
+   :node
+   TJunction
+   ()
+   (
+    :mv_wff
+    (
+     (:values_set Mass (zero low nom high))
+     (:values_set bool (false true))
+    )
+    (
+     (:enum_variable (:identifier m $nil ((:qualifier auxFlow (1)))) () 0)
+     (:enum_variable (:identifier v $nil ((:qualifier auxFlow (1)))) () 1)
+     (:enum_variable (:identifier m $nil ((:qualifier auxFlow (2)))) () 0)
+     (:enum_variable (:identifier v $nil ((:qualifier auxFlow (2)))) () 1)
+     (:enum_variable (:identifier m $nil ((:qualifier auxFlow (3)))) () 0)
+     (:enum_variable (:identifier v $nil ((:qualifier auxFlow (3)))) () 1)
+     (:enum_variable (:identifier massIn (1) $nil) () 0)
+     (:enum_variable (:identifier massIn (2) $nil) () 0)
+     (:enum_variable (:identifier massIn (3) $nil) () 0)
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :mv_wff_e_and
+      (
+       :mv_wff_e_or
+       (:mv_wff_e_not (:mv_wff_e_var 1 1))
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (:mv_wff_e_and (:mv_wff_e_var 6 0) (:mv_wff_e_var 0 0))
+	  (:mv_wff_e_and (:mv_wff_e_var 6 1) (:mv_wff_e_var 0 1))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 6 2) (:mv_wff_e_var 0 2))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 6 3) (:mv_wff_e_var 0 3))
+       )
+      )
+      (:mv_wff_e_or (:mv_wff_e_var 1 1) (:mv_wff_e_var 6 0))
+     )
+     (
+      :mv_wff_e_and
+      (
+       :mv_wff_e_or
+       (:mv_wff_e_not (:mv_wff_e_var 3 1))
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (:mv_wff_e_and (:mv_wff_e_var 7 0) (:mv_wff_e_var 2 0))
+	  (:mv_wff_e_and (:mv_wff_e_var 7 1) (:mv_wff_e_var 2 1))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 7 2) (:mv_wff_e_var 2 2))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 7 3) (:mv_wff_e_var 2 3))
+       )
+      )
+      (:mv_wff_e_or (:mv_wff_e_var 3 1) (:mv_wff_e_var 7 0))
+     )
+     (
+      :mv_wff_e_and
+      (
+       :mv_wff_e_or
+       (:mv_wff_e_not (:mv_wff_e_var 5 1))
+       (
+	:mv_wff_e_or
+	(
+	 :mv_wff_e_or
+	 (
+	  :mv_wff_e_or
+	  (:mv_wff_e_and (:mv_wff_e_var 8 0) (:mv_wff_e_var 4 0))
+	  (:mv_wff_e_and (:mv_wff_e_var 8 1) (:mv_wff_e_var 4 1))
+	 )
+	 (:mv_wff_e_and (:mv_wff_e_var 8 2) (:mv_wff_e_var 4 2))
+	)
+	(:mv_wff_e_and (:mv_wff_e_var 8 3) (:mv_wff_e_var 4 3))
+       )
+      )
+      (:mv_wff_e_or (:mv_wff_e_var 5 1) (:mv_wff_e_var 8 0))
+     )
+    )
+   )
+  )
+ )
+)

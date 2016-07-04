@@ -1,0 +1,34 @@
+#ifndef __LIST_H__
+#define __LIST_H__
+
+#include "fprint.h"
+#include "types.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+.insert listconf.t
+.include lydia.ht
+
+extern int search_lydia_symbol_list(const_lydia_symbol_list symbols, lydia_symbol symbol, unsigned int *pos);
+extern int member_int_list(const_int_list l, const int s);
+extern int search_int_list(const_int_list l, const int m, unsigned int *pos);
+extern int_list add_int_list(int_list l, int s);
+extern int_list merge_int_list(int_list x, int_list y);
+extern int_list remove_int_list(int_list l, const int v);
+extern int is_subset_int_list(const_int_list lx, const_int_list ly);
+extern double max_float_list(const_double_list list);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+
+/*
+ * Local variables:
+ * mode: c
+ * End:
+ */

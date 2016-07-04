@@ -1,0 +1,90 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   TJunction
+   ()
+   (
+    :csp
+    ((:values_set Mass (zero low nom high)))
+    (
+     (:enum_variable (:identifier m $nil ((:qualifier auxFlow (1)))) () 0)
+     (:bool_variable (:identifier v $nil ((:qualifier auxFlow (1)))) () -1)
+     (:enum_variable (:identifier m $nil ((:qualifier auxFlow (2)))) () 0)
+     (:bool_variable (:identifier v $nil ((:qualifier auxFlow (2)))) () -1)
+     (:enum_variable (:identifier m $nil ((:qualifier auxFlow (3)))) () 0)
+     (:bool_variable (:identifier v $nil ((:qualifier auxFlow (3)))) () -1)
+     (:enum_variable (:identifier massIn (1) $nil) () 0)
+     (:enum_variable (:identifier massIn (2) $nil) () 0)
+     (:enum_variable (:identifier massIn (3) $nil) () 0)
+    )
+    ()
+    ((:enum_constant $nil zero 0))
+    0
+    (
+     (
+      :csp_atomic_sentence
+      (
+       :csp_function_term
+       arith_if
+       (
+	(:csp_variable_term 1)
+	(
+	 :csp_function_term
+	 equiv
+	 ((:csp_variable_term 6) (:csp_variable_term 0))
+	)
+	(
+	 :csp_function_term
+	 equiv
+	 ((:csp_variable_term 6) (:csp_constant_term 0))
+	)
+       )
+      )
+     )
+     (
+      :csp_atomic_sentence
+      (
+       :csp_function_term
+       arith_if
+       (
+	(:csp_variable_term 3)
+	(
+	 :csp_function_term
+	 equiv
+	 ((:csp_variable_term 7) (:csp_variable_term 2))
+	)
+	(
+	 :csp_function_term
+	 equiv
+	 ((:csp_variable_term 7) (:csp_constant_term 0))
+	)
+       )
+      )
+     )
+     (
+      :csp_atomic_sentence
+      (
+       :csp_function_term
+       arith_if
+       (
+	(:csp_variable_term 5)
+	(
+	 :csp_function_term
+	 equiv
+	 ((:csp_variable_term 8) (:csp_variable_term 4))
+	)
+	(
+	 :csp_function_term
+	 equiv
+	 ((:csp_variable_term 8) (:csp_constant_term 0))
+	)
+       )
+      )
+     )
+    )
+   )
+  )
+ )
+)

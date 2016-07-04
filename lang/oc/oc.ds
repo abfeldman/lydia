@@ -1,0 +1,54 @@
+obs_orig = { file:lydia_symbol, line:int };
+
+obs_orig_symbol = { sym:lydia_symbol, org:obs_orig };
+
+obs_dump = { observations:[obs_instance] };
+
+obs_instance =
+{
+    type:obs_type,
+    name:obs_orig_symbol,
+    constraints:[obs_expr]
+};
+
+obs_type = 
+    obs_bool_type: {} |
+    obs_enum_type: { name:lydia_symbol };
+
+obs_extent = { from:obs_expr, to:obs_expr };
+
+obs_variable_identifier = { name:obs_orig_symbol, ranges:[obs_extent], qualifiers:[obs_variable_qualifier] };
+obs_variable_qualifier = { name:obs_orig_symbol, ranges:[obs_extent] };
+
+obs_expr ~= { org:obs_orig, type:obs_type };
+
+obs_expr_primary = obs_expr +
+    obs_expr_variable: { name:obs_variable_identifier };
+
+|| Binary operator expressions
+obs_expr_binop = obs_expr + { l:obs_expr, r:obs_expr } +
+    obs_expr_and: {} |
+    obs_expr_or: {} |
+    obs_expr_imply: {} |
+    obs_expr_eq: {} |
+    obs_expr_ne: {} |
+    obs_expr_lt: {} |
+    obs_expr_gt: {} |
+    obs_expr_le: {} |
+    obs_expr_ge: {};
+
+|| Unary operator expressions
+obs_expr_unop = obs_expr + { x:obs_expr } +
+    obs_expr_not: {};
+
+obs_expr_literal = obs_expr +
+    obs_expr_int: { v:int } |
+    obs_expr_bool: { v:lydia_bool } |
+    obs_expr_enum: { name:lydia_symbol, entry:lydia_symbol };
+
+obs_expr_other = obs_expr +
+    obs_expr_if_else: { ifval:obs_expr, thenval:obs_expr, elseval:obs_expr } |
+    obs_expr_cond: { lhs:obs_expr, choices:[obs_choice], defaultval:obs_expr } |
+    obs_expr_concatenation: { l:[obs_expr] };
+
+obs_choice = { org:obs_orig, cond:obs_expr, val:obs_expr };

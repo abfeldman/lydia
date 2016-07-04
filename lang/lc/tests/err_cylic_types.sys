@@ -1,0 +1,9 @@
+type a = b;
+type b = c;
+type c = d;
+type d = a;
+
+system test()
+{
+	a bar = true;
+}

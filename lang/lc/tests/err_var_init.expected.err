@@ -1,0 +1,2 @@
+err_var_init.sys: In system `test':
+err_var_init.sys:3: error: incompatible type in initalizer of `a'

@@ -1,0 +1,905 @@
+// MC = 1
+
+observation obs_m74l85_1
+{
+    i1 && i2 && !i3 && i4 && i5 && !i6 && i7 && i8 && i9 && i10 && 
+    i11 && !o1 && o2 && !o3;
+}
+
+observation obs_m74l85_2
+{
+    !i1 && !i2 && i3 && i4 && !i5 && !i6 && i7 && i8 && i9 && !i10 && 
+    i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_3
+{
+    !i1 && !i2 && i3 && i4 && i5 && !i6 && !i7 && i8 && !i9 && !i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_4
+{
+    i1 && i2 && !i3 && !i4 && i5 && i6 && i7 && i8 && !i9 && i10 && 
+    !i11 && !o1 && o2 && !o3;
+}
+
+observation obs_m74l85_5
+{
+    i1 && !i2 && i3 && i4 && !i5 && i6 && !i7 && i8 && !i9 && i10 && 
+    i11 && !o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_6
+{
+    !i1 && !i2 && i3 && !i4 && !i5 && !i6 && !i7 && i8 && !i9 && !i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_7
+{
+    i1 && i2 && !i3 && !i4 && !i5 && !i6 && i7 && !i8 && i9 && i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_8
+{
+    !i1 && i2 && i3 && i4 && i5 && !i6 && !i7 && i8 && !i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_9
+{
+    i1 && !i2 && !i3 && !i4 && !i5 && i6 && i7 && i8 && i9 && i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_10
+{
+    !i1 && i2 && i3 && !i4 && !i5 && i6 && !i7 && i8 && i9 && !i10 && 
+    i11 && !o1 && o2 && !o3;
+}
+
+observation obs_m74l85_11
+{
+    !i1 && i2 && i3 && i4 && i5 && !i6 && !i7 && !i8 && !i9 && i10 && 
+    !i11 && !o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_12
+{
+    i1 && i2 && !i3 && i4 && i5 && !i6 && i7 && !i8 && !i9 && i10 && 
+    i11 && !o1 && o2 && !o3;
+}
+
+observation obs_m74l85_13
+{
+    !i1 && !i2 && !i3 && !i4 && i5 && !i6 && i7 && !i8 && !i9 && !i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_14
+{
+    !i1 && i2 && i3 && !i4 && !i5 && !i6 && !i7 && i8 && i9 && !i10 && 
+    i11 && !o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_15
+{
+    !i1 && !i2 && !i3 && !i4 && !i5 && !i6 && !i7 && !i8 && i9 && i10 && 
+    !i11 && !o1 && !o2 && o3;
+}
+
+observation obs_m74l85_16
+{
+    i1 && !i2 && i3 && !i4 && !i5 && i6 && !i7 && i8 && !i9 && i10 && 
+    !i11 && !o1 && o2 && o3;
+}
+
+observation obs_m74l85_17
+{
+    !i1 && i2 && !i3 && i4 && !i5 && i6 && !i7 && i8 && i9 && i10 && 
+    i11 && !o1 && o2 && o3;
+}
+
+observation obs_m74l85_18
+{
+    !i1 && !i2 && i3 && !i4 && !i5 && !i6 && !i7 && i8 && !i9 && i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_19
+{
+    i1 && i2 && i3 && i4 && i5 && !i6 && !i7 && !i8 && !i9 && !i10 && 
+    !i11 && !o1 && o2 && o3;
+}
+
+observation obs_m74l85_20
+{
+    i1 && i2 && i3 && !i4 && !i5 && i6 && i7 && i8 && !i9 && i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_21
+{
+    i1 && i2 && !i3 && !i4 && i5 && i6 && !i7 && i8 && i9 && i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_22
+{
+    !i1 && !i2 && !i3 && !i4 && i5 && !i6 && i7 && i8 && !i9 && i10 && 
+    i11 && !o1 && o2 && o3;
+}
+
+observation obs_m74l85_23
+{
+    i1 && i2 && i3 && !i4 && i5 && i6 && !i7 && i8 && i9 && !i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_24
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && i6 && i7 && !i8 && i9 && !i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_25
+{
+    i1 && i2 && i3 && !i4 && i5 && i6 && !i7 && i8 && i9 && i10 && 
+    !i11 && !o1 && !o2 && o3;
+}
+
+observation obs_m74l85_26
+{
+    !i1 && i2 && i3 && !i4 && !i5 && i6 && i7 && !i8 && i9 && !i10 && 
+    i11 && !o1 && o2 && o3;
+}
+
+observation obs_m74l85_27
+{
+    i1 && i2 && !i3 && i4 && !i5 && i6 && !i7 && !i8 && !i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_28
+{
+    !i1 && !i2 && !i3 && !i4 && i5 && !i6 && i7 && i8 && !i9 && !i10 && 
+    i11 && !o1 && o2 && o3;
+}
+
+observation obs_m74l85_29
+{
+    i1 && !i2 && i3 && i4 && !i5 && !i6 && !i7 && !i8 && !i9 && !i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_30
+{
+    !i1 && !i2 && i3 && i4 && i5 && !i6 && i7 && i8 && i9 && !i10 && 
+    !i11 && !o1 && o2 && o3;
+}
+
+observation obs_m74l85_31
+{
+    i1 && i2 && i3 && i4 && i5 && i6 && i7 && i8 && i9 && i10 && 
+    i11 && !o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_32
+{
+    i1 && i2 && i3 && i4 && i5 && !i6 && !i7 && i8 && !i9 && i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_33
+{
+    !i1 && i2 && i3 && i4 && !i5 && !i6 && i7 && !i8 && !i9 && i10 && 
+    !i11 && !o1 && o2 && o3;
+}
+
+observation obs_m74l85_34
+{
+    i1 && !i2 && !i3 && !i4 && !i5 && i6 && !i7 && !i8 && !i9 && i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_35
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && !i6 && i7 && i8 && !i9 && i10 && 
+    !i11 && !o1 && o2 && o3;
+}
+
+observation obs_m74l85_36
+{
+    !i1 && !i2 && !i3 && !i4 && !i5 && !i6 && i7 && i8 && i9 && !i10 && 
+    i11 && !o1 && !o2 && o3;
+}
+
+observation obs_m74l85_37
+{
+    !i1 && !i2 && !i3 && i4 && i5 && !i6 && i7 && !i8 && i9 && i10 && 
+    i11 && !o1 && o2 && !o3;
+}
+
+observation obs_m74l85_38
+{
+    i1 && i2 && !i3 && i4 && !i5 && !i6 && !i7 && !i8 && !i9 && !i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_39
+{
+    i1 && i2 && i3 && !i4 && i5 && !i6 && i7 && i8 && !i9 && i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_40
+{
+    !i1 && i2 && i3 && !i4 && i5 && i6 && i7 && i8 && i9 && i10 && 
+    !i11 && !o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_41
+{
+    !i1 && !i2 && i3 && i4 && !i5 && i6 && !i7 && i8 && !i9 && i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_42
+{
+    i1 && !i2 && !i3 && i4 && !i5 && !i6 && !i7 && !i8 && !i9 && i10 && 
+    !i11 && !o1 && !o2 && o3;
+}
+
+observation obs_m74l85_43
+{
+    i1 && !i2 && !i3 && !i4 && i5 && !i6 && !i7 && i8 && !i9 && i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_44
+{
+    i1 && i2 && i3 && !i4 && i5 && i6 && !i7 && !i8 && !i9 && i10 && 
+    !i11 && !o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_45
+{
+    !i1 && i2 && i3 && i4 && i5 && i6 && i7 && !i8 && !i9 && i10 && 
+    i11 && !o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_46
+{
+    !i1 && !i2 && !i3 && !i4 && !i5 && i6 && !i7 && !i8 && !i9 && i10 && 
+    !i11 && !o1 && o2 && o3;
+}
+
+observation obs_m74l85_47
+{
+    !i1 && i2 && !i3 && !i4 && i5 && i6 && !i7 && !i8 && !i9 && !i10 && 
+    i11 && o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_48
+{
+    !i1 && i2 && i3 && !i4 && !i5 && !i6 && !i7 && !i8 && i9 && i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_49
+{
+    !i1 && i2 && !i3 && i4 && i5 && !i6 && !i7 && i8 && i9 && i10 && 
+    !i11 && !o1 && o2 && o3;
+}
+
+observation obs_m74l85_50
+{
+    !i1 && !i2 && i3 && i4 && !i5 && i6 && i7 && i8 && i9 && i10 && 
+    !i11 && !o1 && o2 && o3;
+}
+
+// MC = 2
+
+observation obs_m74l85_51
+{
+    !i1 && !i2 && i3 && i4 && i5 && !i6 && i7 && i8 && i9 && i10 && 
+    !i11 && o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_52
+{
+    i1 && i2 && i3 && !i4 && !i5 && !i6 && !i7 && i8 && i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_53
+{
+    i1 && i2 && i3 && i4 && !i5 && i6 && !i7 && !i8 && i9 && i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_54
+{
+    !i1 && i2 && i3 && i4 && i5 && i6 && !i7 && i8 && i9 && !i10 && 
+    !i11 && !o1 && o2 && !o3;
+}
+
+observation obs_m74l85_55
+{
+    !i1 && i2 && !i3 && i4 && i5 && !i6 && i7 && i8 && i9 && !i10 && 
+    i11 && !o1 && o2 && !o3;
+}
+
+observation obs_m74l85_56
+{
+    !i1 && i2 && i3 && i4 && !i5 && !i6 && !i7 && i8 && !i9 && !i10 && 
+    i11 && o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_57
+{
+    !i1 && !i2 && !i3 && !i4 && !i5 && !i6 && !i7 && !i8 && !i9 && !i10 && 
+    i11 && !o1 && !o2 && o3;
+}
+
+observation obs_m74l85_58
+{
+    !i1 && !i2 && !i3 && !i4 && !i5 && !i6 && i7 && i8 && !i9 && i10 && 
+    i11 && !o1 && o2 && o3;
+}
+
+observation obs_m74l85_59
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && i6 && !i7 && !i8 && !i9 && i10 && 
+    i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_60
+{
+    !i1 && !i2 && i3 && i4 && !i5 && !i6 && i7 && !i8 && i9 && i10 && 
+    !i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_61
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && !i6 && !i7 && i8 && !i9 && !i10 && 
+    i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_62
+{
+    i1 && !i2 && !i3 && !i4 && i5 && !i6 && i7 && !i8 && i9 && i10 && 
+    i11 && !o1 && !o2 && o3;
+}
+
+observation obs_m74l85_63
+{
+    i1 && i2 && i3 && i4 && i5 && i6 && !i7 && !i8 && !i9 && i10 && 
+    !i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_64
+{
+    !i1 && !i2 && !i3 && !i4 && i5 && !i6 && i7 && !i8 && !i9 && i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_65
+{
+    !i1 && !i2 && !i3 && !i4 && !i5 && !i6 && i7 && i8 && !i9 && !i10 && 
+    !i11 && !o1 && o2 && o3;
+}
+
+observation obs_m74l85_66
+{
+    i1 && i2 && !i3 && !i4 && !i5 && !i6 && !i7 && i8 && i9 && !i10 && 
+    i11 && o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_67
+{
+    !i1 && i2 && !i3 && !i4 && i5 && !i6 && !i7 && !i8 && i9 && !i10 && 
+    i11 && o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_68
+{
+    i1 && i2 && i3 && i4 && i5 && i6 && i7 && i8 && !i9 && i10 && 
+    !i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_69
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && i6 && i7 && !i8 && i9 && i10 && 
+    i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_70
+{
+    !i1 && !i2 && i3 && !i4 && i5 && i6 && i7 && i8 && !i9 && !i10 && 
+    !i11 && o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_71
+{
+    i1 && !i2 && !i3 && i4 && i5 && !i6 && !i7 && i8 && !i9 && !i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_72
+{
+    i1 && !i2 && !i3 && !i4 && !i5 && !i6 && i7 && !i8 && !i9 && !i10 && 
+    !i11 && !o1 && !o2 && o3;
+}
+
+observation obs_m74l85_73
+{
+    !i1 && i2 && !i3 && !i4 && !i5 && !i6 && !i7 && i8 && i9 && !i10 && 
+    i11 && !o1 && o2 && !o3;
+}
+
+observation obs_m74l85_74
+{
+    i1 && !i2 && !i3 && i4 && !i5 && !i6 && !i7 && i8 && !i9 && i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_75
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && !i6 && !i7 && i8 && !i9 && i10 && 
+    i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_76
+{
+    i1 && !i2 && !i3 && !i4 && !i5 && i6 && !i7 && i8 && i9 && !i10 && 
+    i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_77
+{
+    i1 && i2 && !i3 && i4 && !i5 && !i6 && i7 && i8 && !i9 && i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_78
+{
+    i1 && !i2 && !i3 && !i4 && !i5 && i6 && !i7 && i8 && i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_79
+{
+    !i1 && !i2 && !i3 && i4 && i5 && !i6 && !i7 && i8 && i9 && !i10 && 
+    !i11 && o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_80
+{
+    !i1 && !i2 && !i3 && i4 && i5 && i6 && i7 && !i8 && !i9 && i10 && 
+    !i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_81
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && !i6 && i7 && i8 && i9 && i10 && 
+    !i11 && o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_82
+{
+    i1 && i2 && i3 && !i4 && i5 && !i6 && !i7 && i8 && !i9 && !i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_83
+{
+    !i1 && !i2 && i3 && i4 && i5 && !i6 && i7 && !i8 && !i9 && i10 && 
+    i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_84
+{
+    i1 && !i2 && !i3 && i4 && i5 && i6 && i7 && !i8 && i9 && !i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_85
+{
+    !i1 && !i2 && !i3 && !i4 && i5 && !i6 && i7 && !i8 && !i9 && i10 && 
+    !i11 && o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_86
+{
+    !i1 && !i2 && i3 && !i4 && !i5 && i6 && !i7 && i8 && !i9 && !i10 && 
+    !i11 && o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_87
+{
+    i1 && !i2 && !i3 && i4 && !i5 && !i6 && !i7 && !i8 && i9 && i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_88
+{
+    !i1 && !i2 && i3 && i4 && i5 && !i6 && !i7 && i8 && !i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_89
+{
+    i1 && i2 && i3 && i4 && !i5 && !i6 && i7 && !i8 && i9 && !i10 && 
+    !i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_90
+{
+    i1 && !i2 && !i3 && i4 && !i5 && !i6 && !i7 && !i8 && i9 && i10 && 
+    !i11 && o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_91
+{
+    !i1 && !i2 && !i3 && !i4 && i5 && !i6 && !i7 && !i8 && i9 && i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_92
+{
+    i1 && i2 && i3 && !i4 && !i5 && !i6 && !i7 && i8 && !i9 && i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_93
+{
+    !i1 && !i2 && i3 && i4 && i5 && !i6 && i7 && !i8 && i9 && !i10 && 
+    i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_94
+{
+    i1 && !i2 && !i3 && !i4 && i5 && !i6 && !i7 && i8 && i9 && !i10 && 
+    i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_95
+{
+    !i1 && i2 && !i3 && !i4 && !i5 && i6 && !i7 && i8 && !i9 && !i10 && 
+    !i11 && !o1 && o2 && !o3;
+}
+
+observation obs_m74l85_96
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && i6 && !i7 && i8 && !i9 && i10 && 
+    i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_97
+{
+    i1 && !i2 && i3 && i4 && i5 && i6 && !i7 && i8 && i9 && i10 && 
+    !i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_98
+{
+    i1 && !i2 && i3 && !i4 && !i5 && i6 && i7 && i8 && !i9 && !i10 && 
+    i11 && !o1 && !o2 && o3;
+}
+
+observation obs_m74l85_99
+{
+    !i1 && !i2 && i3 && i4 && !i5 && !i6 && !i7 && !i8 && i9 && i10 && 
+    !i11 && o1 && !o2 && !o3;
+}
+
+observation obs_m74l85_100
+{
+    i1 && i2 && !i3 && i4 && i5 && i6 && !i7 && i8 && !i9 && !i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+// MC = 3
+
+observation obs_m74l85_101
+{
+    !i1 && i2 && !i3 && i4 && !i5 && i6 && !i7 && !i8 && !i9 && i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_102
+{
+    i1 && !i2 && i3 && !i4 && i5 && !i6 && i7 && i8 && i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_103
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && i6 && !i7 && i8 && i9 && !i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_104
+{
+    !i1 && i2 && !i3 && i4 && !i5 && !i6 && i7 && i8 && i9 && i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_105
+{
+    i1 && !i2 && i3 && i4 && i5 && i6 && i7 && i8 && i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_106
+{
+    !i1 && !i2 && i3 && !i4 && !i5 && !i6 && i7 && !i8 && i9 && !i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_107
+{
+    !i1 && !i2 && !i3 && !i4 && i5 && !i6 && !i7 && !i8 && i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_108
+{
+    !i1 && i2 && !i3 && i4 && !i5 && !i6 && !i7 && i8 && !i9 && !i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_109
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && i6 && !i7 && !i8 && i9 && !i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_110
+{
+    !i1 && i2 && !i3 && !i4 && i5 && i6 && i7 && i8 && !i9 && i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_111
+{
+    i1 && !i2 && !i3 && !i4 && i5 && !i6 && i7 && !i8 && i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_112
+{
+    !i1 && i2 && !i3 && i4 && !i5 && i6 && !i7 && i8 && i9 && i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_113
+{
+    !i1 && i2 && i3 && i4 && i5 && i6 && !i7 && i8 && i9 && i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_114
+{
+    !i1 && !i2 && i3 && !i4 && i5 && i6 && i7 && i8 && i9 && !i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_115
+{
+    !i1 && i2 && !i3 && i4 && !i5 && i6 && !i7 && i8 && i9 && !i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_116
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && i6 && i7 && i8 && !i9 && !i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_117
+{
+    !i1 && i2 && i3 && i4 && !i5 && !i6 && !i7 && i8 && !i9 && !i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_118
+{
+    !i1 && i2 && !i3 && i4 && i5 && i6 && !i7 && !i8 && !i9 && !i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_119
+{
+    i1 && !i2 && !i3 && !i4 && !i5 && !i6 && i7 && i8 && i9 && i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_120
+{
+    !i1 && !i2 && !i3 && i4 && i5 && i6 && !i7 && i8 && !i9 && i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_121
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && !i6 && i7 && i8 && !i9 && i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_122
+{
+    !i1 && i2 && !i3 && i4 && !i5 && i6 && !i7 && !i8 && i9 && !i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_123
+{
+    !i1 && i2 && i3 && i4 && i5 && i6 && !i7 && i8 && i9 && !i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_124
+{
+    i1 && !i2 && i3 && !i4 && i5 && !i6 && !i7 && !i8 && i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_125
+{
+    i1 && !i2 && i3 && !i4 && !i5 && i6 && i7 && !i8 && !i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_126
+{
+    !i1 && i2 && !i3 && !i4 && !i5 && !i6 && !i7 && i8 && !i9 && i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_127
+{
+    i1 && !i2 && i3 && !i4 && !i5 && !i6 && !i7 && i8 && !i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_128
+{
+    !i1 && i2 && !i3 && i4 && i5 && i6 && i7 && !i8 && i9 && i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_129
+{
+    !i1 && !i2 && !i3 && i4 && i5 && i6 && i7 && i8 && !i9 && i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_130
+{
+    !i1 && i2 && !i3 && i4 && !i5 && i6 && i7 && !i8 && !i9 && !i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_131
+{
+    i1 && !i2 && i3 && i4 && i5 && i6 && !i7 && !i8 && !i9 && !i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_132
+{
+    i1 && !i2 && i3 && i4 && i5 && !i6 && i7 && !i8 && !i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_133
+{
+    i1 && !i2 && i3 && !i4 && !i5 && i6 && i7 && i8 && !i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_134
+{
+    !i1 && i2 && !i3 && !i4 && !i5 && i6 && !i7 && i8 && i9 && i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_135
+{
+    !i1 && i2 && !i3 && i4 && !i5 && i6 && i7 && i8 && !i9 && !i10 && 
+    i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_136
+{
+    !i1 && i2 && i3 && i4 && i5 && i6 && !i7 && i8 && !i9 && i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_137
+{
+    !i1 && i2 && !i3 && i4 && i5 && i6 && !i7 && i8 && !i9 && !i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_138
+{
+    !i1 && i2 && !i3 && i4 && !i5 && !i6 && !i7 && i8 && i9 && i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_139
+{
+    i1 && !i2 && i3 && !i4 && i5 && i6 && i7 && i8 && i9 && !i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_140
+{
+    i1 && !i2 && i3 && !i4 && i5 && !i6 && i7 && !i8 && !i9 && i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_141
+{
+    i1 && !i2 && i3 && !i4 && !i5 && i6 && !i7 && !i8 && !i9 && !i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_142
+{
+    i1 && !i2 && i3 && !i4 && !i5 && !i6 && !i7 && !i8 && !i9 && !i10 && 
+    i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_143
+{
+    i1 && i2 && !i3 && !i4 && i5 && i6 && i7 && i8 && !i9 && !i10 && 
+    !i11 && o1 && o2 && o3;
+}
+
+observation obs_m74l85_144
+{
+    !i1 && !i2 && i3 && !i4 && i5 && !i6 && i7 && !i8 && !i9 && !i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_145
+{
+    i1 && !i2 && !i3 && !i4 && !i5 && !i6 && i7 && i8 && i9 && !i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_146
+{
+    i1 && !i2 && i3 && i4 && !i5 && !i6 && !i7 && !i8 && !i9 && !i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_147
+{
+    i1 && !i2 && i3 && !i4 && i5 && i6 && i7 && !i8 && !i9 && !i10 && 
+    !i11 && o1 && !o2 && o3;
+}
+
+observation obs_m74l85_148
+{
+    !i1 && i2 && i3 && i4 && !i5 && i6 && !i7 && !i8 && i9 && !i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_149
+{
+    !i1 && i2 && !i3 && i4 && !i5 && !i6 && i7 && i8 && i9 && !i10 && 
+    !i11 && o1 && o2 && !o3;
+}
+
+observation obs_m74l85_150
+{
+    !i1 && !i2 && i3 && !i4 && i5 && !i6 && i7 && i8 && i9 && i10 && 
+    !i11 && o1 && !o2 && o3;
+}

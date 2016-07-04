@@ -1,0 +1,8 @@
+type x = struct { bool a[4] };
+
+system main()
+{
+	x i;
+
+	i.a[:1] = i.a[2:];
+}

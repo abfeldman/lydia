@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+  <test>
+    <title>empty observation</title>
+    <model>empty.lcm</model>
+    <observation>empty.obs</observation>
+    <output>empty.lco</output>
+  </test>
+  <test>
+    <title>2 chained inverters</title>
+    <model>2inverters.lcm</model>
+    <observation>2inverters.obs</observation>
+    <output>2inverters.lco</output>
+  </test>
+  <test>
+    <title>3 inverters</title>
+    <model>3inverters.lcm</model>
+    <observation>3inverters.obs</observation>
+    <output>3inverters.lco</output>
+  </test>
+  <test>
+    <title>4 chained inverters</title>
+    <model>4inverters.lcm</model>
+    <observation>4inverters.obs</observation>
+    <output>4inverters.lco</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <model>2adder-weak.lcm</model>
+    <observation>2adder.obs</observation>
+    <output>2adder.lco</output>
+  </test>
+  <test>
+    <title>1-bit subtractor</title>
+    <model>2subtractor.lcm</model>
+    <observation>2subtractor.obs</observation>
+    <output>2subtractor.lco</output>
+  </test>
+  <test>
+    <title>Boolean polycell</title>
+    <model>polycell.lcm</model>
+    <observation>polycell.obs</observation>
+    <output>polycell.lco</output>
+  </test>
+  <test>
+    <title>basic array expressions</title>
+    <model>basic_arrays.lcm</model>
+    <observation>basic_arrays.obs</observation>
+    <output>basic_arrays.lco</output>
+  </test>
+  <test>
+    <title>74182</title>
+    <model>74182.lcm</model>
+    <observation>74182.obs</observation>
+    <output>74182.lco</output>
+  </test>
+  <test>
+    <title>74L85</title>
+    <model>74L85.lcm</model>
+    <observation>74L85.obs</observation>
+    <output>74L85.lco</output>
+  </test>
+  <test>
+    <title>74283</title>
+    <model>74283.lcm</model>
+    <observation>74283.obs</observation>
+    <output>74283.lco</output>
+  </test>
+  <test>
+    <title>74181</title>
+    <model>74181.lcm</model>
+    <observation>74181.obs</observation>
+    <output>74181.lco</output>
+  </test>
+</testsuite>

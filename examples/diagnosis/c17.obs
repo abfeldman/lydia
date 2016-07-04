@@ -1,0 +1,318 @@
+// MC = 1
+
+observation obs_c17_1
+{
+    !i1 && i2 && i3 && !i4 && !i5 && !o1 && !o2;
+}
+
+observation obs_c17_2
+{
+    !i1 && i2 && !i3 && i4 && i5 && o1 && !o2;
+}
+
+observation obs_c17_3
+{
+    !i1 && i2 && i3 && !i4 && !i5 && !o1 && o2;
+}
+
+observation obs_c17_4
+{
+    !i1 && i2 && i3 && !i4 && !i5 && o1 && !o2;
+}
+
+observation obs_c17_5
+{
+    !i1 && i2 && i3 && !i4 && i5 && !o1 && !o2;
+}
+
+observation obs_c17_6
+{
+    !i1 && i2 && !i3 && i4 && i5 && !o1 && o2;
+}
+
+observation obs_c17_7
+{
+    !i1 && i2 && !i3 && i4 && i5 && !o1 && !o2;
+}
+
+observation obs_c17_8
+{
+    !i1 && i2 && !i3 && !i4 && i5 && o1 && !o2;
+}
+
+observation obs_c17_9
+{
+    !i1 && i2 && !i3 && !i4 && i5 && !o1 && o2;
+}
+
+observation obs_c17_10
+{
+    !i1 && i2 && !i3 && i4 && !i5 && !o1 && !o2;
+}
+
+observation obs_c17_11
+{
+    !i1 && !i2 && !i3 && !i4 && !i5 && !o1 && o2;
+}
+
+observation obs_c17_12
+{
+    !i1 && i2 && !i3 && i4 && !i5 && o1 && !o2;
+}
+
+observation obs_c17_13
+{
+    !i1 && i2 && i3 && !i4 && i5 && !o1 && o2;
+}
+
+observation obs_c17_14
+{
+    !i1 && i2 && i3 && !i4 && i5 && o1 && !o2;
+}
+
+observation obs_c17_15
+{
+    i1 && !i2 && !i3 && !i4 && !i5 && o1 && !o2;
+}
+
+observation obs_c17_16
+{
+    i1 && !i2 && !i3 && !i4 && !i5 && !o1 && o2;
+}
+
+observation obs_c17_17
+{
+    i1 && !i2 && !i3 && !i4 && !i5 && o1 && o2;
+}
+
+observation obs_c17_18
+{
+    i1 && !i2 && !i3 && !i4 && i5 && !o1 && !o2;
+}
+
+observation obs_c17_19
+{
+    i1 && !i2 && !i3 && !i4 && i5 && o1 && o2;
+}
+
+observation obs_c17_20
+{
+    !i1 && i2 && i3 && i4 && i5 && o1 && o2;
+}
+
+observation obs_c17_21
+{
+    !i1 && i2 && i3 && i4 && i5 && o1 && !o2;
+}
+
+observation obs_c17_22
+{
+    !i1 && i2 && i3 && i4 && !i5 && !o1 && o2;
+}
+
+observation obs_c17_23
+{
+    !i1 && i2 && i3 && i4 && !i5 && o1 && !o2;
+}
+
+observation obs_c17_24
+{
+    !i1 && i2 && i3 && i4 && !i5 && o1 && o2;
+}
+
+observation obs_c17_25
+{
+    !i1 && i2 && i3 && i4 && i5 && !o1 && o2;
+}
+
+observation obs_c17_26
+{
+    !i1 && i2 && !i3 && !i4 && i5 && !o1 && !o2;
+}
+
+observation obs_c17_27
+{
+    !i1 && i2 && !i3 && i4 && !i5 && !o1 && o2;
+}
+
+observation obs_c17_28
+{
+    !i1 && i2 && !i3 && !i4 && !i5 && o1 && !o2;
+}
+
+observation obs_c17_29
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && o1 && o2;
+}
+
+observation obs_c17_30
+{
+    !i1 && !i2 && !i3 && i4 && i5 && o1 && o2;
+}
+
+observation obs_c17_31
+{
+    !i1 && !i2 && i3 && !i4 && !i5 && !o1 && o2;
+}
+
+observation obs_c17_32
+{
+    !i1 && !i2 && i3 && !i4 && !i5 && o1 && !o2;
+}
+
+observation obs_c17_33
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && o1 && !o2;
+}
+
+observation obs_c17_34
+{
+    !i1 && !i2 && !i3 && i4 && !i5 && !o1 && o2;
+}
+
+observation obs_c17_35
+{
+    !i1 && !i2 && !i3 && !i4 && !i5 && o1 && !o2;
+}
+
+observation obs_c17_36
+{
+    !i1 && !i2 && !i3 && !i4 && !i5 && o1 && o2;
+}
+
+observation obs_c17_37
+{
+    !i1 && !i2 && !i3 && !i4 && i5 && !o1 && !o2;
+}
+
+observation obs_c17_38
+{
+    !i1 && !i2 && !i3 && !i4 && i5 && o1 && o2;
+}
+
+observation obs_c17_39
+{
+    !i1 && !i2 && i3 && !i4 && !i5 && o1 && o2;
+}
+
+observation obs_c17_40
+{
+    !i1 && !i2 && !i3 && i4 && i5 && !o1 && !o2;
+}
+
+observation obs_c17_41
+{
+    !i1 && !i2 && i3 && i4 && i5 && o1 && !o2;
+}
+
+observation obs_c17_42
+{
+    !i1 && !i2 && i3 && i4 && i5 && !o1 && o2;
+}
+
+observation obs_c17_43
+{
+    !i1 && !i2 && i3 && i4 && i5 && o1 && o2;
+}
+
+observation obs_c17_44
+{
+    !i1 && !i2 && i3 && !i4 && i5 && !o1 && !o2;
+}
+
+observation obs_c17_45
+{
+    !i1 && i2 && !i3 && !i4 && !i5 && !o1 && o2;
+}
+
+observation obs_c17_46
+{
+    !i1 && !i2 && i3 && i4 && !i5 && o1 && o2;
+}
+
+observation obs_c17_47
+{
+    !i1 && i2 && !i3 && !i4 && !i5 && !o1 && !o2;
+}
+
+observation obs_c17_48
+{
+    !i1 && !i2 && i3 && i4 && !i5 && o1 && !o2;
+}
+
+observation obs_c17_49
+{
+    !i1 && !i2 && i3 && !i4 && i5 && o1 && o2;
+}
+
+observation obs_c17_50
+{
+    !i1 && !i2 && i3 && i4 && !i5 && !o1 && o2;
+}
+
+// MC = 2
+
+observation obs_c17_51
+{
+    i1 && !i2 && i3 && i4 && i5 && !o1 && o2;
+}
+
+observation obs_c17_52
+{
+    i1 && i2 && i3 && !i4 && !i5 && !o1 && !o2;
+}
+
+observation obs_c17_53
+{
+    i1 && i2 && i3 && !i4 && i5 && !o1 && !o2;
+}
+
+observation obs_c17_54
+{
+    i1 && i2 && i3 && i4 && !i5 && !o1 && o2;
+}
+
+observation obs_c17_55
+{
+    i1 && !i2 && i3 && i4 && !i5 && !o1 && o2;
+}
+
+observation obs_c17_56
+{
+    i1 && i2 && i3 && i4 && i5 && !o1 && o2;
+}
+
+observation obs_c17_57
+{
+    i1 && !i2 && !i3 && i4 && i5 && o1 && !o2;
+}
+
+observation obs_c17_58
+{
+    !i1 && !i2 && !i3 && i4 && i5 && o1 && !o2;
+}
+
+observation obs_c17_59
+{
+    !i1 && !i2 && !i3 && !i4 && i5 && o1 && !o2;
+}
+
+observation obs_c17_60
+{
+    i1 && !i2 && !i3 && !i4 && i5 && o1 && !o2;
+}
+
+observation obs_c17_61
+{
+    !i1 && !i2 && i3 && !i4 && i5 && o1 && !o2;
+}
+
+observation obs_c17_62
+{
+    i1 && !i2 && i3 && !i4 && !i5 && !o1 && o2;
+}
+
+observation obs_c17_63
+{
+    i1 && !i2 && i3 && !i4 && i5 && !o1 && !o2;
+}

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE testsuite SYSTEM "../../testsuite/lydia_tests.dtd">
+
+<testsuite>
+  <separator>Arithmetic Circuits (Flat):</separator>
+  <test>
+    <title>2 chained inverters</title>
+    <input>2inverters.wff</input>
+    <output>2inverters.obdd</output>
+  </test>
+  <test>
+    <title>3 chained inverters</title>
+    <input>3inverters.wff</input>
+    <output>3inverters.obdd</output>
+  </test>
+  <test>
+    <title>4 chained inverters</title>
+    <input>4inverters.wff</input>
+    <output>4inverters.obdd</output>
+  </test>
+  <test>
+    <title>10 chained inverters</title>
+    <input>10inverters.wff</input>
+    <output>10inverters.obdd</output>
+  </test>
+  <test>
+    <title>Boolean polycell</title>
+    <input>polycell.wff</input>
+    <output>polycell.obdd</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-weak.wff</input>
+    <output>2adder-weak.obdd</output>
+  </test>
+  <test>
+    <title>1-bit subtractor</title>
+    <input>2subtractor.wff</input>
+    <output>2subtractor.obdd</output>
+  </test>
+  <test>
+    <title>3 inverters and an AND gate</title>
+    <input>inverted-and.wff</input>
+    <output>inverted-and.obdd</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder-strong.wff</input>
+    <output>2adder-strong.obdd</output>
+  </test>
+  <test>
+    <title>copier</title>
+    <input>copier.wff</input>
+    <output>copier.obdd</output>
+  </test>
+  <test>
+    <title>stereo</title>
+    <input>stereo.wff</input>
+    <output>stereo.obdd</output>
+  </test>
+
+  <separator>Arithmetic Circuits (Hierarchical):</separator>
+  <test>
+    <title>Boolean polycell</title>
+    <input>polycell.hwff</input>
+    <output>polycell.hobdd</output>
+  </test>
+
+  <separator>Observations:</separator>
+  <test>
+    <title>empty hierarchy</title>
+    <input>empty.obs.hwff</input>
+    <output>empty.obs.hobdd</output>
+  </test>
+  <test>
+    <title>2 chained inverters</title>
+    <input>2inverters.obs.hwff</input>
+    <output>2inverters.obs.hobdd</output>
+  </test>
+  <test>
+    <title>3 inverters</title>
+    <input>3inverters.obs.hwff</input>
+    <output>3inverters.obs.hobdd</output>
+  </test>
+  <test>
+    <title>4 chained inverters</title>
+    <input>4inverters.obs.hwff</input>
+    <output>4inverters.obs.hobdd</output>
+  </test>
+  <test>
+    <title>1-bit full adder</title>
+    <input>2adder.obs.hwff</input>
+    <output>2adder.obs.hobdd</output>
+  </test>
+  <test>
+    <title>1-bit subtractor</title>
+    <input>2subtractor.obs.hwff</input>
+    <output>2subtractor.obs.hobdd</output>
+  </test>
+  <test>
+    <title>Boolean polycell</title>
+    <input>polycell.obs.hwff</input>
+    <output>polycell.obs.hobdd</output>
+  </test>
+  <test>
+    <title>basic array expressions</title>
+    <input>basic_arrays.obs.hwff</input>
+    <output>basic_arrays.obs.hobdd</output>
+  </test>
+  <test>
+    <title>74182</title>
+    <input>74182.obs.hwff</input>
+    <output>74182.obs.hobdd</output>
+  </test>
+  <test>
+    <title>74L85</title>
+    <input>74L85.obs.hwff</input>
+    <output>74L85.obs.hobdd</output>
+  </test>
+  <test>
+    <title>74283</title>
+    <input>74283.obs.hwff</input>
+    <output>74283.obs.hobdd</output>
+  </test>
+  <test>
+    <title>74181</title>
+    <input>74181.obs.hwff</input>
+    <output>74181.obs.hobdd</output>
+  </test>
+
+</testsuite>

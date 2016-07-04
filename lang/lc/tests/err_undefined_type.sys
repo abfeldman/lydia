@@ -1,0 +1,2 @@
+type boo = moo;
+attribute zoo foo;

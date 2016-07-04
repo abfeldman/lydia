@@ -1,0 +1,4 @@
+observation alpha_1
+{
+    x && y && !z;
+}

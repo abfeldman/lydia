@@ -1,0 +1,111 @@
+(
+ :csp_hierarchy
+ (
+  (
+   :node
+   inverter
+   ()
+   (
+    :csp
+    ()
+    (
+     (:bool_variable (:identifier x (0) $nil) () -1)
+     (:bool_variable (:identifier x (1) $nil) () -1)
+     (
+      :bool_variable
+      (:identifier h $nil $nil)
+      (
+       (:bool_variable_attribute health (nil t))
+       (:float_variable_attribute probability (0.05 0.95))
+      )
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    (
+     (
+      :csp_impl_sentence
+      (:csp_atomic_sentence (:csp_variable_term 2))
+      (
+       :csp_equiv_sentence
+       (:csp_atomic_sentence (:csp_variable_term 0))
+       (:csp_not_sentence (:csp_atomic_sentence (:csp_variable_term 1)))
+      )
+     )
+    )
+   )
+  )
+  (
+   :node
+   main
+   (
+    (
+     :edge
+     inverter
+     I
+     (0)
+     (
+      (:mapping (:identifier i (0) $nil) (:identifier x (0) $nil))
+      (:mapping (:identifier i (1) $nil) (:identifier x (1) $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     I
+     (1)
+     (
+      (:mapping (:identifier i (1) $nil) (:identifier x (0) $nil))
+      (:mapping (:identifier i (2) $nil) (:identifier x (1) $nil))
+     )
+    )
+    (
+     :edge
+     inverter
+     I
+     (2)
+     (
+      (:mapping (:identifier i (2) $nil) (:identifier x (0) $nil))
+      (:mapping (:identifier i (3) $nil) (:identifier x (1) $nil))
+     )
+    )
+   )
+   (
+    :csp
+    ()
+    (
+     (
+      :bool_variable
+      (:identifier i (0) $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i (1) $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i (2) $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+     (
+      :bool_variable
+      (:identifier i (3) $nil)
+      ((:bool_variable_attribute observable (t t)))
+      -1
+     )
+    )
+    ()
+    ()
+    0
+    ()
+   )
+  )
+ )
+)

@@ -1,0 +1,6 @@
+err_eval_attr.sys:8: error: can't evaluate probability(a) for a = color.R
+err_eval_attr.sys:8: error: (Each non-evaluated value is reported only once
+err_eval_attr.sys:8: error: for each attribute it appears in.)
+err_eval_attr.sys:9: error: can't evaluate probability(c) for c = true
+err_eval_attr.sys:9: error: (Each non-evaluated value is reported only once
+err_eval_attr.sys:9: error: for each attribute it appears in.)
